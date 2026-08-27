@@ -1,0 +1,557 @@
+{
+  "metadata": {
+    "title": "Bias vs. Variance, Oversimplified",
+    "slug": "claude-liam-bias-variance-tradeoff",
+    "topic": "MACHINE LEARNING · GENERALIZATION",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "voice": "Liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Bonjour, Liam",
+    "folderLabel": "@NikBearBrown",
+    "note": "Fresh, free ai-explainer. ILLUSTRATE LAW: Claude UI only at B00/B07/B08/B09; B01–B06 are native concept illustrations. GATE P is intentionally unsatisfied until a human signs PEDAGOGY.md.",
+    "tags": [
+      "bias variance",
+      "overfitting",
+      "underfitting",
+      "generalization",
+      "model selection",
+      "machine learning"
+    ],
+    "build": {
+      "at": "2026-08-24T00:01:04",
+      "cut": "master",
+      "filled": 10,
+      "of": 10,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "A model can fail in two opposite ways: be too simple to see the pattern, or so eager to see one that it memorizes the noise. This is Liam, in for Bear. The bias versus variance tradeoff is how you catch both mistakes before they walk into production wearing a confident score. Let us make it visible.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Claude composer on cream; greeting 'Bonjour, Liam'"
+          },
+          {
+            "at": 0.25,
+            "event": "the ask types into the composer"
+          },
+          {
+            "at": 0.7,
+            "event": "terracotta send arms; running text says 'testing the fit…'"
+          },
+          {
+            "at": 0.85,
+            "event": "three output lines land: too simple / too reactive / useful middle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Bonjour, Liam",
+            "topic": "MACHINE LEARNING · GENERALIZATION",
+            "segment": "Bias vs. Variance, Oversimplified",
+            "command": "Explain the bias versus variance tradeoff visually. Show why a model can be too simple or too reactive, and how validation data tells us which failure we have.",
+            "runningText": "testing the fit…",
+            "folderLabel": "@NikBearBrown",
+            "output": [
+              "high bias = misses the pattern",
+              "high variance = memorizes the sample",
+              "validation = the honest referee"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 16,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 16.3,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-24T00:01:04"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY",
+      "narration_text": "Here is the whole idea in one breath. We train on a small, messy sample, but we care about the next case we have not seen. A rigid model misses real structure. A twitchy one mistakes accidents for structure. The tradeoff is choosing enough flexibility to learn the signal, without letting the sample boss the model around.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "spark line: 'Learn signal, not noise.'"
+          },
+          {
+            "at": 0.18,
+            "event": "training dots appear with a smooth hidden trend line"
+          },
+          {
+            "at": 0.48,
+            "event": "a rigid straight fit misses the curve on the left"
+          },
+          {
+            "at": 0.7,
+            "event": "a jagged fit chases every dot on the right"
+          },
+          {
+            "at": 0.88,
+            "event": "a calm middle fit lands over the trend"
+          }
+        ]
+      },
+      "estimated_duration_s": 17,
+      "audio_file": "mp3/beat-B01.mp3",
+      "graphic": {
+        "engine": "manim",
+        "manim": "B01_BigIdea",
+        "production_viz": {
+          "label": "signal versus sample noise",
+          "mechanic": "three fits over the same observations",
+          "note": "schematic only; no invented measurements"
+        }
+      },
+      "actual_duration_s": 17.22,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-24T00:01:04"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK — two data draws",
+      "narration_text": "Bias is the model's built-in stubbornness: across many possible training sets, its average answer leans away from the real pattern. Variance is its jumpiness: swap in another reasonable sample, and its answer changes too much. Notice the difference. Bias is wrong in a repeatable direction. Variance is unstable because the data got a vote it should not have had.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "two equal panels appear: 'bias' and 'variance'"
+          },
+          {
+            "at": 0.25,
+            "event": "three sample datasets cycle beneath a fixed smooth truth"
+          },
+          {
+            "at": 0.5,
+            "event": "left: three rigid fits stay similarly and visibly off-target"
+          },
+          {
+            "at": 0.72,
+            "event": "right: three flexible fits swing apart when just a few dots change"
+          },
+          {
+            "at": 0.9,
+            "event": "labels resolve: 'consistently wrong' / 'changes too much'"
+          }
+        ]
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B02.mp3",
+      "graphic": {
+        "engine": "manim",
+        "manim": "B02_TwoFailures",
+        "production_viz": {
+          "label": "repeatable error versus sample sensitivity",
+          "mechanic": "same underlying pattern, multiple training samples",
+          "note": "visual definition before examples"
+        }
+      },
+      "actual_duration_s": 19.39,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-24T00:01:04"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WORKED EXAMPLE — high bias",
+      "narration_text": "First failure: high bias. Imagine the real relationship bends, but you insist on fitting a ruler through it. The ruler is admirably stable. Give it a different sample and it still draws almost the same line. That is not reliability. It is a bad assumption surviving every meeting. The model underfits because it lacks the shape the job requires.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "curved truth line draws behind scattered observations"
+          },
+          {
+            "at": 0.3,
+            "event": "a straight ruler-fit sweeps across, missing both ends"
+          },
+          {
+            "at": 0.55,
+            "event": "sample A changes to sample B; ruler barely moves"
+          },
+          {
+            "at": 0.76,
+            "event": "large gaps from ruler to curve pulse in terracotta"
+          },
+          {
+            "at": 0.92,
+            "event": "label lands: 'underfit — too rigid'"
+          }
+        ]
+      },
+      "estimated_duration_s": 16,
+      "audio_file": "mp3/beat-B03.mp3",
+      "graphic": {
+        "engine": "manim",
+        "manim": "B03_HighBias",
+        "production_viz": {
+          "label": "underfit",
+          "mechanic": "rigid line misses a nonlinear signal across two samples",
+          "note": "worked example"
+        }
+      },
+      "actual_duration_s": 18.33,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-24T00:01:04"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED EXAMPLE — high variance",
+      "narration_text": "Now turn the flexibility dial all the way up. The model draws a little flourish through every training point. Training error looks heroic. Then one harmless sample swap makes the whole curve lurch. That is high variance: perfect recall of yesterday's accidents, fragile guesses about tomorrow. It is overfitting, and the training score is the accomplice, not the alibi.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "same observations return with a smooth hidden trend"
+          },
+          {
+            "at": 0.25,
+            "event": "a wavy fit threads exactly through every training dot"
+          },
+          {
+            "at": 0.52,
+            "event": "training badge ticks to 'perfect fit' in ink"
+          },
+          {
+            "at": 0.65,
+            "event": "one dot shifts; the wavy fit redraws into a radically different path"
+          },
+          {
+            "at": 0.88,
+            "event": "unseen test dots appear; large misses flash terracotta"
+          }
+        ]
+      },
+      "estimated_duration_s": 17,
+      "audio_file": "mp3/beat-B04.mp3",
+      "graphic": {
+        "engine": "manim",
+        "manim": "B04_HighVariance",
+        "production_viz": {
+          "label": "overfit",
+          "mechanic": "one altered sample causes a flexible fit to lurch",
+          "note": "training perfection contrasted with unseen cases"
+        }
+      },
+      "actual_duration_s": 18.77,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-24T00:01:04"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "MECHANISM — the validation curve",
+      "narration_text": "So how do you find the useful middle without trusting your vibes? Hold out data the model never trained on. As complexity rises, training error usually keeps falling; it has more ways to please the past. Validation error tells the part you actually care about. It falls while the model learns signal, then rises when the model starts learning noise. Choose near that valley, not at the training trophy.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "horizontal axis types in: 'model flexibility'"
+          },
+          {
+            "at": 0.22,
+            "event": "training-error curve descends steadily in soft ink"
+          },
+          {
+            "at": 0.45,
+            "event": "validation curve descends, bottoms out, then rises"
+          },
+          {
+            "at": 0.7,
+            "event": "terracotta marker drops at the validation valley"
+          },
+          {
+            "at": 0.88,
+            "event": "the far-right training trophy gets crossed out"
+          }
+        ]
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B05.mp3",
+      "graphic": {
+        "engine": "manim",
+        "manim": "B05_Validation",
+        "production_viz": {
+          "label": "validation chooses the fit",
+          "mechanic": "training loss falls while validation loss is U-shaped",
+          "note": "schematic curve; no numeric values"
+        }
+      },
+      "actual_duration_s": 20.12,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-24T00:01:04"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "FALSIFIABILITY — the tradeoff is not a law of nature",
+      "narration_text": "One important cleanup: this is a diagnostic, not a cosmic law that every model obeys neatly. More data can steady a high-variance model. Regularization can make an over-flexible model less jumpy. Better features can let a simple model see what it missed. The tradeoff names the pressure. It does not excuse you from measuring the system you actually built.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "a balance labelled 'bias / variance' appears, then gets stamped 'diagnostic'"
+          },
+          {
+            "at": 0.3,
+            "event": "three levers enter: 'more data', 'regularization', 'better features'"
+          },
+          {
+            "at": 0.55,
+            "event": "more-data lever makes three unstable fits converge"
+          },
+          {
+            "at": 0.72,
+            "event": "regularization lever smooths a jagged fit"
+          },
+          {
+            "at": 0.9,
+            "event": "final rule fills the stage: 'measure the validation behavior'"
+          }
+        ]
+      },
+      "estimated_duration_s": 16,
+      "audio_file": "mp3/beat-B06.mp3",
+      "graphic": {
+        "engine": "manim",
+        "manim": "B06_Levers",
+        "production_viz": {
+          "label": "diagnose, then intervene",
+          "mechanic": "three interventions visibly reduce sample sensitivity or improve representation",
+          "note": "no guarantee claim; interventions are conditional"
+        }
+      },
+      "actual_duration_s": 19.29,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-24T00:01:04"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "narration_text": "The verdict. Bias means your model is consistently missing the pattern. Variance means it lets the particular sample write the answer. The target is not the most complicated model, or the lowest training error. It is the model that stays useful on data it has never met. That is generalization: the only score the future agrees to pay.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Claude artifact page opens with a four-line verdict"
+          },
+          {
+            "at": 0.25,
+            "event": "bias line highlights: 'consistently misses'"
+          },
+          {
+            "at": 0.5,
+            "event": "variance line highlights: 'sample writes the answer'"
+          },
+          {
+            "at": 0.75,
+            "event": "final line fills: 'test on what it has not seen'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "title": "The Verdict",
+            "topic": "Bias vs. Variance",
+            "folderLabel": "@NikBearBrown",
+            "lines": [
+              "Bias: consistently misses the pattern.",
+              "Variance: the sample writes the answer.",
+              "Training error is not the goal.",
+              "Choose what generalizes."
+            ]
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 16,
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 17.94,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-24T00:01:04"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "HANDOFF",
+      "narration_text": "Your turn. Paste this in: build me a tiny regression demo with one noisy dataset, then fit a straight line, a medium curve, and a very flexible curve. Show train and validation error, and let me resample the points. That prompt makes the tradeoff move instead of sit in a textbook. Watch which model changes its mind when the data changes. Then ask what intervention you would try first.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Claude composer opens with greeting 'Your turn.'"
+          },
+          {
+            "at": 0.22,
+            "event": "the suggested prompt types in full"
+          },
+          {
+            "at": 0.72,
+            "event": "send arms terracotta; running text says 'paste this into Claude…'"
+          },
+          {
+            "at": 0.9,
+            "event": "result hint lines appear: 'resample / compare / diagnose'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "MACHINE LEARNING · GENERALIZATION",
+            "segment": "Bias vs. Variance",
+            "command": "Build me a tiny regression demo with one noisy dataset. Fit a straight line, a medium curve, and a very flexible curve; show train and validation error; let me resample the points; then explain which model has high bias or high variance and what intervention to try.",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@NikBearBrown",
+            "output": [
+              "resample the data",
+              "compare train vs. validation",
+              "diagnose before tuning"
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 19.58,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "media",
+        "at": "2026-08-24T00:01:04"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "OUTRO",
+      "narration_text": "Bias versus variance, oversimplified. Do not reward a model for remembering the room. Reward it for recognizing the next room. Liam, in for Bear.",
+      "shot": {
+        "type": "CARD",
+        "source": "remotion",
+        "motion": "brand",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "pixel mascot enters on the cream Claude title card"
+          },
+          {
+            "at": 0.35,
+            "event": "poster title lands: 'Bias vs. Variance.'"
+          },
+          {
+            "at": 0.72,
+            "event": "@NikBearBrown handle holds beneath"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Bias vs. Variance.",
+            "folderLabel": "@NikBearBrown",
+            "slug": "claude-liam-bias-variance-tradeoff"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 12,
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 9.05,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-24T00:01:04"
+      }
+    }
+  ]
+}
