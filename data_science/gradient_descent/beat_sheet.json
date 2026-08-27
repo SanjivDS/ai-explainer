@@ -1,0 +1,531 @@
+{
+  "metadata": {
+    "title": "Gradient Descent, Oversimplified",
+    "slug": "claude-liam-gradient-descent",
+    "topic": "MACHINE LEARNING · GRADIENT DESCENT",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "voice": "Sanjiv",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Namaste, Sanjiv",
+    "greeting_note": "hello lexicon: Hindi (one word + persona). Sanjiv is in for Bear on @NikBearBrown (personalized narrator; channel chip stays @NikBearBrown). Wagwan stays Bear's (charsum('claude-liam-gradient-descent') % 10 == 4 anyway).",
+    "folderLabel": "@NikBearBrown",
+    "color_semantics": "Claude fidelity skin on the four bookends (B00 ask / B07 verdict / B08 handoff / B09 outro). Inner beats B01-B06 are Manim concept illustrations on cream #F2F0E9 with ONE terracotta accent each — no LaTeX (Pango Text only), so they render without MacTeX.",
+    "note": "Fresh concept explainer (no source reel). ILLUSTRATE LAW: UI only on bookends; every inner beat illustrates the mechanism. SHOW-DON'T-TELL authored show-first. No invented figures — the numeric worked example is deferred to the viewer's handoff prompt. IN-FOR-BEAR LAW: B00 + outro say 'Sanjiv, in for Bear' (personalized stand-in narrator).",
+    "tags": [
+      "gradient descent",
+      "machine learning",
+      "neural networks",
+      "loss function",
+      "learning rate",
+      "optimization",
+      "how models learn"
+    ],
+    "build": {
+      "at": "2026-08-12T18:35:59",
+      "cut": "master",
+      "filled": 10,
+      "of": 10,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Every neural network you have ever heard of learns the same humble way: by rolling downhill. This is Sanjiv, in for Bear. No magic, no wall of calculus, just a ball, a slope, and one knob that people constantly get wrong. Let us take it apart.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Claude composer on cream; greeting 'Namaste, Sanjiv' in serif above the composer"
+          },
+          {
+            "at": 0.25,
+            "event": "the ask types itself into the composer"
+          },
+          {
+            "at": 0.7,
+            "event": "send arms terracotta; runningText 'rolling downhill…'"
+          },
+          {
+            "at": 0.85,
+            "event": "three answer lines land — loss / gradient / learning rate"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Namaste, Sanjiv",
+            "topic": "MACHINE LEARNING · GRADIENT DESCENT",
+            "segment": "Gradient Descent, Oversimplified",
+            "command": "Explain gradient descent the way I'd actually use it. How does a model 'learn' from its mistakes — what's the loss, what's the gradient, and what's the one knob everybody tunes? Keep it visual: a picture I can hold, not a wall of calculus.",
+            "runningText": "rolling downhill…",
+            "folderLabel": "@NikBearBrown",
+            "output": [
+              "loss = how wrong the model is, as ONE number",
+              "gradient = which way is downhill",
+              "learning rate = how big a step you take"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 14,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 13.82,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-12T18:35:59"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY",
+      "narration_text": "Here is the whole idea in one breath. A model has millions of knobs. Turn them wrong and its mistakes pile up into a single number we call the loss. Gradient descent just nudges every knob in the direction that makes that number smaller — again, and again, and again. Everything after this is detail.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "one serif line lands: 'make the mistakes smaller'"
+          },
+          {
+            "at": 0.35,
+            "event": "a big loss number sits high, terracotta"
+          },
+          {
+            "at": 0.6,
+            "event": "a downhill arrow sweeps the number down toward zero"
+          },
+          {
+            "at": 0.85,
+            "event": "'×  thousands of steps' stamps under the arrow"
+          }
+        ]
+      },
+      "estimated_duration_s": 12,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 16.15,
+      "graphic": {
+        "engine": "manim",
+        "manim": "B01_BigIdea",
+        "production_viz": {
+          "label": "loss ↓",
+          "mechanic": "one number driven down by a repeated nudge",
+          "note": "the BLUF as kinetic type, no invented values"
+        }
+      },
+      "engine": "manim",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-12T18:35:59"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK — the landscape",
+      "narration_text": "Picture all those knobs as one landscape. Every point is a setting; the height is the loss — how badly the model misses. Training means one thing: find the low ground. But you can't see the whole map. It lives in a thousand dimensions, so you never get to just look and point at the bottom.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "a smooth curved terrain draws left-to-right, ink stroke on cream"
+          },
+          {
+            "at": 0.35,
+            "event": "a marker sits high on a shoulder; label 'you are here'"
+          },
+          {
+            "at": 0.6,
+            "event": "the valley floor glows terracotta; label 'low loss'"
+          },
+          {
+            "at": 0.85,
+            "event": "soft fog wipes across the far map — 'you can't see the bottom'"
+          }
+        ]
+      },
+      "estimated_duration_s": 15,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 15.17,
+      "graphic": {
+        "engine": "manim",
+        "manim": "B02_Landscape",
+        "production_viz": {
+          "label": "loss landscape",
+          "mechanic": "height = loss; goal = low ground; fog = partial view",
+          "note": "schematic curve, no axis units"
+        }
+      },
+      "engine": "manim",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-12T18:35:59"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM — the step (worked example)",
+      "narration_text": "So you do the only thing fog allows. Feel the slope under your feet, and step downhill. Measure the slope, take a small step against it, then look again. That is the whole algorithm. The ball never knows where the bottom is — it only knows which way is down, right here.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "a ball rests on the curve's shoulder"
+          },
+          {
+            "at": 0.3,
+            "event": "a short tangent line appears under it — the local slope"
+          },
+          {
+            "at": 0.5,
+            "event": "a terracotta arrow points downhill along the slope"
+          },
+          {
+            "at": 0.6,
+            "event": "the ball takes ONE step down; slope + arrow recompute"
+          },
+          {
+            "at": 0.8,
+            "event": "steps repeat, three times, settling toward the valley"
+          }
+        ]
+      },
+      "estimated_duration_s": 16,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 13.99,
+      "graphic": {
+        "engine": "manim",
+        "manim": "B03_StepDownhill",
+        "production_viz": {
+          "label": "measure → step → look again",
+          "mechanic": "tangent slope, negative step, iterate",
+          "note": "the hero mechanism beat"
+        }
+      },
+      "engine": "manim",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-12T18:35:59"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MECHANISM — the gradient",
+      "narration_text": "That slope has a name: the gradient. It is simply the direction the ground rises fastest — so we walk the exact opposite way. Steep slope, a big informative step; nearly flat, tiny steps. The gradient is a compass. It never tells you the destination, only the next honest direction.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "at a point on the curve, a grey arrow points UP-slope (steepest ascent)"
+          },
+          {
+            "at": 0.35,
+            "event": "arrow flips terracotta and reverses — 'we go the opposite way'"
+          },
+          {
+            "at": 0.6,
+            "event": "two points contrasted: steep = long arrow, flat = stub arrow"
+          },
+          {
+            "at": 0.85,
+            "event": "a small compass glyph stamps beside the flat point — 'direction, not destination'"
+          }
+        ]
+      },
+      "estimated_duration_s": 15,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 15.64,
+      "graphic": {
+        "engine": "manim",
+        "manim": "B04_Gradient",
+        "production_viz": {
+          "label": "gradient = steepest up; step the opposite",
+          "mechanic": "arrow length tracks steepness",
+          "note": "compass metaphor"
+        }
+      },
+      "engine": "manim",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-12T18:35:59"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "THE KNOB — learning rate",
+      "narration_text": "Now the knob everyone fights with: the learning rate — how far you step each time. Too timid, and you crawl for a thousand steps and never arrive. Too greedy, and you leap clean over the valley and bounce up the far wall — the loss explodes instead of shrinking. The craft is a step that is brave, but not reckless.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "three identical valleys appear side by side, held together ≥2s"
+          },
+          {
+            "at": 0.3,
+            "event": "LEFT 'too small': ball inches, stalls far up the slope, greyed"
+          },
+          {
+            "at": 0.55,
+            "event": "RIGHT 'too big': ball overshoots, bounces higher each time — diverges, warn red"
+          },
+          {
+            "at": 0.8,
+            "event": "MIDDLE 'just right': ball descends in a few clean steps, lands terracotta in the valley"
+          }
+        ]
+      },
+      "estimated_duration_s": 17,
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 15.83,
+      "graphic": {
+        "engine": "manim",
+        "manim": "B05_LearningRate",
+        "production_viz": {
+          "label": "too small · too big · just right",
+          "mechanic": "three step-sizes, same curve, side by side",
+          "note": "falsifiable comparison, held side-by-side"
+        }
+      },
+      "engine": "manim",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-12T18:35:59"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "WHERE IT BITES — local minima",
+      "narration_text": "Here is where the tidy story cracks. Downhill only ever finds the nearest bottom — not the lowest. Land in a shallow dip and you will sit there, slope zero, convinced you are done, while a deeper valley waits one ridge over. Real training fights this with momentum and randomness. Gradient descent is relentless, not wise.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "a bumpy landscape with a shallow LEFT dip and a deep RIGHT valley"
+          },
+          {
+            "at": 0.35,
+            "event": "the ball rolls into the shallow dip and stops; 'slope = 0 → done?'"
+          },
+          {
+            "at": 0.65,
+            "event": "the deeper global valley glows terracotta, unreached, one ridge over"
+          },
+          {
+            "at": 0.85,
+            "event": "label lands: 'local, not global'"
+          }
+        ]
+      },
+      "estimated_duration_s": 15,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 16.73,
+      "graphic": {
+        "engine": "manim",
+        "manim": "B06_LocalMinima",
+        "production_viz": {
+          "label": "nearest bottom ≠ lowest",
+          "mechanic": "ball trapped in local min; global min unreached",
+          "note": "the honest Teardown limit"
+        }
+      },
+      "engine": "manim",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-08-12T18:35:59"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "narration_text": "Let us recap with Claude. Loss is one number for how wrong you are. The gradient points downhill. The learning rate sets your stride. Repeat until the ground goes flat. One line to keep: gradient descent does not find the best answer — it finds the nearest one, fast. That is why the setup around it matters as much as the math.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "stagger",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Claude artifact page opens on cream"
+          },
+          {
+            "at": 0.2,
+            "event": "four verdict lines stagger in, one per spoken clause"
+          },
+          {
+            "at": 0.9,
+            "event": "the 'nearest, not lowest' line underlines terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "sparkLine": "",
+            "artifactTitle": "Gradient Descent — one page",
+            "artifactHeading": "The whole loop",
+            "artifactLines": [
+              "Loss — one number: how wrong the model is right now.",
+              "Gradient — the downhill direction; step the opposite of steepest-up.",
+              "Learning rate — stride length: too small crawls, too big diverges.",
+              "The catch — it finds the NEAREST minimum, not the lowest. Setup matters."
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 17,
+      "audio_file": "mp3/beat-B07.mp3",
+      "lead_silence_s": 0.5,
+      "actual_duration_s": 16.45,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "media",
+        "at": "2026-08-12T18:35:59"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "HANDOFF",
+      "narration_text": "Your turn. Paste this in: ask Claude to run gradient descent by hand on five points and a single weight, printing the loss and the gradient at every step. Watching one number crawl toward zero, step by step, is the moment it stops being a metaphor. Then break it on purpose — crank the learning rate, and watch it fly apart.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Claude composer returns; greeting fixed 'Your turn.'"
+          },
+          {
+            "at": 0.3,
+            "event": "the suggested prompt types itself in"
+          },
+          {
+            "at": 0.8,
+            "event": "runningText 'paste this into Claude…'; send arms terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "MACHINE LEARNING · GRADIENT DESCENT",
+            "segment": "Gradient Descent, Oversimplified",
+            "command": "Walk me through gradient descent on a tiny example: fit a line y = w·x to five points I give you. Show w, the loss, and the gradient at each step for three steps — then tell me what a too-large learning rate would have done.",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 15,
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 16.68,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "media",
+        "at": "2026-08-12T18:35:59"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "OUTRO",
+      "narration_text": "Gradient descent, oversimplified. If the ball finally makes sense, subscribe. Sanjiv, in for Bear.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title restates poster-style serif with terracotta period"
+          },
+          {
+            "at": 0.5,
+            "event": "@NikBearBrown handle beneath; slug-seeded mascot"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Gradient Descent.",
+            "handle": "@NikBearBrown",
+            "slug": "claude-liam-gradient-descent"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 7,
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 6.36,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "media",
+        "at": "2026-08-12T18:35:59"
+      }
+    }
+  ]
+}
