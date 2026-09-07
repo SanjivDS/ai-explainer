@@ -1,0 +1,580 @@
+{
+  "metadata": {
+    "title": "L1 Regularization, Oversimplified",
+    "slug": "claude-liam-l1-regularization-lasso",
+    "topic": "MACHINE LEARNING · REGULARIZATION & FEATURE SELECTION",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "voice": "Liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Ciao, Liam",
+    "greeting_note": "hello lexicon: Italian (one word, fits Liam's budget). Bonjour/Namaste/Shalom already used in this batch. Wagwan stays Bear's — Liam never takes it.",
+    "folderLabel": "@NikBearBrown",
+    "note": "Free ai-explainer, claude-liam channel. Sibling of claude-liam-l2-regularization-ridge: that reel ends on 'small, not exactly zero' — this one explains the exact-zero mechanism. Manim for B01-B07 + B09 (deterministic, layout-audited); Remotion bookends at B00/B08. All 8 Manim scenes pass manim_layout_audit --curve-strict with ZERO findings (no text-on-text, no off-frame, no label struck by a curve).",
+    "tags": [
+      "L1 regularization",
+      "lasso",
+      "feature selection",
+      "sparsity",
+      "regularization path",
+      "machine learning"
+    ],
+    "build": {
+      "at": "2026-09-04T11:15:06",
+      "cut": "review",
+      "filled": 2,
+      "of": 10,
+      "slates": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B09"
+      ],
+      "skin_warnings": [
+        "B09: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "A model with fifty inputs is rarely a model with fifty real signals. L1 regularization does something Ridge cannot: it removes features outright. This is Liam, in for Bear. Lasso shrinks the weights, and then it sets some of them to exactly zero, making the fit and a feature-selection decision in one move. Let us see why the geometry forces that.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude composer opens; greeting 'Ciao, Liam'"
+          },
+          {
+            "at": 0.25,
+            "event": "the ask types in: why does L1 zero coefficients out"
+          },
+          {
+            "at": 0.7,
+            "event": "send arms; running text reads 'pricing the weights…'"
+          },
+          {
+            "at": 0.86,
+            "event": "answered lines land: shrink / exactly zero / selection built in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Ciao, Liam",
+            "topic": "MACHINE LEARNING · REGULARIZATION & FEATURE SELECTION",
+            "segment": "L1 Regularization",
+            "command": "Explain L1 regularization (Lasso). Show why penalizing total absolute weight drives some coefficients to exactly zero, while the squared penalty only makes them small.",
+            "runningText": "pricing the weights…",
+            "folderLabel": "@NikBearBrown",
+            "output": [
+              "L1 penalty → total absolute weight",
+              "the diamond's corner → exactly zero",
+              "fitting and feature selection in one"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 19,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 18.86,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-09-04T11:15:06"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY",
+      "narration_text": "Here is the whole idea in one breath. L1 regularization adds a second bill to the fitting problem: the total absolute size of the coefficients. Paying that bill pulls every weight toward zero, and because of the shape of the penalty, some weights arrive at exactly zero. Those features drop out of the model entirely. You get a simpler model and a shortlist, from one setting.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Shrink some. Zero others.'"
+          },
+          {
+            "at": 0.2,
+            "event": "five coefficient bars grow to their unpenalised lengths"
+          },
+          {
+            "at": 0.5,
+            "event": "every bar shortens as the penalty is applied"
+          },
+          {
+            "at": 0.72,
+            "event": "two bars collapse to nothing; their values turn terracotta 0.00"
+          },
+          {
+            "at": 0.9,
+            "event": "footer lands: 'two features removed — not just reduced'"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B01_ShrinkAndSelect",
+        "production_viz": {
+          "label": "shrink and select",
+          "mechanic": "coefficients shrink; two land on exactly zero and leave the model",
+          "note": "illustrative coefficients, not fitted values"
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 19.86,
+      "build": {
+        "status": "SLATE",
+        "src": null,
+        "filled_by": null,
+        "at": "2026-09-04T11:15:06",
+        "needs": "PIPELINE → render animated_graphics.py scene B01_*"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK — the objective",
+      "narration_text": "The machinery is one objective with two jobs. Start with the prediction error on the training data. Then add lambda times the total absolute weight, every coefficient's magnitude, summed. Lambda at zero is ordinary least squares. Raise lambda and each unit of weight costs more, so the optimizer has to justify every coefficient it keeps. Same fit, now on a budget.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'One score. Two jobs.'"
+          },
+          {
+            "at": 0.2,
+            "event": "DATA FIT card appears — squared error"
+          },
+          {
+            "at": 0.42,
+            "event": "plus sign, then the L1 PENALTY card — lambda × total absolute weight"
+          },
+          {
+            "at": 0.68,
+            "event": "arrow drops into one MINIMIZE card: the sum of both"
+          },
+          {
+            "at": 0.88,
+            "event": "footer lands: 'more penalty → simpler model'"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B02_Objective",
+        "production_viz": {
+          "label": "the penalised objective",
+          "mechanic": "error plus lambda times summed absolute weight, minimised together",
+          "note": "framework beat — precedes every example"
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.9,
+      "build": {
+        "status": "SLATE",
+        "src": null,
+        "filled_by": null,
+        "at": "2026-09-04T11:15:06",
+        "needs": "PIPELINE → render animated_graphics.py scene B02_*"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM — why exactly zero",
+      "narration_text": "Why exactly zero, and not merely small? Picture the budget as a region the solution has to stay inside. Squaring gives you a circle, smooth everywhere, so the best point almost never sits on an axis. Absolute value gives you a diamond, and a diamond has corners sitting right on the axes. The loss contours tend to meet that corner first, and at a corner one coefficient is precisely zero.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "compare",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'The corner is everything.'"
+          },
+          {
+            "at": 0.16,
+            "event": "two headers set the comparison: L1 absolute value vs L2 squared value"
+          },
+          {
+            "at": 0.36,
+            "event": "the L1 diamond and the L2 circle draw on over their axes"
+          },
+          {
+            "at": 0.58,
+            "event": "terracotta loss contours arrive and touch each region"
+          },
+          {
+            "at": 0.76,
+            "event": "contact dots mark where: a corner on the left, a smooth arc on the right"
+          },
+          {
+            "at": 0.9,
+            "event": "captions land: 'meets a corner → exactly zero' vs 'meets a smooth edge → just small'"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B03_TheCorner",
+        "production_viz": {
+          "label": "diamond versus circle",
+          "mechanic": "the L1 constraint region has axis corners; the L2 region does not",
+          "note": "schematic geometry — contours are illustrative, not fitted"
+        }
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 20.1,
+      "build": {
+        "status": "SLATE",
+        "src": null,
+        "filled_by": null,
+        "at": "2026-09-04T11:15:06",
+        "needs": "PIPELINE → render animated_graphics.py scene B03_*"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED EXAMPLE — the regularization path",
+      "narration_text": "Now sweep the penalty and watch. At a small lambda every predictor keeps a weight. Turn it up and the weakest one hits zero and leaves. Turn it further and the next one goes. This is the regularization path, and it is the honest picture of what Lasso does. Not a ranking. A sequence of removals, one threshold at a time.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "sweep",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Watch them drop out.'"
+          },
+          {
+            "at": 0.18,
+            "event": "axes draw on; four named coefficients label the left margin"
+          },
+          {
+            "at": 0.45,
+            "event": "four paths trace downward as the penalty grows"
+          },
+          {
+            "at": 0.72,
+            "event": "terracotta dots mark each arrival at exactly zero"
+          },
+          {
+            "at": 0.88,
+            "event": "note lands: 'each one lands on exactly zero'"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B04_Path",
+        "production_viz": {
+          "label": "regularization path",
+          "mechanic": "coefficients reach zero at different penalty strengths, one at a time",
+          "note": "schematic paths; ordering is illustrative"
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 16.62,
+      "build": {
+        "status": "SLATE",
+        "src": null,
+        "filled_by": null,
+        "at": "2026-09-04T11:15:06",
+        "needs": "PIPELINE → render animated_graphics.py scene B04_*"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "DECISION — choosing lambda",
+      "narration_text": "So which lambda? Do not eyeball it. Hold out data, sweep the penalty, and plot validation error. It falls as you cut variance, then climbs once you start deleting real signal. Take the bottom of that curve. And standardize your features first, because the penalty compares raw coefficient magnitudes, so an unscaled variable gets charged the wrong price.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "threshold",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Tune it. Don't guess.'"
+          },
+          {
+            "at": 0.2,
+            "event": "axes draw on with a rotated 'validation error' label"
+          },
+          {
+            "at": 0.45,
+            "event": "the U-shaped validation curve traces out"
+          },
+          {
+            "at": 0.66,
+            "event": "terracotta dot marks the minimum; a dashed line drops to the axis"
+          },
+          {
+            "at": 0.82,
+            "event": "'lowest validation error' lands with small/large penalty ends"
+          },
+          {
+            "at": 0.94,
+            "event": "footer: 'standardize features first'"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B05_ChooseLambda",
+        "production_viz": {
+          "label": "cross-validated lambda",
+          "mechanic": "validation error is U-shaped in the penalty; the minimum is the choice",
+          "note": "qualitative curve — no benchmark claim"
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 18.67,
+      "build": {
+        "status": "SLATE",
+        "src": null,
+        "filled_by": null,
+        "at": "2026-09-04T11:15:06",
+        "needs": "PIPELINE → render animated_graphics.py scene B05_*"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "FALSIFIABILITY — where sparsity lies",
+      "narration_text": "Now the cleanup, because sparsity flatters itself. Give Lasso two correlated features and it keeps one and drops its twin, nearly arbitrarily. Resample the data and the surviving subset changes, so do not read that list as discovery. The survivors are biased too, pulled toward zero. And selected never means causal. Elastic net exists precisely because grouped predictors break this.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "stagger",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Where sparsity lies.'"
+          },
+          {
+            "at": 0.25,
+            "event": "CORRELATED TWINS tile: keeps one, drops its twin"
+          },
+          {
+            "at": 0.45,
+            "event": "UNSTABLE PICKS tile: resample, get a new subset"
+          },
+          {
+            "at": 0.65,
+            "event": "SHRINKAGE BIAS tile: survivors are pulled down"
+          },
+          {
+            "at": 0.85,
+            "event": "NOT CAUSATION tile: selected is not the same as true"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B06_EdgeCases",
+        "production_viz": {
+          "label": "four failure modes",
+          "mechanic": "correlated twins, unstable selection, shrinkage bias, no causal claim",
+          "note": "qualitative failure modes, not measured rates"
+        }
+      },
+      "estimated_duration_s": 21,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 20.57,
+      "build": {
+        "status": "SLATE",
+        "src": null,
+        "filled_by": null,
+        "at": "2026-09-04T11:15:06",
+        "needs": "PIPELINE → render animated_graphics.py scene B06_*"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "narration_text": "The verdict. L1 regularization penalizes total absolute weight, which shrinks every coefficient and drives some of them to exactly zero. That makes it a fitting method and a feature selector at once. Choose lambda by cross-validation, standardize before you fit, and treat the selected set as one plausible subset rather than the truth. Ridge shrinks. Lasso decides.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": 0,
+            "event": "artifact board opens: 'Shrink, then select'"
+          },
+          {
+            "at": 0.3,
+            "event": "SHRINK row fills: every weight pulled toward zero"
+          },
+          {
+            "at": 0.5,
+            "event": "SELECT row fills: some weights land exactly on zero"
+          },
+          {
+            "at": 0.7,
+            "event": "TUNE row fills: cross-validate lambda, scale first"
+          },
+          {
+            "at": 0.9,
+            "event": "CHECK row fills: correlated picks stay unstable"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B07_Verdict",
+        "production_viz": {
+          "label": "one-page verdict",
+          "mechanic": "four locked takeaways",
+          "note": "recap only — no new claims"
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 19.63,
+      "build": {
+        "status": "SLATE",
+        "src": null,
+        "filled_by": null,
+        "at": "2026-09-04T11:15:06",
+        "needs": "PIPELINE → render animated_graphics.py scene B07_*"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "HANDOFF",
+      "narration_text": "Your turn. Paste this in: fit Lasso across a range of penalties on your own data, plot the regularization path, and mark where each coefficient reaches zero. Then refit on a bootstrap resample and compare which features survive. That second half is the part people skip, and it is the part that tells you whether your shortlist is a finding or an accident. Watch how much the survivor list moves.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude composer opens with 'Your turn.'"
+          },
+          {
+            "at": 0.2,
+            "event": "the exact prompt types in as it is read aloud"
+          },
+          {
+            "at": 0.72,
+            "event": "send arms; running text reads 'paste this into Claude…'"
+          },
+          {
+            "at": 0.9,
+            "event": "rubric lines land: path / zeros / resample / stability"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "MACHINE LEARNING · REGULARIZATION & FEATURE SELECTION",
+            "segment": "L1 Regularization",
+            "command": "Fit Lasso across a range of penalties on my data. Plot the regularization path and mark where each coefficient reaches exactly zero. Then refit on a bootstrap resample and compare which features survive — tell me how stable my selected set actually is.",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@NikBearBrown",
+            "output": [
+              "plot the regularization path",
+              "mark every exact zero",
+              "refit on a resample",
+              "report selection stability"
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 19.97,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "media",
+        "at": "2026-09-04T11:15:06"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "OUTRO",
+      "narration_text": "L1 regularization, oversimplified. Ridge makes weights small. Lasso makes choices, so audit the choices. Liam, in for Bear.",
+      "shot": {
+        "type": "CARD",
+        "source": "own",
+        "lane": "manim",
+        "motion": "brand",
+        "show": [
+          {
+            "at": 0,
+            "event": "dark field and the terracotta NBB mark land"
+          },
+          {
+            "at": 0.4,
+            "event": "poster title restates: 'L1 Regularization.'"
+          },
+          {
+            "at": 0.75,
+            "event": "locked @NikBearBrown handle holds"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B09_Outro",
+        "production_viz": {
+          "label": "title-restate outro",
+          "mechanic": "locked NBB card — title restate, handle, no subline",
+          "note": "OUTRO LAW / OUTRO-LOCK: no subline"
+        }
+      },
+      "estimated_duration_s": 10,
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 8.21,
+      "build": {
+        "status": "SLATE",
+        "src": null,
+        "filled_by": null,
+        "at": "2026-09-04T11:15:06",
+        "needs": "PIPELINE → render animated_graphics.py scene B09_*"
+      }
+    }
+  ]
+}
