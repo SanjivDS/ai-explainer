@@ -1,0 +1,556 @@
+{
+  "metadata": {
+    "title": "L2 Regularization, Oversimplified",
+    "slug": "claude-liam-l2-regularization-ridge",
+    "topic": "MACHINE LEARNING · REGULARIZATION",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "voice": "Liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Shalom, Liam",
+    "folderLabel": "@Sanjiv",
+    "note": "Fresh free ai-explainer. GATE P is unsatisfied until a human approves PEDAGOGY.md.",
+    "tags": [
+      "l2 regularization",
+      "ridge regression",
+      "shrinkage",
+      "multicollinearity",
+      "cross-validation"
+    ],
+    "build": {
+      "at": "2026-09-07T12:14:54",
+      "cut": "master",
+      "filled": 10,
+      "of": 10,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "A regression model can fit the training data beautifully by leaning far too hard on its coefficients. L2 regularization puts a price on that swagger. This is Liam, in for Sanjiv. Ridge regression trades a little training fit for a model that is usually steadier on new data. Let us watch the trade happen.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Claude composer opens on cream with greeting 'Shalom, Liam'"
+          },
+          {
+            "at": 0.25,
+            "event": "the L2 question types into the composer"
+          },
+          {
+            "at": 0.7,
+            "event": "terracotta send arms; running text says 'shrinking coefficients…'"
+          },
+          {
+            "at": 0.86,
+            "event": "answer lines land: fit the data / penalize large weights / tune lambda"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Shalom, Liam",
+            "topic": "MACHINE LEARNING · REGULARIZATION",
+            "segment": "L2 Regularization, Oversimplified",
+            "command": "Explain L2 regularization visually. Show what Ridge adds to least squares, why coefficients shrink, and how cross-validation chooses the strength.",
+            "runningText": "shrinking coefficients…",
+            "folderLabel": "@Sanjiv",
+            "output": [
+              "fit the data",
+              "penalize large weights",
+              "tune lambda on held-out data"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-07T12:07:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 16,
+      "audio_file": "mp3/beat-B00.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-07T12:14:54"
+      },
+      "actual_duration_s": 17.0
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY",
+      "narration_text": "Here is the whole idea in one breath. Ordinary least squares only asks how closely predictions match the training targets. Ridge adds a second bill for large coefficient values. Turning up lambda makes that bill matter more, shrinking the coefficients and often reducing sensitivity to noisy or overlapping predictors, at the cost of some bias.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "spark line appears: 'Fit, with restraint.'"
+          },
+          {
+            "at": 0.18,
+            "event": "a balance appears with training error on the left"
+          },
+          {
+            "at": 0.45,
+            "event": "squared coefficient penalty lands on the right"
+          },
+          {
+            "at": 0.72,
+            "event": "lambda dial increases and coefficient bars shrink together"
+          },
+          {
+            "at": 0.9,
+            "event": "the balance resolves to 'less variance · more bias'"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B01_BigIdea",
+        "production_viz": {
+          "label": "fit with restraint",
+          "mechanic": "lambda balances residual loss against squared coefficient size",
+          "note": "schematic; no performance numbers"
+        }
+      },
+      "estimated_duration_s": 17,
+      "audio_file": "mp3/beat-B01.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-07T12:14:54"
+      },
+      "actual_duration_s": 19.07
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK — the objective",
+      "narration_text": "The machinery is one equation. Start with residual sum of squares: the prediction mistakes. Then add lambda times the sum of every slope coefficient squared. Lambda equals zero gives ordinary least squares. A larger lambda makes big weights increasingly expensive. The optimizer still fits the data; it just has to justify every large coefficient against a quadratic cover charge.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "equation-build",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "residual-sum-of-squares term builds on the left and is labelled 'fit'"
+          },
+          {
+            "at": 0.34,
+            "event": "a plus sign and lambda appear in terracotta"
+          },
+          {
+            "at": 0.5,
+            "event": "sum of squared slope coefficients builds and is labelled 'restraint'"
+          },
+          {
+            "at": 0.72,
+            "event": "lambda dial moves from zero upward"
+          },
+          {
+            "at": 0.9,
+            "event": "coefficient bars below the equation contract toward zero"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B02_Objective",
+        "production_viz": {
+          "label": "ridge objective",
+          "mechanic": "RSS plus lambda times squared L2 norm",
+          "note": "intercept excluded in displayed sum"
+        }
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B02.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-07T12:14:54"
+      },
+      "actual_duration_s": 21.12
+    },
+    {
+      "beat_id": "B03",
+      "act": "MECHANISM — why squaring shrinks",
+      "narration_text": "Why does the square matter? Double a coefficient and its penalty becomes four times larger. So Ridge dislikes one predictor carrying an enormous weight when several smaller weights can explain nearly the same pattern. The circular L2 budget squeezes the solution inward smoothly. It usually makes coefficients small, not exactly zero. That last distinction separates Ridge from feature-selection methods like Lasso.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "one coefficient bar doubles; its penalty tile expands from one square to four"
+          },
+          {
+            "at": 0.34,
+            "event": "loss contours draw around an unconstrained optimum"
+          },
+          {
+            "at": 0.55,
+            "event": "a circular L2 boundary contracts inward as lambda rises"
+          },
+          {
+            "at": 0.76,
+            "event": "the chosen point slides smoothly toward the origin"
+          },
+          {
+            "at": 0.92,
+            "event": "labels land: 'smaller' and 'usually not zero'"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B03_QuadraticPenalty",
+        "production_viz": {
+          "label": "quadratic shrinkage",
+          "mechanic": "coefficient square tiles plus circular constraint geometry",
+          "note": "two-coefficient illustration"
+        }
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B03.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-07T12:14:54"
+      },
+      "actual_duration_s": 21.82
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED EXAMPLE — correlated predictors",
+      "narration_text": "Now the useful case. Suppose two predictors carry almost the same signal. Ordinary least squares can give one a huge positive coefficient and the other a huge negative one, while their combined prediction still looks reasonable. Change the sample slightly and those roles may flip. Ridge shrinks both, sharing the work more calmly. The prediction may barely move, but the fitted coefficients stop performing acrobatics.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "compare-resample",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "two nearly overlapping predictor arrows feed one prediction"
+          },
+          {
+            "at": 0.25,
+            "event": "OLS assigns a tall positive bar to x1 and a tall negative bar to x2"
+          },
+          {
+            "at": 0.48,
+            "event": "sample A swaps to sample B; the two bars flip roles"
+          },
+          {
+            "at": 0.68,
+            "event": "lambda turns on and both bars shrink to moderate heights"
+          },
+          {
+            "at": 0.9,
+            "event": "prediction arrows remain aligned while a stability bracket closes"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B04_CorrelatedPredictors",
+        "production_viz": {
+          "label": "correlated predictors",
+          "mechanic": "OLS coefficients flip across samples; Ridge stabilizes them",
+          "note": "schematic worked example"
+        }
+      },
+      "estimated_duration_s": 19,
+      "audio_file": "mp3/beat-B04.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-07T12:14:54"
+      },
+      "actual_duration_s": 21.06
+    },
+    {
+      "beat_id": "B05",
+      "act": "DECISION — choose lambda",
+      "narration_text": "Lambda is not a bravery setting. Too little regularization leaves the model unstable. Too much crushes useful signal and underfits. Fit a sequence of lambda values inside cross-validation, measure performance on folds the model did not train on, and choose near the validation minimum. Then evaluate once on untouched test data. Training loss alone will always lobby for less restraint.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "trace-and-select",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "log-lambda axis appears from weak to strong regularization"
+          },
+          {
+            "at": 0.22,
+            "event": "coefficient paths shrink across the axis"
+          },
+          {
+            "at": 0.48,
+            "event": "cross-validation error curve draws, falls, then rises"
+          },
+          {
+            "at": 0.72,
+            "event": "terracotta marker drops near the curve minimum"
+          },
+          {
+            "at": 0.9,
+            "event": "an untouched test-data envelope opens only after selection"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B05_ChooseLambda",
+        "production_viz": {
+          "label": "choose lambda by cross-validation",
+          "mechanic": "coefficient paths plus schematic validation curve",
+          "note": "no invented values"
+        }
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B05.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-07T12:14:54"
+      },
+      "actual_duration_s": 20.8
+    },
+    {
+      "beat_id": "B06",
+      "act": "FALSIFIABILITY — where the shortcut breaks",
+      "narration_text": "Now the edge cases. Ridge depends on scale: without standardizing predictors, the same numerical penalty treats differently measured features unevenly. The intercept is usually left unpenalized. And if you need coefficients to become exactly zero for sparse feature selection, L2 is the wrong geometry; use an L1 method such as Lasso. Ridge is stabilization, not automatic simplification.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "diagnostic-triptych",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "three diagnostic cards enter: scale, intercept, sparsity"
+          },
+          {
+            "at": 0.24,
+            "event": "meter and millimeter versions of one feature produce unequal coefficient bars; standardization aligns them"
+          },
+          {
+            "at": 0.52,
+            "event": "intercept bar receives an 'unpenalized' shield"
+          },
+          {
+            "at": 0.74,
+            "event": "Ridge paths approach zero without landing; Lasso path lands exactly on zero"
+          },
+          {
+            "at": 0.92,
+            "event": "verdict line appears: 'stabilize, do not select'"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B06_EdgeCases",
+        "production_viz": {
+          "label": "three limits",
+          "mechanic": "scale normalization, intercept exemption, Ridge-versus-Lasso zero behavior",
+          "note": "full falsifiability beat"
+        }
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B06.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-07T12:14:54"
+      },
+      "actual_duration_s": 21.48
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "narration_text": "The verdict. L2 regularization does not forbid complexity; it charges rent for coefficient magnitude. That small deliberate bias can buy a large reduction in variance, especially when predictors overlap or data is limited. Standardize the features, tune lambda with cross-validation, and judge the final model on untouched data. Ridge earns its keep when steadier predictions matter more than dramatic coefficients.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-reveal",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Claude verdict artifact opens with title 'What Ridge buys'"
+          },
+          {
+            "at": 0.24,
+            "event": "row one reveals: large weights → charged"
+          },
+          {
+            "at": 0.48,
+            "event": "row two reveals: variance → reduced"
+          },
+          {
+            "at": 0.7,
+            "event": "row three reveals: lambda → cross-validated"
+          },
+          {
+            "at": 0.9,
+            "event": "terracotta footer lands: 'steadier beats flashier'"
+          }
+        ],
+        "lane": "manim"
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B07_Verdict"
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B07.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-07T12:14:54"
+      },
+      "actual_duration_s": 22.61
+    },
+    {
+      "beat_id": "B08",
+      "act": "YOUR TURN",
+      "narration_text": "Your turn. Paste this in: build a tiny Ridge regression demo with two strongly correlated predictors. Add a lambda slider, plot both coefficient paths, and show cross-validation error. Let me resample the training rows. Then check three things: whether the coefficients become steadier, whether validation error has a useful minimum, and whether excessive lambda visibly underfits. That is the penalty earning its name.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Claude composer appears with greeting 'Your turn.'"
+          },
+          {
+            "at": 0.18,
+            "event": "the complete demo prompt types in verbatim"
+          },
+          {
+            "at": 0.64,
+            "event": "running text says 'paste this into Claude…'"
+          },
+          {
+            "at": 0.78,
+            "event": "three rubric chips reveal: steadier / validation minimum / underfit"
+          },
+          {
+            "at": 0.94,
+            "event": "pause icon holds the completed prompt"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "MACHINE LEARNING · REGULARIZATION",
+            "segment": "Try Ridge Yourself",
+            "command": "Build a tiny Ridge regression demo with two strongly correlated predictors. Add a lambda slider, plot both coefficient paths, and show cross-validation error. Let me resample the training rows.",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@Sanjiv",
+            "output": [
+              "check coefficient stability",
+              "find the validation minimum",
+              "spot excessive-lambda underfit"
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-07T12:07:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 19,
+      "audio_file": "mp3/beat-B08.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-07T12:14:54"
+      },
+      "actual_duration_s": 20.97
+    },
+    {
+      "beat_id": "B09",
+      "act": "OUTRO",
+      "narration_text": "L2 regularization, oversimplified. Fit the signal, charge the swagger. Liam, in for Sanjiv.",
+      "shot": {
+        "type": "CARD",
+        "source": "remotion",
+        "motion": "title-restate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "locked crisp-safe mascot enters by translation only"
+          },
+          {
+            "at": 0.3,
+            "event": "poster title appears: 'L2 Regularization.'"
+          },
+          {
+            "at": 0.68,
+            "event": "@Sanjiv handle resolves beneath"
+          },
+          {
+            "at": 0.9,
+            "event": "terracotta period holds; no subline"
+          }
+        ],
+        "lane": "manim",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "L2 Regularization",
+            "handle": "@Sanjiv",
+            "subline": ""
+          }
+        }
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B09_Outro"
+      },
+      "estimated_duration_s": 7,
+      "audio_file": "mp3/beat-B09.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-07T12:14:54"
+      },
+      "actual_duration_s": 6.53
+    }
+  ]
+}
