@@ -1,0 +1,586 @@
+{
+  "metadata": {
+    "title": "ROC Curve and AUC Score, Oversimplified",
+    "slug": "claude-liam-roc-curve-auc-score",
+    "topic": "MACHINE LEARNING · CLASSIFIER EVALUATION",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "voice": "Liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Ahoj, Liam",
+    "greeting_note": "Ahoj (Czech) rotates away from Jambo, Ciao, Namaste, Bonjour, and Shalom in the current batch. Liam is in for Sanjiv; the channel handle is @Sanjiv.",
+    "folderLabel": "@Sanjiv",
+    "color_semantics": "Claude fidelity skin on B00/B07/B08/B09. B01-B06 are native Manim illustrations on cream with ink and one terracotta event accent. Warn is reserved for false alarms and the deployment-mismatch beat.",
+    "note": "Fresh concept explainer. The one idea: ROC is the map of threshold tradeoffs; AUC compresses the map into ranking quality, not deployment quality. The worked example uses six explicitly schematic cases and computes 8 correctly ordered positive-negative pairs out of 9. UI appears only on the four bookends.",
+    "tags": [
+      "ROC curve",
+      "AUC",
+      "AUROC",
+      "classification",
+      "threshold",
+      "true positive rate",
+      "false positive rate",
+      "model evaluation"
+    ],
+    "typography": {
+      "serif": "Tiempos/EB Garamond",
+      "ui": "system sans",
+      "mono": "SF Mono"
+    },
+    "build": {
+      "at": "2026-09-09T10:10:10",
+      "cut": "master",
+      "filled": 10,
+      "of": 10,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "A classifier does not begin with yes or no. It begins with a score, and somebody has to decide where yes starts. This is Liam, in for Sanjiv. The ROC curve shows every tradeoff that decision can make. AUC compresses the whole curve into one ranking score. Useful, yes. A deployment decision, absolutely not. Let us separate the map from the number.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude composer opens on 'Ahoj, Liam'"
+          },
+          {
+            "at": 0.24,
+            "event": "the ROC/AUC question types into the composer"
+          },
+          {
+            "at": 0.68,
+            "event": "send arms; running text reads 'sweeping the threshold…'"
+          },
+          {
+            "at": 0.84,
+            "event": "answered lines land: curve = tradeoffs; area = ranking; threshold = your decision"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Ahoj, Liam",
+            "topic": "MACHINE LEARNING · CLASSIFIER EVALUATION",
+            "segment": "ROC Curve and AUC Score",
+            "command": "Explain the significance of the ROC curve and AUC score. Show what changes as the classification threshold moves, what AUC measures, and what neither metric decides for me.",
+            "runningText": "sweeping the threshold…",
+            "folderLabel": "@Sanjiv",
+            "output": [
+              "ROC curve → every threshold tradeoff",
+              "AUC → ranking quality in one number",
+              "deployment threshold → still your decision"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-09T10:02:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 19.11,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-09T10:10:10"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY",
+      "narration_text": "Here is the whole idea in one breath. Move a classifier's threshold and you trade caught positives against false alarms. The ROC curve records that trade at every threshold. A curve pushed toward the upper-left separates the classes better. AUC summarizes that separation as the chance that a random positive outranks a random negative. It compares rankings across thresholds; it does not choose the threshold you should deploy.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "illustrate",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Map first. Number second.'"
+          },
+          {
+            "at": 0.18,
+            "event": "a threshold slider sweeps left across two score rows"
+          },
+          {
+            "at": 0.44,
+            "event": "caught-positive and false-alarm counters rise together"
+          },
+          {
+            "at": 0.68,
+            "event": "their moving pair traces a ROC curve toward the upper-left"
+          },
+          {
+            "at": 0.86,
+            "event": "the area fills once, then the threshold marker remains separate"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B01_MapAndNumber",
+        "production_viz": {
+          "label": "threshold sweep to curve to area",
+          "mechanic": "one control creates a family of operating points; AUC summarizes their ranking",
+          "note": "schematic scores; no performance claim"
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 22.21,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-09T10:10:10"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK — one point per threshold",
+      "narration_text": "The framework has one moving part: the threshold. At each setting, count the positives you caught and divide by all actual positives. That is true positive rate. Count the negatives you falsely flagged and divide by all actual negatives. That is false positive rate. Plot false positive rate across, true positive rate up, and every threshold becomes one point. Sweep the threshold, and the points become the ROC curve.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'One threshold. One point.'"
+          },
+          {
+            "at": 0.16,
+            "event": "threshold cuts a vertical ranked stack"
+          },
+          {
+            "at": 0.38,
+            "event": "TPTPR/positives builds beside FFP/negatives"
+          },
+          {
+            "at": 0.62,
+            "event": "the two rates become the coordinates (FPR, TPR)"
+          },
+          {
+            "at": 0.82,
+            "event": "four threshold positions place four connected points on the ROC axes"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B02_ThresholdFramework",
+        "production_viz": {
+          "label": "one point per threshold",
+          "mechanic": "thresholded counts become FPR and TPR coordinates",
+          "note": "definitions follow scikit-learn; binary classification"
+        }
+      },
+      "estimated_duration_s": 21,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 21.23,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-09T10:10:10"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WORKED EXAMPLE — six ranked cases",
+      "narration_text": "Now use the framework on six cases, three positive and three negative, ranked by score. Start above everything: nobody is flagged, so the point is zero, zero. Lower the threshold. Each positive moves the curve up; each negative moves it right. In this ranking, only one negative jumps ahead of one positive. The staircase finishes at one, one, and eight of the nine positive-negative pairs are in the right order.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "worked-example",
+        "show": [
+          {
+            "at": 0,
+            "event": "the B02 axes remain while six scored cases appear in ranked order: P P N P N N"
+          },
+          {
+            "at": 0.2,
+            "event": "threshold starts above the list at ROC point (0,0)"
+          },
+          {
+            "at": 0.36,
+            "event": "first two positives step the curve upward twice"
+          },
+          {
+            "at": 0.54,
+            "event": "the early negative steps right; the last positive steps up"
+          },
+          {
+            "at": 0.72,
+            "event": "remaining negatives step right to (1,1)"
+          },
+          {
+            "at": 0.88,
+            "event": "a 3×3 pair grid counts 8 correct, 1 inversion"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B03_SixCaseWalk",
+        "production_viz": {
+          "label": "six-case ROC walk",
+          "mechanic": "P creates an up-step; N creates a right-step; pair grid verifies AUC = 8/9",
+          "note": "constructed teaching example, labelled schematic"
+        }
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 21.38,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-09T10:10:10"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "MEANING — what the area says",
+      "narration_text": "Now the area earns its meaning. AUC is not the percent of predictions that are correct. It is the probability that a randomly chosen positive receives a higher score than a randomly chosen negative, with ties handled appropriately. Our example gets eight out of nine pair orderings right, so its AUC is about zero point eight nine. A random ranking averages zero point five. Perfect separation scores one.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "compare",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'AUC judges the ranking.'"
+          },
+          {
+            "at": 0.18,
+            "event": "the words 'percent correct' appear and are struck through"
+          },
+          {
+            "at": 0.34,
+            "event": "one positive-negative pair is drawn; the higher score wins"
+          },
+          {
+            "at": 0.52,
+            "event": "the 3×3 pair grid fills eight terracotta checks and one ink inversion"
+          },
+          {
+            "at": 0.72,
+            "event": "8 ÷ 9 resolves to 0.89 beside the shaded ROC area"
+          },
+          {
+            "at": 0.88,
+            "event": "0.5 random and 1.0 perfect anchors appear on a scale"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B04_AreaMeansRanking",
+        "production_viz": {
+          "label": "pairwise interpretation of AUC",
+          "mechanic": "correct positive-negative orderings equal the empirical ROC area",
+          "note": "8/9 = 0.888… independently computed"
+        }
+      },
+      "estimated_duration_s": 21,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 21.76,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-09T10:10:10"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "DECISION — choose an operating point",
+      "narration_text": "So which point on the curve should you use? The curve cannot answer until you price the mistakes. In a disease screen, missing a case may be costly, so you might accept more false alarms. In an expensive manual-review queue, false alarms consume people and time, so the useful region may be the far-left slice. Compare models there, then choose a threshold using real costs, capacity, and prevalence.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "branch",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'The curve needs a policy.'"
+          },
+          {
+            "at": 0.16,
+            "event": "one ROC curve appears with three candidate threshold dots"
+          },
+          {
+            "at": 0.36,
+            "event": "disease-screen branch enlarges the high-recall region"
+          },
+          {
+            "at": 0.58,
+            "event": "manual-review branch crops to the low-FPR region"
+          },
+          {
+            "at": 0.8,
+            "event": "cost + capacity + prevalence arrows converge on one chosen operating point"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B05_OperatingPoint",
+        "production_viz": {
+          "label": "same curve, two policies",
+          "mechanic": "different error costs select different regions and thresholds",
+          "note": "qualitative; no clinical recommendation"
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 20.42,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-09T10:10:10"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "FALSIFIABILITY — a good AUC can still fail",
+      "narration_text": "Here is where one beautiful number lies by omission. AUC measures ordering across all thresholds. Your product uses one threshold, under one class balance, with one error budget. A model can rank well yet produce badly calibrated probabilities, overwhelm the queue with false positives, or fail a subgroup. And under severe imbalance, inspect precision-recall behavior too. High AUC is evidence of separation. It is not evidence that deployment is safe.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "stress-test",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Ranking is not deployment.'"
+          },
+          {
+            "at": 0.14,
+            "event": "an AUC badge stays fixed at 0.89"
+          },
+          {
+            "at": 0.3,
+            "event": "three panels split beneath it: calibration, queue capacity, subgroup"
+          },
+          {
+            "at": 0.5,
+            "event": "each panel reveals a distinct failure despite the unchanged badge"
+          },
+          {
+            "at": 0.72,
+            "event": "an imbalanced positive/negative strip appears beside a precision-recall curve"
+          },
+          {
+            "at": 0.9,
+            "event": "the AUC badge relabels itself 'separation evidence — not safety'"
+          }
+        ]
+      },
+      "graphic": {
+        "engine": "manim",
+        "manim": "B06_DeploymentStressTest",
+        "production_viz": {
+          "label": "unchanged AUC, three deployment failures",
+          "mechanic": "ranking summary is held constant while calibration, capacity, and subgroup checks fail",
+          "note": "PR is an additional view under imbalance, not universally superior"
+        }
+      },
+      "estimated_duration_s": 21,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 23.66,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-09T10:10:10"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "narration_text": "Let us recap with Claude. A score becomes decisions only after you choose a threshold. Sweep that threshold and each true-positive-rate, false-positive-rate pair traces the ROC curve. A curve nearer the upper-left means stronger separation. AUC compresses the ranking into the chance that a random positive outranks a random negative. Use it to compare ranking quality. Then return to the curve, your operating region, calibration, and real-world costs before you deploy.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude verdict artifact opens with a compact ROC curve"
+          },
+          {
+            "at": 0.25,
+            "event": "threshold → point → curve sequence highlights"
+          },
+          {
+            "at": 0.5,
+            "event": "AUC definition lands beside a shaded area"
+          },
+          {
+            "at": 0.74,
+            "event": "deployment checklist reveals: region, calibration, costs"
+          },
+          {
+            "at": 0.9,
+            "event": "verdict line lands: 'A ranking score is not a policy.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "ROC and AUC — one page",
+            "artifactHeading": "The whole idea",
+            "artifactLines": [
+              "ROC — each threshold becomes one (false-positive rate, true-positive rate) point.",
+              "AUC — the chance a random positive outranks a random negative.",
+              "Use — compare ranking quality, then inspect the operating region you can afford.",
+              "The catch — ranking is not calibration, capacity, fairness, or deployment safety."
+            ]
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-09T10:10:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 25.45,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-09T10:10:10"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "HANDOFF",
+      "narration_text": "Your turn. Paste this in: take my classifier scores and labels, draw the ROC curve, calculate AUC, and mark the thresholds that keep false positive rate below my real capacity limit. For each marked point, report recall, precision, calibration, and the number of cases sent to review. Then check the answer. Did it use scores rather than hard labels? Did it name the positive class? And did it keep threshold choice separate from AUC?",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude composer opens with greeting 'Your turn.'"
+          },
+          {
+            "at": 0.1,
+            "event": "the full experiment prompt types verbatim"
+          },
+          {
+            "at": 0.56,
+            "event": "running line reads 'paste this into Claude…'"
+          },
+          {
+            "at": 0.72,
+            "event": "three rubric chips land: scores / positive class / threshold ≠ AUC"
+          },
+          {
+            "at": 0.9,
+            "event": "prompt holds for pause and copy"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "MACHINE LEARNING · CLASSIFIER EVALUATION",
+            "segment": "Test Your ROC Workflow",
+            "command": "Take my classifier scores and labels. Draw the ROC curve, calculate AUC, and mark thresholds that keep false-positive rate below my real capacity limit. For each marked point, report recall, precision, calibration, and cases sent to review.",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@Sanjiv",
+            "output": [
+              "check: use scores, not hard labels",
+              "check: name the positive class",
+              "check: threshold choice is separate from AUC"
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-09T10:02:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 21.72,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-09T10:10:10"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "OUTRO",
+      "narration_text": "ROC curve and AUC score, oversimplified. Keep the curve when the number hides the decision. Liam, in for Sanjiv.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "poster",
+        "show": [
+          {
+            "at": 0,
+            "event": "poster title restates 'ROC Curve and AUC Score, Oversimplified'"
+          },
+          {
+            "at": 0.35,
+            "event": "slug-seeded crisp mascot scales and waves without rotation"
+          },
+          {
+            "at": 0.72,
+            "event": "@Sanjiv handle holds beneath the title"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "ROC Curve and AUC Score, Oversimplified",
+            "handle": "@Sanjiv",
+            "subline": "",
+            "seed": "claude-liam-roc-curve-auc-score"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-09T10:11:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 10,
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 7.81,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-09T10:10:10"
+      }
+    }
+  ]
+}
