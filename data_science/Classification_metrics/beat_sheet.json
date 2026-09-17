@@ -1,0 +1,526 @@
+{
+  "metadata": {
+    "title": "Accuracy vs Precision vs Recall vs F1 Score, Oversimplified",
+    "slug": "claude-liam-precision-recall-f1",
+    "topic": "MACHINE LEARNING · CLASSIFICATION METRICS",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "voice": "Liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Sawubona, Liam",
+    "greeting_note": "Sawubona (Zulu) continues the rotating world-language greeting. Liam is in for Sanjiv; the channel handle is @Sanjiv.",
+    "folderLabel": "@Sanjiv",
+    "note": "Revised concept explainer. One idea: accuracy counts all correct decisions, precision audits false alarms, recall audits misses, and F1 compresses precision and recall only when equal weighting is defensible.",
+    "tags": [
+      "classification",
+      "accuracy",
+      "precision",
+      "recall",
+      "F1 score",
+      "confusion matrix",
+      "threshold"
+    ],
+    "typography": {
+      "serif": "Tiempos/EB Garamond",
+      "ui": "system sans",
+      "mono": "SF Mono"
+    },
+    "build": {
+      "at": "2026-09-17T14:44:41",
+      "cut": "master",
+      "filled": 10,
+      "of": 10,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Sawubona. This is Liam, in for Sanjiv. A classifier can look excellent by one metric and careless by another. Accuracy counts every correct decision. Precision asks whether positive alerts deserve trust. Recall asks how many real positives it catches. F1 combines precision and recall. Let us use one confusion matrix to learn what each score reveals—and what each can hide.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude composer opens on 'Sawubona, Liam'"
+          },
+          {
+            "at": 0.22,
+            "event": "the four-metric comparison prompt types into the composer"
+          },
+          {
+            "at": 0.64,
+            "event": "send arms; running text reads 'counting false alarms and misses…'"
+          },
+          {
+            "at": 0.82,
+            "event": "answer lines land: trust, coverage, balance, threshold"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Sawubona, Liam",
+            "topic": "MACHINE LEARNING · CLASSIFICATION METRICS",
+            "segment": "Accuracy · Precision · Recall · F1",
+            "command": "Compare accuracy, precision, recall, and F1 on one confusion matrix. Show what each reveals, what each hides, and how the threshold changes the tradeoff.",
+            "runningText": "counting false alarms and misses…",
+            "folderLabel": "@Sanjiv",
+            "output": [
+              "ACCURACY → all correct decisions",
+              "PRECISION → trust positive alerts",
+              "RECALL → catch actual positives",
+              "F1 → balance precision and recall"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-17T14:42:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B00.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-17T14:44:41"
+      },
+      "actual_duration_s": 20.33
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY",
+      "narration_text": "Here is the whole idea. Accuracy asks how often the classifier is right overall. Precision asks whether positive alerts are trustworthy. Recall asks how many real positives were caught. F1 rewards precision and recall together. None is automatically best: class balance, the positive class, the decision threshold, and the real cost of each mistake decide which number deserves attention.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "branch",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Same predictions. Different questions.'"
+          },
+          {
+            "at": 0.18,
+            "event": "a confusion matrix assembles and all four cells feed an accuracy lens"
+          },
+          {
+            "at": 0.38,
+            "event": "predicted-positive column becomes the precision lens beside accuracy"
+          },
+          {
+            "at": 0.58,
+            "event": "actual-positive row becomes the recall lens; F1 joins precision and recall"
+          },
+          {
+            "at": 0.78,
+            "event": "precision and recall feed an F1 balance, then a cost tag appears"
+          }
+        ]
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B01.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-17T14:44:41"
+      },
+      "actual_duration_s": 20.78
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "narration_text": "Name the four cells first. True positives and true negatives are correct decisions; false positives are false alarms; false negatives are misses. Accuracy divides both correct cells by every case. Precision divides true positives by all predicted positives. Recall divides true positives by all actual positives. F1 takes the harmonic mean of precision and recall. Different denominators ask different questions.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          {
+            "at": 0,
+            "event": "two-by-two confusion matrix draws from actual and predicted axes"
+          },
+          {
+            "at": 0.2,
+            "event": "TP, FP, FN, and TN cells receive plain-language labels"
+          },
+          {
+            "at": 0.5,
+            "event": "accuracy highlights TP plus TN over all four cells"
+          },
+          {
+            "at": 0.7,
+            "event": "precision highlights TP plus FP; recall highlights TP plus FN"
+          },
+          {
+            "at": 0.88,
+            "event": "F1 joins precision and recall; four question labels land"
+          }
+        ]
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B02.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-17T14:44:41"
+      },
+      "actual_duration_s": 22.49
+    },
+    {
+      "beat_id": "B03",
+      "act": "WORKED EXAMPLE",
+      "narration_text": "Suppose one hundred patients are tested. Ten truly have the condition. The model catches six, misses four, and raises two false alarms, leaving eighty-eight true negatives. Accuracy is ninety-four percent. Precision is six divided by eight, or seventy-five percent. Recall is six divided by ten, or sixty percent. F1 is about sixty-six point seven percent. Same predictions, four different summaries.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "worked-example",
+        "show": [
+          {
+            "at": 0,
+            "event": "one hundred cases collapse into confusion-matrix counts"
+          },
+          {
+            "at": 0.22,
+            "event": "cells settle at TP 6, FP 2, FN 4, and TN 88"
+          },
+          {
+            "at": 0.46,
+            "event": "accuracy computes (6+88)/100 = 0.94"
+          },
+          {
+            "at": 0.64,
+            "event": "precision computes 6/8 = 0.75 and recall computes 6/10 = 0.60"
+          },
+          {
+            "at": 0.82,
+            "event": "F1 computes 2×0.75×0.60/(0.75+0.60) ≈ 0.667"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B03.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-17T14:44:41"
+      },
+      "actual_duration_s": 21.5
+    },
+    {
+      "beat_id": "B04",
+      "act": "THRESHOLD TRADEOFF",
+      "narration_text": "Now move the decision threshold. Lowering it labels more cases positive, so recall can rise or stay level because fewer actual positives are missed. Precision often falls as extra false alarms enter, but it is not guaranteed to move monotonically. Raising the threshold reverses the pressure. A precision-recall curve shows these operating points; the threshold chooses which mistake the system tolerates.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "threshold-sweep",
+        "show": [
+          {
+            "at": 0,
+            "event": "ranked prediction scores appear beneath a movable threshold"
+          },
+          {
+            "at": 0.24,
+            "event": "threshold slides lower and more predictions enter the positive set"
+          },
+          {
+            "at": 0.46,
+            "event": "recall steps upward or stays level"
+          },
+          {
+            "at": 0.64,
+            "event": "precision fluctuates while its general tradeoff is labeled, not promised"
+          },
+          {
+            "at": 0.82,
+            "event": "the sweep traces a stair-step precision-recall curve"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B04.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-17T14:44:41"
+      },
+      "actual_duration_s": 21.57
+    },
+    {
+      "beat_id": "B05",
+      "act": "ACCURACY TRAP",
+      "narration_text": "Now notice the trap. Ninety-four percent accuracy sounds excellent, yet the model misses four of ten sick patients: recall is only sixty percent. The eighty-eight easy true negatives dominate the overall score. Accuracy is useful when classes and error costs are reasonably balanced. With a rare positive class, always compare it with the confusion matrix, precision, recall, and the operating threshold.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "balance",
+        "show": [
+          {
+            "at": 0,
+            "event": "accuracy 94% expands into a dominant headline"
+          },
+          {
+            "at": 0.28,
+            "event": "the 88 true negatives visibly supply most correct decisions"
+          },
+          {
+            "at": 0.5,
+            "event": "four missed positives enlarge beside recall 60%"
+          },
+          {
+            "at": 0.72,
+            "event": "accuracy and recall separate into 94% versus 60%"
+          },
+          {
+            "at": 0.9,
+            "event": "condition lands: 'accuracy needs class and cost context'"
+          }
+        ]
+      },
+      "estimated_duration_s": 21,
+      "audio_file": "mp3/beat-B05.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-17T14:44:41"
+      },
+      "actual_duration_s": 20.57
+    },
+    {
+      "beat_id": "B06",
+      "act": "FALSIFIABILITY",
+      "narration_text": "F1 fixes one accuracy problem by ignoring true negatives and punishing imbalance between precision and recall. But that creates limits of its own. F1 weights precision and recall equally, so it is wrong when misses cost far more than false alarms. It also omits true negatives entirely. Undefined denominators and micro, macro, or per-class averaging choices add hidden policy. One score never removes judgment.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "stress-test",
+        "show": [
+          {
+            "at": 0,
+            "event": "two confusion matrices share TP, FP, and FN but have different TN counts"
+          },
+          {
+            "at": 0.28,
+            "event": "both produce the same F1 while the TN cells visibly diverge"
+          },
+          {
+            "at": 0.5,
+            "event": "an equal-weight scale collides with a 100-to-1 miss-cost label"
+          },
+          {
+            "at": 0.72,
+            "event": "zero denominator warning appears beside a never-positive classifier"
+          },
+          {
+            "at": 0.86,
+            "event": "micro, macro, and per-class labels fan out as explicit reporting choices"
+          }
+        ]
+      },
+      "estimated_duration_s": 24,
+      "audio_file": "mp3/beat-B06.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-17T14:44:41"
+      },
+      "actual_duration_s": 22.63
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "narration_text": "The verdict: use accuracy for an overall score when classes and error costs are reasonably balanced. Use precision when false alarms are expensive. Use recall when misses are expensive. Use F1 when one balance score is needed and equal weight is defensible. Always report the positive class, threshold, support, and confusion matrix. A metric should expose the decision, not replace it.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-build",
+        "show": [
+          {
+            "at": 0,
+            "event": "verdict artifact opens with four metric decisions"
+          },
+          {
+            "at": 0.22,
+            "event": "accuracy receives 'balanced classes and costs'; precision receives 'false alarms expensive'"
+          },
+          {
+            "at": 0.4,
+            "event": "recall receives 'misses expensive'"
+          },
+          {
+            "at": 0.58,
+            "event": "F1 receives 'equal weight defensible'"
+          },
+          {
+            "at": 0.78,
+            "event": "reporting strip lands: positive class · threshold · support · confusion matrix"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Classification metric verdict · @Sanjiv",
+            "artifactHeading": "Match the metric to the mistake",
+            "artifactLines": [
+              "ACCURACY — overall correctness; check balance and costs.",
+              "PRECISION — false alarms are expensive.",
+              "RECALL — missed positives are expensive.",
+              "F1 — equal weight is defensible. REPORT the confusion matrix and threshold."
+            ]
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-17T14:43:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B07.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-17T14:44:41"
+      },
+      "actual_duration_s": 20.65
+    },
+    {
+      "beat_id": "B08",
+      "act": "HANDOFF",
+      "narration_text": "Your turn. Give Claude your true labels, prediction scores, positive class, and the relative cost of false positives and false negatives. Ask: Compute accuracy, precision, recall, and F1 across useful thresholds. Plot the precision-recall curve. Recommend a threshold under my cost or capacity constraint, state the zero-division and averaging conventions, and show one case where accuracy or F1 would mislead me. Then inspect the tradeoff, not just the winner.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "prompt-compose",
+        "show": [
+          {
+            "at": 0,
+            "event": "handoff artifact opens with four required inputs"
+          },
+          {
+            "at": 0.2,
+            "event": "true labels, scores, positive class, and error costs check on"
+          },
+          {
+            "at": 0.4,
+            "event": "the exact spoken prompt types into the composer"
+          },
+          {
+            "at": 0.72,
+            "event": "threshold table and precision-recall curve preview appear"
+          },
+          {
+            "at": 0.88,
+            "event": "failure-case challenge locks as the final instruction"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "MACHINE LEARNING · THRESHOLD SELECTION",
+            "segment": "Choose an Operating Threshold",
+            "command": "Compute accuracy, precision, recall, and F1 across useful thresholds. Plot the precision-recall curve. Recommend a threshold under my cost or capacity constraint, state the zero-division and averaging conventions, and show one case where accuracy or F1 would mislead me.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "INPUT · labels, scores, positive class",
+              "CONSTRAINT · FP versus FN cost",
+              "OUTPUT · threshold plus failure case"
+            ],
+            "folderLabel": "@Sanjiv"
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-17T14:44:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 24,
+      "audio_file": "mp3/beat-B08.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-17T14:44:41"
+      },
+      "actual_duration_s": 23.4
+    },
+    {
+      "beat_id": "B09",
+      "act": "TITLE RESTATE",
+      "narration_text": "Accuracy versus precision versus recall versus F1 score, oversimplified. Accuracy counts overall correctness. Precision asks whether positive predictions deserve trust. Recall asks whether real positives were found. F1 rewards balance between precision and recall. Choose the positive class, choose the cost, then choose the threshold. This was Liam, in for Sanjiv.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "title-lockup",
+        "show": [
+          {
+            "at": 0,
+            "event": "title words enter one at a time: ACCURACY / PRECISION / RECALL / F1"
+          },
+          {
+            "at": 0.3,
+            "event": "trust / coverage / balance labels settle beneath"
+          },
+          {
+            "at": 0.58,
+            "event": "cost and threshold rails converge into one operating point"
+          },
+          {
+            "at": 0.8,
+            "event": "'Liam, in for Sanjiv' lands"
+          },
+          {
+            "at": 0.9,
+            "event": "@Sanjiv holds inside the title-safe poster border"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Accuracy vs Precision vs Recall vs F1 Score",
+            "handle": "@Sanjiv",
+            "subline": "Overall · Trust · Coverage · Balance · Liam, in for Sanjiv"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-17T14:45:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B09.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-17T14:44:41"
+      },
+      "actual_duration_s": 20.33
+    }
+  ]
+}
