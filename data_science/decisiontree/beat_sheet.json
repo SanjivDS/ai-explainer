@@ -1,0 +1,527 @@
+{
+  "metadata": {
+    "title": "Decision Trees: How Splits Actually Work, Oversimplified",
+    "slug": "claude-liam-decision-tree-splits",
+    "topic": "MACHINE LEARNING · DECISION TREES",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "voice": "Liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Merhaba, Liam",
+    "greeting_note": "Merhaba (Turkish) continues the rotating world-language greeting. Liam is in for Sanjiv; the channel handle is @Sanjiv.",
+    "folderLabel": "@Sanjiv",
+    "note": "Fresh concept explainer. One idea: a classification tree greedily tests feature-threshold candidates, minimizes weighted child impurity, chooses the best local split, and repeats under stopping constraints.",
+    "tags": [
+      "decision trees",
+      "classification",
+      "Gini impurity",
+      "information gain",
+      "threshold",
+      "CART",
+      "overfitting"
+    ],
+    "typography": {
+      "serif": "Tiempos/EB Garamond",
+      "ui": "system sans",
+      "mono": "SF Mono"
+    },
+    "build": {
+      "at": "2026-09-18T11:37:43",
+      "cut": "master",
+      "filled": 10,
+      "of": 10,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Merhaba. This is Liam, in for Sanjiv. A decision tree does not invent a clever question and hope. For a common exact binary classifier, it tests feature-and-threshold candidates, measures how much cleaner each pair of child groups becomes, keeps the best local improvement, and repeats. Let us watch one split earn its place with actual numbers.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude composer opens on 'Merhaba, Liam'"
+          },
+          {
+            "at": 0.22,
+            "event": "the split-mechanics prompt types into the composer"
+          },
+          {
+            "at": 0.62,
+            "event": "send arms; running text reads 'testing thresholds…'"
+          },
+          {
+            "at": 0.82,
+            "event": "answer lines land: candidates, impurity, best local split, recurse"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Merhaba, Liam",
+            "topic": "MACHINE LEARNING · DECISION TREES",
+            "segment": "How Splits Actually Work",
+            "command": "Show how a classification tree chooses one numerical split. Enumerate candidate thresholds, calculate weighted Gini impurity, select the winner, and explain what greedy recursion can miss.",
+            "runningText": "testing thresholds…",
+            "folderLabel": "@Sanjiv",
+            "output": [
+              "CANDIDATES → feature + threshold",
+              "SCORE → weighted child impurity",
+              "CHOOSE → best local decrease",
+              "REPEAT → grow, stop, or prune"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-17T20:28:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 20,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-18T11:37:43"
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 18.75
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY",
+      "narration_text": "Here is the whole idea. A tree repeatedly divides training rows into two groups. At each node, it searches for the feature and cutoff that make those groups more internally alike by the chosen loss or impurity measure. That choice is greedy: best now, not guaranteed best for the whole future tree. The tree becomes useful when we also control when it must stop.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "branch",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Score. Split. Repeat.'"
+          },
+          {
+            "at": 0.18,
+            "event": "one mixed node of labeled rows appears"
+          },
+          {
+            "at": 0.38,
+            "event": "several candidate cut lines sweep across the rows"
+          },
+          {
+            "at": 0.6,
+            "event": "the cleanest local division locks in and becomes two child nodes"
+          },
+          {
+            "at": 0.82,
+            "event": "a stop control prevents the branches from growing without limit"
+          }
+        ]
+      },
+      "estimated_duration_s": 22,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-18T11:37:43"
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 18.79
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "narration_text": "For classification, impurity measures how mixed the labels are inside a node. We will use Gini impurity: one minus the sum of squared class proportions. A pure node scores zero. With two classes split fifty-fifty, Gini is one half. A candidate is judged by the sample-weighted impurity of its left and right children. Lower children mean a larger impurity decrease.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "equation-build",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Purity is the scoreboard.'"
+          },
+          {
+            "at": 0.16,
+            "event": "Gini = 1 − Σ p² builds term by term"
+          },
+          {
+            "at": 0.36,
+            "event": "a pure six-of-one-class node resolves to Gini 0"
+          },
+          {
+            "at": 0.56,
+            "event": "a three-and-three mixed node resolves to Gini 0.5"
+          },
+          {
+            "at": 0.76,
+            "event": "left and right impurity boxes combine under sample-count weights"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-18T11:37:43"
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.8
+    },
+    {
+      "beat_id": "B03",
+      "act": "CANDIDATES",
+      "narration_text": "Take one numerical feature with values one through six and labels A, A, A, B, B, B. In scikit-learn's best splitter, the exact search considers midpoints between sorted distinct values: one point five, two point five, three point five, four point five, and five point five. Each threshold sends values at or below it left and the rest right. Other implementations can search differently.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "threshold-sweep",
+        "show": [
+          {
+            "at": 0,
+            "event": "six labeled samples sort along a number line: 1A 2A 3A 4B 5B 6B"
+          },
+          {
+            "at": 0.24,
+            "event": "five midpoint ticks appear between distinct adjacent values"
+          },
+          {
+            "at": 0.5,
+            "event": "a threshold sweeps from 1.5 through 5.5, repartitioning the samples"
+          },
+          {
+            "at": 0.76,
+            "event": "the rule x ≤ threshold / x > threshold labels the two sides"
+          },
+          {
+            "at": 0.9,
+            "event": "source tag lands: scikit-learn best splitter; implementations vary"
+          }
+        ]
+      },
+      "estimated_duration_s": 22,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-18T11:37:43"
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 21.25
+    },
+    {
+      "beat_id": "B04",
+      "act": "WORKED EXAMPLE",
+      "narration_text": "The parent has three A's and three B's, so its Gini is zero point five. Try two point five. The left child is A, A: impurity zero. The right is A, B, B, B: impurity zero point three seven five. Weighting by child size gives zero point two five, so the decrease is zero point two five. That split helps, but it is not the winner.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "worked-example",
+        "show": [
+          {
+            "at": 0,
+            "event": "the parent's 3A/3B proportions calculate to Gini 0.5"
+          },
+          {
+            "at": 0.24,
+            "event": "threshold 2.5 cuts the sorted row into AA and ABBB"
+          },
+          {
+            "at": 0.46,
+            "event": "left Gini resolves to 0; right Gini resolves to 0.375"
+          },
+          {
+            "at": 0.68,
+            "event": "weighted child impurity calculates (2/6)×0 + (4/6)×0.375 = 0.25"
+          },
+          {
+            "at": 0.86,
+            "event": "impurity decrease calculates 0.5 − 0.25 = 0.25"
+          }
+        ]
+      },
+      "estimated_duration_s": 24,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-18T11:37:43"
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 18.43
+    },
+    {
+      "beat_id": "B05",
+      "act": "WINNING SPLIT",
+      "narration_text": "Now try three point five. The left child contains only A's; the right contains only B's. Both child impurities are zero, so their weighted impurity is zero. The decrease is the full zero point five. Among the candidates shown, three point five wins. A best splitter performs this comparison across the available features and thresholds, then stores that feature and cutoff at the node.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "comparison-table",
+        "show": [
+          {
+            "at": 0,
+            "event": "threshold 3.5 cuts AAA from BBB"
+          },
+          {
+            "at": 0.24,
+            "event": "both children turn pure and each Gini counter falls to 0"
+          },
+          {
+            "at": 0.46,
+            "event": "weighted child impurity resolves to 0; decrease rises to 0.5"
+          },
+          {
+            "at": 0.66,
+            "event": "candidate table compares 2.5 gain 0.25 against 3.5 gain 0.5"
+          },
+          {
+            "at": 0.86,
+            "event": "3.5 is ringed and written into the root node"
+          }
+        ]
+      },
+      "estimated_duration_s": 22,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-18T11:37:43"
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 20.35
+    },
+    {
+      "beat_id": "B06",
+      "act": "FALSIFIABILITY",
+      "narration_text": "Now stress-test the method. The winning split is only the best immediate move. A different first split can sometimes support a better later tree, but greedy training does not backtrack to search every possible tree. Keep splitting and the model can isolate tiny pockets of training data. Maximum depth, minimum samples, minimum impurity decrease, and pruning trade training purity for a simpler tree that may generalize better.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "stress-test",
+        "show": [
+          {
+            "at": 0,
+            "event": "a greedy badge locks onto the best immediate root split"
+          },
+          {
+            "at": 0.24,
+            "event": "an unsearched alternate root previews a different downstream tree"
+          },
+          {
+            "at": 0.48,
+            "event": "the greedy tree grows until single-sample leaves appear"
+          },
+          {
+            "at": 0.68,
+            "event": "training purity rises while a validation gauge turns downward"
+          },
+          {
+            "at": 0.84,
+            "event": "max depth, min samples, min gain, and pruning visibly trim the tree"
+          }
+        ]
+      },
+      "estimated_duration_s": 24,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-18T11:37:43"
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 21.33
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "narration_text": "The verdict: a split is a local optimization, not an intuitive question. Enumerate valid feature-threshold candidates. Partition the rows. Compute each child's impurity. Weight by child size. Choose the largest decrease, then recurse under explicit stopping rules. For regression, the score changes from class impurity to a regression loss. Either way, validate the whole tree, because a perfect training partition can be a warning, not a victory.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-build",
+        "show": [
+          {
+            "at": 0,
+            "event": "verdict artifact opens as a five-step split receipt"
+          },
+          {
+            "at": 0.2,
+            "event": "enumerate and partition steps check on"
+          },
+          {
+            "at": 0.4,
+            "event": "score and weight steps check on"
+          },
+          {
+            "at": 0.6,
+            "event": "choose and recurse locks under stopping controls"
+          },
+          {
+            "at": 0.82,
+            "event": "validation warning lands beneath the receipt"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Decision-tree split verdict · @Sanjiv",
+            "artifactHeading": "The question must earn the branch",
+            "artifactLines": [
+              "ENUMERATE — feature + threshold candidates.",
+              "PARTITION — send rows left and right.",
+              "SCORE — weight the child impurities.",
+              "CHOOSE — best local decrease; recurse, stop, validate."
+            ]
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-17T20:28:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 24,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-18T11:37:43"
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 22.59
+    },
+    {
+      "beat_id": "B08",
+      "act": "HANDOFF",
+      "narration_text": "Your turn. Paste this into Claude: Given this small labeled dataset, sort each numeric feature, list every valid midpoint threshold, compute parent and weighted child Gini impurity, rank the impurity decreases, draw the first two tree levels, and show how maximum depth or minimum leaf size changes the result. Then identify one sign of overfitting. Check the arithmetic, the winning threshold, and whether the stopping rule changes the story—not just the picture.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "prompt-compose",
+        "show": [
+          {
+            "at": 0,
+            "event": "handoff composer opens with 'Your turn.'"
+          },
+          {
+            "at": 0.18,
+            "event": "the exact spoken prompt types into the composer"
+          },
+          {
+            "at": 0.56,
+            "event": "a threshold ledger and two-level tree preview appear"
+          },
+          {
+            "at": 0.76,
+            "event": "rubric checks on: arithmetic, winning threshold, stopping-rule effect"
+          },
+          {
+            "at": 0.9,
+            "event": "overfitting challenge locks as the final instruction"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "MACHINE LEARNING · SPLIT AUDIT",
+            "segment": "Audit a Two-Level Tree",
+            "command": "Given this small labeled dataset, sort each numeric feature, list every valid midpoint threshold, compute parent and weighted child Gini impurity, rank the impurity decreases, draw the first two tree levels, and show how maximum depth or minimum leaf size changes the result. Then identify one sign of overfitting.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "CHECK · arithmetic",
+              "CHECK · winning threshold",
+              "CHECK · stopping-rule effect",
+              "CHALLENGE · find overfitting"
+            ],
+            "folderLabel": "@Sanjiv"
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-17T20:28:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-18T11:37:43"
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 23.72
+    },
+    {
+      "beat_id": "B09",
+      "act": "TITLE RESTATE",
+      "narration_text": "Decision trees: how splits actually work, oversimplified. Test the candidates. Measure the weighted child impurity. Keep the best local decrease. Repeat only while the stopping rules allow it. The branch is not magic; it is the winner of a local scoring contest. This was Liam, in for Sanjiv.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "title-lockup",
+        "show": [
+          {
+            "at": 0,
+            "event": "title assembles around one root node and two branches"
+          },
+          {
+            "at": 0.28,
+            "event": "test / score / choose / repeat labels settle along the branches"
+          },
+          {
+            "at": 0.58,
+            "event": "the winning threshold 3.5 lands in terracotta"
+          },
+          {
+            "at": 0.78,
+            "event": "'Liam, in for Sanjiv' lands"
+          },
+          {
+            "at": 0.9,
+            "event": "@Sanjiv holds inside the title-safe poster border"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Decision Trees: How Splits Actually Work",
+            "handle": "@Sanjiv",
+            "subline": "Test · Score · Choose · Repeat · Liam, in for Sanjiv"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-17T20:28:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-18T11:37:43"
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 15.94
+    }
+  ]
+}
