@@ -1,0 +1,527 @@
+{
+  "metadata": {
+    "title": "Random Forest: Why Multiple Trees Beat One, Oversimplified",
+    "slug": "claude-liam-random-forest",
+    "topic": "MACHINE LEARNING · ENSEMBLE METHODS",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "voice": "Liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Bula, Liam",
+    "greeting_note": "Bula (Fijian) continues the rotating world-language greeting. Liam is in for Sanjiv; the channel handle is @Sanjiv.",
+    "folderLabel": "@Sanjiv",
+    "note": "One idea: a random forest reduces the high variance of individual trees by averaging strong-enough trees whose errors are decorrelated through sample and feature randomness.",
+    "tags": [
+      "random forest",
+      "decision trees",
+      "bagging",
+      "bootstrap",
+      "feature randomness",
+      "variance",
+      "ensemble learning"
+    ],
+    "typography": {
+      "serif": "Tiempos/EB Garamond",
+      "ui": "system sans",
+      "mono": "SF Mono"
+    },
+    "build": {
+      "at": "2026-09-17T23:36:08",
+      "cut": "master",
+      "filled": 10,
+      "of": 10,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Bula. This is Liam, in for Sanjiv. One decision tree can fit the training data beautifully and still change its mind when the data changes slightly. A random forest does something smarter than cloning that tree: it trains many deliberately different trees, then combines their predictions. Let us see why diversity plus averaging can turn unstable parts into a steadier whole.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude composer opens on 'Bula, Liam'"
+          },
+          {
+            "at": 0.22,
+            "event": "the forest-mechanics prompt types into the composer"
+          },
+          {
+            "at": 0.62,
+            "event": "send arms; running text reads 'growing diverse trees…'"
+          },
+          {
+            "at": 0.82,
+            "event": "answer lines land: unstable tree, bootstrap rows, random features, average"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Bula, Liam",
+            "topic": "MACHINE LEARNING · ENSEMBLE METHODS",
+            "segment": "Why Multiple Trees Beat One",
+            "command": "Show why a random forest can generalize better than one decision tree. Explain bootstrap samples, random feature subsets, averaging, and the case where more trees do not help.",
+            "runningText": "growing diverse trees…",
+            "folderLabel": "@Sanjiv",
+            "output": [
+              "ONE TREE → high variance",
+              "ROWS → bootstrap samples",
+              "FEATURES → random subsets",
+              "FOREST → average diverse predictions"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-17T23:17:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 21,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-17T23:36:08"
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 19.88
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY",
+      "narration_text": "Here is the whole idea. Deep decision trees are flexible, but that flexibility makes them unstable: small changes in training data can create different branches and predictions. A random forest injects controlled randomness so its trees make different mistakes, then averages them. When the trees remain useful and their errors are not too correlated, the average usually varies less than any one tree.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "divergence",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Different mistakes. Steadier average.'"
+          },
+          {
+            "at": 0.18,
+            "event": "one dataset produces one tall, twitching tree"
+          },
+          {
+            "at": 0.4,
+            "event": "small data perturbations split into several different trees"
+          },
+          {
+            "at": 0.64,
+            "event": "their prediction needles fluctuate in different directions"
+          },
+          {
+            "at": 0.84,
+            "event": "the averaged needle settles near the center"
+          }
+        ]
+      },
+      "estimated_duration_s": 22,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-17T23:36:08"
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 20.59
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "narration_text": "The mechanism has three steps. First, each tree trains on a bootstrap sample: rows drawn from the training set with replacement. Second, each split considers a random subset of features instead of every feature. Those choices create diversity. Third, classification averages class probabilities in scikit-learn, while regression averages numerical predictions. The design target is strong trees with less-correlated errors.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "pipeline",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Perturb. Grow. Combine.'"
+          },
+          {
+            "at": 0.16,
+            "event": "training table fans into bootstrap row bags"
+          },
+          {
+            "at": 0.4,
+            "event": "each bag enters a tree with a different feature subset at its nodes"
+          },
+          {
+            "at": 0.66,
+            "event": "tree predictions flow into a probability or value average"
+          },
+          {
+            "at": 0.86,
+            "event": "strength and low correlation balance on one scale"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-17T23:36:08"
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 22.34
+    },
+    {
+      "beat_id": "B03",
+      "act": "TREE INSTABILITY",
+      "narration_text": "Watch one tree wobble. In the first training set, feature X wins the root split by a tiny margin. Change or remove a few rows, and feature Y can win instead. Every later branch now sees different data, so the disagreement cascades down the tree. That sensitivity is high variance: the fitted rule changes substantially across plausible training samples from the same problem.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "branch-cascade",
+        "show": [
+          {
+            "at": 0,
+            "event": "two nearly identical training tables appear side by side"
+          },
+          {
+            "at": 0.24,
+            "event": "a few rows change or disappear in the second table"
+          },
+          {
+            "at": 0.44,
+            "event": "root winner flips from feature X to feature Y"
+          },
+          {
+            "at": 0.66,
+            "event": "different roots cascade into visibly different lower branches"
+          },
+          {
+            "at": 0.86,
+            "event": "the same test point receives opposing predictions"
+          }
+        ]
+      },
+      "estimated_duration_s": 22,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-17T23:36:08"
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 20.12
+    },
+    {
+      "beat_id": "B04",
+      "act": "DIVERSITY ENGINE",
+      "narration_text": "A forest manufactures disagreement on purpose. Bootstrap sampling changes which rows—and how many copies of each row—reach each tree. Random feature selection changes which predictors are allowed to compete at each split. Without the feature restriction, one dominant predictor can make many trees resemble one another. Randomness may weaken an individual tree slightly, but it can make the group more valuable by lowering correlation.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "shuffle-and-grow",
+        "show": [
+          {
+            "at": 0,
+            "event": "one row table shuffles into three bootstrap bags with repeats and omissions"
+          },
+          {
+            "at": 0.26,
+            "event": "three feature decks expose different subsets at their root nodes"
+          },
+          {
+            "at": 0.5,
+            "event": "three visibly different trees grow from the bags and feature decks"
+          },
+          {
+            "at": 0.72,
+            "event": "a dominant-feature-only forest collapses toward look-alike trees"
+          },
+          {
+            "at": 0.88,
+            "event": "correlation gauge drops as diversity increases"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-17T23:36:08"
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 21.46
+    },
+    {
+      "beat_id": "B05",
+      "act": "WORKED EXAMPLE",
+      "narration_text": "Now combine five classification trees for one case. Their class-A probabilities are zero point nine, zero point eight, zero point two, zero point seven, and zero point four. One tree is sharply bearish; the others disagree. The mean is zero point six, so the forest predicts class A under a zero point five cutoff. No single tree controls the answer. The average absorbs their different errors.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "worked-average",
+        "show": [
+          {
+            "at": 0,
+            "event": "five tree cards reveal class-A probabilities 0.9, 0.8, 0.2, 0.7, 0.4"
+          },
+          {
+            "at": 0.3,
+            "event": "the 0.2 prediction separates as the dissenting tree"
+          },
+          {
+            "at": 0.5,
+            "event": "all five values enter an averaging tray"
+          },
+          {
+            "at": 0.7,
+            "event": "sum 3.0 divides by 5 and resolves to mean probability 0.6"
+          },
+          {
+            "at": 0.86,
+            "event": "0.6 crosses the 0.5 class-A cutoff; no individual card remains highlighted"
+          }
+        ]
+      },
+      "estimated_duration_s": 22,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-17T23:36:08"
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 21.16
+    },
+    {
+      "beat_id": "B06",
+      "act": "FALSIFIABILITY",
+      "narration_text": "More trees are not a magic repair kit. If every tree follows the same dominant signal, their errors stay correlated and averaging repeats the mistake. If the features carry little predictive information, a crowd of weak trees remains weak. Forests can also sacrifice interpretability, consume more compute, and underperform a well-tuned simpler model. Judge the ensemble on held-out or out-of-bag performance, not tree count.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "stress-test",
+        "show": [
+          {
+            "at": 0,
+            "event": "ten look-alike trees make the same wrong prediction in lockstep"
+          },
+          {
+            "at": 0.26,
+            "event": "correlation gauge rises and the average stays wrong"
+          },
+          {
+            "at": 0.48,
+            "event": "weak-signal feature cards feed many uncertain trees"
+          },
+          {
+            "at": 0.68,
+            "event": "interpretability and compute costs grow with the forest"
+          },
+          {
+            "at": 0.86,
+            "event": "held-out and out-of-bag scoreboards replace the tree-count counter"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-09-17T23:36:08"
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 21.65
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "narration_text": "The verdict: one tree is easy to inspect but often unstable. A random forest perturbs the rows, restricts candidate features, grows many different trees, and averages their predictions. The gain comes from variance reduction when individual trees stay competent and their errors are not perfectly aligned. Tune diversity without destroying strength, then validate. More trees stabilize the estimate; they do not manufacture missing signal.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-build",
+        "show": [
+          {
+            "at": 0,
+            "event": "verdict artifact opens as a forest receipt"
+          },
+          {
+            "at": 0.2,
+            "event": "perturb rows and restrict features check on"
+          },
+          {
+            "at": 0.42,
+            "event": "grow diverse, competent trees checks on"
+          },
+          {
+            "at": 0.62,
+            "event": "average predictions resolves to lower variance"
+          },
+          {
+            "at": 0.82,
+            "event": "warning lands: more trees cannot create signal"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Random-forest verdict · @Sanjiv",
+            "artifactHeading": "Diversity makes averaging useful",
+            "artifactLines": [
+              "PERTURB — bootstrap the training rows.",
+              "DECORRELATE — restrict candidate features.",
+              "COMBINE — average competent, different trees.",
+              "VALIDATE — more trees stabilize; they do not create signal."
+            ]
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-17T23:17:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 23,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-17T23:36:08"
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 22.57
+    },
+    {
+      "beat_id": "B08",
+      "act": "HANDOFF",
+      "narration_text": "Your turn. Paste this into Claude: Using my labeled dataset, compare one tuned decision tree with random forests across several tree counts, feature-subset sizes, and leaf-size limits. Report cross-validated and out-of-bag performance, training-to-validation gaps, prediction stability across random seeds, and fit time. Then identify whether extra trees reduce variance or merely repeat correlated errors. Check the baseline, the stability spread, and the compute tradeoff—not just the highest score.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "prompt-compose",
+        "show": [
+          {
+            "at": 0,
+            "event": "handoff composer opens with 'Your turn.'"
+          },
+          {
+            "at": 0.18,
+            "event": "the exact spoken comparison prompt types into the composer"
+          },
+          {
+            "at": 0.58,
+            "event": "tree-count, feature-subset, and leaf-size sweep previews appear"
+          },
+          {
+            "at": 0.78,
+            "event": "rubric checks on: baseline, stability spread, compute tradeoff"
+          },
+          {
+            "at": 0.9,
+            "event": "correlated-error challenge locks as the final instruction"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "MACHINE LEARNING · ENSEMBLE AUDIT",
+            "segment": "Test the Forest",
+            "command": "Using my labeled dataset, compare one tuned decision tree with random forests across several tree counts, feature-subset sizes, and leaf-size limits. Report cross-validated and out-of-bag performance, training-to-validation gaps, prediction stability across random seeds, and fit time. Then identify whether extra trees reduce variance or merely repeat correlated errors.",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@Sanjiv",
+            "output": [
+              "CHECK · tuned single-tree baseline",
+              "CHECK · stability across seeds",
+              "CHECK · validation and OOB",
+              "CHECK · compute versus gain"
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-17T23:17:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-17T23:36:08"
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 26.97
+    },
+    {
+      "beat_id": "B09",
+      "act": "TITLE RESTATE",
+      "narration_text": "Random forest: why multiple trees beat one, oversimplified. Resample the rows. Randomize the feature choices. Grow trees that are useful but different. Average their predictions, and validate the result. The forest wins when its trees disagree productively—not when they echo the same mistake. This was Liam, in for Sanjiv.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "title-lockup",
+        "show": [
+          {
+            "at": 0,
+            "event": "one tree multiplies into a forest behind the title"
+          },
+          {
+            "at": 0.3,
+            "event": "resample / randomize / average labels settle beneath"
+          },
+          {
+            "at": 0.58,
+            "event": "different prediction needles converge into one stable mean"
+          },
+          {
+            "at": 0.8,
+            "event": "'Liam, in for Sanjiv' lands"
+          },
+          {
+            "at": 0.9,
+            "event": "@Sanjiv holds inside the title-safe poster border"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Random Forest: Why Multiple Trees Beat One",
+            "handle": "@Sanjiv",
+            "subline": "Resample · Randomize · Average · Liam, in for Sanjiv"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-17T23:17:00-04:00"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-17T23:36:08"
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 17.66
+    }
+  ]
+}
