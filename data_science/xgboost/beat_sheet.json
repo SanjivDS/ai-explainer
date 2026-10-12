@@ -1,0 +1,545 @@
+{
+  "metadata": {
+    "title": "XGBoost - Why It Works So Well",
+    "slug": "claude-liam-xgboost",
+    "topic": "MACHINE LEARNING",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "register": "Teardown",
+    "ground": "#FAF9F5",
+    "folderLabel": "@sanjiv",
+    "build": {
+      "at": "2026-10-02T12:22:09",
+      "cut": "master",
+      "filled": 11,
+      "of": 11,
+      "slates": [],
+      "skin_warnings": []
+    },
+    "keep_review_labels": false
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Bonjour. This is Liam, in for Sanjiv. Why does X G Boost work so well? Start with a surprisingly modest ingredient: a small decision tree. The trick is how many small corrections become one useful predictor. Let us build a tiny example, then look at the controls that keep it honest.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "Composer types the question"
+          },
+          {
+            "at": 0.65,
+            "event": "Result lists corrections, controls, and efficient search"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "MACHINE LEARNING",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Bonjour, Liam",
+            "segment": "XGBoost",
+            "command": "Explain why XGBoost works: build one correction, show the controls, then test the limits.",
+            "runningText": "a worked explanation",
+            "output": [
+              "Small trees → targeted corrections",
+              "Complexity controls → restraint",
+              "Efficient search → practical training"
+            ],
+            "durationSeconds": 16.478667
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-29T04:16:13.259071+00:00"
+          }
+        }
+      },
+      "tail_silence_s": 0.5,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 16.478667,
+      "render_duration_s": 16.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-02T12:22:09"
+      },
+      "audio_padding_applied": true
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY",
+      "narration_text": "X G Boost improves predictions through controlled corrections. Small trees learn patterns that earlier trees missed, while limits on complexity help keep those corrections useful on new data.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "Writer replaces magic with controlled"
+          },
+          {
+            "at": 0.65,
+            "event": "Corrected overview remains legible"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "XGBoost improves predictions\nthrough magic corrections.",
+            "triggerWords": "magic",
+            "replacementWords": "controlled",
+            "seed": "xgboost-20260928",
+            "fontSize": 82,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0,
+            "charMs": 45,
+            "brandLabel": "@sanjiv",
+            "contextTitle": "Why It Works",
+            "contextItems": [
+              {
+                "label": "Learn",
+                "detail": "patterns in a table"
+              },
+              {
+                "label": "Correct",
+                "detail": "what remains wrong"
+              },
+              {
+                "label": "Control",
+                "detail": "complexity and cost"
+              }
+            ],
+            "durationSeconds": 12.18
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-29T04:16:50.818068+00:00"
+          }
+        }
+      },
+      "tail_silence_s": 0.5,
+      "lead_silence_s": 0.8,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 12.18,
+      "audio_padding_applied": true,
+      "render_duration_s": 12.208333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-02T12:22:09"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "narration_text": "A tree divides a table into groups using questions about its columns. Following several branches lets it capture interactions: one feature matters differently depending on another. Boosting adds these trees in sequence. Each new tree proposes a correction to the current prediction. X G Boost combines that flexible model with a loss function, complexity controls, and efficient search. Those pieces work together.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "drawon",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A feature split branches into a conditional second split"
+          },
+          {
+            "at": 0.43,
+            "event": "Three trees join an additive prediction chain"
+          },
+          {
+            "at": 0.77,
+            "event": "Loss, controls and search framework appears"
+          }
+        ],
+        "manim": {
+          "scene_class": "B02_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 21.684,
+      "audio_padding_applied": true,
+      "render_duration_s": 21.708333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim:B02_Scene",
+        "at": "2026-10-02T12:22:09"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WORKED EXAMPLE",
+      "narration_text": "Here are four invented training targets: two, four, eight, and ten. Start by predicting six for everyone. The residuals are minus four, minus two, plus two, and plus four. A split separates the first pair from the second. Their average corrections are minus three and plus three. Apply half the correction: predictions become four point five and seven point five. Mean squared error falls from ten to three point two five.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "drawon",
+        "show": [
+          {
+            "at": 0.07,
+            "event": "Four targets and baseline six appear"
+          },
+          {
+            "at": 0.33,
+            "event": "Residuals populate row by row"
+          },
+          {
+            "at": 0.57,
+            "event": "Two leaves average the residuals"
+          },
+          {
+            "at": 0.82,
+            "event": "Half-step updates predictions and MSE"
+          }
+        ],
+        "manim": {
+          "scene_class": "B03_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 21.62,
+      "audio_padding_applied": true,
+      "render_duration_s": 21.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim:B03_Scene",
+        "at": "2026-10-02T12:22:09"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "CURVATURE",
+      "narration_text": "For squared error, residuals make the correction easy to see. Other losses need a more general signal. X G Boost uses both the gradient, which points toward lower loss, and curvature, which describes how quickly that slope changes. Here, two local loss curves share a slope but suggest different step sizes. These statistics help score candidate splits and leaf values. They do not guarantee a globally optimal tree.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "drawon",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Two loss curves share the tangent at zero"
+          },
+          {
+            "at": 0.43,
+            "event": "Their different minima are marked"
+          },
+          {
+            "at": 0.77,
+            "event": "Slope and curvature callouts resolve"
+          }
+        ],
+        "manim": {
+          "scene_class": "B04_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 22.004,
+      "audio_padding_applied": true,
+      "render_duration_s": 22.041666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim:B04_Scene",
+        "at": "2026-10-02T12:22:09"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "REGULARIZATION",
+      "narration_text": "Now put brakes on the correction. With the same example, an L two penalty shrinks the leaf scores from plus or minus three to plus or minus one point five. That is separate from the learning rate, which scales each tree before adding it. A split penalty discourages extra leaves; depth limits constrain interactions. Row and column sampling can add randomness. These controls trade training fit for a chance at better generalization.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "drawon",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Two leaf-score bars shrink under L2"
+          },
+          {
+            "at": 0.43,
+            "event": "Learning-rate half-step appears as a separate operation"
+          },
+          {
+            "at": 0.77,
+            "event": "Split and depth controls surround the tree"
+          }
+        ],
+        "manim": {
+          "scene_class": "B05_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 22.601333,
+      "audio_padding_applied": true,
+      "render_duration_s": 22.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim:B05_Scene",
+        "at": "2026-10-02T12:22:09"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "SYSTEMS",
+      "narration_text": "Good mathematics still needs an affordable search. The histogram method groups feature values into bins, then scans aggregated statistics for promising splits. That saves work compared with checking every distinct value. Missing values follow a default branch learned during training. Parallel work inside tree construction and careful memory access make the system practical. The boosting rounds still depend on earlier rounds; the whole forest is not trained independently.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "drawon",
+        "show": [
+          {
+            "at": 0.07,
+            "event": "Individual values move into histogram bins"
+          },
+          {
+            "at": 0.33,
+            "event": "A candidate split scans the bins"
+          },
+          {
+            "at": 0.57,
+            "event": "Missing row routes to learned default"
+          },
+          {
+            "at": 0.82,
+            "event": "Dependent tree rounds contrast with within-round parallel work"
+          }
+        ],
+        "manim": {
+          "scene_class": "B06_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 24.875,
+      "audio_padding_applied": true,
+      "render_duration_s": 24.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim:B06_Scene",
+        "at": "2026-10-02T12:22:09"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "FALSIFIABILITY",
+      "narration_text": "Here is the catch. As more trees chase the training data, training error can fall while validation error rises. These curves illustrate overfitting, not a benchmark. Use validation to choose when to stop, then evaluate on an untouched test set. Trees also make constant predictions within leaves, so ordinary boosted trees do not naturally extend a trend beyond the training range. Strong on one table does not mean best everywhere.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "drawon",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Training and validation curves draw over rounds"
+          },
+          {
+            "at": 0.43,
+            "event": "Validation minimum is marked"
+          },
+          {
+            "at": 0.77,
+            "event": "Tree extrapolation stays flat beyond observed range"
+          }
+        ],
+        "manim": {
+          "scene_class": "B07_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 22.473333,
+      "audio_padding_applied": true,
+      "render_duration_s": 22.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim:B07_Scene",
+        "at": "2026-10-02T12:22:09"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "VERDICT",
+      "narration_text": "The answer is a combination: trees capture nonlinear rules and interactions; boosting adds targeted corrections; regularization limits complexity; efficient engineering makes the search affordable. That makes X G Boost a strong candidate for tabular prediction, not an automatic winner. Compare against a simple baseline on appropriate splits, measure the metric you care about, and inspect the mistakes. Liam, in for Sanjiv.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "Verdict artifact reveals the four complementary mechanisms"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "XGBoost · The Verdict",
+            "artifactHeading": "Several Strengths, One System",
+            "brandLabel": "@sanjiv",
+            "artifactLines": [
+              "TREES — nonlinear rules and interactions.",
+              "BOOSTING — targeted, sequential corrections.",
+              "CONTROLS — complexity and learning rate.",
+              "SYSTEMS — efficient split search and memory use."
+            ],
+            "durationSeconds": 22.345958
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-29T04:17:43.347849+00:00"
+          }
+        }
+      },
+      "tail_silence_s": 0.5,
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 22.345958,
+      "render_duration_s": 22.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-02T12:22:09"
+      },
+      "audio_padding_applied": true
+    },
+    {
+      "beat_id": "B09",
+      "act": "HANDOFF",
+      "narration_text": "Your turn. Paste this into Claude: Explain one boosting round on four rows. Show residuals, a split, leaf corrections, and the learning rate. Then design a leakage-safe comparison of XGBoost and a simple baseline for my dataset. Check that the arithmetic adds up, that validation chooses stopping, and that the final test set stays untouched.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "Viewer prompt types"
+          },
+          {
+            "at": 0.65,
+            "event": "Arithmetic, validation and test rubric appears"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "MACHINE LEARNING",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Your turn.",
+            "segment": "Try The Mechanism",
+            "command": "Explain one boosting round on four rows. Show residuals, a split, leaf corrections, and the learning rate. Then design a leakage-safe comparison of XGBoost and a simple baseline for my dataset.",
+            "runningText": "check the explanation",
+            "output": [
+              "Arithmetic adds up",
+              "Validation selects stopping",
+              "Final test stays untouched"
+            ],
+            "durationSeconds": 18.932
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-29T04:18:24.409366+00:00"
+          }
+        }
+      },
+      "tail_silence_s": 0.5,
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 18.932,
+      "audio_padding_applied": true,
+      "render_duration_s": 18.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-02T12:22:09"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "OUTRO",
+      "narration_text": "XGBoost - Why It Works So Well. At Sanjiv.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "Exact title restatement with channel mascot"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "XGBoost - Why It Works So Well",
+            "slug": "claude-liam-xgboost",
+            "durationSeconds": 4.52,
+            "handle": "@sanjiv"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-29T04:18:36.515645+00:00"
+          }
+        }
+      },
+      "tail_silence_s": 1,
+      "kind": "outro_voice",
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 4.52,
+      "render_duration_s": 4.541666666666667,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-02T12:22:09"
+      },
+      "audio_padding_applied": true
+    }
+  ]
+}
