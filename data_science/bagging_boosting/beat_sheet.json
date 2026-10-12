@@ -1,0 +1,581 @@
+{
+  "metadata": {
+    "title": "Bagging vs Boosting, Oversimplified",
+    "slug": "claude-liam-bagging-vs-boosting",
+    "topic": "MACHINE LEARNING · ENSEMBLE METHODS",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "voice": "am_onyx",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Salaam, Liam",
+    "greeting_note": "Salaam continues the rotating greeting. Liam is in for Sanjiv; the visible handle is @sanjiv.",
+    "folderLabel": "@sanjiv",
+    "note": "One idea: bagging aggregates independent randomized fits; boosting accumulates dependent corrections. Validate both under matched conditions.",
+    "tags": [
+      "bagging",
+      "boosting",
+      "ensemble learning",
+      "random forest",
+      "AdaBoost",
+      "gradient boosting"
+    ],
+    "build": {
+      "at": "2026-10-02T23:01:01",
+      "cut": "master",
+      "filled": 11,
+      "of": 11,
+      "slates": [],
+      "skin_warnings": []
+    },
+    "persona": "Liam",
+    "keep_review_labels": false
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Salaam. This is Liam, in for Sanjiv. One decision tree is unstable: change a few training rows and its answer can change with them. Ensemble methods respond by building a team. But there are two very different coaching strategies. Bagging lets many models work independently, then combines their votes. Boosting makes each new model study what the current team still gets wrong. Same ingredients; different training logic.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude composer opens on Salaam, Liam"
+          },
+          {
+            "at": 0.2,
+            "event": "bagging-versus-boosting prompt types"
+          },
+          {
+            "at": 0.58,
+            "event": "parallel committee and corrective relay appear"
+          },
+          {
+            "at": 0.82,
+            "event": "answer lines resolve the two training logics"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Salaam, Liam",
+            "topic": "MACHINE LEARNING · ENSEMBLE METHODS",
+            "segment": "Bagging vs Boosting",
+            "command": "Compare bagging and boosting by training logic, work one example of each, and show when either method can fail.",
+            "runningText": "assembling the ensemble…",
+            "folderLabel": "@sanjiv",
+            "output": [
+              "BAGGING → independent randomized fits",
+              "AGGREGATE → vote or average",
+              "BOOSTING → sequential corrections",
+              "VALIDATE → no universal winner"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-02T15:39:11.025543+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 24,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 21.27,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-02T23:01:01"
+      },
+      "render_duration_s": 21.291666666666668
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY",
+      "narration_text": "Here is the whole comparison. Bagging creates diversity, then averages away some instability. Boosting creates a sequence, then adds corrections to improve the current prediction. Bagging is naturally parallel and often starts with flexible learners. Boosting is dependent and often builds with small learners. Neither wins by definition. The data, noise, compute budget, and validation result decide which strategy earns the job.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "whole-comparison",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: Two ways to build a team."
+          },
+          {
+            "at": 0.18,
+            "event": "one unstable tree enters"
+          },
+          {
+            "at": 0.38,
+            "event": "left lane branches into randomized peers and an aggregate"
+          },
+          {
+            "at": 0.62,
+            "event": "right lane becomes a correction sequence"
+          },
+          {
+            "at": 0.84,
+            "event": "validation decision card lands"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 22.17,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T23:01:01"
+      },
+      "render_duration_s": 22.208333333333332
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "narration_text": "Watch the arrows. On the left, bagging draws several randomized training sets, fits the models independently, and aggregates at the end. On the right, boosting fits model one, measures its mistakes, then changes what model two must focus on. That feedback continues through the sequence. Bagging asks, “Can disagreement cancel?” Boosting asks, “What error should the next learner correct?” Parallel committee versus corrective relay.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "training-logic",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: Committee versus relay."
+          },
+          {
+            "at": 0.15,
+            "event": "bagging data branches into three independent fits"
+          },
+          {
+            "at": 0.43,
+            "event": "three fits converge into vote or average"
+          },
+          {
+            "at": 0.58,
+            "event": "boosting learner one feeds an error signal to learner two"
+          },
+          {
+            "at": 0.82,
+            "event": "the corrective chain accumulates a final prediction"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 21.29,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T23:01:01"
+      },
+      "render_duration_s": 21.291666666666668
+    },
+    {
+      "beat_id": "B03",
+      "act": "BAGGING WORKED EXAMPLE",
+      "narration_text": "Take eight training rows and build three bootstrap samples by drawing rows with replacement. Some rows repeat; some are left out. Train one tree on each sample. For a new case, suppose the trees predict blue, orange, and blue. The bagged classifier returns blue by vote; a regressor would average numeric predictions instead. No tree sees another tree’s errors. The gain comes from combining models whose mistakes are not perfectly aligned.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "bootstrap-vote",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: Resample. Fit. Aggregate."
+          },
+          {
+            "at": 0.12,
+            "event": "eight training-row chips appear"
+          },
+          {
+            "at": 0.32,
+            "event": "three bootstrap samples draw with repeats"
+          },
+          {
+            "at": 0.56,
+            "event": "three independent trees fit"
+          },
+          {
+            "at": 0.76,
+            "event": "votes blue, orange, blue land"
+          },
+          {
+            "at": 0.9,
+            "event": "blue wins 2–1 and regression averaging note appears"
+          }
+        ]
+      },
+      "estimated_duration_s": 25,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 22.23,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T23:01:01"
+      },
+      "render_duration_s": 22.25
+    },
+    {
+      "beat_id": "B04",
+      "act": "DIVERSITY",
+      "narration_text": "Averaging does not rescue identical mistakes. If every tree follows the same misleading signal, the ensemble repeats it with confidence. Bagging works when randomization makes the learners meaningfully different while each remains useful. Random forests add feature randomness to bootstrap sampling for exactly that reason: decorrelate the trees. More trees can stabilize the average, but duplicated thinking is not diversity, and quantity cannot repair systematic bias.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "correlation-stress-test",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: Diversity must be useful."
+          },
+          {
+            "at": 0.18,
+            "event": "uncorrelated error arrows partly cancel"
+          },
+          {
+            "at": 0.45,
+            "event": "correlated error arrows stack in the same direction"
+          },
+          {
+            "at": 0.67,
+            "event": "feature randomness separates tree paths"
+          },
+          {
+            "at": 0.86,
+            "event": "quantity cannot repair systematic bias"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 24.44,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T23:01:01"
+      },
+      "render_duration_s": 24.458333333333332
+    },
+    {
+      "beat_id": "B05",
+      "act": "BOOSTING WORKED EXAMPLE",
+      "narration_text": "Now start every training row with equal weight. The first small tree misses two difficult cases. AdaBoost increases those cases’ influence, so the second tree pays more attention to them. It fixes one but misses another; the next round shifts attention again. At the end, the learners do not receive equal say—the stronger ones carry more weight. Gradient boosting changes the mathematics, fitting new trees to loss-reducing corrections, but keeps the sequential idea.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "reweight-and-accumulate",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: The next learner studies the miss."
+          },
+          {
+            "at": 0.12,
+            "event": "eight equally weighted points appear"
+          },
+          {
+            "at": 0.34,
+            "event": "first stump misses two and their rings enlarge"
+          },
+          {
+            "at": 0.55,
+            "event": "second stump corrects one; attention shifts"
+          },
+          {
+            "at": 0.76,
+            "event": "weighted learner votes accumulate"
+          },
+          {
+            "at": 0.9,
+            "event": "gradient boosting distinction appears"
+          }
+        ]
+      },
+      "estimated_duration_s": 26,
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 22.98,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T23:01:01"
+      },
+      "render_duration_s": 23.0
+    },
+    {
+      "beat_id": "B06",
+      "act": "OPERATIONS",
+      "narration_text": "The training diagrams now explain the engineering. Bagged learners can usually be fit at the same time because their jobs do not depend on one another. Boosted learners form a chain, so later stages wait for earlier predictions or residuals. Bagging often spends memory on many developed models. Boosting adds learning rate, stage count, tree size, and stopping choices. Compare total validation quality and runtime, not the family names alone.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "parallel-versus-sequential",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: Independence changes the clock."
+          },
+          {
+            "at": 0.17,
+            "event": "four bagged fits run on parallel lanes"
+          },
+          {
+            "at": 0.43,
+            "event": "four boosted stages illuminate sequentially"
+          },
+          {
+            "at": 0.66,
+            "event": "memory and tuning controls appear"
+          },
+          {
+            "at": 0.86,
+            "event": "validation quality plus runtime becomes the scoreboard"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 22.66,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T23:01:01"
+      },
+      "render_duration_s": 22.666666666666668
+    },
+    {
+      "beat_id": "B07",
+      "act": "FALSIFIABILITY",
+      "narration_text": "Here is where the slogan breaks. A mislabeled or extreme case looks like a mistake worth chasing. Sequential correction can keep spending capacity on it, especially with overly deep learners, too many stages, or an aggressive learning rate. Bagging can still overfit, and correlated trees can preserve the same error. So test both on untouched validation data, inspect learning curves, and tune the mechanism. “Ensemble” is not a warranty.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "noise-stress-test",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: Ensemble is not a warranty."
+          },
+          {
+            "at": 0.16,
+            "event": "a mislabeled point attracts repeated correction"
+          },
+          {
+            "at": 0.43,
+            "event": "training loss falls while validation loss turns upward"
+          },
+          {
+            "at": 0.67,
+            "event": "bagged correlated errors remain aligned"
+          },
+          {
+            "at": 0.86,
+            "event": "untouched validation and learning curves become the guardrail"
+          }
+        ]
+      },
+      "estimated_duration_s": 24,
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 22.87,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T23:01:01"
+      },
+      "render_duration_s": 22.875
+    },
+    {
+      "beat_id": "B08",
+      "act": "VERDICT",
+      "narration_text": "The verdict: use bagging when an unstable learner benefits from randomized views and aggregation; random forests are the familiar example. Use boosting when a controlled sequence of weak corrections improves the chosen loss; AdaBoost and gradient-boosted trees are different versions of that idea. Bagging is independent then combined. Boosting is dependent then accumulated. Choose with cross-validation, error analysis, training cost, and the noise you actually have.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-build",
+        "show": [
+          {
+            "at": 0,
+            "event": "verdict artifact opens"
+          },
+          {
+            "at": 0.2,
+            "event": "bagging mechanism line appears"
+          },
+          {
+            "at": 0.42,
+            "event": "boosting mechanism line appears"
+          },
+          {
+            "at": 0.66,
+            "event": "failure-mode check lands"
+          },
+          {
+            "at": 0.86,
+            "event": "matched validation rule resolves"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Ensemble verdict · @sanjiv",
+            "artifactHeading": "Choose the training logic the evidence supports",
+            "artifactLines": [
+              "BAGGING — randomize, fit independently, aggregate.",
+              "BOOSTING — fit sequentially, add corrections.",
+              "STRESS — inspect noise and aligned errors.",
+              "DECIDE — matched splits, metric, cost, and runtime."
+            ],
+            "brandLabel": "@sanjiv"
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-10-02T15:40:28.598607+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 24,
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 23.19,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-02T23:01:01"
+      },
+      "render_duration_s": 23.208333333333332
+    },
+    {
+      "beat_id": "B09",
+      "act": "HANDOFF",
+      "narration_text": "Your turn. Paste this into Claude: Given my dataset, metric, compute limits, and baseline model, design a leakage-safe comparison of a single decision tree, a random forest or bagging model, and a gradient-boosted tree model. Use the same cross-validation splits, tune each fairly, report mean and spread, training and inference time, and analyze where their errors disagree. Recommend one only if the evidence supports it. Look for matched evaluation, not a popularity contest.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "prompt-compose",
+        "show": [
+          {
+            "at": 0,
+            "event": "Your turn composer opens"
+          },
+          {
+            "at": 0.14,
+            "event": "the exact comparison prompt types"
+          },
+          {
+            "at": 0.52,
+            "event": "matched split and fair-tuning checks appear"
+          },
+          {
+            "at": 0.76,
+            "event": "quality, spread, time, and disagreement checks land"
+          },
+          {
+            "at": 0.92,
+            "event": "evidence before recommendation resolves"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "MACHINE LEARNING · ENSEMBLE AUDIT",
+            "segment": "Test the Ensembles",
+            "command": "Given my dataset, metric, compute limits, and baseline model, design a leakage-safe comparison of a single decision tree, a random forest or bagging model, and a gradient-boosted tree model. Use the same cross-validation splits, tune each fairly, report mean and spread, training and inference time, and analyze where their errors disagree. Recommend one only if the evidence supports it.",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@sanjiv",
+            "output": [
+              "MATCH · identical validation splits",
+              "TUNE · fair search budgets",
+              "MEASURE · quality, spread, and time",
+              "DECIDE · only when evidence supports it"
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-10-02T15:41:31.693949+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 29,
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 25.26,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-02T23:01:01"
+      },
+      "render_duration_s": 25.291666666666668
+    },
+    {
+      "beat_id": "B10",
+      "act": "TITLE RESTATE",
+      "narration_text": "Bagging versus boosting, oversimplified. Bagging trains randomized learners independently, then votes or averages. Boosting trains learners in sequence, with each stage correcting the current ensemble. Bagging needs useful diversity. Boosting needs disciplined corrections. Both can fail when their errors align with noise. Validate them under the same splits, metric, and compute budget. This was Liam, in for Sanjiv.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "title-lockup",
+        "show": [
+          {
+            "at": 0,
+            "event": "parallel votes and correction chain contract into the title"
+          },
+          {
+            "at": 0.34,
+            "event": "independent votes and sequential corrections settle beneath"
+          },
+          {
+            "at": 0.7,
+            "event": "Liam in for Sanjiv lands"
+          },
+          {
+            "at": 0.9,
+            "event": "@sanjiv holds inside the poster border"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Bagging vs Boosting",
+            "handle": "@sanjiv",
+            "subline": "Independent votes · Sequential corrections · Liam, in for Sanjiv"
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-10-02T15:41:50.038274+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 21.46,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-02T23:01:01"
+      },
+      "render_duration_s": 21.5
+    }
+  ]
+}
