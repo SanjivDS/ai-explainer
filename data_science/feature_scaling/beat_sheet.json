@@ -1,0 +1,546 @@
+{
+  "metadata": {
+    "title": "Feature Scaling: Standardization vs Normalization, Oversimplified",
+    "slug": "claude-liam-feature-scaling",
+    "topic": "MACHINE LEARNING · DATA PREPROCESSING",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "voice": "am_onyx",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Ahoj, Liam",
+    "greeting_note": "Ahoj (Czech) continues the rotating greeting. Liam is in for Sanjiv; the channel handle is @sanjiv.",
+    "folderLabel": "@sanjiv",
+    "note": "One idea: scaling changes units, not information; choose a transformation whose geometry and assumptions fit the model, and learn its parameters from training data only.",
+    "tags": [
+      "feature scaling",
+      "standardization",
+      "normalization",
+      "min-max scaling",
+      "data leakage",
+      "machine learning"
+    ],
+    "build": {
+      "at": "2026-10-02T11:58:30",
+      "cut": "master",
+      "filled": 10,
+      "of": 10,
+      "slates": [],
+      "skin_warnings": []
+    },
+    "persona": "Liam",
+    "keep_review_labels": false
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Ahoj. This is Liam, in for Sanjiv. Imagine one feature measured in dollars and another measured as a fraction. A model that uses distance, gradients, or penalties can treat the larger numbers as more important even when they are not. Feature scaling fixes the units. But standardization and normalization do it differently, and choosing blindly can create a new problem.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude composer opens on 'Ahoj, Liam'"
+          },
+          {
+            "at": 0.2,
+            "event": "the feature-scaling comparison prompt types in"
+          },
+          {
+            "at": 0.58,
+            "event": "a dollar-scale column towers over a fractional column"
+          },
+          {
+            "at": 0.8,
+            "event": "answer lines land: standardize, min–max, fit on train, choose by model"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Ahoj, Liam",
+            "topic": "MACHINE LEARNING · DATA PREPROCESSING",
+            "segment": "Standardization vs Normalization",
+            "command": "Explain when feature scaling matters, compare standardization with min–max normalization, work one example, and show how to avoid data leakage.",
+            "runningText": "rescaling the features…",
+            "folderLabel": "@sanjiv",
+            "output": [
+              "WHY → comparable geometry",
+              "STANDARDIZE → center and scale",
+              "MIN–MAX → map a training range",
+              "PIPELINE → fit on training data only"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-02T15:49:45.459806+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 21,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 19.8,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-02T11:58:30"
+      },
+      "render_duration_s": 19.833333333333332
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY",
+      "narration_text": "Here is the whole idea. Scaling does not add information; it changes the coordinate system so numerical magnitude does not win by accident. Standardization expresses values in standard-deviation units around the mean. Min–max scaling maps the observed training range into a fixed interval, usually zero to one. Neither is universally better. The model, distribution, outliers, and deployment range decide.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "coordinate-reframe",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Change units, not information.'"
+          },
+          {
+            "at": 0.2,
+            "event": "two unequal feature axes distort a circular neighborhood"
+          },
+          {
+            "at": 0.48,
+            "event": "axes rescale and the intended neighborhood becomes balanced"
+          },
+          {
+            "at": 0.7,
+            "event": "standardization and min–max appear as two distinct coordinate maps"
+          },
+          {
+            "at": 0.88,
+            "event": "choice factors land: model, outliers, deployment range"
+          }
+        ]
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 22.04,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T11:58:30"
+      },
+      "render_duration_s": 22.041666666666668
+    },
+    {
+      "beat_id": "B02",
+      "act": "WHY SCALE",
+      "narration_text": "Why can units matter? In nearest neighbors, a thousand-dollar difference can overwhelm a small but meaningful ratio because distance sees the raw numbers. In gradient-based models, uneven scales can make optimization crawl along a narrow valley. With regularization, coefficient penalties also interact with feature scale. Tree splits mostly compare order and thresholds, so ordinary decision trees usually need scaling far less.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "three-mechanisms",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Units change the geometry.'"
+          },
+          {
+            "at": 0.18,
+            "event": "a KNN distance ruler is dominated by the large-scale feature"
+          },
+          {
+            "at": 0.42,
+            "event": "a gradient zigzags through an elongated loss valley"
+          },
+          {
+            "at": 0.65,
+            "event": "equal coefficient penalties meet unequal feature scales"
+          },
+          {
+            "at": 0.84,
+            "event": "a tree threshold card remains nearly unchanged and is labeled 'usually scale-insensitive'"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 22.68,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T11:58:30"
+      },
+      "render_duration_s": 22.708333333333332
+    },
+    {
+      "beat_id": "B03",
+      "act": "STANDARDIZATION",
+      "narration_text": "Standardization subtracts the training mean, then divides by the training standard deviation. Take ten, twenty, and thirty. Their mean is twenty; using the population standard deviation, about eight point one six, they become roughly minus one point two two, zero, and plus one point two two. The center moves to zero and one unit now means one training-set standard deviation. The shape is not forced to become normal.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "worked-z-score",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Center. Then scale.'"
+          },
+          {
+            "at": 0.16,
+            "event": "formula z = (x − mean) / standard deviation writes on"
+          },
+          {
+            "at": 0.34,
+            "event": "10, 20, 30 settle on a number line and mean 20 is marked"
+          },
+          {
+            "at": 0.58,
+            "event": "standard deviation 8.16 becomes the new ruler"
+          },
+          {
+            "at": 0.78,
+            "event": "points transform to −1.22, 0, +1.22 without changing order"
+          },
+          {
+            "at": 0.92,
+            "event": "warning lands: 'standardized ≠ normally distributed'"
+          }
+        ]
+      },
+      "estimated_duration_s": 25,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 21.55,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T11:58:30"
+      },
+      "render_duration_s": 21.583333333333332
+    },
+    {
+      "beat_id": "B04",
+      "act": "MIN-MAX NORMALIZATION",
+      "narration_text": "Min–max scaling subtracts the training minimum and divides by the training range. The same ten, twenty, and thirty become zero, zero point five, and one. That bounded interval is useful when a model or interface expects a known range. But the endpoints are set by extremes. Add an outlier at one hundred, and the original three values compress near the bottom.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "range-map",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Anchor to the endpoints.'"
+          },
+          {
+            "at": 0.16,
+            "event": "formula (x − min) / (max − min) writes on"
+          },
+          {
+            "at": 0.38,
+            "event": "10, 20, 30 map evenly to 0, 0.5, 1"
+          },
+          {
+            "at": 0.66,
+            "event": "an outlier at 100 extends the source axis"
+          },
+          {
+            "at": 0.84,
+            "event": "10, 20, 30 visibly compress toward zero"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 19.31,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T11:58:30"
+      },
+      "render_duration_s": 19.333333333333332
+    },
+    {
+      "beat_id": "B05",
+      "act": "COMPARE",
+      "narration_text": "The tradeoff is clearer side by side. Standardization has no fixed bounds and remains sensitive to outliers because the mean and standard deviation move. Min–max guarantees the chosen range for the training observations, but it is even more hostage to extreme endpoints. New values can fall below zero or above one unless you clip them. If outliers dominate, consider a robust scaler instead of pretending either default is safe.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "comparison-stress-test",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Both defaults can bend.'"
+          },
+          {
+            "at": 0.18,
+            "event": "standardization panel shows an unbounded axis centered at zero"
+          },
+          {
+            "at": 0.4,
+            "event": "min–max panel shows the training interval locked to 0–1"
+          },
+          {
+            "at": 0.62,
+            "event": "one outlier pulls both transforms in different ways"
+          },
+          {
+            "at": 0.82,
+            "event": "a new deployment value lands beyond 1 on the min–max panel"
+          },
+          {
+            "at": 0.92,
+            "event": "robust-scaler option appears as the honest fallback"
+          }
+        ]
+      },
+      "estimated_duration_s": 24,
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 22.66,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T11:58:30"
+      },
+      "render_duration_s": 22.666666666666668
+    },
+    {
+      "beat_id": "B06",
+      "act": "LEAKAGE AND NAMING",
+      "narration_text": "Two practical traps matter more than the formula. First, split before fitting the scaler. Learn the mean, deviation, minimum, or maximum from training data only, then reuse those stored values on validation, test, and production inputs. A pipeline makes that discipline easier. Second, names vary: here normalization means min–max scaling, while scikit-learn's Normalizer rescales each sample to unit norm. Always inspect the exact operation.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "pipeline-guardrail",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Fit train. Reuse everywhere.'"
+          },
+          {
+            "at": 0.18,
+            "event": "raw data splits into train and test before the scaler"
+          },
+          {
+            "at": 0.4,
+            "event": "training data fits scaler parameters; test data can only transform"
+          },
+          {
+            "at": 0.66,
+            "event": "an attempted fit on all data is blocked as leakage"
+          },
+          {
+            "at": 0.82,
+            "event": "MIN–MAX and UNIT NORM cards separate to expose the naming ambiguity"
+          }
+        ]
+      },
+      "estimated_duration_s": 24,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 23.23,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T11:58:30"
+      },
+      "render_duration_s": 23.25
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "narration_text": "The verdict: scale when the model cares about distances, gradients, variance, or comparable penalties. Standardize when centered, standard-deviation units fit the job. Use min–max scaling when a fixed training range is useful and extremes are trustworthy. Trees often do not need either. Whatever you choose, fit it inside the training pipeline, validate the whole model, and remember that scaling changes geometry—not the underlying signal.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-build",
+        "show": [
+          {
+            "at": 0,
+            "event": "verdict artifact opens as a scaler selection receipt"
+          },
+          {
+            "at": 0.2,
+            "event": "model sensitivity check appears first"
+          },
+          {
+            "at": 0.42,
+            "event": "standardize and min–max choices resolve with their assumptions"
+          },
+          {
+            "at": 0.64,
+            "event": "tree-model exception checks on"
+          },
+          {
+            "at": 0.84,
+            "event": "pipeline rule lands: fit on train, transform everywhere"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Feature-scaling verdict · @sanjiv",
+            "artifactHeading": "Choose the geometry your model needs",
+            "artifactLines": [
+              "CHECK — does the model care about scale?",
+              "STANDARDIZE — centered deviation units.",
+              "MIN–MAX — bounded training range.",
+              "PIPELINE — fit on train; reuse everywhere."
+            ],
+            "brandLabel": "@sanjiv"
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-10-02T15:51:21.577638+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 22.46,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-02T11:58:30"
+      },
+      "render_duration_s": 22.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Intentional inset Claude recap artifact. Inspected rendered B07 frame: heading and all four verdict lines are readable and complete, with consistent margins. The 47% occupancy reflects the floating card design, not missing or undersized content."
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "HANDOFF",
+      "narration_text": "Your turn. Paste this into Claude: Given my dataset, model, and train-validation split, compare no scaling, StandardScaler, MinMaxScaler, and RobustScaler inside leakage-safe pipelines. Explain which model behaviors make scaling relevant, report cross-validated performance and convergence time, inspect transformed ranges and outliers, and recommend one option with caveats. Look for a justified choice, not an automatic winner, then run the same comparison on your own data.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "prompt-compose",
+        "show": [
+          {
+            "at": 0,
+            "event": "handoff composer opens with 'Your turn.'"
+          },
+          {
+            "at": 0.16,
+            "event": "the exact spoken scaler-comparison prompt types in"
+          },
+          {
+            "at": 0.5,
+            "event": "four leakage-safe pipelines preview side by side"
+          },
+          {
+            "at": 0.72,
+            "event": "performance, convergence, ranges, and outliers check on"
+          },
+          {
+            "at": 0.9,
+            "event": "final rubric lands: justified choice, not automatic winner"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "MACHINE LEARNING · PREPROCESSING AUDIT",
+            "segment": "Test the Scalers",
+            "command": "Given my dataset, model, and train-validation split, compare no scaling, StandardScaler, MinMaxScaler, and RobustScaler inside leakage-safe pipelines. Explain which model behaviors make scaling relevant, report cross-validated performance and convergence time, inspect transformed ranges and outliers, and recommend one option with caveats.",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@sanjiv",
+            "output": [
+              "CHECK · unscaled baseline",
+              "CHECK · leakage-safe pipelines",
+              "CHECK · outliers and new ranges",
+              "CHOOSE · one scaler with caveats"
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-10-02T15:52:48.725363+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 27,
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 26.62,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-02T11:58:30"
+      },
+      "render_duration_s": 26.625
+    },
+    {
+      "beat_id": "B09",
+      "act": "TITLE RESTATE",
+      "narration_text": "Feature scaling: standardization versus normalization, oversimplified. Standardization centers values and measures deviation from the mean. Min–max normalization anchors values to the training endpoints. Both can be distorted by outliers. Some models need scaling; trees often do not. Split first, fit the scaler on training data, and reuse it everywhere else. This was Liam, in for Sanjiv.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "title-lockup",
+        "show": [
+          {
+            "at": 0,
+            "event": "unequal axes contract into a balanced title lockup"
+          },
+          {
+            "at": 0.3,
+            "event": "standardization and min–max formulas settle beneath"
+          },
+          {
+            "at": 0.6,
+            "event": "fit train / transform rest rule locks on"
+          },
+          {
+            "at": 0.82,
+            "event": "'Liam, in for Sanjiv' lands"
+          },
+          {
+            "at": 0.92,
+            "event": "@sanjiv holds inside the poster border"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Feature Scaling: Standardization vs Normalization",
+            "handle": "@sanjiv",
+            "subline": "Choose the geometry · Liam, in for Sanjiv"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-10-02T15:53:16.290007+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 19,
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 21.29,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-02T11:58:30"
+      },
+      "render_duration_s": 21.291666666666668
+    }
+  ]
+}
