@@ -1,0 +1,553 @@
+{
+  "metadata": {
+    "title": "K-Means Clustering + Elbow Method",
+    "slug": "claude-liam-k-means-elbow",
+    "brand": "claude-liam",
+    "audience": "Claude",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "register": "Teardown",
+    "folderLabel": "@sanjiv",
+    "keep_review_labels": false,
+    "build": {
+      "at": "2026-10-04T01:02:21",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Hola. This is Liam, in for Sanjiv. Give a machine a cloud of points and ask it to find groups. What makes two points belong together? We will animate K means, move its centers by hand, and plot a real, computed elbow curve. Then we will test the tempting claim that one bend tells you the true number of groups.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Composer asks for the computed walkthrough"
+          },
+          {
+            "at": 0.5,
+            "event": "Answer previews assignment, centroids, elbow and failure cases"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "MACHINE LEARNING",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Hola, Liam",
+            "segment": "K-Means + Elbow Method",
+            "command": "Animate K-means assignment and moving centroids. Compute an elbow plot, then show where the method fails.",
+            "runningText": "computing the example…",
+            "output": [
+              "Assign → average → repeat",
+              "Compare K with recorded inertia",
+              "Check scale, shape, and stability"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-04T04:50:06.486659+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 16.32,
+      "render_duration_s": 16.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-04T01:02:21"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "OVERVIEW",
+      "narration_text": "K means builds compact groups around moving centers. The elbow method helps compare how many centers to use, but it does not certify natural categories. Your definition of distance still decides what similarity means.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Writer replaces natural with compact"
+          },
+          {
+            "at": 0.5,
+            "event": "Corrected overview holds"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "K-means builds natural groups.\nThe elbow helps choose how many.",
+            "triggerWords": "natural",
+            "replacementWords": "compact",
+            "fontSize": 76,
+            "charMs": 48,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0,
+            "seed": "kmeans-sanjiv-20261004",
+            "brandLabel": "@sanjiv",
+            "contextTitle": "A Useful Grouping",
+            "contextItems": [
+              {
+                "label": "Group",
+                "detail": "assign and average"
+              },
+              {
+                "label": "Compare",
+                "detail": "look for diminishing gains"
+              },
+              {
+                "label": "Question",
+                "detail": "test the assumptions"
+              }
+            ]
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-10-04T04:50:54.021783+00:00"
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 12.8,
+      "render_duration_s": 12.833333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-04T01:02:21"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "narration_text": "Here is the whole loop. Choose K, the number of centers. Start those centers somewhere. Assign every point to its nearest center, then move each center to the average of its assigned points. Repeat. Points can change teams when the centers move. K is your input; the algorithm does not discover that number for you.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Choose K and initial centers"
+          },
+          {
+            "at": 0.33,
+            "event": "Assign points to centers"
+          },
+          {
+            "at": 0.67,
+            "event": "Move centers to their means and repeat"
+          }
+        ],
+        "manim": {
+          "class": "B02_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 16.21,
+      "render_duration_s": 16.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T01:02:21"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "EXAMPLE",
+      "narration_text": "Take four points: one, two, eight, and nine. Choose two centers, initially at one and two. The first center gets point one. The other gets two, eight, and nine, so its average moves to about six point three three. Reassign, and point two changes teams. The centers settle at one point five and eight point five. Assign, average, repeat.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assign",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Show points 1, 2, 8, 9 and centers 1, 2"
+          },
+          {
+            "at": 0.33,
+            "event": "Center moves to 6.33"
+          },
+          {
+            "at": 0.67,
+            "event": "Point 2 switches; centers settle at 1.5 and 8.5"
+          }
+        ],
+        "manim": {
+          "class": "B03_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 17.45,
+      "render_duration_s": 17.458333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T01:02:21"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "OBJECTIVE",
+      "narration_text": "What is the loop trying to reduce? Inertia: add up each point's squared distance to its assigned center. A distance of one contributes one. A distance of three contributes nine. Large misses count much more. In our four-point example, every point finishes half a unit from its center, and the four squared distances sum to one. Lower inertia means a tighter fit to these data.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "scale",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Compare distances 1 and 3"
+          },
+          {
+            "at": 0.33,
+            "event": "Grow squares of area 1 and 9"
+          },
+          {
+            "at": 0.67,
+            "event": "Show four half-unit residuals and total inertia 1"
+          }
+        ],
+        "manim": {
+          "class": "B04_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 19.63,
+      "render_duration_s": 19.666666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T01:02:21"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "ELBOW",
+      "narration_text": "Now change K. These eighteen synthetic points form three separated clouds. With one center, the recorded inertia is about one hundred forty-eight. With two, fifty-eight. With three, roughly four. After that, each extra center buys a much smaller improvement. That bend near three is the elbow: a useful tradeoff between a tighter fit and another cluster. These are computed results, not a universal threshold.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Draw recorded inertia curve for K 1 through 6"
+          },
+          {
+            "at": 0.33,
+            "event": "Highlight bend at K 3"
+          },
+          {
+            "at": 0.67,
+            "event": "Show diminishing gains beyond the bend"
+          }
+        ],
+        "manim": {
+          "class": "B05_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 20.95,
+      "render_duration_s": 20.958333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T01:02:21"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "SCALE",
+      "narration_text": "Distance is a design choice disguised as arithmetic. Watch the same four observations under two feature weightings. With one feature spanning ten units and the other only one, the split follows the larger scale. Rescale that feature and the split changes. Standardization can help when units would otherwise dominate, but it is not automatic truth. Choose features and scales that represent meaningful similarity.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "transform",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Show original four observations and nearest-center memberships"
+          },
+          {
+            "at": 0.33,
+            "event": "Rescale one feature"
+          },
+          {
+            "at": 0.67,
+            "event": "Reveal changed memberships"
+          }
+        ],
+        "manim": {
+          "class": "B06_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 21.21,
+      "render_duration_s": 21.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T01:02:21"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "FAILURE",
+      "narration_text": "Here is a failure the elbow cannot repair. These two curved bands look like separate groups. K means with two centers cuts across them, because nearest-center regions are separated by a straight boundary in this plane. It prefers compact groups, not arbitrary shapes. Different starts can also reach different local solutions. Use careful initialization and repeated runs, then inspect what the clusters actually contain.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "compare",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Show two synthetic curved bands"
+          },
+          {
+            "at": 0.33,
+            "event": "Reveal computed two-center split"
+          },
+          {
+            "at": 0.67,
+            "event": "Compare shape-based grouping with nearest-center grouping"
+          }
+        ],
+        "manim": {
+          "class": "B07_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 20.8,
+      "render_duration_s": 20.833333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T01:02:21"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "DECISION",
+      "narration_text": "And sometimes there is no convincing elbow. These points are evenly spaced along a line, with no planted groups. Their inertia still falls as we add centers. The best possible inertia cannot increase when K grows; that alone proves nothing about categories. Compare nearby choices, inspect silhouette scores and stability, and ask whether the grouping helps your task. If the evidence is ambiguous, say so.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Draw uniform-data inertia curve"
+          },
+          {
+            "at": 0.33,
+            "event": "Show evenly spaced points with no planted groups"
+          },
+          {
+            "at": 0.67,
+            "event": "Reveal silhouette, stability and usefulness checks"
+          }
+        ],
+        "manim": {
+          "class": "B08_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 20.86,
+      "render_duration_s": 20.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T01:02:21"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "narration_text": "Keep three ideas. K means alternates nearest-center assignment and averaging. Its score rewards compactness under your chosen distance. The elbow is a candidate-selection heuristic, not a truth detector. A sensible number of groups survives checks on scaling, initialization, shape, and usefulness. The question is not only whether the score got smaller. It is whether the groups earned an interpretation.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "artifact",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Verdict artifact reveals the three key lessons"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "K-means — one page",
+            "artifactHeading": "Question the grouping",
+            "artifactLines": [
+              "LOOP — assign to the nearest center; move to the mean.",
+              "SCORE — sum squared distances on the chosen feature scale.",
+              "ELBOW — a useful bend, not proof of natural categories.",
+              "CHECK — scaling, repeated starts, shape, and usefulness."
+            ],
+            "folderLabel": "@sanjiv",
+            "largeText": true,
+            "brandLabel": "@sanjiv"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-10-04T04:59:54.524972+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 20.8,
+      "render_duration_s": 20.833333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-04T01:02:21"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR TURN",
+      "narration_text": "Try this prompt. On a small synthetic dataset, run K means for K from one to six with repeated initializations. Plot inertia, compare silhouette scores for K above one, and show cluster assignments. Then rescale one feature and repeat. Explain whether the same K remains defensible. Look for changed memberships, unstable results, and an honest explanation when no clear elbow exists. Save the data and seed so you can reproduce the comparison.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Type and read the reproducible viewer experiment"
+          },
+          {
+            "at": 0.5,
+            "event": "Show checklist for interpreting the result"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "MACHINE LEARNING",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Your turn.",
+            "segment": "Test the Bend",
+            "command": "On a small synthetic dataset, run K means for K from one to six with repeated initializations. Plot inertia, compare silhouette scores for K above one, and show cluster assignments. Then rescale one feature and repeat. Explain whether the same K remains defensible.",
+            "runningText": "test the assumptions…",
+            "output": [
+              "SAVE the data and seed",
+              "COMPARE memberships after scaling",
+              "REPORT ambiguity when the elbow is unclear"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-10-04T04:53:06.251390+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 23.21,
+      "render_duration_s": 23.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-04T01:02:21"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "narration_text": "K-Means Clustering plus Elbow Method. Build the groups, then question the bend. Liam, in for Sanjiv.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "poster",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Restate title and hold @sanjiv"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "K-Means Clustering + Elbow Method",
+            "handle": "@sanjiv",
+            "subline": "",
+            "seed": "kmeans-sanjiv-20261004"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-10-04T04:53:21.172311+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 6.49,
+      "render_duration_s": 6.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-04T01:02:21"
+      }
+    }
+  ]
+}
