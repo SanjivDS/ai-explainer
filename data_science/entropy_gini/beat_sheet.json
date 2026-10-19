@@ -1,0 +1,547 @@
+{
+  "metadata": {
+    "title": "Entropy vs Gini Impurity",
+    "slug": "claude-liam-entropy-vs-gini",
+    "brand": "claude-liam",
+    "audience": "Claude",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "register": "Teardown",
+    "folderLabel": "@sanjiv",
+    "keep_review_labels": false,
+    "build": {
+      "at": "2026-10-04T13:38:45",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Bonjour. This is Liam, in for Sanjiv. A decision tree keeps asking questions that separate classes. But how does it score a question? Gini impurity and entropy both measure how mixed a node is. We will calculate them on the same examples, animate their curves, and find a case where they disagree about the best split.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Type the comparison request"
+          },
+          {
+            "at": 0.5,
+            "event": "Preview node scores, weighted splits and disagreement"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "MACHINE LEARNING",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Bonjour, Liam",
+            "segment": "Entropy vs Gini Impurity",
+            "command": "Animate class mixing, calculate Gini and entropy, then show two candidate splits whose rankings disagree.",
+            "runningText": "computing the comparison…",
+            "output": [
+              "Same labels, two impurity measures",
+              "Weight every child by its size",
+              "Test a disagreement with real arithmetic"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-04T17:26:51.099204+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 16.49,
+      "render_duration_s": 16.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-04T13:38:45"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "OVERVIEW",
+      "narration_text": "Gini and entropy are different measures of class mixing. Both reward cleaner groups. Neither guarantees a better tree on new data. The interesting difference is how they score the tradeoffs between candidate splits.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Replace identical with different in the overview"
+          },
+          {
+            "at": 0.5,
+            "event": "Hold the corrected claim"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Gini and entropy are identical measures.\nBoth reward cleaner groups.",
+            "triggerWords": "identical",
+            "replacementWords": "different",
+            "fontSize": 70,
+            "charMs": 45,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0,
+            "seed": "entropy-gini-sanjiv",
+            "brandLabel": "@sanjiv",
+            "contextTitle": "How Mixed Is This Node?",
+            "contextItems": [
+              {
+                "label": "Measure",
+                "detail": "class mixing"
+              },
+              {
+                "label": "Compare",
+                "detail": "weighted child scores"
+              },
+              {
+                "label": "Validate",
+                "detail": "performance on new data"
+              }
+            ]
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-10-04T17:27:42.262152+00:00"
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 11.43,
+      "render_duration_s": 11.458333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-04T13:38:45"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "narration_text": "Start with the labels, not the feature values. This node contains four examples of class A and one of class B. Those proportions are eighty percent and twenty percent. A pure node contains only one class. A balanced binary node contains equal shares. Both measures are zero at purity and largest at an even mix. They measure uncertainty about the label inside a node.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "transform",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Reveal four A dots and one B dot"
+          },
+          {
+            "at": 0.5,
+            "event": "Transform into pure and balanced nodes"
+          }
+        ],
+        "manim": {
+          "class": "B02_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.48,
+      "render_duration_s": 19.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T13:38:45"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "GINI",
+      "narration_text": "Gini has a useful probability interpretation. Draw two labels independently from this node, with replacement. What is the chance they disagree? The grid shows all twenty-five equally likely ordered pairs from our five records. Eight pairs disagree, so Gini is eight over twenty-five: zero point three two. The formula subtracts the probability of matching labels from one. This is not the error rate of a majority-vote prediction.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "isotype",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Build a five-by-five grid of ordered label pairs"
+          },
+          {
+            "at": 0.33,
+            "event": "Highlight the eight disagreements"
+          },
+          {
+            "at": 0.67,
+            "event": "Reveal structured formula and computed 0.32"
+          }
+        ],
+        "manim": {
+          "class": "B03_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 22.29,
+      "render_duration_s": 22.291666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T13:38:45"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "ENTROPY",
+      "narration_text": "Entropy asks about average surprise. A common label brings little surprise; a rare label brings more. With base-two logarithms, our eighty-percent label contributes about zero point three two bits of surprise when it appears. The twenty-percent label brings about two point three two bits. Weight those surprises by their probabilities and the average is about zero point seven two bits. A class with probability zero contributes zero by convention.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Reveal probability bars and surprisal values"
+          },
+          {
+            "at": 0.33,
+            "event": "Weight each surprise; reveal structured entropy formula"
+          },
+          {
+            "at": 0.67,
+            "event": "Show computed 0.722 bits"
+          }
+        ],
+        "manim": {
+          "class": "B04_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 22.93,
+      "render_duration_s": 22.958333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T13:38:45"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "CURVES",
+      "narration_text": "Now move the class balance. Both curves vanish at the pure ends and peak in the middle. But their scales differ. For two balanced classes, Gini is one half; base-two entropy is one bit. Here Gini is doubled only to compare the shapes. Entropy rises more sharply near a pure node. Similar shapes do not make the criteria interchangeable when children have different sizes and mixtures.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Trace entropy and doubled-Gini curves"
+          },
+          {
+            "at": 0.33,
+            "event": "Move a probability marker through pure, skewed and balanced states"
+          },
+          {
+            "at": 0.67,
+            "event": "Label normalization and maxima"
+          }
+        ],
+        "manim": {
+          "class": "B05_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 19.52,
+      "render_duration_s": 19.541666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T13:38:45"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "WEIGHTS",
+      "narration_text": "A tree scores the whole split, not just its cleanest child. Take eight A labels and two B labels. Send four A labels left, leaving four A and two B on the right. The left child is pure; the right is still mixed. Weight each child by its share of the ten records. Weighted Gini is about zero point two six seven. Subtract that from the parent score to get the reduction.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "partition",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Partition ten label dots into four and six"
+          },
+          {
+            "at": 0.33,
+            "event": "Reveal child weights and impurities"
+          },
+          {
+            "at": 0.67,
+            "event": "Combine into weighted score and parent reduction"
+          }
+        ],
+        "manim": {
+          "class": "B06_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 18.77,
+      "render_duration_s": 18.791666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T13:38:45"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "DISAGREEMENT",
+      "narration_text": "Here the rankings actually flip. Both candidate questions split the same parent: ten A labels and ten B labels. Split A makes children with one A and seven B, then nine A and three B. Split B isolates five B labels, leaving ten A and five B. The computed weighted Gini favors A. Weighted entropy favors B. Within each criterion, lower is better. Comparing their raw numbers across criteria is meaningless.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "compare",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Reveal both candidate partitions of the same parent"
+          },
+          {
+            "at": 0.33,
+            "event": "Compute the two weighted Gini scores and winner"
+          },
+          {
+            "at": 0.67,
+            "event": "Reveal entropy scores and the reversed winner"
+          }
+        ],
+        "manim": {
+          "class": "B07_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 21.55,
+      "render_duration_s": 21.583333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T13:38:45"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "LIMITS",
+      "narration_text": "A cleaner training leaf is not a promise about tomorrow. Watch a pure training group receive new examples with different labels. Neither impurity formula protects you from overfitting, noise, or an unrepresentative sample. Compare criteria with the same validation plan and sensible limits on tree size. Judge the predictions on held-out data using a metric that fits your task. The split score is a training tool, not the final verdict.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "move",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Show a pure training leaf"
+          },
+          {
+            "at": 0.33,
+            "event": "Send mixed held-out labels into it"
+          },
+          {
+            "at": 0.67,
+            "event": "Reveal validation and tree-size controls"
+          }
+        ],
+        "manim": {
+          "class": "B08_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 22.14,
+      "render_duration_s": 22.166666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-04T13:38:45"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "narration_text": "Keep the distinction clear. Gini is the probability that two independently drawn labels disagree. Entropy is average surprise in the class label. Both guide a tree toward purer children using a weighted score. Their rankings can differ, and their numeric scales differ too. Choose with validation, not with the assumption that a more elaborate formula must be better.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "artifact",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Reveal the summary artifact"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "brandLabel": "@sanjiv",
+            "artifactTitle": "Entropy vs Gini — one page",
+            "artifactHeading": "Two Scores, One Decision",
+            "artifactLines": [
+              "GINI — probability of disagreement between two label draws.",
+              "ENTROPY — average surprise in the class label.",
+              "SPLIT — compare child scores weighted by sample count.",
+              "VALIDATE — lower training impurity is not a test result."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-10-04T17:29:09.954521+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 19.22,
+      "render_duration_s": 19.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-04T13:38:45"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR TURN",
+      "narration_text": "Try this prompt. Construct two candidate splits of the same labeled dataset. Compute Gini and base-two entropy for every node, weight child scores by sample count, and compare the rankings. Then explain why the preferred training split does not guarantee better test performance. Look for the child counts, the weights, and the arithmetic. Ask for a reproducible example, then check that the comparison keeps the parent data fixed.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Type and read the reproducible comparison task"
+          },
+          {
+            "at": 0.5,
+            "event": "Reveal arithmetic-checking guidance"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "MACHINE LEARNING",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Your turn.",
+            "segment": "Compare the Same Splits",
+            "command": "Construct two candidate splits of the same labeled dataset. Compute Gini and base-two entropy for every node, weight child scores by sample count, and compare the rankings. Then explain why the preferred training split does not guarantee better test performance.",
+            "runningText": "check the arithmetic…",
+            "output": [
+              "KEEP the parent dataset fixed",
+              "CHECK counts, weights and scores",
+              "VALIDATE on held-out data"
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-10-04T17:30:26.687422+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 21.76,
+      "render_duration_s": 21.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-04T13:38:45"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "narration_text": "Entropy versus Gini Impurity. Score the split, then test the tree. Liam, in for Sanjiv.",
+      "tail_silence_s": 0.65,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "poster",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Hold title and @sanjiv"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Entropy vs Gini Impurity",
+            "handle": "@sanjiv",
+            "subline": "",
+            "seed": "entropy-gini-sanjiv"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-10-04T17:30:44.753758+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 5.87,
+      "render_duration_s": 5.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-04T13:38:45"
+      }
+    }
+  ]
+}
