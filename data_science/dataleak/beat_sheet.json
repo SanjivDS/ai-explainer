@@ -1,0 +1,454 @@
+{
+  "metadata": {
+    "title": "Data Leakage — The ML Mistake That Gives Fake-Good Results",
+    "slug": "claude-liam-data-leakage",
+    "brand": "claude-liam",
+    "audience": "Claude",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "register": "Teardown",
+    "folderLabel": "@sanjiv",
+    "keep_review_labels": false,
+    "build": {
+      "at": "2026-10-12T19:28:44",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Ciao. This is Liam, in for Sanjiv. A model can earn a great test score by using information it would never have in practice. That mistake is data leakage. We will trace three ways information sneaks across a boundary, then run a noise-only experiment whose impressive score disappears when we fix the workflow.",
+      "tail_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Show the request for a leakage audit and reproducible noise experiment"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "MACHINE LEARNING",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": false,
+            "greeting": "Ciao, Liam",
+            "segment": "Data Leakage",
+            "command": "Illustrate prediction-time and group leakage. Run a seeded noise-only experiment comparing feature selection before the split with training-only selection.",
+            "runningText": "tracing the information…",
+            "output": [
+              "Define what can be known, and when",
+              "Keep evaluation out of training choices",
+              "Compare the same model and split"
+            ],
+            "animateTyping": false
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-12T23:18:50.792744+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 16.94,
+      "render_duration_s": 16.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-12T19:28:44"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "OVERVIEW",
+      "narration_text": "Data leakage gives a model an unfair preview. Ask three questions: was this information available when the prediction was made? Did held-out data influence training choices? And are the supposedly separate examples actually connected? A high score is only useful if the evaluation matches the real task.",
+      "tail_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Reveal the three information boundaries directly"
+          }
+        ],
+        "manim": {
+          "class": "B01_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 16.58,
+      "render_duration_s": 16.583333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T19:28:44"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "TIME",
+      "narration_text": "Imagine predicting whether a support ticket will escalate, at the moment it arrives. The opening message is available then. The resolution code is written after the ticket closes. If that later field enters the model, it can reveal the outcome. A random train-test split does not remove this shortcut. Keep only features that would genuinely be available at the prediction time.",
+      "tail_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Draw prediction-time boundary; show future resolution entering a support-ticket predictor"
+          }
+        ],
+        "manim": {
+          "class": "B02_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.16,
+      "render_duration_s": 19.166666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T19:28:44"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "GROUPS",
+      "narration_text": "Now imagine predicting outcomes for new customers. A customer has several tickets. Split individual rows randomly, and that same customer can appear in both training and test data. The model may exploit familiarity instead of generalizing to new customers. Keep each customer together when that is the task. For future predictions, also respect time. The right boundary depends on what deployment will ask.",
+      "tail_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "partition",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Show the same customer in train and test; regroup whole customers"
+          }
+        ],
+        "manim": {
+          "class": "B03_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 21.21,
+      "render_duration_s": 21.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T19:28:44"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "EXPERIMENT",
+      "narration_text": "Here is our reproducible experiment. Generate three hundred rows, ten thousand random features, and independent random binary labels. There is no planted predictive signal. Reserve one hundred twenty rows for evaluation and use one hundred eighty for training. The model will use just twenty-five features. The crucial question is which rows get to influence that choice.",
+      "tail_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "isotype",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Reveal 300 rows, 10,000 noise features and random binary labels; split 180/120"
+          }
+        ],
+        "manim": {
+          "class": "B04_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 19.11,
+      "render_duration_s": 19.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T19:28:44"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "LEAK",
+      "narration_text": "In the leaky workflow, select the twenty-five features most correlated with the labels across all three hundred rows. Then train a simple linear classifier using only the training rows. That last step looks correct. But the evaluation labels already helped choose the features. With so many random columns, selection can discover accidental patterns in the very answers we claim to have held out.",
+      "tail_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Show selection using all labels; trace test-label information into selected columns"
+          }
+        ],
+        "manim": {
+          "class": "B05_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 20.39,
+      "render_duration_s": 20.416666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T19:28:44"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "RESULT",
+      "narration_text": "On those same one hundred twenty evaluation rows, the leaky workflow gets ninety-five correct: seventy-nine point two percent. Repeat feature selection using training rows only, with the same split and classifier, and it gets sixty-two correct: fifty-one point seven percent. These are measured results from one seeded synthetic run, not universal scores. Near-chance performance is the honest expectation for this noise-only task.",
+      "tail_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "compare",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Reveal measured leaky and clean scores side by side on a common scale"
+          }
+        ],
+        "manim": {
+          "class": "B06_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 22.51,
+      "render_duration_s": 22.541666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T19:28:44"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "REPAIR",
+      "narration_text": "The repair is to put every learned preparation step inside the training boundary. Learn imputation values, scaling statistics, and feature choices from training data. Apply those fixed choices to held-out data without fitting again. In cross-validation, repeat that process separately inside every training fold. A pipeline helps enforce this order, but it cannot recognize a future-only feature or choose the right customer split for you.",
+      "tail_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Draw train-only learned transform and fixed test transform; enclose training pipeline"
+          }
+        ],
+        "manim": {
+          "class": "B07_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 23.08,
+      "render_duration_s": 23.083333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T19:28:44"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "STRESS TEST",
+      "narration_text": "A good score alone does not prove leakage. Ordinary overfitting can happen with a clean split: a model memorizes training noise and performs poorly on held-out data. Leakage instead compromises what the evaluation is allowed to know. Shuffling labels and rerunning the entire workflow can expose suspicious performance, but passing that check does not certify the dataset. Audit timestamps, duplicated entities, and every learned step too.",
+      "tail_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "compare",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Compare ordinary overfitting with evaluation contamination; show limits of a shuffle check"
+          }
+        ],
+        "manim": {
+          "class": "B08_Scene"
+        }
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 22.95,
+      "render_duration_s": 22.958333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T19:28:44"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "VERDICT",
+      "narration_text": "Define exactly what is being predicted and when. Split according to the people, devices, or time periods that must remain unseen. Keep learned preprocessing inside training folds. Use validation data to make choices, then evaluate the fixed workflow on an untouched final test. If you repeatedly change the model after reading that final score, the test has become part of development.",
+      "tail_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "artifact",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Reveal four practical audit steps"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "brandLabel": "@sanjiv",
+            "artifactTitle": "Data leakage — one page",
+            "artifactHeading": "Protect the Boundary",
+            "artifactLines": [
+              "TIME — use only information available at prediction.",
+              "SPLIT — separate the entities or periods that matter.",
+              "FIT — learn preparation inside each training fold.",
+              "TEST — evaluate once the workflow is fixed."
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-10-12T23:20:15.191452+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 20.74,
+      "render_duration_s": 20.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-12T19:28:44"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "YOUR TURN",
+      "narration_text": "Try this prompt. Audit a machine learning workflow for data leakage. Define the prediction time and the unit being predicted. List when each feature becomes available. Check for overlapping entities across splits. Fit preprocessing inside each training fold. Protect a final test set. Propose one reproducible leakage check. Look for explicit timestamps, a justified split, and a clear separation between fitting and applying transformations. Run the proposed check; do not accept a reassuring checklist as proof.",
+      "tail_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "reveal",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Show and read the complete viewer prompt"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "MACHINE LEARNING",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": false,
+            "greeting": "Your turn.",
+            "segment": "Audit the Boundary",
+            "command": "Audit a machine learning workflow for data leakage. Define the prediction time and the unit being predicted. List when each feature becomes available. Check for overlapping entities across splits. Fit preprocessing inside each training fold. Protect a final test set. Propose one reproducible leakage check.",
+            "runningText": "check the boundary…",
+            "output": [
+              "CHECK feature availability timestamps",
+              "JUSTIFY the group or time split",
+              "SEPARATE fit from transform"
+            ],
+            "animateTyping": false
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-10-12T23:21:29.655154+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 26.62,
+      "render_duration_s": 26.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-12T19:28:44"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "narration_text": "Data Leakage. The machine learning mistake that gives fake-good results. Protect the boundary before trusting the score. Liam, in for Sanjiv.",
+      "tail_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "poster",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Restate the full title and @sanjiv"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Data Leakage — The ML Mistake That Gives Fake-Good Results",
+            "handle": "@sanjiv",
+            "subline": "",
+            "seed": "data-leakage-sanjiv",
+            "slug": "claude-liam-data-leakage"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-10-12T23:21:49.496575+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 8.38,
+      "render_duration_s": 8.416666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-12T19:28:44"
+      }
+    }
+  ]
+}
