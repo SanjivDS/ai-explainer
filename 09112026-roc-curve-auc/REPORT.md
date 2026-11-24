@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Fresh concept explainer. The one idea: ROC is the map of threshold tradeoffs; AUC compresses the map into ranking quality, not deployment quality. The worked example uses six explicitly schematic cases and computes 8 correctly ordered positive-negative pairs out of 9. UI appears only on the four bookends.
+How the ROC curve maps the trade-off across every classification threshold, and why AUC measures ranking quality rather than how a model will perform once deployed.
 
 10 beats · 3:25.0 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

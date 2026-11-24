@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Hallo. This is Liam, in for Sanjiv. A classifier gets ninety-nine percent accuracy. Impressive? Not if it misses every fault. We will build a small, clearly constructed example, count what the classifier gets wrong, and move its decision threshold. The goal is to see what accuracy hides when one class is much rarer than the other.
+Why high accuracy can hide failure on rare cases, and how to check which class a model misses, how many false alarms it raises, and whether those mistakes fit the job.
 
 12 beats · 4:01.5 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

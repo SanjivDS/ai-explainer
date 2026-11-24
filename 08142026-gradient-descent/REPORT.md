@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Fresh concept explainer (no source reel). ILLUSTRATE LAW: UI only on bookends; every inner beat illustrates the mechanism. SHOW-DON'T-TELL authored show-first. No invented figures — the numeric worked example is deferred to the viewer's handoff prompt. IN-FOR-BEAR LAW: B00 + outro say 'Sanjiv, in for Bear' (personalized stand-in narrator).
+How gradient descent walks downhill on a loss landscape: the gradient as the local slope, the learning rate as the step size, and where the method stops being reliable.
 
 10 beats · 2:33.5 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

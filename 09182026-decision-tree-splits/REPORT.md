@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Fresh concept explainer. One idea: a classification tree greedily tests feature-threshold candidates, minimizes weighted child impurity, chooses the best local split, and repeats under stopping constraints.
+How a classification tree picks each split: it tests feature-threshold candidates, scores the weighted impurity of the children, and greedily keeps the best one.
 
 10 beats · 3:21.1 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

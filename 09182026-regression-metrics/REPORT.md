@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Fresh concept explainer. One idea: the metrics are different lenses on the same residuals; choose the lens that matches the cost of error and report more than one.
+How MAE, MSE, RMSE, R² and MAPE are different lenses on the same residuals, and how to choose the one that matches the cost of an error.
 
 10 beats · 3:37.5 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

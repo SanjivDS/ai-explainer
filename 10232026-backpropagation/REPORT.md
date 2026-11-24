@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Hi. This is Sanjiv. Today we shall discuss backpropagation, and how neural networks actually learn. Last time, we followed inputs forward to a prediction. Now we will add a target, trace the calculation backward, and watch one training step change the result.
+How backpropagation uses the chain rule to turn a prediction's error into a gradient for every weight, worked through a small network and checked against finite differences.
 
 16 beats · 4:31.3 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

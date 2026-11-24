@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Hi. This is Sanjiv. Today we shall discuss how a machine breaks down language with tokenization. You write a sentence. A language model receives numbers. Tokenization connects those two worlds. Let us follow the conversion, build a tiny tokenizer, and see why a token is not the same thing as a word.
+How a sentence becomes the numbers a language model receives, built up through a tiny byte-pair-encoding tokenizer, and why a token is not the same as a word.
 
 12 beats · 3:07.6 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Hi. This is Sanjiv. Today we shall discuss word embeddings: Word2Vec, GloVe, and semantic similarity. A token ID tells us which entry to look up. An embedding gives that entry a learned vector. Let us see how context shapes those vectors, and when their similarity can mislead us.
+How word embeddings turn patterns of word use into geometry, how Word2Vec and GloVe learn that geometry through different objectives, and what similarity in vector space does and doesn't tell you.
 
 14 beats · 3:57.3 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

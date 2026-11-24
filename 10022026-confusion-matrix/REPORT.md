@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Short concept explainer (target 2:00-2:30). One idea: a confusion matrix replaces one score with four counts, so the two kinds of mistake become visible and every rate is read from a row or a column.
+How a confusion matrix replaces one score with four counts, so the two kinds of mistake become visible and every rate can be read from a row or a column.
 
 9 beats · 2:14.5 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

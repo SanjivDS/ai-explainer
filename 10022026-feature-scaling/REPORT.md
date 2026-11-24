@@ -9,7 +9,7 @@
 
 ## What it covers
 
-One idea: scaling changes units, not information; choose a transformation whose geometry and assumptions fit the model, and learn its parameters from training data only.
+How standardisation and min–max normalisation change units but not information, and how to pick the transformation that fits the model and learn its parameters from training data only.
 
 10 beats · 3:41.8 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

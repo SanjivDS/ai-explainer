@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Bonjour. This is Liam, in for Sanjiv. A decision tree keeps asking questions that separate classes. But how does it score a question? Gini impurity and entropy both measure how mixed a node is. We will calculate them on the same examples, animate their curves, and find a case where they disagree about the best split.
+How a decision tree scores a candidate split with Gini impurity or entropy, using a constructed split on which the two criteria disagree.
 
 12 beats · 3:41.7 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

@@ -9,7 +9,7 @@
 
 ## What it covers
 
-One idea: a random forest reduces the high variance of individual trees by averaging strong-enough trees whose errors are decorrelated through sample and feature randomness.
+Why a random forest beats a single tree: averaging many trees whose errors are decorrelated by bootstrap sampling and random feature choice reduces variance.
 
 10 beats · 3:34.6 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Hola. This is Liam, in for Sanjiv. Give a machine a cloud of points and ask it to find groups. What makes two points belong together? We will animate K means, move its centers by hand, and plot a real, computed elbow curve. Then we will test the tempting claim that one bend tells you the true number of groups.
+How k-means groups points by alternating between assigning each point to its nearest centroid and moving the centroids, and how the elbow method suggests a number of clusters, along with when it fails.
 
 12 beats · 3:37.0 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

@@ -9,7 +9,7 @@
 
 ## What it covers
 
-One idea: PCA rotates centered data into orthogonal variance-ranked directions; dimensionality reduction happens only when trailing components are discarded.
+How PCA rotates centred data onto orthogonal directions ranked by variance, and why dimensionality is only reduced when the trailing components are discarded.
 
 12 beats · 4:33.8 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

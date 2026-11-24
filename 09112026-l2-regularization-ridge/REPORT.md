@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Fresh free ai-explainer. GATE P is unsatisfied until a human approves PEDAGOGY.md.
+How the L2 (ridge) penalty shrinks weights to curb overfitting, making them small but not exactly zero.
 
 10 beats · 3:12.6 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

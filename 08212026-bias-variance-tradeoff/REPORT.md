@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Fresh, free ai-explainer. ILLUSTRATE LAW: Claude UI only at B00/B07/B08/B09; B01–B06 are native concept illustrations. GATE P is intentionally unsatisfied until a human signs PEDAGOGY.md.
+Why a model trained on a small, noisy sample can fail in two ways, too rigid to learn real structure (bias) or so flexible it learns the noise (variance), and how to choose enough flexibility to generalise.
 
 10 beats · 2:56.6 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

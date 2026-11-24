@@ -9,7 +9,7 @@
 
 ## What it covers
 
-One idea: bagging aggregates independent randomized fits; boosting accumulates dependent corrections. Validate both under matched conditions.
+How bagging averages independent randomised fits while boosting adds dependent corrections in sequence, and why both should be compared under matched conditions.
 
 11 beats · 4:10.0 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

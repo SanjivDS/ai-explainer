@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Hi. This is Sanjiv. Today we shall discuss neural networks, and how forward propagation turns inputs into a prediction. We will follow two numbers through a tiny network, calculate each step, and change one input to see what happens. The whole journey is arithmetic you can check.
+How a neural network turns inputs into a prediction, following two numbers through weights, biases and a ReLU activation, layer by layer.
 
 14 beats · 4:04.0 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

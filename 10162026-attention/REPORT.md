@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Hi. This is Sanjiv. Today we shall discuss attention, and why it changed natural language processing. Embeddings give us vectors. Attention lets those vectors draw information from other positions. Let us follow that exchange, calculate a tiny example, and see what changed when the Transformer put attention at its center.
+How attention lets each token's vector draw on the others, worked through a small numerical example, and why that changed natural language processing.
 
 15 beats · 4:37.5 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

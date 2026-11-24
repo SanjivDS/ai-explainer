@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Free ai-explainer, claude-liam channel. Sibling of claude-liam-l2-regularization-ridge: that reel ends on 'small, not exactly zero' — this one explains the exact-zero mechanism. Manim for B01-B07 + B09 (deterministic, layout-audited); Remotion bookends at B00/B08. All 8 Manim scenes pass manim_layout_audit --curve-strict with ZERO findings (no text-on-text, no off-frame, no label struck by a curve).
+How the L1 (lasso) penalty on absolute weight size can push some weights exactly to zero, so regularisation also selects features. It is the companion to the L2 video.
 
 10 beats · 3:03.2 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

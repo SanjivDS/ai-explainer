@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Revised concept explainer. One idea: accuracy counts all correct decisions, precision audits false alarms, recall audits misses, and F1 compresses precision and recall only when equal weighting is defensible.
+What accuracy, precision, recall and F1 each measure: accuracy counts all correct decisions, precision audits false alarms, recall audits misses, and F1 combines precision and recall.
 
 10 beats · 3:34.4 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

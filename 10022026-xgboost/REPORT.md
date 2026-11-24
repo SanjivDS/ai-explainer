@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Bonjour. This is Liam, in for Sanjiv. Why does X G Boost work so well? Start with a surprisingly modest ingredient: a small decision tree. The trick is how many small corrections become one useful predictor. Let us build a tiny example, then look at the controls that keep it honest.
+How XGBoost improves predictions through controlled corrections: small trees learn what earlier trees missed, while limits on complexity keep those corrections useful on new data.
 
 11 beats · 3:30.0 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

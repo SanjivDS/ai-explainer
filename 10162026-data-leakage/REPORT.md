@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Ciao. This is Liam, in for Sanjiv. A model can earn a great test score by using information it would never have in practice. That mistake is data leakage. We will trace three ways information sneaks across a boundary, then run a noise-only experiment whose impressive score disappears when we fix the workflow.
+How data leakage gives a model an unfair preview of the test set, and three questions that catch it: was the information available at prediction time, did held-out data influence training choices, and are the 'separate' examples actually connected?
 
 12 beats · 3:57.9 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

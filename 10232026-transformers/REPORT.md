@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Hi. This is Sanjiv. Today we shall discuss Transformers: encoders, decoders, and self-attention. We will follow a sentence through the architecture, calculate a tiny attention example, and see how a decoder produces its next token.
+How a Transformer's encoder and decoder use self-attention: a sentence followed through the architecture, a tiny attention calculation, and the decoder producing its next token.
 
 17 beats · 5:09.9 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).

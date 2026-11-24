@@ -9,7 +9,7 @@
 
 ## What it covers
 
-Hi. This is Sanjiv. Today we shall discuss CNNs, RNNs, and LSTMs, and when and why to use each. We will follow how they handle information, work through small examples, and turn those differences into practical choices.
+How CNNs, RNNs and LSTMs handle local patterns, sequence order and memory, and how to choose the one that fits the task.
 
 17 beats · 4:31.8 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).
