@@ -1,0 +1,695 @@
+{
+  "metadata": {
+    "title": "Transformers - Encoder, Decoder & Self-Attention",
+    "slug": "transformers",
+    "brand": "sanjiv",
+    "channel": "sanjiv",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "folderLabel": "@sanjiv",
+    "persona": "Sanjiv",
+    "palette": "claude",
+    "width": 3840,
+    "height": 2160,
+    "fps": 24,
+    "keep_review_labels": false,
+    "footer_wordmark": false,
+    "approval_status": "approved",
+    "template_reference": "books/confusion-matrix/youtube/claude-liam-confusion-matrix",
+    "approval_note": "User approved on 2026-10-21",
+    "build": {
+      "at": "2026-10-21T17:57:45",
+      "cut": "master",
+      "filled": 17,
+      "of": 17,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "title": "The Question",
+      "narration_text": "Hi. This is Sanjiv. Today we shall discuss Transformers: encoders, decoders, and self-attention. We will follow a sentence through the architecture, calculate a tiny attention example, and see how a decoder produces its next token.",
+      "tail_silence_s": 0.5,
+      "classification": "CARD",
+      "estimated_duration_s": 14.0,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "ClaudeComposerAsk: Hi, Sanjiv. Agenda below @sanjiv: Self-Attention / Encoder & Decoder / Generate a Token."
+          }
+        ],
+        "visual_intent": "ClaudeComposerAsk: Hi, Sanjiv. Agenda below @sanjiv: Self-Attention / Encoder & Decoder / Generate a Token.",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "DATA SCIENCE · NEURAL NETWORKS",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Hi, Sanjiv",
+            "segment": "Transformers",
+            "command": "Trace self-attention through an encoder and decoder.",
+            "runningText": "following the information…",
+            "output": [
+              "SELF-ATTENTION → mix context",
+              "ENCODER & DECODER → trace the flow",
+              "NEXT TOKEN → predict and repeat"
+            ],
+            "durationSeconds": 14.217333
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-21T16:15:14.067072+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.217333,
+      "audio_file": "mp3/beat-B00.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 14.25
+    },
+    {
+      "beat_id": "B01",
+      "title": "The Big Picture",
+      "narration_text": "Tokens work in context. A Transformer updates each token's representation using information from other allowed positions. Encoders and decoders use this machinery differently. To understand the architecture, track two things: where the information comes from, and which positions each token is allowed to see.",
+      "tail_silence_s": 0.5,
+      "classification": "CARD",
+      "estimated_duration_s": 17.6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Older hesitant writer: ‘Tokens work alone.’ Replace single word ‘alone’ with ‘in context’. Final: Tokens work in context. Context cards: Read / Connect / Predict."
+          }
+        ],
+        "visual_intent": "Older hesitant writer: ‘Tokens work alone.’ Replace single word ‘alone’ with ‘in context’. Final: Tokens work in context. Context cards: Read / Connect / Predict.",
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Tokens work alone.",
+            "triggerWords": "alone",
+            "replacementWords": "in context",
+            "seed": "transformers-221",
+            "fontSize": 82,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0,
+            "charMs": 45,
+            "brandLabel": "",
+            "contextTitle": "Follow the Information",
+            "contextItems": [
+              {
+                "label": "Read",
+                "detail": "represent the input"
+              },
+              {
+                "label": "Connect",
+                "detail": "mix allowed context"
+              },
+              {
+                "label": "Predict",
+                "detail": "produce the next token"
+              }
+            ],
+            "durationSeconds": 18.665333
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-10-21T16:16:13.983619+00:00"
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "actual_duration_s": 18.665333,
+      "audio_file": "mp3/beat-B01.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 18.666666666666668
+    },
+    {
+      "beat_id": "B02",
+      "title": "The Architecture Map",
+      "narration_text": "Start with the original encoder-decoder design. The encoder reads a source sequence and produces contextual representations. The decoder uses the target prefix and those source representations to predict the next target token. This is one Transformer arrangement; we will also distinguish encoder-only and decoder-only models.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "estimated_duration_s": 18.0,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "scene": "B02_Scene",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Source tokens → encoder stack → contextual vectors. Separate target-prefix → decoder → next-token distribution. Draw cross-attention connection only after both streams appear."
+          }
+        ],
+        "visual_intent": "Source tokens → encoder stack → contextual vectors. Separate target-prefix → decoder → next-token distribution. Draw cross-attention connection only after both streams appear."
+      },
+      "actual_duration_s": 18.782667,
+      "audio_file": "mp3/beat-B02.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 18.791666666666668
+    },
+    {
+      "beat_id": "B03",
+      "title": "Give Tokens Position",
+      "narration_text": "Text first becomes tokens, then embedding vectors. The model also needs information about position. Otherwise, unrestricted self-attention by itself does not know which token came first. The original Transformer adds positional encodings to embeddings. Other designs supply position information differently, but order must enter the computation somehow.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "estimated_duration_s": 18.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "scene": "B03_Scene",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Three token chips ‘cats / chase / birds’ become vector columns. Position tags attach. Reverse noun positions while preserving token identities."
+          }
+        ],
+        "visual_intent": "Three token chips ‘cats / chase / birds’ become vector columns. Position tags attach. Reverse noun positions while preserving token identities."
+      },
+      "actual_duration_s": 19.977333,
+      "audio_file": "mp3/beat-B03.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 20.0
+    },
+    {
+      "beat_id": "B04",
+      "title": "Self-Attention Connects a Sequence",
+      "narration_text": "In self-attention, queries, keys, and values come from the same sequence of representations through learned projections. A query is compared with keys to produce scores. Those scores become weights over the values. Each output mixes information from allowed positions, including its own position when the mask permits it.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "estimated_duration_s": 19.2,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "scene": "B04_Scene",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Three token vectors project into Q/K/V lanes. Select one query; draw score connections to keys, then weighted value arrows back to output. Label schematic, not learned linguistic weights."
+          }
+        ],
+        "visual_intent": "Three token vectors project into Q/K/V lanes. Select one query; draw score connections to keys, then weighted value arrows back to output. Label schematic, not learned linguistic weights."
+      },
+      "actual_duration_s": 18.1,
+      "audio_file": "mp3/beat-B04.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 18.125
+    },
+    {
+      "beat_id": "B05",
+      "title": "Calculate Attention Weights",
+      "narration_text": "Here is a constructed example with two-dimensional queries and keys. Our query is one, zero. Its dot products with the three keys are one, zero, and one. Divide by the square root of two, then apply softmax. The resulting weights are approximately zero point four zero one, zero point one nine eight, and zero point four zero one.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "estimated_duration_s": 23.2,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "scene": "B05_Scene",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Typeset q=(1,0), keys=(1,0),(0,1),(1,1); dot products [1,0,1]; divide by sqrt(2); softmax weights [.401,.198,.401]. Reveal in stages, replacing score row."
+          }
+        ],
+        "visual_intent": "Typeset q=(1,0), keys=(1,0),(0,1),(1,1); dot products [1,0,1]; divide by sqrt(2); softmax weights [.401,.198,.401]. Reveal in stages, replacing score row."
+      },
+      "actual_duration_s": 19.188,
+      "audio_file": "mp3/beat-B05.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 19.208333333333332
+    },
+    {
+      "beat_id": "B06",
+      "title": "Mix the Values",
+      "narration_text": "Now use those weights to combine three value vectors. Our supplied values are one, zero; zero, two; and three, one. The weighted sum is approximately one point six zero four, zero point seven nine seven. This is a new representation, not a selected word. These numbers illustrate arithmetic, not a trained model's behavior.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "estimated_duration_s": 21.2,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "scene": "B06_Scene",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Weights connect to values (1,0),(0,2),(3,1). Weighted contributions accumulate to output approximately (1.604,.797). Full attention formula revealed separately above."
+          }
+        ],
+        "visual_intent": "Weights connect to values (1,0),(0,2),(3,1). Weighted contributions accumulate to output approximately (1.604,.797). Full attention formula revealed separately above."
+      },
+      "actual_duration_s": 19.06,
+      "audio_file": "mp3/beat-B06.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 19.083333333333332
+    },
+    {
+      "beat_id": "B07",
+      "title": "Why Multiple Heads",
+      "narration_text": "A multi-head layer repeats attention with different learned projections. Each head can form a different mixture. The head outputs are concatenated and projected back into the model's representation space. Do not assume one head always handles grammar and another always handles meaning; those neat labels are not guaranteed by the architecture.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "estimated_duration_s": 20.4,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "scene": "B07_Scene",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Two parallel attention heads with separate projection blocks merge by concatenation then output projection. Avoid semantic-role labels for heads."
+          }
+        ],
+        "visual_intent": "Two parallel attention heads with separate projection blocks merge by concatenation then output projection. Avoid semantic-role labels for heads."
+      },
+      "actual_duration_s": 18.953333,
+      "audio_file": "mp3/beat-B07.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 18.958333333333332
+    },
+    {
+      "beat_id": "B08",
+      "title": "Inside an Encoder Block",
+      "narration_text": "An encoder block contains more than attention. In the original arrangement, a residual connection and normalization follow self-attention. A feed-forward network then transforms each position separately, followed by another residual connection and normalization. Stacking these blocks repeatedly updates the representations. Normalization placement varies across Transformer designs.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "estimated_duration_s": 18.4,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "scene": "B08_Scene",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Progressive stack: self-attention → Add & Norm → feed-forward → Add & Norm. Residual bypasses routed outside boxes. Label original post-norm arrangement."
+          }
+        ],
+        "visual_intent": "Progressive stack: self-attention → Add & Norm → feed-forward → Add & Norm. Residual bypasses routed outside boxes. Label original post-norm arrangement."
+      },
+      "actual_duration_s": 21.598667,
+      "audio_file": "mp3/beat-B08.mp3",
+      "audio_padding_applied": true,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Progressive encoder stack reserves lower space for feed-forward and second residual path. Final arrangement is balanced and legible; intermediate blank space is intentional."
+      },
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 21.625
+    },
+    {
+      "beat_id": "B09",
+      "title": "The Decoder Cannot Peek",
+      "narration_text": "For next-token prediction, the decoder must not see the answer through later target positions. Its self-attention uses a causal mask. A position can attend to itself and earlier positions in the shifted input, but not later ones. Masked scores are excluded before softmax, so their attention weights become zero.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "estimated_duration_s": 19.6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "scene": "B09_Scene",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Target input [START,I,see] aligned to targets [I,see,cats]. Lower-triangular attention mask revealed; future positions blocked before softmax."
+          }
+        ],
+        "visual_intent": "Target input [START,I,see] aligned to targets [I,see,cats]. Lower-triangular attention mask revealed; future positions blocked before softmax."
+      },
+      "actual_duration_s": 17.46,
+      "audio_file": "mp3/beat-B09.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 17.5
+    },
+    {
+      "beat_id": "B10",
+      "title": "Cross-Attention Reads the Source",
+      "narration_text": "In an encoder-decoder Transformer, another attention layer connects the two streams. Its queries come from decoder states, while its keys and values come from encoder outputs. That is cross-attention. The decoder can consult the source while building its target sequence. Self-attention connects positions within a stream; cross-attention connects different streams.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "estimated_duration_s": 20.0,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "scene": "B10_Scene",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Decoder queries point to encoder keys and values in separate lanes. Compare self vs cross provenance with minimal labels."
+          }
+        ],
+        "visual_intent": "Decoder queries point to encoder keys and values in separate lanes. Compare self vs cross provenance with minimal labels."
+      },
+      "actual_duration_s": 19.422667,
+      "audio_file": "mp3/beat-B10.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 19.458333333333332
+    },
+    {
+      "beat_id": "B11",
+      "title": "Training and Generation",
+      "narration_text": "During training, the target sequence is already known. With shifted inputs and a causal mask, many target positions can be processed together without revealing their future answers. During ordinary autoregressive generation, the next token is not known yet. Predict a distribution, choose a token, append it, and repeat.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "estimated_duration_s": 19.2,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "scene": "B11_Scene",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Training: shifted input positions processed together under triangular mask. Replace with generation loop prefix → distribution → chosen token → extended prefix. Distribution illustrative, no invented trained probabilities."
+          }
+        ],
+        "visual_intent": "Training: shifted input positions processed together under triangular mask. Replace with generation loop prefix → distribution → chosen token → extended prefix. Distribution illustrative, no invented trained probabilities."
+      },
+      "actual_duration_s": 17.566667,
+      "audio_file": "mp3/beat-B11.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 17.583333333333332
+    },
+    {
+      "beat_id": "B12",
+      "title": "Three Transformer Families",
+      "narration_text": "Encoder-only models build contextual representations that can support classification or token labeling. Decoder-only models use causal self-attention for next-token prediction without a separate encoder. Encoder-decoder models connect a source sequence to a generated target through cross-attention. The name Transformer describes a family, not one fixed wiring diagram.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "estimated_duration_s": 18.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "scene": "B12_Scene",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Encoder-only / decoder-only / encoder-decoder schematics progressively highlighted, then held side by side for ≥2 seconds. No product/version claims."
+          }
+        ],
+        "visual_intent": "Encoder-only / decoder-only / encoder-decoder schematics progressively highlighted, then held side by side for ≥2 seconds. No product/version claims."
+      },
+      "actual_duration_s": 21.556,
+      "audio_file": "mp3/beat-B12.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 21.583333333333332
+    },
+    {
+      "beat_id": "B13",
+      "title": "Check the Mask",
+      "narration_text": "We can test the information boundary. Keep our supplied queries and keys fixed, and change only a future value vector. With the causal mask, earlier attention outputs must stay unchanged. Without that mask, they can change. This small test checks our attention implementation; it does not establish the quality of a trained language model.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "estimated_duration_s": 21.6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "scene": "B13_Scene",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "Execute toy causal attention: change third value massively; compare earlier outputs unchanged under mask versus changed without mask. Label fixed Q/K/V attention-unit test."
+          }
+        ],
+        "visual_intent": "Execute toy causal attention: change third value massively; compare earlier outputs unchanged under mask versus changed without mask. Label fixed Q/K/V attention-unit test."
+      },
+      "actual_duration_s": 18.398667,
+      "audio_file": "mp3/beat-B13.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 18.416666666666668
+    },
+    {
+      "beat_id": "B14",
+      "title": "The Verdict",
+      "narration_text": "Self-attention mixes information across allowed positions. Position information supplies order. Encoder and decoder blocks organize these operations, and masks control access to context. Follow the information flow and the large diagram becomes easier to read. Attention is a central component; the complete Transformer also needs projections, feed-forward layers, residual paths, and normalization.",
+      "tail_silence_s": 0.5,
+      "classification": "CARD",
+      "estimated_duration_s": 20.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "ClaudeVerdictArtifact: Context through attention / Position matters / Masks control access / Architecture defines information flow."
+          }
+        ],
+        "visual_intent": "ClaudeVerdictArtifact: Context through attention / Position matters / Masks control access / Architecture defines information flow.",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Transformers · The Verdict",
+            "artifactHeading": "Follow the Information",
+            "brandLabel": "",
+            "artifactLines": [
+              "Context through attention",
+              "Position supplies order",
+              "Masks control access",
+              "Architecture defines information flow"
+            ],
+            "durationSeconds": 22.537958
+          },
+          "rendered": {
+            "out": "media/B14.mp4",
+            "at": "2026-10-21T16:17:31.677551+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 22.537958,
+      "audio_file": "mp3/beat-B14.mp3",
+      "audio_padding_applied": true,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Preserves the older Claude verdict-artifact template requested by the user: four concise conclusions in a centered card, with deliberate surrounding whitespace."
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B14.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 22.541666666666668
+    },
+    {
+      "beat_id": "B15",
+      "title": "Your Turn",
+      "narration_text": "Build a tiny scaled dot-product attention example with three tokens. Show the queries, keys, values, softmax weights, and output. Add a causal mask and verify that changing a future value cannot affect earlier outputs. Use this prompt to reproduce the calculation. Ask for runnable code and inspect the test, not just the diagram.",
+      "tail_silence_s": 0.5,
+      "classification": "CARD",
+      "estimated_duration_s": 21.2,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "ClaudeComposerAsk with exact spoken prompt, @sanjiv chip and task lines; no corner footer."
+          }
+        ],
+        "visual_intent": "ClaudeComposerAsk with exact spoken prompt, @sanjiv chip and task lines; no corner footer.",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "DATA SCIENCE · NEURAL NETWORKS",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Your turn.",
+            "segment": "Transformers",
+            "command": "Build a tiny scaled dot-product attention example with three tokens. Show the queries, keys, values, softmax weights, and output. Add a causal mask and verify that changing a future value cannot affect earlier outputs.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "SELF-ATTENTION → mix context",
+              "ENCODER & DECODER → trace the flow",
+              "NEXT TOKEN → predict and repeat"
+            ],
+            "durationSeconds": 18.974667
+          },
+          "rendered": {
+            "out": "media/B15.mp4",
+            "at": "2026-10-21T16:18:34.058278+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.974667,
+      "audio_file": "mp3/beat-B15.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B15.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 19.0
+    },
+    {
+      "beat_id": "B16",
+      "title": "Transformers",
+      "narration_text": "Transformers. Encoder. Decoder. And self-attention. This is Sanjiv.",
+      "tail_silence_s": 0.5,
+      "classification": "CARD",
+      "estimated_duration_s": 3.2,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": "aligned narration cues",
+            "event": "ClaudeTitleOutro exact title; centered @sanjiv, mascotGap100, no recurring footer."
+          }
+        ],
+        "visual_intent": "ClaudeTitleOutro exact title; centered @sanjiv, mascotGap100, no recurring footer.",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Transformers - Encoder, Decoder & Self-Attention",
+            "slug": "sanjiv-transformers",
+            "handle": "@sanjiv",
+            "mascotGap": 100,
+            "durationSeconds": 5.044
+          },
+          "rendered": {
+            "out": "media/B16.mp4",
+            "at": "2026-10-21T16:20:08.392159+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.044,
+      "audio_file": "mp3/beat-B16.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B16.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-21T17:57:45"
+      },
+      "render_duration_s": 5.083333333333333
+    }
+  ]
+}

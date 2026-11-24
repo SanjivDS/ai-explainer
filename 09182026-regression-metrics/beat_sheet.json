@@ -1,0 +1,529 @@
+{
+  "metadata": {
+    "title": "Regression Metrics: MAE, MSE, RMSE, R², and MAPE, Oversimplified",
+    "slug": "claude-liam-regression-metrics",
+    "topic": "MACHINE LEARNING · REGRESSION EVALUATION",
+    "register": "Teardown",
+    "audience": "Claude",
+    "brand": "claude-liam",
+    "voice": "am_onyx",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "greeting": "Kumusta, Liam",
+    "greeting_note": "Kumusta (Filipino) continues the rotating world-language greeting. Liam is in for Sanjiv; the channel handle is @sanjiv.",
+    "folderLabel": "@sanjiv",
+    "note": "Fresh concept explainer. One idea: the metrics are different lenses on the same residuals; choose the lens that matches the cost of error and report more than one.",
+    "tags": [
+      "regression",
+      "MAE",
+      "MSE",
+      "RMSE",
+      "R2",
+      "MAPE",
+      "model evaluation"
+    ],
+    "typography": {
+      "serif": "Tiempos/EB Garamond",
+      "ui": "system sans",
+      "mono": "SF Mono"
+    },
+    "build": {
+      "at": "2026-10-03T10:36:40",
+      "cut": "master",
+      "filled": 10,
+      "of": 10,
+      "slates": [],
+      "skin_warnings": []
+    },
+    "persona": "Liam",
+    "keep_review_labels": false
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Five regression metrics can score the same predictions five different ways. This is Liam, in for Sanjiv. MAE counts ordinary misses. MSE makes large misses dominate. RMSE restores the target's units. R squared compares against a mean-prediction baseline. MAPE speaks in percentages, until zero makes that language break. Let us choose the metric by the mistake we actually care about.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude composer opens on 'Kumusta, Liam'"
+          },
+          {
+            "at": 0.24,
+            "event": "the five-metric comparison prompt types into the composer"
+          },
+          {
+            "at": 0.68,
+            "event": "send arms; running text reads 'measuring the misses…'"
+          },
+          {
+            "at": 0.84,
+            "event": "answer lines land: typical error, large-error penalty, baseline fit, percentage caveat"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Kumusta, Liam",
+            "topic": "MACHINE LEARNING · REGRESSION EVALUATION",
+            "segment": "Regression Metrics",
+            "command": "Compare MAE, MSE, RMSE, R², and MAPE on one prediction example. Explain what each rewards, what can mislead me, and when to use it.",
+            "runningText": "measuring the misses…",
+            "folderLabel": "@sanjiv",
+            "output": [
+              "MAE / RMSE → error magnitude",
+              "MSE → large misses dominate",
+              "R² → improvement over mean baseline",
+              "MAPE → percentage scale, zero-sensitive"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-02T16:16:29.761397+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B00.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-03T10:36:40"
+      },
+      "actual_duration_s": 21.12,
+      "render_duration_s": 21.125
+    },
+    {
+      "beat_id": "B01",
+      "act": "EXECUTIVE SUMMARY",
+      "narration_text": "Here is the whole idea in one breath. Every metric starts with the gap between prediction and reality, but each one values that gap differently. Absolute error is steady, squared error is harsh, root mean squared error is harsh but readable in the original units, R squared asks whether you beat a simple baseline, and percentage error asks how large the miss was relative to the truth. Metric choice is a cost decision disguised as arithmetic.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "branch",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'One residual. Five lenses.'"
+          },
+          {
+            "at": 0.18,
+            "event": "one prediction-to-actual gap appears as a residual"
+          },
+          {
+            "at": 0.38,
+            "event": "the residual branches into absolute, squared, rooted, baseline, and percentage lenses"
+          },
+          {
+            "at": 0.68,
+            "event": "each lens visibly changes the same gap's emphasis"
+          },
+          {
+            "at": 0.88,
+            "event": "the branches reunite under 'match the cost'"
+          }
+        ]
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B01.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-03T10:36:40"
+      },
+      "actual_duration_s": 22.7,
+      "render_duration_s": 22.708333333333332
+    },
+    {
+      "beat_id": "B02",
+      "act": "FRAMEWORK",
+      "narration_text": "Start with residuals: actual value minus predicted value. Their signs tell direction, but most regression metrics remove the sign before averaging. MAE takes absolute values. MSE squares them. RMSE takes the square root after averaging the squares. R squared compares your total squared error with the squared error from always predicting the training-set mean. MAPE divides each absolute error by the actual value before averaging.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Residuals come first.'"
+          },
+          {
+            "at": 0.14,
+            "event": "actual and predicted dots connect into signed residual arrows"
+          },
+          {
+            "at": 0.34,
+            "event": "absolute and square transforms animate side by side"
+          },
+          {
+            "at": 0.58,
+            "event": "RMSE root and R² baseline comparison assemble"
+          },
+          {
+            "at": 0.8,
+            "event": "MAPE division by actual value appears with a zero warning"
+          }
+        ]
+      },
+      "estimated_duration_s": 24,
+      "audio_file": "mp3/beat-B02.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-03T10:36:40"
+      },
+      "actual_duration_s": 22.95,
+      "render_duration_s": 22.958333333333332
+    },
+    {
+      "beat_id": "B03",
+      "act": "WORKED EXAMPLE",
+      "narration_text": "Use one tiny example: actual values two, four, six, and eight; predictions three, five, five, and eleven. The errors have magnitudes one, one, one, and three. MAE is their average: one point five. MSE averages one, one, one, and nine, giving three. RMSE is the square root of three, about one point seven three. One large miss barely shifts MAE, but it owns most of MSE.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "worked-example",
+        "show": [
+          {
+            "at": 0,
+            "event": "four actual/prediction pairs enter as vertical columns"
+          },
+          {
+            "at": 0.22,
+            "event": "residual magnitudes 1, 1, 1, 3 draw between each pair"
+          },
+          {
+            "at": 0.44,
+            "event": "MAE tray averages 1+1+1+3 into 1.5"
+          },
+          {
+            "at": 0.64,
+            "event": "MSE tray squares the values and averages to 3"
+          },
+          {
+            "at": 0.82,
+            "event": "RMSE root resolves to about 1.73 while the squared 3-error remains highlighted"
+          }
+        ]
+      },
+      "estimated_duration_s": 24,
+      "audio_file": "mp3/beat-B03.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-03T10:36:40"
+      },
+      "actual_duration_s": 20.93,
+      "render_duration_s": 20.958333333333332
+    },
+    {
+      "beat_id": "B04",
+      "act": "COMPARE",
+      "narration_text": "Now change only the error pattern. Model A misses every case by two. Model B is exact three times and misses once by eight. Both have MAE two. But A has RMSE two, while B has RMSE four, because squaring exposes the catastrophic miss. That is not proof that RMSE is better. It proves the metrics encode different preferences: consistency versus protection from rare, expensive failures.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "compare",
+        "show": [
+          {
+            "at": 0,
+            "event": "two model lanes appear: A errors [2,2,2,2], B errors [0,0,0,8]"
+          },
+          {
+            "at": 0.3,
+            "event": "both MAE counters meet at 2"
+          },
+          {
+            "at": 0.52,
+            "event": "RMSE counters split to 2 versus 4"
+          },
+          {
+            "at": 0.72,
+            "event": "B's single 8 expands into a dominant squared-error block"
+          },
+          {
+            "at": 0.88,
+            "event": "labels land: steady misses / catastrophic miss"
+          }
+        ]
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B04.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-03T10:36:40"
+      },
+      "actual_duration_s": 22.02,
+      "render_duration_s": 22.041666666666668
+    },
+    {
+      "beat_id": "B05",
+      "act": "R²",
+      "narration_text": "R squared changes the question. Instead of asking how many units you missed by, it asks how much squared error you removed compared with predicting the mean every time. One means perfect predictions. Zero means you merely matched that baseline. Negative values are possible: your model can be worse than the mean baseline. And R squared has no target units, so pair it with an error metric people can interpret.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "scale",
+        "show": [
+          {
+            "at": 0,
+            "event": "spark line: 'Beat the baseline.'"
+          },
+          {
+            "at": 0.18,
+            "event": "mean-only baseline residual bars establish total squared error"
+          },
+          {
+            "at": 0.42,
+            "event": "model residual bars shrink and the removed fraction fills an R² gauge"
+          },
+          {
+            "at": 0.68,
+            "event": "gauge marks 1, 0, then extends below zero"
+          },
+          {
+            "at": 0.86,
+            "event": "unitless R² pairs with RMSE in target units"
+          }
+        ]
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B05.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-03T10:36:40"
+      },
+      "actual_duration_s": 20.69,
+      "render_duration_s": 20.708333333333332
+    },
+    {
+      "beat_id": "B06",
+      "act": "MAPE FAILURE CASE",
+      "narration_text": "MAPE looks friendly because it says percent, but the denominator is the actual value. If actual is one and you miss by one, that is one hundred percent. If actual is one hundred and you miss by one, that is one percent. At actual zero, ordinary MAPE is undefined. Near zero, tiny denominators can dominate the average, so low-valued cases receive much more weight. Use it only when zero is impossible and relative error matches the domain.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "stress-test",
+        "show": [
+          {
+            "at": 0,
+            "event": "equal absolute misses of 1 appear over actuals 1 and 100"
+          },
+          {
+            "at": 0.25,
+            "event": "percentage labels diverge to 100% and 1%"
+          },
+          {
+            "at": 0.48,
+            "event": "actual value approaches zero and the ratio meter shoots upward"
+          },
+          {
+            "at": 0.67,
+            "event": "actual zero breaks the fraction with 'undefined'"
+          },
+          {
+            "at": 0.84,
+            "event": "equal absolute misses sort by actual-value scale, exposing MAPE's low-value weighting"
+          }
+        ]
+      },
+      "estimated_duration_s": 25,
+      "audio_file": "mp3/beat-B06.mp3",
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-03T10:36:40"
+      },
+      "actual_duration_s": 22.74,
+      "render_duration_s": 22.75
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "narration_text": "Let us recap with Claude. Use MAE when each unit of error has roughly equal cost and you want robustness to large misses. Use MSE when large errors deserve a sharply larger penalty, especially during optimization. Report RMSE when you want that sensitivity in the target's units. Use R squared to compare against the mean baseline, not to describe error size. Use MAPE only where actual values stay meaningfully away from zero. Usually, report a pair, plus the error distribution.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude verdict artifact opens with a metric-to-cost matrix"
+          },
+          {
+            "at": 0.26,
+            "event": "MAE and RMSE rows highlight their error-cost assumptions"
+          },
+          {
+            "at": 0.52,
+            "event": "R² row moves beside the mean baseline"
+          },
+          {
+            "at": 0.72,
+            "event": "MAPE receives a zero-denominator warning"
+          },
+          {
+            "at": 0.9,
+            "event": "verdict lands: report a pair plus the distribution"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Regression metrics — one page",
+            "artifactHeading": "Match the metric to the mistake",
+            "artifactLines": [
+              "MAE — steady unit cost; resistant to one huge miss.",
+              "MSE / RMSE — make large misses matter more; RMSE restores units.",
+              "R² — improvement over the mean-prediction baseline; not error size.",
+              "MAPE — relative error only when zero and near-zero actuals are not a problem."
+            ],
+            "brandLabel": "@sanjiv"
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-10-02T16:18:19.286785+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 25,
+      "audio_file": "mp3/beat-B07.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-03T10:36:40"
+      },
+      "actual_duration_s": 26.71,
+      "render_duration_s": 26.75
+    },
+    {
+      "beat_id": "B08",
+      "act": "HANDOFF",
+      "narration_text": "Your turn. Paste this in: given my regression predictions, actual values, target units, and the real cost of small versus large errors, calculate MAE, MSE, RMSE, R squared, and MAPE. Show which observations dominate each metric, test what happens near actual value zero, and recommend two metrics with reasons. This prompt forces the arithmetic to meet the operating context. Check whether the answer names the R squared baseline and refuses MAPE when zero makes it invalid.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": 0,
+            "event": "Claude composer opens on 'Your turn.'"
+          },
+          {
+            "at": 0.12,
+            "event": "the full evaluation prompt types verbatim"
+          },
+          {
+            "at": 0.7,
+            "event": "running text reads 'testing metric assumptions…'"
+          },
+          {
+            "at": 0.86,
+            "event": "checklist lands: dominant rows, zero test, baseline, recommendation"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "MACHINE LEARNING · REGRESSION EVALUATION",
+            "segment": "Choose Your Metrics",
+            "command": "Given my regression predictions, actual values, target units, and the real cost of small versus large errors, calculate MAE, MSE, RMSE, R², and MAPE. Show which observations dominate each metric, test what happens near actual value zero, and recommend two metrics with reasons.",
+            "runningText": "testing metric assumptions…",
+            "folderLabel": "@sanjiv",
+            "output": [
+              "inspect dominant observations",
+              "stress-test zero and near-zero actuals",
+              "name the R² baseline",
+              "recommend two complementary metrics"
+            ]
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-10-02T16:19:46.772304+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 28,
+      "audio_file": "mp3/beat-B08.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-03T10:36:40"
+      },
+      "actual_duration_s": 27.24,
+      "render_duration_s": 27.25
+    },
+    {
+      "beat_id": "B09",
+      "act": "OUTRO",
+      "narration_text": "Regression metrics: M A E, M S E, R M S E, R squared, and M A P E, oversimplified. Measure the errors your decisions can afford. Liam, in for Sanjiv.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "poster",
+        "show": [
+          {
+            "at": 0,
+            "event": "poster title restates the episode title"
+          },
+          {
+            "at": 0.35,
+            "event": "title-safe poster frame settles"
+          },
+          {
+            "at": 0.72,
+            "event": "@sanjiv handle holds beneath the title"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Regression Metrics: MAE, MSE, RMSE, R², and MAPE, Oversimplified",
+            "handle": "@sanjiv",
+            "subline": "",
+            "seed": "claude-liam-regression-metrics"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-10-02T16:20:07.274013+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 12,
+      "audio_file": "mp3/beat-B09.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-03T10:36:40"
+      },
+      "actual_duration_s": 10.24,
+      "render_duration_s": 10.25
+    }
+  ]
+}

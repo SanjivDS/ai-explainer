@@ -1,0 +1,566 @@
+{
+  "metadata": {
+    "title": "Word Embeddings - Word2Vec, GloVe & Semantic Similarity",
+    "slug": "word-embeddings",
+    "brand": "sanjiv",
+    "channel": "sanjiv",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "folderLabel": "@sanjiv",
+    "persona": "Sanjiv",
+    "palette": "claude",
+    "width": 3840,
+    "height": 2160,
+    "fps": 24,
+    "keep_review_labels": false,
+    "footer_wordmark": false,
+    "approval_status": "approved",
+    "template_reference": "books/confusion-matrix/youtube/claude-liam-confusion-matrix",
+    "approval_note": "User approved script and production in this conversation.",
+    "build": {
+      "at": "2026-10-16T12:40:07",
+      "cut": "master",
+      "filled": 14,
+      "of": 14,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "title": "The Question",
+      "narration_text": "Hi. This is Sanjiv. Today we shall discuss word embeddings: Word2Vec, GloVe, and semantic similarity. A token ID tells us which entry to look up. An embedding gives that entry a learned vector. Let us see how context shapes those vectors, and when their similarity can mislead us.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "DATA SCIENCE · LANGUAGE",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Hi, Sanjiv",
+            "segment": "Word Embeddings",
+            "command": "Explain word embeddings: compare Word2Vec and GloVe, calculate cosine similarity, and show where similarity misleads.",
+            "runningText": "connecting context to vectors…",
+            "output": [
+              "CONTEXT → patterns of word use",
+              "LEARNING → Word2Vec and GloVe",
+              "SIMILARITY → calculate, then interpret"
+            ],
+            "durationSeconds": 16.329333
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-16T16:35:34.645795+00:00"
+          }
+        },
+        "visual_intent": "Claude intro types the episode prompt; agenda: Context, Learning, Similarity."
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 16.329333,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 16.333333333333332
+    },
+    {
+      "beat_id": "B01",
+      "title": "The Whole Idea",
+      "narration_text": "Word embeddings turn patterns of word use into geometry. Words used in similar contexts can acquire similar vectors. Word2Vec and GloVe learn that geometry through different objectives. The result is useful evidence about language use, not a dictionary definition or a guarantee of shared meaning.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Word embeddings encode definitions.",
+            "triggerWords": "definitions",
+            "replacementWords": "usage patterns",
+            "seed": "word-embeddings-sanjiv",
+            "fontSize": 82,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0,
+            "charMs": 45,
+            "brandLabel": "",
+            "contextTitle": "Word Embeddings",
+            "contextItems": [
+              {
+                "label": "Context",
+                "detail": "patterns in a corpus"
+              },
+              {
+                "label": "Vectors",
+                "detail": "learned coordinates"
+              },
+              {
+                "label": "Similarity",
+                "detail": "evidence to inspect"
+              }
+            ],
+            "durationSeconds": 18.366667
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-10-16T16:27:45.147972+00:00"
+          }
+        },
+        "visual_intent": "Older-template writer changes “store definitions” to “encode usage patterns”; three cards: Context, Vectors, Similarity."
+      },
+      "tail_silence_s": 0.5,
+      "lead_silence_s": 0.8,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 18.366667,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 18.375
+    },
+    {
+      "beat_id": "B02",
+      "title": "An ID Is Not an Embedding",
+      "narration_text": "An ID is an address, not a measurement. Adjacent IDs need not mean similar words. A learned embedding table maps each vocabulary entry to a row of numbers. Those coordinates work together; an individual coordinate usually has no simple human label.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "assemble",
+        "visual_intent": "A categorical lookup selects one row of a matrix. Label example coordinates as illustrative; no meaningful numeric ID distances.",
+        "manim": {
+          "scene_class": "B02_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 15.390667,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim:B02_Scene",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 15.416666666666666
+    },
+    {
+      "beat_id": "B03",
+      "title": "Context Supplies the Signal",
+      "narration_text": "Here is a deliberately tiny corpus. Cat eats food; dog eats food. Cat likes play; dog likes play. With a window of one neighboring word, cat and dog have identical context counts: eats once and likes once. That is a training signal, not proof that cats and dogs mean the same thing.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "assemble",
+        "visual_intent": "Highlight exact executed corpus windows; accumulate cat and dog rows side by side. Disclosure: toy corpus; radius one.",
+        "manim": {
+          "scene_class": "B03_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 16.393958,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim:B03_Scene",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 16.416666666666668
+    },
+    {
+      "beat_id": "B04",
+      "title": "Word2Vec: Two Prediction Tasks",
+      "narration_text": "Word2Vec includes two familiar architectures. Continuous bag of words predicts a target from surrounding context. Skip-gram reverses that direction: a target predicts nearby context words. Slide a window through text, form training examples, and adjust vectors to improve those predictions.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "assemble",
+        "visual_intent": "Use the sentence “the cat eats food”; separate CBOW and skip-gram arrow diagrams. Context → target, then target → context. Sequential transitions, no crossing labels.",
+        "manim": {
+          "scene_class": "B04_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 17.182667,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim:B04_Scene",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 17.208333333333332
+    },
+    {
+      "beat_id": "B05",
+      "title": "Learning From Prediction",
+      "narration_text": "For skip-gram, a target word and an observed context form a positive pair. Negative sampling, one common training method, contrasts observed pairs with sampled alternatives. Training adjusts target and context vectors to distinguish them. A sampled negative is a training contrast, not a claim that the two words can never occur together.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "assemble",
+        "visual_intent": "Positive pair cat/eats beside sampled contrast cat/road; show parameter update schematically, without invented loss values. Label: schematic training step.",
+        "manim": {
+          "scene_class": "B05_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 19.529333,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim:B05_Scene",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 19.541666666666668
+    },
+    {
+      "beat_id": "B06",
+      "title": "GloVe: Count Before Fitting",
+      "narration_text": "GloVe starts with aggregated word-context co-occurrence statistics. It learns word and context vectors whose dot product, with bias terms, approximates the logarithm of a nonzero co-occurrence count. A weighting function controls how strongly counts contribute. The counts come from context windows across the corpus.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "assemble",
+        "visual_intent": "Build the exact toy co-occurrence matrix; highlight nonzero cells. Reveal structured equation: word–context dot product + biases approximates log count. No log of zero.",
+        "manim": {
+          "scene_class": "B06_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 18.804,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim:B06_Scene",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 18.833333333333332
+    },
+    {
+      "beat_id": "B07",
+      "title": "Different Routes, Related Evidence",
+      "narration_text": "Word2Vec learns through prediction tasks; GloVe fits aggregated co-occurrence statistics. Both depend on a corpus and a definition of context. Neither method assigns dictionary meanings to axes. When comparing their outputs, keep the corpus, preprocessing, and evaluation task in view; the algorithm name alone does not tell you which representation is better.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "assemble",
+        "visual_intent": "Side-by-side pipelines from one corpus: prediction examples → Word2Vec; count matrix → GloVe. Both end at learned vector tables; no fabricated performance ranking.",
+        "manim": {
+          "scene_class": "B07_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 20.34,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim:B07_Scene",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 20.375
+    },
+    {
+      "beat_id": "B08",
+      "title": "Cosine Compares Directions",
+      "narration_text": "Cosine similarity compares directions by dividing the dot product by the product of the vector lengths. Here are constructed two-dimensional vectors, not trained embeddings. A is one, two. B is two, four. They point in the same direction, so their cosine is one, even though their lengths differ.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "assemble",
+        "visual_intent": "Plot A=(1,2), B=(2,4) on fixed axes; structured fraction, calculated cosine=1. Explicit constructed-vector label.",
+        "manim": {
+          "scene_class": "B08_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 16.862667,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim:B08_Scene",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 16.875
+    },
+    {
+      "beat_id": "B09",
+      "title": "Compute, Do Not Guess",
+      "narration_text": "Now compare A with C, two, one. Their dot product is four; each length is the square root of five. Cosine is four over five, or zero point eight. A perpendicular vector gives zero. Zero does not mean unrelated in every sense, and cosine is undefined for a zero vector.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "assemble",
+        "visual_intent": "Exact evidence: A·C=4, norms=√5, cosine=0.8. Then D=(-2,1) gives zero. Stage equation and arrows separately; avoid label collisions.",
+        "manim": {
+          "scene_class": "B09_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 16.948,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim:B09_Scene",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 16.958333333333332
+    },
+    {
+      "beat_id": "B10",
+      "title": "Similarity Has Limits",
+      "narration_text": "A high score can reflect shared context rather than synonymy. Opposites can occur in similar surroundings. Classic Word2Vec and GloVe also assign one stored vector per vocabulary entry: bank keeps the same vector in river bank and bank loan. A later contextual model can represent those occurrences differently.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "lane": "manim",
+        "motion": "assemble",
+        "visual_intent": "Show hot/cold as a qualitative context illustration, without an invented score. Then two bank sentences point to one static vector; clearly distinguish contextual representations.",
+        "manim": {
+          "scene_class": "B10_Scene",
+          "file": "scenes.py"
+        }
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 18.462667,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim:B10_Scene",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 18.5
+    },
+    {
+      "beat_id": "B11",
+      "title": "The Verdict",
+      "narration_text": "Treat a neighbor list as evidence to inspect. Record the embedding model, corpus, and preprocessing. Compute similarity in the original vector space; a two-dimensional visualization can distort distances. Test neighbors against the task you care about, and remember that a corpus can carry stereotypes and other unwanted associations into its vectors.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "artifact-build",
+        "show": [],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Word Embeddings · The Verdict",
+            "artifactHeading": "Inspect the Geometry",
+            "brandLabel": "",
+            "artifactLines": [
+              "MODEL — record the corpus and preprocessing.",
+              "SPACE — calculate similarity before projection.",
+              "NEIGHBORS — inspect what close actually means.",
+              "TASK — evaluate usefulness and unwanted associations."
+            ],
+            "durationSeconds": 19.7
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-10-16T16:28:38.599483+00:00"
+          }
+        },
+        "visual_intent": "Claude verdict artifact: Name the model; Compute in original space; Inspect neighbors; Test the task. No recurring footer."
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 19.7,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 19.708333333333332
+    },
+    {
+      "beat_id": "B12",
+      "title": "Your Turn",
+      "narration_text": "Your turn. Using a named Word2Vec or GloVe model, compute cosine similarities for three word pairs. Show the code, handle missing words, and explain one surprising neighbor. Check the model name and whether the code really ran. Compare its output with your expectations instead of treating every high score as a synonym.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "prompt-compose",
+        "show": [],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "DATA SCIENCE · LANGUAGE",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Your turn.",
+            "segment": "Inspect Your Own Neighbors",
+            "command": "Using a named Word2Vec or GloVe model, compute cosine similarities for three word pairs. Show the code, handle missing words, and explain one surprising neighbor.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "Model and corpus identified",
+              "Code execution verified",
+              "Missing words handled"
+            ],
+            "durationSeconds": 18.078667
+          },
+          "rendered": {
+            "out": "media/B12.mp4",
+            "at": "2026-10-16T16:29:23.706491+00:00"
+          }
+        },
+        "visual_intent": "Claude composer types the exact prompt; output checklist includes model named, code executed, missing words handled. Folder @sanjiv retained."
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 18.078667,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B12.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 18.083333333333332
+    },
+    {
+      "beat_id": "B13",
+      "title": "Word Embeddings",
+      "narration_text": "Word Embeddings. Word2Vec, GloVe, and Semantic Similarity.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "title-lockup",
+        "show": [],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Word Embeddings - Word2Vec, GloVe & Semantic Similarity",
+            "slug": "claude-sanjiv-word-embeddings",
+            "handle": "@sanjiv",
+            "durationSeconds": 4.66
+          },
+          "rendered": {
+            "out": "media/B13.mp4",
+            "at": "2026-10-16T16:29:38.772911+00:00"
+          }
+        },
+        "visual_intent": "Older-template title card and mascot, @sanjiv handle; no Liam."
+      },
+      "tail_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with user-requested absence of recurring corner footer. Preserve legible diagrams and intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B13.mp3",
+      "actual_duration_s": 4.66,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B13.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-16T12:40:07"
+      },
+      "render_duration_s": 4.666666666666667
+    }
+  ]
+}

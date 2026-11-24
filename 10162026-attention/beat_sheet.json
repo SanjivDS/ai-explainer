@@ -1,0 +1,597 @@
+{
+  "metadata": {
+    "title": "Attention - Why It Changed NLP",
+    "slug": "attention",
+    "brand": "sanjiv",
+    "channel": "sanjiv",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "folderLabel": "@sanjiv",
+    "persona": "Sanjiv",
+    "palette": "claude",
+    "width": 3840,
+    "height": 2160,
+    "fps": 24,
+    "keep_review_labels": false,
+    "footer_wordmark": false,
+    "approval_status": "approved",
+    "template_reference": "books/confusion-matrix/youtube/claude-liam-confusion-matrix",
+    "approval_note": "User approved this episode plan in the conversation.",
+    "build": {
+      "at": "2026-10-16T21:24:49",
+      "cut": "master",
+      "filled": 15,
+      "of": 15,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "title": "The Question",
+      "narration_text": "Hi. This is Sanjiv. Today we shall discuss attention, and why it changed natural language processing. Embeddings give us vectors. Attention lets those vectors draw information from other positions. Let us follow that exchange, calculate a tiny example, and see what changed when the Transformer put attention at its center.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          "Claude composer intro, greeting Hi, Sanjiv; prompt then three-line agenda: Context, Calculation, Consequences."
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "DATA SCIENCE · LANGUAGE",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Hi, Sanjiv",
+            "segment": "Attention",
+            "command": "Explain attention: show why it changed NLP, calculate query-key scores and weighted values, and distinguish training from generation.",
+            "runningText": "following the flow of information…",
+            "output": [
+              "CONTEXT → the translation bottleneck",
+              "CALCULATION → score, weight, mix",
+              "CONSEQUENCES → the Transformer"
+            ],
+            "durationSeconds": 18.249333
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-17T01:18:23.974675+00:00"
+          }
+        },
+        "visual_intent": "Claude composer intro, greeting Hi, Sanjiv; prompt then three-line agenda: Context, Calculation, Consequences."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 18.249333,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 18.25
+    },
+    {
+      "beat_id": "B01",
+      "title": "The Whole Idea",
+      "narration_text": "Attention builds input-dependent context. It scores possible sources of information, turns those scores into weights, and combines what those sources carry. That operation helped language models connect distant positions and made a different kind of sequence architecture practical.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          "Older hesitant-writer overview: Attention supplies fixed context. Correct fixed to input-dependent; three cards: Score, Weight, Mix."
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Attention supplies fixed context.",
+            "triggerWords": "fixed",
+            "replacementWords": "input-dependent",
+            "seed": "attention-41726",
+            "fontSize": 82,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0,
+            "charMs": 45,
+            "brandLabel": "",
+            "contextTitle": "Attention",
+            "contextItems": [
+              {
+                "label": "Score",
+                "detail": "compare query and keys"
+              },
+              {
+                "label": "Weight",
+                "detail": "normalize the scores"
+              },
+              {
+                "label": "Mix",
+                "detail": "combine values"
+              }
+            ],
+            "durationSeconds": 16.894667
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-10-17T01:21:20.361183+00:00"
+          }
+        },
+        "visual_intent": "Older hesitant-writer overview: Attention supplies fixed context. Correct fixed to input-dependent; three cards: Score, Weight, Mix."
+      },
+      "lead_silence_s": 0.8,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 16.894667,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 16.916666666666668
+    },
+    {
+      "beat_id": "B02",
+      "title": "One Summary Is a Bottleneck",
+      "narration_text": "Start with a basic encoder-decoder translation model. The encoder compresses the source into one fixed-length vector, and the decoder generates the translation from it. That puts pressure on a single summary. The attention approach explored by Bahdanau and colleagues lets the decoder consult different source states as it produces different output words.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          "Simple encoder-decoder schematic: four source states collapse into one summary; decoder repeatedly reads it. Replace with accessible source-state row."
+        ],
+        "visual_intent": "Simple encoder-decoder schematic: four source states collapse into one summary; decoder repeatedly reads it. Replace with accessible source-state row."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.316,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 19.333333333333332
+    },
+    {
+      "beat_id": "B03",
+      "title": "Context Can Change Each Step",
+      "narration_text": "The source states stay available. At each decoding step, a new set of weights creates a new context vector. One step can draw more from one region; another step can draw more from another. These weights are a schematic illustration, not a measured translation alignment. The important change is repeated access to the source.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          "Two successive decoder queries point to the same source states with different illustrative weights. No learned language alignment claimed."
+        ],
+        "visual_intent": "Two successive decoder queries point to the same source states with different illustrative weights. No learned language alignment claimed."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 17.78,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 17.791666666666668
+    },
+    {
+      "beat_id": "B04",
+      "title": "Query, Key, Value",
+      "narration_text": "For the dot-product attention used in Transformers, three roles make the operation easier to follow. A query is compared with keys to produce scores. Values supply the vectors that will be mixed. In self-attention, all three come from the same sequence through learned projections. They are numeric representations, not literal questions, labels, or definitions.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          "Three vector roles revealed separately; query compares with keys, resulting weights multiply values. Show learned projection paths from input representations."
+        ],
+        "visual_intent": "Three vector roles revealed separately; query compares with keys, resulting weights multiply values. Show learned projection paths from input representations."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 19.188,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 19.208333333333332
+    },
+    {
+      "beat_id": "B05",
+      "title": "Compute the Scores",
+      "narration_text": "Here is a deliberately constructed example with two-dimensional keys. Our query is one, zero. Its dot products with the three keys are two, zero, and zero. Divide by the square root of two, because the key dimension is two. The first scaled score is about one point four one. The other two scores are zero.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          "Constructed example: q=(1,0), keys=(2,0),(0,2),(0,0), d_k=2. Dot products 2,0,0 then divide by sqrt(2)."
+        ],
+        "visual_intent": "Constructed example: q=(1,0), keys=(2,0),(0,2),(0,0), d_k=2. Dot products 2,0,0 then divide by sqrt(2)."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 16.948,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 16.958333333333332
+    },
+    {
+      "beat_id": "B06",
+      "title": "Scores Become Weights",
+      "narration_text": "Softmax exponentiates the scores and divides each result by their total. Our first source receives about sixty-seven percent of the weight; the other two receive about sixteen percent each. The unrounded weights sum to one. This is a distribution for mixing information, not a probability that a word is true or that an interpretation is correct.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          "Stable softmax computation; bars labeled .673,.164,.164, with rounded-values note. Exact weights retained in evidence."
+        ],
+        "visual_intent": "Stable softmax computation; bars labeled .673,.164,.164, with rounded-values note. Exact weights retained in evidence."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 18.996,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 19.0
+    },
+    {
+      "beat_id": "B07",
+      "title": "Mix the Values",
+      "narration_text": "Now apply those weights to the values. Multiplying and adding gives approximately zero point eight four for the first coordinate, and zero point three three for the second. Change only the query to zero and one, and the second key receives the largest score. The output becomes about zero point three three for the first coordinate, and zero point eight four for the second. Same keys and values; a different query produces a different mixture.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          "Values=(1,0),(0,1),(1,1); weighted sum gives (.836,.327). Then q=(0,1), weights swap and output=(.327,.836). Sequential stages, no crowded combined table."
+        ],
+        "visual_intent": "Values=(1,0),(0,1),(1,1); weighted sum gives (.836,.327). Then q=(0,1), weights swap and output=(.327,.836). Sequential stages, no crowded combined table."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 22.452,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 22.458333333333332
+    },
+    {
+      "beat_id": "B08",
+      "title": "Self-Attention and Cross-Attention",
+      "narration_text": "The names describe where the vectors come from. Self-attention relates positions within one sequence. Cross-attention takes queries from one sequence and keys and values from another, as when a decoder consults an encoder. Both use the same score, weight, and mix pattern. The distinction is the source of the information.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          "Side-by-side provenance diagrams: same sequence supplies Q,K,V versus decoder supplies Q and encoder supplies K,V. No complete architecture on this frame."
+        ],
+        "visual_intent": "Side-by-side provenance diagrams: same sequence supplies Q,K,V versus decoder supplies Q and encoder supplies K,V. No complete architecture on this frame."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 17.929958,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 17.958333333333332
+    },
+    {
+      "beat_id": "B09",
+      "title": "Why the Transformer Mattered",
+      "narration_text": "Attention existed before the Transformer. The 2017 Transformer removed recurrence from its sequence-processing architecture. Allowed positions could interact directly through attention, and training could compute many positions in parallel. That shortened information paths and suited matrix-based hardware. Autoregressive generation still produces each new token using the preceding tokens; parallel training does not mean the whole answer appears in one step.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          "Recurrent chain vs direct allowed attention links; parallel training positions then separate autoregressive output steps. Historical label: Transformer, 2017."
+        ],
+        "visual_intent": "Recurrent chain vs direct allowed attention links; parallel training positions then separate autoregressive output steps. Historical label: Transformer, 2017."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 24.457958,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 24.458333333333332
+    },
+    {
+      "beat_id": "B10",
+      "title": "Structure Still Matters",
+      "narration_text": "Attention needs surrounding structure. Position information helps represent order. A causal mask blocks access to future positions when predicting the next token. Multiple heads use different learned projections and combine their results. Heads can learn different patterns, but they are not assigned fixed jobs like grammar or meaning. Feed-forward layers and residual connections also remain part of a Transformer.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          "Three uncluttered stages: positional information; causal triangular mask; two heads whose outputs concatenate and project. Show context-appropriate illustrative labels only."
+        ],
+        "visual_intent": "Three uncluttered stages: positional information; causal triangular mask; two heads whose outputs concatenate and project. Show context-appropriate illustrative labels only."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 21.769958,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 21.791666666666668
+    },
+    {
+      "beat_id": "B11",
+      "title": "Power Has Limits",
+      "narration_text": "There are costs and cautions. Doubling the sequence length quadruples the number of query-key pairs in dense full attention. And a bright cell in an attention map is not, by itself, proof of why the whole model answered as it did. Attention can be useful evidence to investigate, but explanations require tests of the model, not just a persuasive heat map.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "assemble",
+        "show": [
+          "Dense 4×4 to 8×8 score grid, counts16→64; separate attention-map inspection panel tagged not a causal explanation by itself."
+        ],
+        "visual_intent": "Dense 4×4 to 8×8 score grid, counts16→64; separate attention-map inspection panel tagged not a causal explanation by itself."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 19.636,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 19.666666666666668
+    },
+    {
+      "beat_id": "B12",
+      "title": "The Verdict",
+      "narration_text": "The change was a flexible way to exchange information across a sequence. Scores determine weights, weights mix values, and the surrounding architecture learns how to use that mixture. Attention helped move natural language processing beyond a single compressed summary and became a central building block of the Transformer. Follow the calculation before trusting the metaphor.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "artifact-build",
+        "show": [
+          "Claude artifact with four short lines: Scores compare; weights normalize; values mix; architecture enables context exchange."
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Attention · The Verdict",
+            "artifactHeading": "Follow the Calculation",
+            "brandLabel": "",
+            "artifactLines": [
+              "SCORES — compare queries and keys.",
+              "WEIGHTS — normalize over allowed sources.",
+              "VALUES — combine information.",
+              "ARCHITECTURE — use the context."
+            ],
+            "durationSeconds": 20.382667
+          },
+          "rendered": {
+            "out": "media/B12.mp4",
+            "at": "2026-10-17T01:19:27.078188+00:00"
+          }
+        },
+        "visual_intent": "Claude artifact with four short lines: Scores compare; weights normalize; values mix; architecture enables context exchange."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 20.382667,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B12.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 20.416666666666668
+    },
+    {
+      "beat_id": "B13",
+      "title": "Your Turn",
+      "narration_text": "Try this prompt: Implement our three-key attention example in Python. Print the scaled scores, softmax weights, and weighted values. Change the query and verify the result. Ask for the arithmetic, not just a diagram. Check that the weights sum to one, and keep the example clearly labeled as constructed rather than learned from language.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "prompt-compose",
+        "show": [
+          "Claude composer prompt read aloud; folder @sanjiv retained, bottom-right footer absent."
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "DATA SCIENCE · LANGUAGE",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Your turn.",
+            "segment": "Compute Attention",
+            "command": "Implement our three-key attention example in Python. Print the scaled scores, softmax weights, and weighted values. Change the query and verify the result.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "Constructed inputs declared",
+              "Intermediate values printed",
+              "Changed-query result verified"
+            ],
+            "durationSeconds": 18.164
+          },
+          "rendered": {
+            "out": "media/B13.mp4",
+            "at": "2026-10-17T01:20:10.050032+00:00"
+          }
+        },
+        "visual_intent": "Claude composer prompt read aloud; folder @sanjiv retained, bottom-right footer absent."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B13.mp3",
+      "actual_duration_s": 18.164,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B13.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 18.166666666666668
+    },
+    {
+      "beat_id": "B14",
+      "title": "Attention - Why It Changed NLP",
+      "narration_text": "Attention. Why it changed natural language processing. This is Sanjiv.",
+      "tail_silence_s": 0.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "title-lockup",
+        "show": [
+          "Older title restatement with mascot and centered @sanjiv."
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Attention - Why It Changed NLP",
+            "slug": "attention",
+            "handle": "@sanjiv",
+            "durationSeconds": 5.065958
+          },
+          "rendered": {
+            "out": "media/B14.mp4",
+            "at": "2026-10-17T01:20:23.920304+00:00"
+          }
+        },
+        "visual_intent": "Older title restatement with mascot and centered @sanjiv."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Older-template educational composition with no recurring corner footer, as requested. Intentional corner whitespace; no clipping or overlap exemptions."
+      },
+      "audio_file": "mp3/beat-B14.mp3",
+      "actual_duration_s": 5.065958,
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B14.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-16T21:24:49"
+      },
+      "render_duration_s": 5.083333333333333
+    }
+  ]
+}
