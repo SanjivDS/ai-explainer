@@ -1,0 +1,683 @@
+{
+  "metadata": {
+    "title": "Backpropagation - How Neural Networks Actually Learn",
+    "slug": "backpropagation",
+    "brand": "sanjiv",
+    "channel": "sanjiv",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "folderLabel": "@sanjiv",
+    "persona": "Sanjiv",
+    "palette": "claude",
+    "width": 3840,
+    "height": 2160,
+    "fps": 24,
+    "keep_review_labels": false,
+    "footer_wordmark": false,
+    "approval_status": "approved",
+    "template_reference": "books/confusion-matrix/youtube/claude-liam-confusion-matrix",
+    "approval_note": "User approved on 2026-10-19.",
+    "build": {
+      "at": "2026-10-19T18:38:28",
+      "cut": "master",
+      "filled": 16,
+      "of": 16,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "title": "The Question",
+      "narration_text": "Hi. This is Sanjiv. Today we shall discuss backpropagation, and how neural networks actually learn. Last time, we followed inputs forward to a prediction. Now we will add a target, trace the calculation backward, and watch one training step change the result.",
+      "tail_silence_s": 0.5,
+      "classification": "CARD",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "ClaudeComposerAsk: Hi, Sanjiv. Composer request and agenda: Predict, Trace Gradients, Update. Retain folder chip and agenda; no corner footer."
+          }
+        ],
+        "visual_intent": "ClaudeComposerAsk: Hi, Sanjiv. Composer request and agenda: Predict, Trace Gradients, Update. Retain folder chip and agenda; no corner footer.",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "DATA SCIENCE · NEURAL NETWORKS",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Hi, Sanjiv",
+            "segment": "Backpropagation",
+            "command": "Trace a neural network backward, calculate gradients, and take one training step.",
+            "runningText": "following the training loop…",
+            "output": [
+              "PREDICT → compute the loss",
+              "TRACE → calculate gradients",
+              "UPDATE → verify the next pass"
+            ],
+            "durationSeconds": 14.836
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-19T16:22:08.711795+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 15.000000000000002,
+      "actual_duration_s": 14.836,
+      "audio_file": "mp3/beat-B00.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-19T18:38:28"
+      },
+      "render_duration_s": 14.875
+    },
+    {
+      "beat_id": "B01",
+      "title": "The Big Picture",
+      "narration_text": "Backpropagation calculates how each parameter affects loss. It follows the prediction backward through the operations that produced it. An optimizer then uses those gradients to change the parameters. Together, these steps turn a prediction into a training loop.",
+      "tail_silence_s": 0.5,
+      "classification": "CARD",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Older-template overview: correct guesses to calculates in “Backpropagation guesses how each parameter affects loss.” Context cards: Loss, Gradients, Update."
+          }
+        ],
+        "visual_intent": "Older-template overview: correct guesses to calculates in “Backpropagation guesses how each parameter affects loss.” Context cards: Loss, Gradients, Update.",
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Backpropagation guesses how\neach parameter affects loss.",
+            "triggerWords": "guesses",
+            "replacementWords": "calculates",
+            "seed": "backpropagation-219",
+            "fontSize": 82,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0,
+            "charMs": 45,
+            "brandLabel": "",
+            "contextTitle": "Backpropagation",
+            "contextItems": [
+              {
+                "label": "Loss",
+                "detail": "measure the mismatch"
+              },
+              {
+                "label": "Gradients",
+                "detail": "trace local sensitivities"
+              },
+              {
+                "label": "Update",
+                "detail": "take an optimizer step"
+              }
+            ],
+            "durationSeconds": 15.636
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-10-19T16:23:17.720605+00:00"
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "estimated_duration_s": 13.571428571428573,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Preserve older-template progressive overview / concise verdict / centered title card with intentional whitespace and legible type."
+      },
+      "actual_duration_s": 15.636,
+      "audio_file": "mp3/beat-B01.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-19T18:38:28"
+      },
+      "render_duration_s": 15.666666666666666
+    },
+    {
+      "beat_id": "B02",
+      "title": "Bring Back the Network",
+      "narration_text": "Our tiny network has two inputs, two hidden units, and one linear output. The inputs are two and one. The hidden sums are one and negative one half. After ReLU, the hidden values are one and zero. With the same weights and biases as before, the prediction is two point five.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Reuse two-input, two-hidden-unit network. Reveal x=(2,1), z=(1,-0.5), h=(1,0), prediction=2.5 along its route. Parameter values supplied in companion example."
+          }
+        ],
+        "visual_intent": "Reuse two-input, two-hidden-unit network. Reveal x=(2,1), z=(1,-0.5), h=(1,0), prediction=2.5 along its route. Parameter values supplied in companion example.",
+        "scene": "B02_Scene"
+      },
+      "estimated_duration_s": 18.214285714285715,
+      "actual_duration_s": 15.753333,
+      "audio_file": "mp3/beat-B02.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-19T18:38:28"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Progressive network recap: the midpoint shows input and hidden sums before the hidden activation and output arrive. Keep three aligned network columns and older-template whitespace; final state fills the frame without congestion."
+      },
+      "render_duration_s": 15.791666666666666
+    },
+    {
+      "beat_id": "B03",
+      "title": "Give the Prediction a Target",
+      "narration_text": "For this constructed example, let the target be one. We choose half the squared error as our loss. Subtract one from two point five, square the difference, then divide by two. The loss is one point one two five. The loss gives training a numerical objective to reduce.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Prediction 2.5 and target 1 enter half-squared-error block. Reveal L=½(ŷ−y)²=1.125. Label one constructed training example."
+          }
+        ],
+        "visual_intent": "Prediction 2.5 and target 1 enter half-squared-error block. Reveal L=½(ŷ−y)²=1.125. Label one constructed training example.",
+        "scene": "B03_Scene"
+      },
+      "estimated_duration_s": 17.142857142857142,
+      "actual_duration_s": 14.942667,
+      "audio_file": "mp3/beat-B03.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-19T18:38:28"
+      },
+      "render_duration_s": 14.958333333333334
+    },
+    {
+      "beat_id": "B04",
+      "title": "Start at the Loss",
+      "narration_text": "Start with the prediction. The derivative of our loss with respect to that prediction is prediction minus target: one point five. This is a local sensitivity. A tiny increase in the prediction would increase the loss here. The gradient is not the loss itself; it describes how the loss changes.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Plot local loss curve with point ŷ=2.5 and slope 1.5. Display ∂L/∂ŷ=ŷ−y=1.5; separate gradient from loss label."
+          }
+        ],
+        "visual_intent": "Plot local loss curve with point ŷ=2.5 and slope 1.5. Display ∂L/∂ŷ=ŷ−y=1.5; separate gradient from loss label.",
+        "scene": "B04_Scene"
+      },
+      "estimated_duration_s": 17.857142857142858,
+      "actual_duration_s": 16.564,
+      "audio_file": "mp3/beat-B04.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-19T18:38:28"
+      },
+      "render_duration_s": 16.583333333333332
+    },
+    {
+      "beat_id": "B05",
+      "title": "The Chain Rule",
+      "narration_text": "A parameter usually affects the loss through intermediate calculations. The chain rule connects their sensitivities. Multiply the gradient arriving from the next operation by the derivative of the current operation. Repeat backward through the graph. When several paths connect a value to the loss, add their contributions.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Three nodes parameter → intermediate → loss. Animate backward arrows and reveal ∂L/∂w=(∂L/∂u)(∂u/∂w). One equation at a time."
+          }
+        ],
+        "visual_intent": "Three nodes parameter → intermediate → loss. Animate backward arrows and reveal ∂L/∂w=(∂L/∂u)(∂u/∂w). One equation at a time.",
+        "scene": "B05_Scene"
+      },
+      "estimated_duration_s": 16.78571428571429,
+      "actual_duration_s": 17.737958,
+      "audio_file": "mp3/beat-B05.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-19T18:38:28"
+      },
+      "render_duration_s": 17.75
+    },
+    {
+      "beat_id": "B06",
+      "title": "Gradients at the Output",
+      "narration_text": "At the output, each weight multiplies a hidden value. So its gradient is the arriving gradient times that hidden value. One point five times one gives one point five for the first weight. One point five times zero gives zero for the second. The output bias has gradient one point five.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Use v=(2,-1), c=0.5 to avoid layer-index clutter. Show ŷ=v₁h₁+v₂h₂+c. Reveal gradients v₁:1.5, v₂:0, c:1.5 sequentially."
+          }
+        ],
+        "visual_intent": "Use v=(2,-1), c=0.5 to avoid layer-index clutter. Show ŷ=v₁h₁+v₂h₂+c. Reveal gradients v₁:1.5, v₂:0, c:1.5 sequentially.",
+        "scene": "B06_Scene"
+      },
+      "estimated_duration_s": 18.214285714285715,
+      "actual_duration_s": 17.182667,
+      "audio_file": "mp3/beat-B06.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-19T18:38:28"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Output gradients are revealed one derivative row at a time with narration. Midpoint deliberately has only the output equation and first derivative; remaining rows occupy the reserved lower space. Enlarging the first state would crowd the completed derivation."
+      },
+      "render_duration_s": 17.208333333333332
+    },
+    {
+      "beat_id": "B07",
+      "title": "Pass Through ReLU",
+      "narration_text": "Continue toward the hidden layer using the original output weights, two and negative one. The arriving gradients are three and negative one point five. ReLU has slope one on its positive side and zero on its negative side. Our hidden sums are one and negative zero point five, so the gradients become three and zero.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Backward sensitivities into h: (3,-1.5). ReLU gates at z=(1,-0.5) yield dz=(3,0). Gate labels positive slope 1, negative slope 0."
+          }
+        ],
+        "visual_intent": "Backward sensitivities into h: (3,-1.5). ReLU gates at z=(1,-0.5) yield dz=(3,0). Gate labels positive slope 1, negative slope 0.",
+        "scene": "B07_Scene"
+      },
+      "estimated_duration_s": 19.28571428571429,
+      "actual_duration_s": 18.249333,
+      "audio_file": "mp3/beat-B07.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-19T18:38:28"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "ReLU explanation progressively reveals incoming gradients, two gate cards, and the final gradient. The midpoint reserves room for the second gate and final equation; all are visibly separated in the completed state."
+      },
+      "render_duration_s": 18.25
+    },
+    {
+      "beat_id": "B08",
+      "title": "Reach the Earlier Weights",
+      "narration_text": "The first hidden unit received inputs two and one. Multiply those inputs by its gradient of three. Its two weight gradients are six and three, and its bias gradient is three. The second unit receives zero through its ReLU gate, so its incoming parameter gradients are zero for this example. Other inputs can activate it.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Focus first unit only. ∂L/∂w₁₁=3×2=6; ∂L/∂w₁₂=3×1=3; ∂L/∂b₁=3. Then muted second-unit zero gradients."
+          }
+        ],
+        "visual_intent": "Focus first unit only. ∂L/∂w₁₁=3×2=6; ∂L/∂w₁₂=3×1=3; ∂L/∂b₁=3. Then muted second-unit zero gradients.",
+        "scene": "B08_Scene"
+      },
+      "estimated_duration_s": 19.642857142857142,
+      "actual_duration_s": 18.185333,
+      "audio_file": "mp3/beat-B08.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-19T18:38:28"
+      },
+      "render_duration_s": 18.208333333333332
+    },
+    {
+      "beat_id": "B09",
+      "title": "The Optimizer Takes a Step",
+      "narration_text": "Now the optimizer acts. For gradient descent, subtract the learning rate times each gradient. With a learning rate of zero point zero five, the first hidden weight moves from zero point five to zero point two. Compute all gradients at the original parameters first, then update every parameter together. Backpropagation supplied the gradients; this step changes the model.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Freeze computed gradients, then reveal θnew=θ−0.05∇L. Focus w₁₁:0.5−0.05×6=0.2. Updated parameters in separate panel, no new-value reuse during backward pass."
+          }
+        ],
+        "visual_intent": "Freeze computed gradients, then reveal θnew=θ−0.05∇L. Focus w₁₁:0.5−0.05×6=0.2. Updated parameters in separate panel, no new-value reuse during backward pass.",
+        "scene": "B09_Scene"
+      },
+      "estimated_duration_s": 20.714285714285715,
+      "actual_duration_s": 20.574667,
+      "audio_file": "mp3/beat-B09.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-19T18:38:28"
+      },
+      "render_duration_s": 20.583333333333332
+    },
+    {
+      "beat_id": "B10",
+      "title": "Run Forward Again",
+      "narration_text": "Run the same input forward again. The hidden values are now zero point one and zero. The updated output is zero point six one seven five, and the loss falls from one point one two five to about zero point zero seven three two. This particular step helped this example. It does not establish that the model generalizes.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Recompute with updated parameters: z=(0.1,-0.5), h=(0.1,0), output=.6175. Compare loss1.125→.073153125, displayed0.0732. Label one example, one step."
+          }
+        ],
+        "visual_intent": "Recompute with updated parameters: z=(0.1,-0.5), h=(0.1,0), output=.6175. Compare loss1.125→.073153125, displayed0.0732. Label one example, one step.",
+        "scene": "B10_Scene"
+      },
+      "estimated_duration_s": 20.714285714285715,
+      "actual_duration_s": 19.166667,
+      "audio_file": "mp3/beat-B10.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-19T18:38:28"
+      },
+      "render_duration_s": 19.208333333333332
+    },
+    {
+      "beat_id": "B11",
+      "title": "Check the Gradient",
+      "narration_text": "We can check our calculus by nudging a weight slightly in both directions and comparing the losses. The central difference estimate agrees with the analytic gradient of six. The companion Python example checks all nine parameters. This numerical check is useful for debugging, but repeatedly perturbing every parameter is expensive. Backpropagation reuses intermediate calculations.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Show central difference [L(w+ε)−L(w−ε)]/(2ε), ε=10⁻⁶. Analytic6 and numerical≈6. Real companion output excerpt; no fabricated terminal."
+          }
+        ],
+        "visual_intent": "Show central difference [L(w+ε)−L(w−ε)]/(2ε), ε=10⁻⁶. Analytic6 and numerical≈6. Real companion output excerpt; no fabricated terminal.",
+        "scene": "B11_Scene"
+      },
+      "estimated_duration_s": 19.28571428571429,
+      "actual_duration_s": 21.236,
+      "audio_file": "mp3/beat-B11.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-19T18:38:28"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Finite-difference check reveals formula, analytic/numerical comparison, then epsilon and the nine-check conclusion. Midpoint intentionally retains whitespace for subsequent elements, preserving the established template and reading order."
+      },
+      "render_duration_s": 21.25
+    },
+    {
+      "beat_id": "B12",
+      "title": "From One Step to Learning",
+      "narration_text": "Training repeats this loop across examples or small batches, usually combining their losses. The learning rate controls the size of each step; an overly large step can raise the loss. We also evaluate on held-out data. Lower training loss shows progress on the training objective. Useful learning requires predictions that hold up beyond those training examples.",
+      "tail_silence_s": 0.5,
+      "classification": "SHOW",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "annotate",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Training loop around minibatch: forward → loss → backward → update. Separate held-out evaluation panel. Brief learning-rate large-step caution, no invented training curve."
+          }
+        ],
+        "visual_intent": "Training loop around minibatch: forward → loss → backward → update. Separate held-out evaluation panel. Brief learning-rate large-step caution, no invented training curve.",
+        "scene": "B12_Scene"
+      },
+      "estimated_duration_s": 20.0,
+      "actual_duration_s": 19.998667,
+      "audio_file": "mp3/beat-B12.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-19T18:38:28"
+      },
+      "render_duration_s": 20.0
+    },
+    {
+      "beat_id": "B13",
+      "title": "The Verdict",
+      "narration_text": "The complete loop is now visible. Predict with the current parameters. Measure a loss against a target. Trace gradients backward with the chain rule. Let the optimizer update the parameters. Backpropagation makes that gradient calculation efficient, while the data, objective, model, and optimizer together determine what the network learns.",
+      "tail_silence_s": 0.5,
+      "classification": "CARD",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Claude verdict artifact, four concise lines: Predict; Measure loss; Trace gradients; Update parameters."
+          }
+        ],
+        "visual_intent": "Claude verdict artifact, four concise lines: Predict; Measure loss; Trace gradients; Update parameters.",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Backpropagation · The Verdict",
+            "artifactHeading": "Follow the Gradients",
+            "brandLabel": "",
+            "artifactLines": [
+              "PREDICT — use the current parameters.",
+              "MEASURE — compare with the target.",
+              "TRACE — calculate gradients backward.",
+              "UPDATE — let the optimizer take a step."
+            ],
+            "durationSeconds": 18.206667
+          },
+          "rendered": {
+            "out": "media/B13.mp4",
+            "at": "2026-10-19T16:24:28.270248+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 17.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Preserve older-template progressive overview / concise verdict / centered title card with intentional whitespace and legible type."
+      },
+      "actual_duration_s": 18.206667,
+      "audio_file": "mp3/beat-B13.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B13.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-19T18:38:28"
+      },
+      "render_duration_s": 18.208333333333332
+    },
+    {
+      "beat_id": "B14",
+      "title": "Your Turn",
+      "narration_text": "Try this prompt: Using the supplied network, compute every gradient by hand and in Python. Check them with finite differences, apply one gradient descent step, and compare the losses. Keep the target at one and the learning rate at zero point zero five. Print the intermediate values so you can check every link in the chain.",
+      "tail_silence_s": 0.5,
+      "classification": "CARD",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "ClaudeComposerAsk prompt verbatim with folder chip and task lines: Use supplied parameters; Check all gradients; Recompute loss."
+          }
+        ],
+        "visual_intent": "ClaudeComposerAsk prompt verbatim with folder chip and task lines: Use supplied parameters; Check all gradients; Recompute loss.",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "topic": "DATA SCIENCE · NEURAL NETWORKS",
+            "folderLabel": "@sanjiv",
+            "modelLabel": "Claude",
+            "effortLabel": "",
+            "largeText": true,
+            "greeting": "Your turn.",
+            "segment": "Backpropagation",
+            "command": "Using the supplied network, compute every gradient by hand and in Python. Check them with finite differences, apply one gradient descent step, and compare the losses.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "Use the supplied parameters",
+              "Check all nine gradients",
+              "Recompute the loss"
+            ],
+            "durationSeconds": 17.801333
+          },
+          "rendered": {
+            "out": "media/B14.mp4",
+            "at": "2026-10-19T16:25:27.236516+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 20.0,
+      "actual_duration_s": 17.801333,
+      "audio_file": "mp3/beat-B14.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B14.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-19T18:38:28"
+      },
+      "render_duration_s": 17.833333333333332
+    },
+    {
+      "beat_id": "B15",
+      "title": "Backpropagation - How Neural Networks Actually Learn",
+      "narration_text": "Backpropagation. How Neural Networks Actually Learn. This is Sanjiv.",
+      "tail_silence_s": 0.5,
+      "classification": "CARD",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "kinetic",
+        "show": [
+          {
+            "at": "successive narration cues",
+            "event": "Older title outro, centered @sanjiv and crisp mascot. Solid cream background during title fade."
+          }
+        ],
+        "visual_intent": "Older title outro, centered @sanjiv and crisp mascot. Solid cream background during title fade.",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Backpropagation - How Neural Networks Actually Learn",
+            "slug": "sanjiv-backpropagation",
+            "handle": "@sanjiv",
+            "durationSeconds": 4.937333,
+            "mascotGap": 100
+          },
+          "rendered": {
+            "out": "media/B15.mp4",
+            "at": "2026-10-19T22:29:13.924802+00:00"
+          }
+        }
+      },
+      "estimated_duration_s": 10,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Preserve older-template progressive overview / concise verdict / centered title card with intentional whitespace and legible type."
+      },
+      "actual_duration_s": 4.937333,
+      "audio_file": "mp3/beat-B15.mp3",
+      "audio_padding_applied": true,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B15.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-19T18:38:28"
+      },
+      "render_duration_s": 4.958333333333333
+    }
+  ]
+}

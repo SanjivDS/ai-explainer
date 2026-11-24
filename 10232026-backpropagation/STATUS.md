@@ -1,0 +1,1 @@
+Complete — 2026-10-19. Backpropagation master rendered and reviewed: 3840×2160 / 24 fps / 4:31. Typography, final-frame, sharpness, decode, audio peak, caption and footer checks passed. See QC-REPORT.md.
