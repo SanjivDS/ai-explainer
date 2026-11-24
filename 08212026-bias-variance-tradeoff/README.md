@@ -1,7 +1,7 @@
 # 02 · Bias vs. Variance, Oversimplified
 
 - **Series:** Foundational (Data Science)
-- **Built:** 17–21 Aug (master built 24 Aug)
+- **Built:** 17–23 Aug (master built 24 Aug)
 - **Delivered:** [02 Bias Variance tradeoff](https://drive.google.com/file/d/1y1Nk4S24TQ_2nRiNhHrATZcOxkUHeyur/view) (uploaded 3 Oct)
 - **Master:** 3840×2160, 24 fps · 2:56.6
 

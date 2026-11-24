@@ -1,7 +1,7 @@
 # 16 · Entropy vs Gini Impurity
 
 - **Series:** Foundational (Data Science)
-- **Built:** 28 Sep – 2 Oct (master built 4 Oct)
+- **Built:** 28 Sep – 4 Oct (master built 4 Oct)
 - **Delivered:** [16 Entropy and Gini Impurity](https://drive.google.com/file/d/18uo3Szq3xQPllJUmH9YBMH78c7yEEE6X/view) (uploaded 11 Oct)
 - **Master:** 3840×2160, 24 fps · 3:41.7
 

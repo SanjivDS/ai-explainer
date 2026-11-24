@@ -1,6 +1,6 @@
 # Explainer — Linear vs. Logistic Regression, Oversimplified
 
-**Week:** 24–28 Aug
+**Week:** 24–30 Aug
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
 - **Video:** not yet on YouTube

@@ -1,7 +1,7 @@
 # 12 · XGBoost - Why It Works So Well
 
 - **Series:** Foundational (Data Science)
-- **Built:** 28 Sep – 2 Oct (master built 2 Oct)
+- **Built:** 28 Sep – 4 Oct (master built 2 Oct)
 - **Delivered:** [12 XGBoost](https://drive.google.com/file/d/1UhfocwQahh-rv4pjjGX2geiqFicUd0oQ/view) (uploaded 4 Oct)
 - **Master:** 3840×2160, 24 fps · 3:30.0
 

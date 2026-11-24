@@ -3,7 +3,7 @@
 **Google Drive:** [23 NLP-3 Attention](https://drive.google.com/file/d/1Bmz9_baTgAK8_1_6JqsUTcf3jhbN1xM0/view) (uploaded 3 Nov)
 **Status:** delivered to Drive for review · not yet published to YouTube
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 4:37.5
-**Built:** 12–16 Oct (master built 16 Oct)
+**Built:** 12–18 Oct (master built 16 Oct)
 
 Build notes for `attention`. Append-only going forward.
 

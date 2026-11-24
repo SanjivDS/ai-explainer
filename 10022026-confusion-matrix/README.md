@@ -1,7 +1,7 @@
 # 18 · Confusion Matrix
 
 - **Series:** Foundational (Data Science)
-- **Built:** 28 Sep – 2 Oct (master built 4 Oct)
+- **Built:** 28 Sep – 4 Oct (master built 4 Oct)
 - **Delivered:** [18 Confusion Matrix](https://drive.google.com/file/d/1O1R9GoWIcBpjxbi-4Tt_ECdLuVIzReTY/view) (uploaded 13 Oct)
 - **Master:** 3840×2160, 24 fps · 2:14.5
 

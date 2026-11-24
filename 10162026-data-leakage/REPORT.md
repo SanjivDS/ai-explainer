@@ -1,6 +1,6 @@
 # Explainer — Data Leakage — The ML Mistake That Gives Fake-Good Results
 
-**Week:** 12–16 Oct
+**Week:** 12–18 Oct
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
 - **Video:** not yet on YouTube

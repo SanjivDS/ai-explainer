@@ -1,6 +1,6 @@
 # Explainer — Accuracy vs Precision vs Recall vs F1 Score, Oversimplified
 
-**Week:** 14–18 Sep
+**Week:** 14–20 Sep
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
 - **Video:** not yet on YouTube

@@ -1,7 +1,7 @@
 # 04 · L1 Regularization, Oversimplified
 
 - **Series:** Foundational (Data Science)
-- **Built:** 31 Aug – 4 Sep (master built 4 Sep)
+- **Built:** 31 Aug – 6 Sep (master built 4 Sep)
 - **Delivered:** [04 L1 Regularization (Lasso)](https://drive.google.com/file/d/1zC_kkxJUv7AXVCOCVGzKKL6VLvD-8gjm/view) (uploaded 3 Oct)
 - **Master:** 3840×2160, 24 fps · 3:03.2
 

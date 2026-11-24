@@ -1,6 +1,6 @@
 # Explainer — Neural Networks - Forward Propagation Explained
 
-**Week:** 12–16 Oct
+**Week:** 12–18 Oct
 **Type:** STEM / AI explainer — Deep Dive — Deep Learning
 
 - **Video:** not yet on YouTube

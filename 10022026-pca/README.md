@@ -1,7 +1,7 @@
 # 14 · PCA — Dimensionality Reduction Explained Visually
 
 - **Series:** Foundational (Data Science)
-- **Built:** 28 Sep – 2 Oct (master built 2 Oct)
+- **Built:** 28 Sep – 4 Oct (master built 2 Oct)
 - **Delivered:** [14 Principal Component Analysis](https://drive.google.com/file/d/16tIVinbuyIlWZ_eBwJOxiCWnSBcP4Yp4/view) (uploaded 4 Oct)
 - **Master:** 3840×2160, 24 fps · 4:33.8
 

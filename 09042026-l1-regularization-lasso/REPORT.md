@@ -1,6 +1,6 @@
 # Explainer — L1 Regularization, Oversimplified
 
-**Week:** 31 Aug – 4 Sep
+**Week:** 31 Aug – 6 Sep
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
 - **Video:** not yet on YouTube

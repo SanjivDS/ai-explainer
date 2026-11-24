@@ -1,6 +1,6 @@
 # Explainer — Gradient Descent, Oversimplified
 
-**Week:** 10–14 Aug
+**Week:** 10–16 Aug
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
 - **Video:** not yet on YouTube

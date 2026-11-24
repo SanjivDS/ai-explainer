@@ -1,6 +1,6 @@
 # Explainer — Class Imbalance — Why Accuracy Can Be Misleading
 
-**Week:** 12–16 Oct
+**Week:** 12–18 Oct
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
 - **Video:** not yet on YouTube

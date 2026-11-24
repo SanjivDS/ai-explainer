@@ -1,6 +1,6 @@
 # Explainer — Bagging vs Boosting, Oversimplified
 
-**Week:** 28 Sep – 2 Oct
+**Week:** 28 Sep – 4 Oct
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
 - **Video:** not yet on YouTube

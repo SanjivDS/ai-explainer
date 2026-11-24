@@ -1,6 +1,6 @@
 # Explainer — Attention - Why It Changed NLP
 
-**Week:** 12–16 Oct
+**Week:** 12–18 Oct
 **Type:** STEM / AI explainer — Deep Dive — NLP
 
 - **Video:** not yet on YouTube

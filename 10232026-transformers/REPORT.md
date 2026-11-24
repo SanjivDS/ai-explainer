@@ -1,6 +1,6 @@
 # Explainer — Transformers - Encoder, Decoder & Self-Attention
 
-**Week:** 19–23 Oct
+**Week:** 19–25 Oct
 **Type:** STEM / AI explainer — Deep Dive — Transformers & LLMs
 
 - **Video:** not yet on YouTube

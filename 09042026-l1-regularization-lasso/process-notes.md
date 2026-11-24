@@ -3,7 +3,7 @@
 **Google Drive:** [04 L1 Regularization (Lasso)](https://drive.google.com/file/d/1zC_kkxJUv7AXVCOCVGzKKL6VLvD-8gjm/view) (uploaded 3 Oct)
 **Status:** delivered to Drive for review · not yet published to YouTube
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:03.2
-**Built:** 31 Aug – 4 Sep (master built 4 Sep)
+**Built:** 31 Aug – 6 Sep (master built 4 Sep)
 
 Build notes for `claude-liam-l1-regularization-lasso`. Append-only going forward.
 

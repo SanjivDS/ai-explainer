@@ -1,6 +1,6 @@
 # Explainer — Random Forest: Why Multiple Trees Beat One, Oversimplified
 
-**Week:** 14–18 Sep
+**Week:** 14–20 Sep
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
 - **Video:** not yet on YouTube

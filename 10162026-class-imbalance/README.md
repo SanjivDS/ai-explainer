@@ -1,7 +1,7 @@
 # 19 · Class Imbalance — Why Accuracy Can Be Misleading
 
 - **Series:** Foundational (Data Science)
-- **Built:** 12–16 Oct (master built 12 Oct)
+- **Built:** 12–18 Oct (master built 12 Oct)
 - **Delivered:** [19 Class Imbalance](https://drive.google.com/file/d/1g1HXzkdhFJaQWYIdChWK52f3ai-48P9B/view) (uploaded 16 Oct)
 - **Master:** 3840×2160, 24 fps · 4:01.5
 

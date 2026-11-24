@@ -3,7 +3,7 @@
 **Google Drive:** [09 Decision Tree](https://drive.google.com/file/d/1ObfLER35dWIxFoyfZmbZwT9woN8qdirV/view) (uploaded 3 Oct)
 **Status:** delivered to Drive for review · not yet published to YouTube
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:21.1
-**Built:** 14–18 Sep (master built 18 Sep)
+**Built:** 14–20 Sep (master built 18 Sep)
 
 Build notes for `claude-liam-decision-tree-splits`. Append-only going forward.
 

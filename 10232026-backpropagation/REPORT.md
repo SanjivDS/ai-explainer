@@ -1,6 +1,6 @@
 # Explainer — Backpropagation - How Neural Networks Actually Learn
 
-**Week:** 19–23 Oct
+**Week:** 19–25 Oct
 **Type:** STEM / AI explainer — Deep Dive — Deep Learning
 
 - **Video:** not yet on YouTube

@@ -3,7 +3,7 @@
 **Google Drive:** [19 Class Imbalance](https://drive.google.com/file/d/1g1HXzkdhFJaQWYIdChWK52f3ai-48P9B/view) (uploaded 16 Oct)
 **Status:** delivered to Drive for review · not yet published to YouTube
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 4:01.5
-**Built:** 12–16 Oct (master built 12 Oct)
+**Built:** 12–18 Oct (master built 12 Oct)
 
 Build notes for `claude-liam-class-imbalance`. Append-only going forward.
 

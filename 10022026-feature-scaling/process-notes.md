@@ -3,7 +3,7 @@
 **Google Drive:** [13 Feature Scaling](https://drive.google.com/file/d/1ULEnffn0oWHuYXTpswzNwxXW9NhhDNae/view) (uploaded 4 Oct)
 **Status:** delivered to Drive for review · not yet published to YouTube
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:41.8
-**Built:** 28 Sep – 2 Oct (master built 2 Oct)
+**Built:** 28 Sep – 4 Oct (master built 2 Oct)
 
 Build notes for `claude-liam-feature-scaling`. Append-only going forward.
 

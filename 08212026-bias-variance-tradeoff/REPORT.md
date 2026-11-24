@@ -1,6 +1,6 @@
 # Explainer — Bias vs. Variance, Oversimplified
 
-**Week:** 17–21 Aug
+**Week:** 17–23 Aug
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
 - **Video:** not yet on YouTube

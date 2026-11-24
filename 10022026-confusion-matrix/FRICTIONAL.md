@@ -55,7 +55,7 @@ foundational series, with the master in `renders/` and the generation files in
 0 major, 269 frames reviewed at 2 fps plus 27 per-beat samples. SRT and VTT
 captions included.
 
-**What Claude contributed, and what I did with it.**
+**What the AI tools contributed, and what I did with it.**
 - Mine: [CHECK: the topic choice and its place in the series, the brief (short,
   4K, renders/books layout), the fraud-detection framing if that was yours, and
   your review of the cut.]

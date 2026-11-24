@@ -3,7 +3,7 @@
 **Google Drive:** [03 Linear and Logistic regression](https://drive.google.com/file/d/1K_sJsQZUd6gjVJgL9WTlBuo06Ypa53eZ/view) (uploaded 4 Oct)
 **Status:** delivered to Drive for review · not yet published to YouTube
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:16.6
-**Built:** 24–28 Aug (master built 26 Aug)
+**Built:** 24–30 Aug (master built 26 Aug)
 
 Build notes for `claude-liam-linear-logistic-regression`. Append-only going forward.
 

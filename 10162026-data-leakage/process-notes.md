@@ -3,7 +3,7 @@
 **Google Drive:** [20 Data Leakage](https://drive.google.com/file/d/1PCTPrwN19P6th_XSMKgxNwcklbTDwdXM/view) (uploaded 20 Oct)
 **Status:** delivered to Drive for review · not yet published to YouTube
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:57.9
-**Built:** 12–16 Oct (master built 12 Oct)
+**Built:** 12–18 Oct (master built 12 Oct)
 
 Build notes for `claude-liam-data-leakage`. Append-only going forward.
 

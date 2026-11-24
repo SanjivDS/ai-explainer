@@ -1,7 +1,7 @@
 # 26 · CNN vs RNN vs LSTM - When and Why to Use Each
 
 - **Series:** Deep Dive — Deep Learning
-- **Built:** 19–23 Oct (master built 20 Oct)
+- **Built:** 19–25 Oct (master built 20 Oct)
 - **Delivered:** [26 DL-3 CNN vs RNN vs LSTM](https://drive.google.com/file/d/1RxkUe1leAyT9_OjvVmeXjtJTeAIthLAo/view) (uploaded 12 Nov)
 - **Master:** 3840×2160, 24 fps · 4:31.8
 

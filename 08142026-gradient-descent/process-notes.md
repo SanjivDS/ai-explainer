@@ -3,7 +3,7 @@
 **Google Drive:** [01 Gradient Descent](https://drive.google.com/file/d/1jo-3nv1LZTZu02BW7VScrk4BU5uQyJfw/view) (uploaded 3 Oct)
 **Status:** delivered to Drive for review · not yet published to YouTube
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 2:33.5
-**Built:** 10–14 Aug (master built 12 Aug)
+**Built:** 10–16 Aug (master built 12 Aug)
 
 Build notes for `claude-liam-gradient-descent`. Append-only going forward.
 
