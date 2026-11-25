@@ -56,7 +56,7 @@ its revealed state. SRT (80 cues, 0 errors) and VTT captions included.
 
 **What the AI tools contributed, and what I did with it.**
 - Mine: [CHECK: the topic choice and its place in the series, the brief, and your review of the cut before the 11 Oct upload.]
-- The agent's (this build ran in a Codex session, per my message log): the beat
+- Codex's: the beat
   sheet and narration, the computed node and split values with their fact-check,
   the constructed disagreement case, the MathText equations, the Manim scenes,
   the build, and the frame QC and fixes listed above.

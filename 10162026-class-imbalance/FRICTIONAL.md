@@ -64,7 +64,7 @@ included, plus STATUS.md.
   approving the revised cut. [CHECK: the topic choice and its place in the
   series, and anything you changed between the 12 Oct master and the 16 Oct
   upload.]
-- The agent's (this build ran in a Codex session, per my message log): the beat
+- Codex's: the beat
   sheet and narration, the constructed 1,000-record example and its fact-check,
   the Manim scenes and layout checks, both builds, and the revision listed above.
 

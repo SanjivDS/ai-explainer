@@ -58,7 +58,7 @@ VTT captions included.
 - Mine: the brief carrying the 4K, footer and branding notes forward.
   [CHECK: the topic choice and its place in the series, and your review of the
   cut before the 4 Oct Drive upload.]
-- The agent's (this build ran in a Codex session, per my message log): the beat
+- Codex's: the beat
   sheet and narration, the computed clustering examples and their fact-check,
   the Manim scenes, the build, and the frame QC and fixes listed above.
 

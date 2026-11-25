@@ -68,7 +68,7 @@ included, plus STATUS.md.
 - Mine: the request to build on the approved Class Imbalance treatment.
   [CHECK: the topic choice and its place in the series, and your review of the
   cut before the 20 Oct upload.]
-- The agent's (this build ran in a Codex session, per my message log): the beat
+- Codex's: the beat
   sheet and narration, the noise experiment and its fact-check, the Manim
   scenes, the build, the contrast fix and the frame QC listed above.
 
