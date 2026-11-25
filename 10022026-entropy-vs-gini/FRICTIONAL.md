@@ -60,7 +60,6 @@ its revealed state. SRT (80 cues, 0 errors) and VTT captions included.
   sheet and narration, the computed node and split values with their fact-check,
   the constructed disagreement case, the MathText equations, the Manim scenes,
   the build, and the frame QC and fixes listed above.
-  [CHECK: keep the template's "Claude" heading or name the tool you used.]
 
 <!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
      FACTCHECK.md, SOURCES.md, SRTCHECK.md, TYPECHECK.md, _qc/DELIVERY-QC.md,

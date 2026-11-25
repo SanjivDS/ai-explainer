@@ -71,7 +71,6 @@ included, plus STATUS.md.
 - The agent's (this build ran in a Codex session, per my message log): the beat
   sheet and narration, the noise experiment and its fact-check, the Manim
   scenes, the build, the contrast fix and the frame QC listed above.
-  [CHECK: keep the template's "Claude" heading or name the tool you used.]
 
 <!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
      FACTCHECK.md, SOURCES.md, SRTCHECK.md, STATUS.md, TYPECHECK.md,

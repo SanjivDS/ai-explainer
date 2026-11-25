@@ -56,7 +56,6 @@ VTT captions included.
 - The agent's (this build ran in a Codex session, per my message log): the beat
   sheet and narration, the computed regression experiment and its fact-check,
   the Manim scenes, the build, and the frame QC and fixes listed above.
-  [CHECK: keep the template's "Claude" heading or name the tool you used.]
 
 <!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
      FACTCHECK.md, SOURCES.md, SRTCHECK.md, TYPECHECK.md, _qc/DELIVERY-QC.md,

@@ -67,7 +67,6 @@ included, plus STATUS.md.
 - The agent's (this build ran in a Codex session, per my message log): the beat
   sheet and narration, the constructed 1,000-record example and its fact-check,
   the Manim scenes and layout checks, both builds, and the revision listed above.
-  [CHECK: keep the template's "Claude" heading or name the tool you used.]
 
 <!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
      FACTCHECK.md, PROMPTS.md, SOURCES.md, SRTCHECK.md, STATUS.md, TYPECHECK.md,
