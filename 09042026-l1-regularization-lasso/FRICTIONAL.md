@@ -56,13 +56,3 @@ Branding check: 367 frames at 2 fps plus 30 beat samples, no matches.
   *ESL* §3.4 and §7.10, Zou & Hastie 2005), fact-check, Manim scenes and first
   build. Codex's: the 7–8 Sep fixes, the 25 Sep 4K rebuild and the 2 Oct branding
   cleanup.
-
-<!-- DRAFT. Sources: README.md; brutalist.art-main and -latest copies of
-     PEDAGOGY.md, FACTCHECK.md, SOURCES.md, PROMPTS.md, CHECKS-REPORT.md,
-     _qc/REPORT.md (the 8 Sep repair note is only in the main copy); latest
-     BUILD-LOG.md, TYPECHECK.md, layout_audit.md; beat_sheet.json (build.at
-     2026-09-08 main, 2026-10-02 latest); books/l1-regularization BUILD-LOG.md;
-     reports/4k-audit-2026-09-24 (README, inventory.json, lasso logs);
-     reports/branding-cleanup-2026-10-02 (README, baseline-findings.json,
-     final-qc result.json); Claude Code messages 4 Sep and 21 Sep; Codex
-     messages 7–8 Sep. Replace every [CHECK] and delete this comment. -->

@@ -15,8 +15,9 @@ recall. 10 beats: 6 Manim body beats and 4 Remotion bookends, with Kokoro
 **What I tried, and what I expected.**
 - I asked for "Precision vs Recall vs F-1 score" (17 Sep) and approved the
   narration with "Verdict: Pass".
-- [CHECK: what you expected going in, e.g. that the three-metric version
-  would be enough, or why you decided to add accuracy after approving it.]
+- I expected precision, recall and F1 to be enough. After reviewing the narration,
+  I decided accuracy had to be included, because it is the metric people reach for
+  first and the video needed to show where it misleads.
 
 **Where it resisted, and what I did next.**
 - **The scope changed after the narration gate.** About 50 minutes after
@@ -56,11 +57,3 @@ plus 30 beat samples, with no old-name or production-label OCR matches.
 - Codex's: the beat sheet and narration, the fact-check against Google for Developers
   and scikit-learn with the arithmetic worked out, the Manim scenes, the 4K
   rebuild, the type-gate fixes, and frame-level QC.
-
-<!-- DRAFT. Sources: brutalist.art-main and brutalist.art-latest copies of
-     BUILD-PROMPT.md, STATUS.md, TYPECHECK.md, FACTCHECK.md, PEDAGOGY.md,
-     SOURCES.md, _qc/REPORT.md, scenes.py diff, beat_sheet.json (build.at
-     2026-10-03T10:34); reports/4k-audit-2026-09-24/README.md;
-     reports/branding-cleanup-2026-10-02 (README, claude-liam-precision-recall-f1.log,
-     type-debug.log, final-qc result.json); Codex messages 17–21 Sep.
-     Replace every [CHECK] and delete this comment. -->

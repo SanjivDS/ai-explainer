@@ -16,8 +16,9 @@ Remotion), built in Codex on 8–9 Sep.
 - On 8 Sep I asked Codex to make it "considering all the changes that were
   mentioned", meaning the handle and footer fixes from Sanjana Rao's review the day
   before.
-- [CHECK: what you expected, e.g. that building with the corrections from the start
-  would mean no resubmission this time.]
+- I expected that building the review fixes in from the start would mean no
+  resubmission, so I could focus on explaining how the threshold trades off true
+  and false positives.
 
 **Where it resisted, and what I did next.**
 - **The narration approval was inferred.** `PEDAGOGY.md` records the PASS as given
@@ -58,13 +59,3 @@ layout audit clean, 8/9 derived independently in `FACTCHECK.md`. Branding check:
   the sources (Google ML Crash Course, scikit-learn, McDermott et al.), the
   corrections above, the Manim scenes, the build and the October fixes. Claude
   Code's: the 21 Sep 4K export.
-
-<!-- DRAFT. Sources: README.md; brutalist.art-main and -latest copies of
-     PEDAGOGY.md, CHECKS-REPORT.md, BUILD-PROMPT.md, FACTCHECK.md, SOURCES.md,
-     replace_log.md, _qc/DISPOSITION.md, layout_audit.md; TYPECHECK.md (3 Oct);
-     beat_sheet.json (build.at 2026-09-09 main, 2026-10-03 latest); the empty
-     books/roc-auc folder in both trees; ffprobe of the 9 Sep master;
-     reports/4k-audit-2026-09-24 inventory.json; reports/branding-cleanup-2026-10-02
-     (roc log, repair-round2/3.log, type-debug.log, final-qc result.json);
-     Codex messages 7–9 Sep, 21 Sep; Claude Code messages 21–22 Sep.
-     Replace every [CHECK] and delete this comment. -->

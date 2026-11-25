@@ -15,8 +15,9 @@ against the mean baseline and can go negative, and MAPE breaks at or near zero.
 **What I tried, and what I expected.**
 - I asked Codex for the video on 15 Sep and approved the narration the same day
   ("Verdict: PASS approving narration").
-- [CHECK: what you expected, e.g. that a fact-heavy topic with formulas would need
-  more checking than the earlier ones.]
+- I expected a topic with several formulas to need more checking than the earlier
+  videos, so I paid close attention to the worked examples and what each metric is
+  used for.
 
 **Where it resisted, and what I did next.**
 - **One claim in the draft was wrong.** It called ordinary MAPE asymmetric for
@@ -51,13 +52,3 @@ keeps one warning (a ✦ mark just outside the safe area at 1.3 s). Branding che
 - Codex's: the beat sheet and narration, the worked examples and their arithmetic,
   the fact-check against scikit-learn's documentation and the MAPE correction, the
   Manim scenes, the 1080p build, the 21 Sep 4K rebuild and the October cleanup.
-
-<!-- DRAFT. Sources: README.md; brutalist.art-main and -latest copies of
-     PEDAGOGY.md (VERDICT 2026-09-15), FACTCHECK.md, SOURCES.md, BUILD-PROMPT.md,
-     TYPECHECK.md (15 Sep manual / 3 Oct GATE T), STATUS.md (4K rebuild),
-     _qc/REPORT.md (21 Sep note in main), layout_audit.md, PROMPTS.md;
-     beat_sheet.json (build.at 2026-09-21 main, 2026-10-03 latest);
-     reports/4k-audit-2026-09-24 inventory.json; reports/branding-cleanup-2026-10-02
-     (regression log, type-debug.log, final-qc result.json);
-     reports/video-resolution-inventory.md; Codex messages 15 Sep, 21 Sep, 1 Oct.
-     Replace every [CHECK] and delete this comment. -->
