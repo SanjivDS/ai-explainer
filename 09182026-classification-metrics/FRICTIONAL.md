@@ -31,12 +31,11 @@ recall. 10 beats: 6 Manim body beats and 4 Remotion bookends, with Kokoro
   rendered frames instead.
 - **No STATUS file.** On 18 Sep I asked where the status.md was. None existed, so
   one was made.
-- **It was rendered at 1080p.** The 17 Sep master was 1920×1080. On 21 Sep the
-  PM's review said none of the videos were 4K and asked me to use the latest
+- **It was rendered at 1080p.** The 17 Sep master was 1920×1080. On 21 Sep Sanjana's review said none of the videos were 4K and asked me to use the latest
   version of Brutalist. All ten beats were rebuilt at native 3840×2160 that
   morning, and the 1080p file was kept as an archive. The same day I forked the
   upstream toolkit and moved the books into `brutalist.art-latest`. Later that
-  day the PM said again that the videos still weren't 4K. [CHECK: what her
+  day Sanjana said again that the videos still weren't 4K. [CHECK: what her
   screenshot showed and which file she was looking at.] The 24 Sep 4K audit
   confirmed 3840×2160 streams with ffprobe, and noted this proves the encoded
   size, not how the video was rendered.
@@ -53,7 +52,7 @@ plus 30 beat samples, with no old-name or production-label OCR matches.
 
 **What the AI tools contributed, and what I did with it.**
 - Mine: the topic, the decision to add accuracy, the footer-removal request,
-  both narration approvals, and passing on the PM's 4K feedback. [CHECK: why
+  both narration approvals, and passing on Sanjana's 4K feedback. [CHECK: why
   this topic this week, and your own review of the cut.]
 - Claude's: [CHECK: the session records for this build and the 21 Sep 4K
   rebuild are Codex threads, not Claude Code. Confirm which tool to credit.]

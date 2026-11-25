@@ -35,10 +35,10 @@ bookends.
   branch arrows appear.
 - **No STATUS file.** I asked for one on 18 Sep, along with the random forest
   video's.
-- **It was rendered at 1080p.** After the PM's 21 Sep note that nothing was in
+- **It was rendered at 1080p.** After Sanjana's 21 Sep note that nothing was in
   4K, all ten beats were rebuilt at native 3840×2160 that morning. QC covered 402
   frames at 2 fps across 17 contact sheets, and the 0:21/0:25 fix was checked
-  again. The PM said again that afternoon that the videos still weren't 4K.
+  again. Sanjana said again that afternoon that the videos still weren't 4K.
   [CHECK: what that screenshot showed.] The 24 Sep audit confirmed the 3840×2160
   stream with ffprobe.
 - **The branding cleanup was blocked by the type gate (2 Oct).** The final

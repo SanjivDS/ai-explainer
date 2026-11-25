@@ -31,7 +31,7 @@ shows how both can fail. 11 beats: 7 Manim and 4 Remotion bookends.
   both labels aligned vertically before the three boxes, and finally to keep
   train loss and move validation loss up to the end of the red curve. The
   master was rebuilt that night at 1920×1080 and 500 frames were checked.
-- **The first master was 1080p.** On 21 Sep the PM asked for 4K. The 24–27 Sep
+- **The first master was 1080p.** On 21 Sep Sanjana asked for 4K. The 24–27 Sep
   4K continuation rebuilt all seven scenes natively. The final export was
   blocked twice (GATE T failing on 7 beats, then 2) and fixed by raising
   card/text contrast and redrawing the B02/B07 diagram strokes in ink,

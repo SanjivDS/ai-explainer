@@ -26,7 +26,7 @@ be fitted on training data only. 10 beats: 6 Manim and 4 Remotion bookends.
 - **Collisions in the first cut.** QC found brief graphic collisions in B01, B03
   and B04. They were fixed and the 1080p master was regenerated (443 frames
   checked).
-- **The first master was 1080p.** On 21 Sep the PM asked for 4K. In the 24–27
+- **The first master was 1080p.** On 21 Sep Sanjana asked for 4K. In the 24–27
   Sep 4K continuation, all six scenes were rebuilt natively. The final export
   was blocked three times (GATE T failing on 5, 2, then 1 beat). The fixes were
   terracotta arrows and outlines redrawn in ink for contrast, and the
@@ -46,7 +46,7 @@ FAILs), GATE V 0 blocker / 0 major. Branding QC: 444 frames at 2 fps plus 30
 beat samples, with no flags.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the topic request, the narration approval, passing on the PM's 4K
+- Mine: the topic request, the narration approval, passing on Sanjana's 4K
   feedback, and the 2 Oct request to remove the old handle and footers.
   [CHECK: why this topic this week, and your review of the cut.]
 - Claude's: [CHECK: the 18 Sep build and the 4K continuation are Codex

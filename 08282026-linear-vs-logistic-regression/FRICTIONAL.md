@@ -38,8 +38,8 @@ and a stress test (nonlinearity, calibration, threshold costs, causal overreach)
   still found an "NBB" monogram in the closing frame, which was replaced with the
   star motif. [CHECK: confirm this feedback came from Sanjana Rao before keeping it.]
 - **Resolution.** The 24 Sep audit found the 7 Sep copies at 1920×1080 (196.4 s).
-  4K masters (196.6 s) had been exported on 21 Sep, the same day I was told the
-  videos were still not in 4K. [CHECK: what the PM's screenshot showed, if you know
+  4K masters (196.6 s) had been exported on 21 Sep, the same day Sanjana told me the
+  videos were still not in 4K. [CHECK: what Sanjana's screenshot showed, if you know
   which file she reviewed.]
 - **The type gate blocked the branding export once** (one beat failed, 2 Oct).
   B02 was re-rendered in a retry and the gate passed.

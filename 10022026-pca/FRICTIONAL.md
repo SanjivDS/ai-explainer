@@ -15,7 +15,7 @@ set.
 **What I tried, and what I expected.**
 - I asked for "PCA - Dimensionality Reduction Explained Visually" on 20 Sep and
   approved the narration the next morning. The 1920×1080 master was finished at
-  10:18 on 21 Sep. At 10:25 I passed on the PM's note that none of the videos
+  10:18 on 21 Sep. At 10:25 I passed on Sanjana's note that none of the videos
   were in 4K.
 - [CHECK: what you expected, e.g. whether you knew 1080p would be rejected.]
 
@@ -49,7 +49,7 @@ FAILs), GATE V 0 blocker / 0 major. Branding QC: 548 frames at 2 fps plus 36
 beat samples, with no flags.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the topic request, the narration approval, and passing on the PM's 4K
+- Mine: the topic request, the narration approval, and passing on Sanjana's 4K
   feedback. [CHECK: why this topic this week, and your review of the 4K cut.]
 - Claude's: [CHECK: the 20–21 Sep build and the 4K continuation are Codex
   threads. Confirm which tool to credit.] The beat sheet and the wording

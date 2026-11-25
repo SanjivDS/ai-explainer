@@ -42,7 +42,7 @@ Remotion), built in Codex on 8–9 Sep.
   cross-fade, the verdict card's page margin (B07), and the outro's negative space
   (B09).
 - **Resolution.** The 9 Sep master was 1920×1080 (204.75 s). A 4K master (205.0 s)
-  was exported on 21 Sep, the same day I was told the videos were still not in 4K.
+  was exported on 21 Sep, the same day Sanjana told me the videos were still not in 4K.
 - **The branding export failed GATE T in three rounds** (2–3 Oct). Text runs in
   B01, B03, B05 and B06 measured about 36–40 px, under the 41 px floor. It passed
   on 3 Oct.
