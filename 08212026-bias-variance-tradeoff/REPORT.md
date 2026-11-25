@@ -15,7 +15,7 @@ Why a model trained on a small, noisy sample can fail in two ways, too rigid to 
 
 ## Why this topic, this week
 
-After how models learn, the next question is why they fail; bias and variance name the two ways.
+After how models learn, the next question is why they fail; bias and variance name the two ways. <!-- DRAFT: drafted description, review and reword before merging -->
 
 ## Limits
 

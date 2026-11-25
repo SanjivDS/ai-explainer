@@ -15,7 +15,7 @@ How a classification tree picks each split: it tests feature-threshold candidate
 
 ## Why this topic, this week
 
-Trees are the base of the ensemble videos that follow, so the split rule came first.
+Trees are the base of the ensemble videos that follow, so the split rule came first. <!-- DRAFT: drafted description, review and reword before merging -->
 
 ## Limits
 

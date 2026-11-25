@@ -15,7 +15,7 @@ Why a single train/test split gives an unstable score, and how k-fold cross-vali
 
 ## Why this topic, this week
 
-Ties the evaluation videos together: how to get a score you can trust from limited data.
+Ties the evaluation videos together: how to get a score you can trust from limited data. <!-- DRAFT: drafted description, review and reword before merging -->
 
 ## Limits
 

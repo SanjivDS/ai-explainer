@@ -15,7 +15,7 @@ How a Transformer's encoder and decoder use self-attention: a sentence followed 
 
 ## Why this topic, this week
 
-Brings together attention and the deep-learning videos, and opens the LLM part of the series.
+Brings together attention and the deep-learning videos, and opens the LLM part of the series. <!-- DRAFT: drafted description, review and reword before merging -->
 
 ## Limits
 

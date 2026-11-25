@@ -15,7 +15,7 @@ How data leakage gives a model an unfair preview of the test set, and three ques
 
 ## Why this topic, this week
 
-The last foundational video: the mistake that makes every earlier metric look better than it is.
+The last foundational video: the mistake that makes every earlier metric look better than it is. <!-- DRAFT: drafted description, review and reword before merging -->
 
 ## Limits
 

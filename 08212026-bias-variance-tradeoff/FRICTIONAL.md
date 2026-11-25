@@ -17,8 +17,8 @@ Remotion). All curves are schematic; no numbers appear on screen.
   again", "Continue from where you left off").
 - On 23 Aug I moved to Codex, told it the gradient-descent video already existed
   and the setup was ready, but the tokens had run out on this second video.
-- [CHECK: your 16 Nov note says you also used Cursor in this stretch, but no Cursor
-  session is in the exports. Say what you tried there, or drop it.]
+- With Claude at its limit (18–23 Aug), I carried on in Codex and Cursor, and kept
+  working with both through 30 Aug.
 - [CHECK: what you expected, e.g. that Codex could pick up the same toolkit and
   match the first video's look.]
 
@@ -34,7 +34,7 @@ Remotion). All curves are schematic; no numbers appear on screen.
   is shown as the selection holdout, kept separate from a final test.
 - **The handle changed after review.** On 7 Sep I asked for Sanjana Rao's fixes
   (@Sanjiv, "Liam, in for Sanjiv") on this older video too. It was recompiled that
-  day at 1920×1080.
+  day at 1920×1080. [CHECK: confirm this feedback came from Sanjana Rao before keeping it.]
 - **It wasn't 4K.** The 24 Sep audit found all three full-length copies beside the
   project at 1920×1080 (176.4 s). A 4K copy (176.6 s) had been exported on 21 Sep
   in the Claude Code session that followed the "not in 4K" feedback.

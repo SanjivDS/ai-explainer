@@ -32,7 +32,7 @@ against the mean baseline and can go negative, and MAPE breaks at or near zero.
   3840×2160 with no upscaling (217.34 s), 435 frames were reviewed across 18
   contact sheets, and the old file was kept as `-1080p-archive`. Later that day I
   was told the videos were still not in 4K. [CHECK: what the PM's screenshot
-  showed, if you know which file she reviewed.]
+  showed, if you know which file she reviewed.] [CHECK: confirm this feedback came from Sanjana Rao before keeping it.]
 - **Too many copies.** The folder ended up with `-1080p-archive`, `-4k`, `-slate`
   (1920×1080, 225 s) and a plain master. On 1 Oct I asked which ones were 4K.
 - **The branding export was refused twice over.** On 2–3 Oct the final was blocked

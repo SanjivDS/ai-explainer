@@ -15,7 +15,7 @@ What accuracy, precision, recall and F1 each measure: accuracy counts all correc
 
 ## Why this topic, this week
 
-Accuracy alone misleads, so precision, recall and F1 had to be explained before the harder evaluation videos.
+Accuracy alone misleads, so precision, recall and F1 had to be explained before the harder evaluation videos. <!-- DRAFT: drafted description, review and reword before merging -->
 
 ## Limits
 

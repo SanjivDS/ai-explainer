@@ -3,7 +3,7 @@
 - **Role:** Fellow — STEM explainer video producer
 - **Project:** AI+1 — STEM explainer video series (Humanitarians AI)
 - **Repository:** https://github.com/SanjivDS/ai-explainer
-- **Group / supervisor:** Humanitarians AI — AI+1 explainer series (reviews with Sanjana)
+- **Group / PMs:** Humanitarians AI — AI+1 explainer series · PM: Sanjana Rao; also coordinated with Shourya (PM at the time)
 - **Agreement period:** 7 Aug 2026 — 30 Nov 2026 (renewed after the August progress report)
 - **Videos:** [Drive review folder](https://drive.google.com/drive/folders/1baua7IlhIQ1cUQgkPel5fMejPyXGbG-S) · all masters 3840×2160
 
@@ -23,7 +23,7 @@ the date it was uploaded to the Drive review folder.
 
 ## Research question
 
-Can an AI-assisted, audio-first pipeline produce accurate 4K STEM explainers at a steady weekly pace, and where does a person still have to step in to keep them correct and clear?
+Can an AI-assisted, audio-first pipeline produce accurate 4K STEM explainers at a steady weekly pace, and where does a person still have to step in to keep them correct and clear? <!-- DRAFT: drafted description, review and reword before merging -->
 
 ## Weekly timeline
 
@@ -31,16 +31,16 @@ Can an AI-assisted, audio-first pipeline produce accurate 4K STEM explainers at 
 |---|---|---|---|
 | 3–9 Aug | — | — | Joined 7 Aug. |
 | 10–16 Aug | [Gradient Descent](./08142026-gradient-descent/) | — | Set up the work environment (8–10 Aug). Hit the Claude usage limit. |
-| 17–23 Aug | [Bias vs. Variance](./08212026-bias-variance-tradeoff/) | — | Resolving the Claude limit; tried Cursor for Bias vs Variance. |
-| 24–30 Aug | [Linear vs. Logistic Regression](./08282026-linear-vs-logistic-regression/) | — | Tried Codex for rendering. Renewal request and progress report. |
+| 17–23 Aug | [Bias vs. Variance](./08212026-bias-variance-tradeoff/) | — | Hit the Claude limit (18–23 Aug); continued with Codex and Cursor through 30 Aug. |
+| 24–30 Aug | [Linear vs. Logistic Regression](./08282026-linear-vs-logistic-regression/) | — | Working in Codex and Cursor; hit the Codex limit (26–30 Aug) on Linear vs. Logistic Regression. Submitted the renewal request and progress report, explaining how the tool limits affected output. |
 | 31 Aug – 6 Sep | [L1 Regularization](./09042026-l1-regularization-lasso/) | — | Working in Codex; Claude access not yet resolved. |
 | 7–13 Sep | [L2 Regularization](./09112026-l2-regularization-ridge/), [ROC Curve and AUC Score](./09112026-roc-curve-auc/) | — | Claude premium seat. |
 | 14–20 Sep | [Regression Metrics: MAE, MSE, RMSE, R², and MAPE](./09182026-regression-metrics/), [Accuracy vs Precision vs Recall vs F1 Score](./09182026-classification-metrics/), [Decision Trees: How Splits Actually Work](./09182026-decision-tree-splits/), [Random Forest: Why Multiple Trees Beat One](./09182026-random-forest/) | — |  |
-| 21–27 Sep | — | — |  |
-| 28 Sep – 4 Oct | [Bagging vs Boosting](./10022026-bagging-vs-boosting/), [XGBoost - Why It Works So Well](./10022026-xgboost/), [Feature Scaling: Standardization vs Normalization](./10022026-feature-scaling/), [PCA — Dimensionality Reduction Explained Visually](./10022026-pca/), [K-Means Clustering + Elbow Method](./10022026-k-means-elbow/), [Entropy vs Gini Impurity](./10022026-entropy-vs-gini/), [Cross-Validation — Why One Train/Test Split Isn't Enough](./10022026-cross-validation/), [Confusion Matrix](./10022026-confusion-matrix/) | [01–15 re-uploaded in 4K](https://drive.google.com/drive/folders/1baua7IlhIQ1cUQgkPel5fMejPyXGbG-S) (3–4 Oct) | Feedback from Sanjana on a few mistakes; re-rendered all earlier videos in 4K. |
+| 21–27 Sep | — | — | Told the videos were not yet 4K (21 Sep); started the 4K re-renders. |
+| 28 Sep – 4 Oct | [Bagging vs Boosting](./10022026-bagging-vs-boosting/), [XGBoost - Why It Works So Well](./10022026-xgboost/), [Feature Scaling: Standardization vs Normalization](./10022026-feature-scaling/), [PCA — Dimensionality Reduction Explained Visually](./10022026-pca/), [K-Means Clustering + Elbow Method](./10022026-k-means-elbow/), [Entropy vs Gini Impurity](./10022026-entropy-vs-gini/), [Cross-Validation — Why One Train/Test Split Isn't Enough](./10022026-cross-validation/), [Confusion Matrix](./10022026-confusion-matrix/) | [01–15 re-uploaded in 4K](https://drive.google.com/drive/folders/1baua7IlhIQ1cUQgkPel5fMejPyXGbG-S) (3–4 Oct) | Finished the 4K re-renders of the earlier videos; re-uploaded #01–15 to Drive (3–4 Oct). |
 | 5–11 Oct | — | [16 Entropy and Gini Impurity](https://drive.google.com/file/d/18uo3Szq3xQPllJUmH9YBMH78c7yEEE6X/view) (11 Oct), [17 Cross Validation](https://drive.google.com/file/d/1syYUyYCA-J3N2VSU8LjKkBSBBm4Hu54M/view) (11 Oct) |  |
 | 12–18 Oct | [Class Imbalance — Why Accuracy Can Be Misleading](./10162026-class-imbalance/), [Data Leakage — The ML Mistake That Gives Fake-Good Results](./10162026-data-leakage/), [Tokenization - How Machines Break Down Language](./10162026-tokenization/), [Word Embeddings - Word2Vec, GloVe & Semantic Similarity](./10162026-word-embeddings/), [Attention - Why It Changed NLP](./10162026-attention/), [Neural Networks - Forward Propagation Explained](./10162026-forward-propagation/) | [18 Confusion Matrix](https://drive.google.com/file/d/1O1R9GoWIcBpjxbi-4Tt_ECdLuVIzReTY/view) (13 Oct), [19 Class Imbalance](https://drive.google.com/file/d/1g1HXzkdhFJaQWYIdChWK52f3ai-48P9B/view) (16 Oct) |  |
-| 19–25 Oct | [Backpropagation - How Neural Networks Actually Learn](./10232026-backpropagation/), [CNN vs RNN vs LSTM - When and Why to Use Each](./10232026-cnn-rnn-lstm/), [Transformers - Encoder, Decoder & Self-Attention](./10232026-transformers/) | [20 Data Leakage](https://drive.google.com/file/d/1PCTPrwN19P6th_XSMKgxNwcklbTDwdXM/view) (20 Oct) | Feedback from Boopesh Mohanraj. |
+| 19–25 Oct | [Backpropagation - How Neural Networks Actually Learn](./10232026-backpropagation/), [CNN vs RNN vs LSTM - When and Why to Use Each](./10232026-cnn-rnn-lstm/), [Transformers - Encoder, Decoder & Self-Attention](./10232026-transformers/) | [20 Data Leakage](https://drive.google.com/file/d/1PCTPrwN19P6th_XSMKgxNwcklbTDwdXM/view) (20 Oct) | — |
 | 26 Oct – 1 Nov | — | [21 NLP-1 Tokenization](https://drive.google.com/file/d/18dn6Hh80p-udcuUEfW7L-cqLJs3FKgM4/view) (26 Oct), [22 NLP-2 WordEmbeddings](https://drive.google.com/file/d/1-1OwFdY2SjeuR-celejEz5cXTD9uOZHL/view) (29 Oct) |  |
 | 2–8 Nov | — | [23 NLP-3 Attention](https://drive.google.com/file/d/1Bmz9_baTgAK8_1_6JqsUTcf3jhbN1xM0/view) (3 Nov), [24 DL-1 Forward Propagation](https://drive.google.com/file/d/1et1AAhBKixBxMH0R-7YwtEiE0oB_cShG/view) (6 Nov) | Updated Sanjana on the mini-series and the Deep Dive plan for the series. |
 | 9–15 Nov | — | [25 DL-2 Backpropagation](https://drive.google.com/file/d/1f_kycoVZQ6QvMcogdwsCwsxiOYfV-FSs/view) (10 Nov), [26 DL-3 CNN vs RNN vs LSTM](https://drive.google.com/file/d/1RxkUe1leAyT9_OjvVmeXjtJTeAIthLAo/view) (12 Nov) |  |

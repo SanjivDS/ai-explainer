@@ -15,7 +15,7 @@ Remotion), built in Codex on 8–9 Sep.
 **What I tried, and what I expected.**
 - On 8 Sep I asked Codex to make it "considering all the changes that were
   mentioned", meaning the handle and footer fixes from Sanjana Rao's review the day
-  before.
+  before. [CHECK: confirm this feedback came from Sanjana Rao before keeping it.]
 - [CHECK: what you expected, e.g. that building with the corrections from the start
   would mean no resubmission this time.]
 

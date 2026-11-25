@@ -31,7 +31,7 @@ L2 reel. Built in Claude Code; I signed the narration verdict on 4 Sep before au
   feature "at random" became "nearly arbitrarily"; a Lasso-vs-Ridge accuracy line
   was dropped for lack of a source.
 - **The handle was wrong.** Sanjana Rao's 7 Sep review found @NikBearBrown on this
-  video, L2 and Linear/Logistic. It was recompiled that day.
+  video, L2 and Linear/Logistic. It was recompiled that day. [CHECK: confirm this feedback came from Sanjana Rao before keeping it.]
 - **"Missing media throughout."** Her 8 Sep review rejected this video. B01–B07 in
   the submitted cut were pipeline placeholder slates. The Manim scenes were
   re-rendered from `scenes.py`, restored to their slots, the 1920×1080 master was

@@ -15,7 +15,7 @@ How XGBoost improves predictions through controlled corrections: small trees lea
 
 ## Why this topic, this week
 
-The boosting family's most-used model, following on from bagging vs boosting.
+The boosting family's most-used model, following on from bagging vs boosting. <!-- DRAFT: drafted description, review and reword before merging -->
 
 ## Limits
 

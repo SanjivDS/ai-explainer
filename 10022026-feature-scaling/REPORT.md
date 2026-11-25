@@ -15,7 +15,7 @@ How standardisation and min–max normalisation change units but not information
 
 ## Why this topic, this week
 
-Distance- and gradient-based models depend on scale, and PCA and K-means come next.
+Distance- and gradient-based models depend on scale, and PCA and K-means come next. <!-- DRAFT: drafted description, review and reword before merging -->
 
 ## Limits
 

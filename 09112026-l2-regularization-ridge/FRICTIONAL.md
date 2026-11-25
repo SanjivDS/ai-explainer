@@ -27,7 +27,7 @@ Remotion), built in Codex.
   had a footer in the bottom left, "B00 GRAPHIC VIDEO 0.0s + 16.7s", that had to go.
   She then clarified the narrator line should be "Liam, in for Sanjiv" and the
   handle under the Claude dialogue box "@Sanjiv". I asked Codex to correct the three
-  videos one by one, and this one was recompiled that day at 1920×1080.
+  videos one by one, and this one was recompiled that day at 1920×1080. [CHECK: confirm this feedback came from Sanjana Rao before keeping it.]
 - **Claims were hedged in the sources.** Ridge "usually" improves stability rather
   than promising lower test error, the intercept is "usually" unpenalized as a
   standard formulation, and every path and curve is labelled schematic.

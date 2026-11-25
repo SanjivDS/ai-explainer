@@ -15,7 +15,7 @@ How attention lets each token's vector draw on the others, worked through a smal
 
 ## Why this topic, this week
 
-Closes the NLP part: how a model decides which embedded words matter to each other.
+Closes the NLP part: how a model decides which embedded words matter to each other. <!-- DRAFT: drafted description, review and reword before merging -->
 
 ## Limits
 

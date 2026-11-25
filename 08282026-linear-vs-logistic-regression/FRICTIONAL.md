@@ -26,8 +26,9 @@ and a stress test (nonlinearity, calibration, threshold costs, causal overreach)
   6.8 s clip into a 23.6 s beat (3.5×) and B06 from 7.4 s into 23.4 s (3.2×);
   `replace_log.md` flagged both for longer renders. [CHECK: whether these were
   re-rendered at full length; `replace_log.md` is unchanged in the latest tree.]
-- **The Codex limit.** My 16 Nov note says I hit the Codex limit on this video.
-  [CHECK: when, and what it held up.]
+- **The Codex limit.** I hit the Codex limit during 26–30 Aug while working on this
+  video, on top of the Claude limit from the week before. I submitted a renewal
+  request explaining how the tool limits had affected my output.
 - **Claims were hedged in the fact-check.** OLS and log loss are described as what
   fitting "commonly" uses, 0.5 is labelled an example threshold, logistic regression
   is called a classifier despite its name, and "coefficients prove causation" is
@@ -35,7 +36,7 @@ and a stress test (nonlinearity, calibration, threshold costs, causal overreach)
 - **The handle was wrong.** Sanjana Rao's 7 Sep review found @NikBearBrown on this
   video, L1 and L2. It was recompiled that day, still at 1920×1080. The 2 Oct audit
   still found an "NBB" monogram in the closing frame, which was replaced with the
-  star motif.
+  star motif. [CHECK: confirm this feedback came from Sanjana Rao before keeping it.]
 - **Resolution.** The 24 Sep audit found the 7 Sep copies at 1920×1080 (196.4 s).
   4K masters (196.6 s) had been exported on 21 Sep, the same day I was told the
   videos were still not in 4K. [CHECK: what the PM's screenshot showed, if you know

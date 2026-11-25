@@ -15,7 +15,7 @@ How the L2 (ridge) penalty shrinks weights to curb overfitting, making them smal
 
 ## Why this topic, this week
 
-The companion to L1, so the two penalties can be compared side by side.
+The companion to L1, so the two penalties can be compared side by side. <!-- DRAFT: drafted description, review and reword before merging -->
 
 ## Limits
 

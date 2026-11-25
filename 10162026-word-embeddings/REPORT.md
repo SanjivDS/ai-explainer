@@ -15,7 +15,7 @@ How word embeddings turn patterns of word use into geometry, how Word2Vec and Gl
 
 ## Why this topic, this week
 
-The next step after tokens: turning them into vectors that carry meaning.
+The next step after tokens: turning them into vectors that carry meaning. <!-- DRAFT: drafted description, review and reword before merging -->
 
 ## Limits
 

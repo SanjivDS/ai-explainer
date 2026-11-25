@@ -29,7 +29,7 @@ for Sanjiv". It was built in Claude Code right after the toolkit setup on 10 Aug
   ("when will it reset").
 - **The handle changed after review.** On 7 Sep, after Sanjana Rao's feedback on
   the later videos, I asked for the same fix here (@Sanjiv, "Liam, in for
-  Sanjiv"). It was recompiled that day, still at 1920×1080.
+  Sanjiv"). It was recompiled that day, still at 1920×1080. [CHECK: confirm this feedback came from Sanjana Rao before keeping it.]
 - **It wasn't 4K.** The 24 Sep audit found both full-length copies at 1920×1080
   (146.9 s); only the review slate was 3840×2160.
 - **The 4K pass found factual problems in the narration.** The recap said "the
