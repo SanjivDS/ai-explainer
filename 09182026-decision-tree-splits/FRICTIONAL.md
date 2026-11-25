@@ -15,8 +15,9 @@ bookends.
 **What I tried, and what I expected.**
 - I asked for "Decision Trees (How Splits Actually Work)" on 17 Sep and approved
   the narration that evening.
-- [CHECK: what you expected, e.g. that a tree diagram would be simple to lay
-  out after the metrics video, or that one review pass would be enough.]
+- I expected the tree diagram to be simple to lay out after the metrics video.
+  In practice, the splits and labels needed a closer review to keep them
+  readable.
 
 **Where it resisted, and what I did next.**
 - **The wording had to be narrowed while scripting.** The script doesn't say a
@@ -54,17 +55,8 @@ beat samples, with no flags.
 
 **What the AI tools contributed, and what I did with it.**
 - Mine: the topic request, the narration approval, the timestamped overlap
-  report and the follow-up when the first fix didn't satisfy me. [CHECK: why
-  this topic this week, and anything else you reviewed.]
-- Claude's: [CHECK: the session records for this build and the 21 Sep 4K
-  rebuild are Codex threads. Confirm which tool to credit.] The beat sheet, the
+  report, the follow-up when the first fix didn't satisfy me, and reviewing the
+  cut.
+- Codex's: the beat sheet, the
   six-row example and its arithmetic, the source-scoped wording, the Manim
   scenes, the overlap fix, the 4K rebuild and the type-gate repair.
-
-<!-- DRAFT. Sources: brutalist.art-main and -latest copies of BUILD-PROMPT.md,
-     STATUS.md, TYPECHECK.md, FACTCHECK.md, SOURCES.md, PEDAGOGY.md,
-     _qc/REPORT.md, scenes.py diff, beat_sheet.json (build.at
-     2026-10-02T23:45); reports/4k-audit-2026-09-24/README.md;
-     reports/branding-cleanup-2026-10-02 (claude-liam-decision-tree-splits*.log,
-     type-debug.log, type-debug-repair.log, final-qc result.json); Codex
-     messages 17–21 Sep. Replace every [CHECK] and delete this comment. -->

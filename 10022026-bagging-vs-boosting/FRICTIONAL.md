@@ -14,8 +14,9 @@ shows how both can fail. 11 beats: 7 Manim and 4 Remotion bookends.
 **What I tried, and what I expected.**
 - I asked for "Bagging vs Boosting" on 18 Sep and approved the narration a few
   minutes later.
-- [CHECK: what you expected, e.g. that a side-by-side comparison would lay out
-  more easily than the tree videos.]
+- I expected a side-by-side comparison to be easier to lay out than the tree
+  videos, with the main work being to make the difference between parallel and
+  sequential training clear.
 
 **Where it resisted, and what I did next.**
 - **The usual slogans had to go.** "Bagging reduces variance, boosting reduces
@@ -46,20 +47,8 @@ FAILs), GATE V 0 blocker / 0 major. Branding QC: 500 frames at 2 fps plus 33
 beat samples, with no flags.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the topic request, the narration approval, and the timestamped layout
-  review, including the exact label placement I wanted at 2:45. [CHECK: why
-  this topic this week, and your review of the 4K cut.]
-- Claude's: [CHECK: the 18–19 Sep build and the 4K continuation are Codex
-  threads. Confirm which tool to credit.] The beat sheet and the hedged
+- Mine: the topic request, the narration approval, the timestamped layout review
+  (including the exact label placement I wanted at 2:45), and reviewing the cut.
+- Codex's: the beat sheet and the hedged
   wording, the Manim mechanism diagrams, each label revision, the 4K rebuild,
   and the footer and handle fixes.
-
-<!-- DRAFT. Sources: brutalist.art-main and -latest copies of BUILD-PROMPT.md,
-     STATUS.md, TYPECHECK.md, FACTCHECK.md, SOURCES.md, PEDAGOGY.md,
-     _qc/REPORT.md, BUILD-LOG.md, scenes.py / scenes.py.pre-qc-fix diff,
-     beat_sheet.json (build.at 2026-10-02T23:01); reports/4k-audit-2026-09-24
-     (README.md, bagging-vs-boosting-*final*.log);
-     reports/branding-cleanup-2026-10-02 (fixes.json, final-qc result.json);
-     Codex messages 18–21 Sep. Note: the repo README gives "Built 28 Sep – 2 Oct",
-     but the records show the first build on 18–19 Sep.
-     Replace every [CHECK] and delete this comment. -->

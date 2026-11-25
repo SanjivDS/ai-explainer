@@ -14,8 +14,8 @@ illustrative 0.50 cutoff. 10 beats: 6 Manim and 4 Remotion bookends.
 **What I tried, and what I expected.**
 - I asked for "Random Forest - Why multiple trees beat one" late on 17 Sep and
   approved the narration within about ten minutes.
-- [CHECK: what you expected, e.g. that reusing the decision-tree layout would
-  carry over cleanly.]
+- I expected the decision-tree layout to carry over, so the focus could be on
+  how combining many trees reduces variance and improves generalization.
 
 **Where it resisted, and what I did next.**
 - **The title overclaims, so the script hedges.** "Beat one" is explained as a
@@ -52,18 +52,8 @@ beat samples, with no flags.
 
 **What the AI tools contributed, and what I did with it.**
 - Mine: the topic request, the narration approval, the six timestamped layout
-  reports, and asking for the 4K work to be checked and finished. [CHECK: why
-  this topic this week, and your review of the final cut.]
-- Claude's: [CHECK: the 17 Sep build and the 24–27 Sep 4K continuation are
-  Codex threads. Confirm which tool to credit.] The beat sheet, the worked
+  reports, asking for the 4K work to be checked and finished, and reviewing the
+  cut.
+- Codex's: the beat sheet, the worked
   average and the wording limits, the Manim scenes, the collision fixes, the
   native 4K rebuild, and the handle repair with OCR checks.
-
-<!-- DRAFT. Sources: brutalist.art-main and -latest copies of BUILD-PROMPT.md,
-     STATUS.md, TYPECHECK.md, FACTCHECK.md, SOURCES.md, PEDAGOGY.md,
-     _qc/REPORT.md, BUILD-LOG.md, scenes.py / scenes.py.pre-qc-fix diff,
-     beat_sheet.json (build.at 2026-10-02T12:24); reports/4k-audit-2026-09-24
-     (README.md, random-forest-*final*.log); reports/branding-cleanup-2026-10-02
-     (README.md, baseline-findings.json, final-qc result.json);
-     video-resolution-inventory.md; Codex messages 17–24 Sep.
-     Replace every [CHECK] and delete this comment. -->

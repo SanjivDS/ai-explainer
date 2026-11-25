@@ -15,8 +15,9 @@ Manim and 5 Remotion.
 **What I tried, and what I expected.**
 - I asked for "XGBoost - why it works so well" "rendered in 4k" (28 Sep). This
   was the first video where 4K was part of the request.
-- [CHECK: what you expected, e.g. that saying 4K up front would avoid the
-  re-render cycle of the earlier videos.]
+- I expected that asking for 4K from the start would avoid the re-render cycle
+  of the earlier videos, so I could focus on why gradient boosting with
+  regularization works so well.
 
 **Where it resisted, and what I did next.**
 - **No library scene for the mechanism.** The scene search found the shared
@@ -50,20 +51,9 @@ beat samples, with no flags. SRT and VTT captions included. The loss curves
 and the extrapolation beat are labelled as conceptual, with no benchmark claims.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the topic and the 4K requirement, the identity correction, and the
-  question about which files were really 4K. [CHECK: why this topic this week,
-  and your review of the cut.]
-- Claude's: [CHECK: the session record for this build is a Codex thread.
-  Confirm which tool to credit.] The beat sheet, the constructed example and
+- Mine: the topic and the 4K requirement, the identity correction, the question
+  about which files were really 4K, and reviewing the cut.
+- Codex's: the beat sheet, the constructed example and
   its executed check, the fact-check against Chen & Guestrin and the XGBoost
   docs, the Manim scenes, the rebrand re-render, the type and layout fixes, and
   frame-level QC.
-
-<!-- DRAFT. Sources: brutalist.art-latest/books/xgboost/.../claude-liam-xgboost:
-     BUILD-LOG.md, BUILD-PROMPT.md, PROMPTS.md, README.md, STATUS.md,
-     FACTCHECK.md, SOURCES.md, TYPECHECK.md, _qc/VISUAL-REVIEW.md,
-     _qc/REPORT.md, type-check.log, final-build.log, rebrand-*.log,
-     beat_sheet.json (build.at 2026-10-02T12:22); video-resolution-inventory.md;
-     reports/branding-cleanup-2026-10-02 (baseline-findings.json, final-qc
-     result.json); Codex messages 28 Sep – 2 Oct.
-     Replace every [CHECK] and delete this comment. -->

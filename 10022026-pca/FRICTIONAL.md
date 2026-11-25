@@ -17,7 +17,9 @@ set.
   approved the narration the next morning. The 1920×1080 master was finished at
   10:18 on 21 Sep. At 10:25 I passed on Sanjana's note that none of the videos
   were in 4K.
-- [CHECK: what you expected, e.g. whether you knew 1080p would be rejected.]
+- I expected to show how PCA finds the directions of greatest variance and
+  reduces dimensions while retaining as much variance as possible, then refine
+  the video after review.
 
 **Where it resisted, and what I did next.**
 - **The claims had to be narrowed.** The script doesn't say PCA "selects the
@@ -49,18 +51,8 @@ FAILs), GATE V 0 blocker / 0 major. Branding QC: 548 frames at 2 fps plus 36
 beat samples, with no flags.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the topic request, the narration approval, and passing on Sanjana's 4K
-  feedback. [CHECK: why this topic this week, and your review of the 4K cut.]
-- Claude's: [CHECK: the 20–21 Sep build and the 4K continuation are Codex
-  threads. Confirm which tool to credit.] The beat sheet and the wording
+- Mine: the topic request, the narration approval, passing on Sanjana's 4K
+  feedback, and reviewing the cut.
+- Codex's: the beat sheet and the wording
   limits, the point-cloud Manim scenes, the bookend corrections, the native 4K
   rebuild and its layout fixes, and frame-level QC.
-
-<!-- DRAFT. Sources: brutalist.art-main and -latest copies of BUILD-PROMPT.md,
-     STATUS.md, TYPECHECK.md, FACTCHECK.md, SOURCES.md, PEDAGOGY.md,
-     _qc/REPORT.md, scenes.py / scenes.py.pre-qc-fix diff, beat_sheet.json
-     (build.at 2026-10-02T12:18); reports/4k-audit-2026-09-24 (README.md,
-     pca-*final*.log); reports/branding-cleanup-2026-10-02 (baseline-findings.json,
-     final-qc result.json); Codex messages 20–21 Sep. Note: the repo README
-     gives "Built 28 Sep – 2 Oct", but the first build is dated 20–21 Sep.
-     Replace every [CHECK] and delete this comment. -->
