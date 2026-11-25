@@ -50,9 +50,8 @@ Gate V 0 blocker / 0 major, strict layout audit 0 errors across 15 snapshots.
 Branding check: 367 frames at 2 fps plus 30 beat samples, no matches.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: [CHECK: the topic and pairing it with L2, the 4 Sep narration sign-off,
-  reporting the missing narration, passing on Sanjana's two reviews, and your review
-  of the cut.]
+- Mine: the topic and pairing it with L2, the 4 Sep narration sign-off, reporting
+  the missing narration, passing on Sanjana's two reviews, and reviewing the cut.
 - Claude Code's (4 Sep): the beat sheet, narration, sources (Tibshirani 1996,
   *ESL* §3.4 and §7.10, Zou & Hastie 2005), fact-check, Manim scenes and first
   build. Codex's: the 7–8 Sep fixes, the 25 Sep 4K rebuild and the 2 Oct branding

@@ -49,9 +49,9 @@ Branding check: 385 frames at 2 fps plus 30 beat samples, no old-name or
 production-footer matches.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: [CHECK: the topic switch, the narration approval, passing Sanjana's
-  feedback through and asking for the fixes one video at a time, reporting the
-  returning footers, and your review of the cut.]
+- Mine: the topic switch, the narration approval, passing Sanjana's feedback
+  through and asking for the fixes one video at a time, reporting the returning
+  footers, and reviewing the cut.
 - Codex's: the beat sheet and narration, the sources (scikit-learn Ridge, Stanford
   STATS 202), fact-check, Manim scenes and build, and the 7 Sep and 2 Oct fixes.
   Claude Code's: the 21 Sep 4K export.

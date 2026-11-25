@@ -46,8 +46,8 @@ keeps one warning (a ✦ mark just outside the safe area at 1.3 s). Branding che
 435 frames at 2 fps plus 30 beat samples, no matches.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: [CHECK: the topic and the five metrics chosen, the narration approval,
-  choosing this video to start the 4K re-renders, and your review of the cut.]
+- Mine: the topic and the five metrics chosen, the narration approval, choosing
+  this video to start the 4K re-renders, and reviewing the cut.
 - Codex's: the beat sheet and narration, the worked examples and their arithmetic,
   the fact-check against scikit-learn's documentation and the MAPE correction, the
   Manim scenes, the 1080p build, the 21 Sep 4K rebuild and the October cleanup.

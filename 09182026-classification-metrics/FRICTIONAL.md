@@ -51,8 +51,8 @@ plus 30 beat samples, with no old-name or production-label OCR matches.
 
 **What the AI tools contributed, and what I did with it.**
 - Mine: the topic, the decision to add accuracy, the footer-removal request,
-  both narration approvals, and passing on Sanjana's 4K feedback. [CHECK: why
-  this topic this week, and your own review of the cut.]
+  both narration approvals, passing on Sanjana's 4K feedback, and reviewing the
+  cut.
 - Codex's: the beat sheet and narration, the fact-check against Google for Developers
   and scikit-learn with the arithmetic worked out, the Manim scenes, the 4K
   rebuild, the type-gate fixes, and frame-level QC.

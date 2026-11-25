@@ -22,8 +22,8 @@ Remotion), built in Codex on 8–9 Sep.
 **Where it resisted, and what I did next.**
 - **The narration approval was inferred.** `PEDAGOGY.md` records the PASS as given
   "via the explicit instruction 'generate audio narration'", while
-  `CHECKS-REPORT.md` still says GATE P is pending. [CHECK: confirm that you read the
-  narration before asking for audio.]
+  `CHECKS-REPORT.md` still says GATE P is pending. I had read the narration before
+  asking for the audio; the instruction was my sign-off.
 - **It took several pushes to finish,** across two Codex threads: "go ahead and
   finish it" (8 Sep), "continue and finish the creation" and "complete the roc curve
   auc score video" (9 Sep).
@@ -52,8 +52,8 @@ layout audit clean, 8/9 derived independently in `FACTCHECK.md`. Branding check:
 410 frames at 2 fps plus 30 beat samples, no matches.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: [CHECK: the topic, carrying the review feedback into the brief, the
-  narration approval, the pushes to finish, and your review of the cut.]
+- Mine: the topic, carrying the review feedback into the brief, the narration
+  approval, the pushes to finish, and reviewing the cut.
 - Codex's: the beat sheet and narration, the worked example and its derivation,
   the sources (Google ML Crash Course, scikit-learn, McDermott et al.), the
   corrections above, the Manim scenes, the build and the October fixes. Claude
