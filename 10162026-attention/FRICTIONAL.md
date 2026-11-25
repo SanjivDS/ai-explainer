@@ -15,9 +15,8 @@ the older Confusion Matrix template, Sanjiv persona, no bottom-right footer.
   minutes later, with the same series preferences as Word Embeddings.
 - The previous video was used only for template props; no earlier timing or media
   was reused.
-- [CHECK: what you expected going in, e.g. that the worked example would fit on
-  screen without crowding, or that this would be a straight run after the
-  Tokenization revisions.]
+- I expected a straight run after the Tokenization revisions, with the main work
+  being to fit the worked example on screen without crowding.
 
 **Where it resisted, and what I did next.**
 - **No library scene did attention arithmetic.** The scene search returned only

@@ -18,9 +18,9 @@ template, with a Sanjiv persona in place of Liam.
   reference; no overlapping text or graphs; no beat-sheet footnote.
 - I dropped Liam from the intro and outro and wrote the opening myself ("This is
   Sanjiv. Today we shall discuss…"), asking for similar intros from here on.
-- [CHECK: what you expected going in, e.g. that these rules would sit cleanly on
-  top of the old template, or that swapping Liam for Sanjiv would be a small
-  text change.]
+- I expected the new series rules to sit cleanly on top of the old template, and
+  swapping Liam for my own intro to be a small change, so the focus could be on
+  how text is split into tokens.
 
 **Where it resisted, and what I did next.**
 - **The footer request ran four rounds.** I asked to remove the @sanjiv footer

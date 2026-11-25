@@ -13,8 +13,8 @@ Sanjiv persona, no bottom-right footer.
 **What I tried, and what I expected.**
 - I requested it on the evening of 19 Oct and approved the plan the next morning.
   The plan targeted about 5–6 minutes; the measured narration came to 4:31.8.
-- [CHECK: what you expected going in, e.g. a head-to-head ranking, and whether
-  "choose a fit for the task" was the framing you wanted.]
+- I expected to compare the three architectures by their strengths and
+  suitability for different tasks, which meant studying all three closely.
 
 **Where it resisted, and what I did next.**
 - **The template's overview writer can't correct a phrase.** The older hesitant

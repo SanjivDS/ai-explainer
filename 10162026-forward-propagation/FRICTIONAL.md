@@ -14,8 +14,8 @@ Matrix template, Sanjiv persona, no bottom-right footer.
 **What I tried, and what I expected.**
 - I requested it on the morning of 18 Oct and approved the plan five minutes
   later. The build followed the Attention reel's pipeline.
-- [CHECK: what you expected going in, e.g. that a single small network would be
-  quicker than the NLP videos, or that Backpropagation would reuse this network.]
+- I expected a single small network to be quicker than the NLP videos, and to
+  show step by step how inputs become a prediction.
 
 **Where it resisted, and what I did next.**
 - **The diagrams were mathematically wrong in small ways.** The matrix brackets

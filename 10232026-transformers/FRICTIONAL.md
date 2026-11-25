@@ -16,9 +16,9 @@ bottom-right footer and no beat-sheet footnote.
 - I requested it on the morning of 21 Oct and approved the plan half an hour
   later. The worked example is a constructed three-token attention calculation,
   executed locally in `evidence/example.py`.
-- [CHECK: what you expected going in, e.g. how much of the Attention video you
-  expected to carry over, or that the largest architecture so far would still fit
-  the older template's whitespace.]
+- I expected much of the Attention video to carry over, so the focus could be on
+  how the encoder, the decoder and self-attention fit together, including the
+  masked self-attention a decoder uses to predict the next token.
 
 **Where it resisted, and what I did next.**
 - **The math renderer was missing again.** Minutes after approval,

@@ -15,8 +15,9 @@ older Confusion Matrix template, with the Sanjiv persona.
   of Tokenization: Sanjiv persona, no bottom-right footer, intro and handoff folder
   chips and the closing handle kept, every text/line/figure overlap checked. I
   requested it late on 15 Oct and approved the plan five minutes later.
-- [CHECK: what you expected going in, e.g. that with the preferences saved, the
-  second video would need no template corrections.]
+- I expected that with the series preferences saved, this video would need no
+  template corrections, leaving the focus on how words become vectors that
+  capture meaning.
 
 **Where it resisted, and what I did next.**
 - **The equations needed a renderer the venv didn't have.** The cosine and GloVe

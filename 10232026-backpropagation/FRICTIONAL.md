@@ -14,8 +14,9 @@ Matrix template, Sanjiv persona, no bottom-right footer.
 - I requested it on 19 Oct and approved the plan three minutes later. The plan
   reused the older Claude bookends and the Forward Propagation typography.
 - The plan targeted about 5–6 minutes. The measured narration came to 4:31.
-- [CHECK: what you expected going in, e.g. that reusing the forward network would
-  make this one quick, or what you thought of the shorter final length.]
+- I expected that reusing the forward network would make this one quicker, so
+  the focus could be on how gradients are computed backward and used to update
+  the weights.
 
 **Where it resisted, and what I did next.**
 - **The maths had to be provable, not just plausible.** All nine analytic
