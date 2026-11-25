@@ -11,7 +11,7 @@ a computed elbow curve and test the tempting claim that one bend gives the true
 number of groups. 12 beats (7 Manim, 5 Remotion bookends), native 3840×2160.
 It was the first new topic after the 2–3 Oct cleanup of 15 masters, which put
 @sanjiv on every video and removed the beat-sheet footers. Sanjana Rao had asked
-for both of those in September. [CHECK: confirm this feedback came from Sanjana Rao before keeping it.]
+for both of those in September.
 
 **What I tried, and what I expected.**
 - I asked for it on 4 Oct at 00:38 "remembering all the notes so far (4k,

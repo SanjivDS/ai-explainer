@@ -31,7 +31,7 @@ for Sanjiv". It was built in Claude Code right after the toolkit setup on 10 Aug
   ("when will it reset").
 - **The handle changed after review.** On 7 Sep, after Sanjana Rao's feedback on
   the later videos, I asked for the same fix here (@Sanjiv, "Liam, in for
-  Sanjiv"). It was recompiled that day, still at 1920×1080. [CHECK: confirm this feedback came from Sanjana Rao before keeping it.]
+  Sanjiv"). It was recompiled that day, still at 1920×1080.
 - **It wasn't 4K.** The 24 Sep audit found both full-length copies at 1920×1080
   (146.9 s); only the review slate was 3840×2160.
 - **The 4K pass found factual problems in the narration.** The recap said "the
@@ -55,20 +55,9 @@ Fact-check PASS on the corrected claims (Goodfellow et al., *Deep Learning* §4.
 and ch. 8). No SRT/VTT captions in `renders/`.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: studying the concept, directing changes, approving the five narration
-  corrections before the 27 Sep export, and reviewing the video. [CHECK: confirm
-  the topic choice, the original August narration approval, and that you spotted
-  the overlap yourself.]
+- Mine: the topic, studying the concept, the original August narration approval,
+  spotting the label overlap on playback, directing changes, approving the five
+  narration corrections before the 27 Sep export, and reviewing the video.
 - Claude Code's (Aug): the beat sheet and narration, the Manim scenes and the first
   build. Codex's (Sep–Oct): the 4K rebuild, the fact review and proposed
   corrections, the re-voicing, and the frame-QC and branding fixes above.
-
-<!-- DRAFT. Sources: README.md; brutalist.art-main and -latest copies of
-     PEDAGOGY.md, CHECKS-REPORT.md, layout_audit.md (12 Aug), STATUS.md;
-     latest BUILD-LOG.md, SCRIPT-CORRECTIONS.md, FACTCHECK.md, PROMPTS.md,
-     TYPECHECK.md (2 Oct), _qc/REPORT.md; beat_sheet.json (build.at 2026-09-07
-     main, 2026-10-02 latest); books/l1-regularization BUILD-LOG.md;
-     reports/4k-audit-2026-09-24 (README, inventory.json);
-     reports/branding-cleanup-2026-10-02 final-qc result.json; Claude Code
-     messages 10–14 Aug; Codex messages 23 Aug, 7 Sep, 24–27 Sep, 2 Oct.
-     Replace every [CHECK] and delete this comment. -->

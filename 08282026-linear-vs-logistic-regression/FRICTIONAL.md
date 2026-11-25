@@ -39,7 +39,7 @@ and a stress test (nonlinearity, calibration, threshold costs, causal overreach)
 - **The handle was wrong.** Sanjana Rao's 7 Sep review found @NikBearBrown on this
   video, L1 and L2. It was recompiled that day, still at 1920×1080. The 2 Oct audit
   still found an "NBB" monogram in the closing frame, which was replaced with the
-  star motif. [CHECK: confirm this feedback came from Sanjana Rao before keeping it.]
+  star motif.
 - **Resolution.** The 24 Sep audit found the 7 Sep copies at 1920×1080 (196.4 s).
   4K masters (196.6 s) had been exported on 21 Sep, the same day Sanjana told me the
   videos were still not in 4K.
@@ -51,19 +51,9 @@ Gate V 0 blocker / 0 major, layout audit clean. Branding check: 393 frames at 2 
 plus 30 beat samples, no old-name, NBB or production-footer matches.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: studying the concept, giving revision instructions, and reviewing the
-  video. [CHECK: confirm the request for the same format, the 26 Aug narration
-  approval, and the GitHub layout work.]
+- Mine: the topic, studying the concept, asking for the same format as the earlier
+  videos, the 26 Aug narration approval, the GitHub layout, giving revision
+  instructions, and reviewing the video.
 - Codex's: the beat sheet and narration, the sources (scikit-learn Linear Models,
   Stanford CS109 and STATS 202, *ISL*) and fact-check, the Manim scenes and build,
   and the 7 Sep and 2 Oct fixes. Claude Code's: the 21 Sep 4K export.
-
-<!-- DRAFT. Sources: README.md; brutalist.art-main and -latest copies of
-     PEDAGOGY.md (VERDICT 2026-08-26), FACTCHECK.md, SOURCES.md, PROMPTS.md,
-     CHECKS-REPORT.md, replace_log.md, layout_audit.md, _qc/REPORT.md;
-     TYPECHECK.md (2 Oct); beat_sheet.json (build.at 2026-09-07 main,
-     2026-10-02 latest); reports/4k-audit-2026-09-24 inventory.json;
-     reports/branding-cleanup-2026-10-02 (README, baseline-findings.json,
-     linear logs, final-qc result.json); archive/pre-sanjiv-cleanup file dates;
-     Codex messages 26 Aug, 7 Sep, 21 Sep, 2 Oct, 16 Nov; Claude Code messages
-     21–22 Sep. Replace every [CHECK] and delete this comment. -->

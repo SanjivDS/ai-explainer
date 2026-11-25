@@ -16,8 +16,8 @@ L2 reel. Built in Claude Code; I signed the narration verdict on 4 Sep before au
 - The 4 Sep session stopped partway ("Continue from where you left off", "Try
   again") and I re-ran the command. Two L1 projects were built that morning: this
   one (`claude-liam-l1-regularization-lasso`) and a standalone
-  `claude-liam-l1-regularization`. [CHECK: whether the second one was intended, and
-  which one you submitted first.]
+  `claude-liam-l1-regularization`. Both were intended; the second
+  copy's BUILD-LOG is where the missing-narration fault was traced.
 - I expected to explain how L1 regularization shrinks coefficients and can remove
   features, then refine the video after reviewing the draft.
 
@@ -31,7 +31,7 @@ L2 reel. Built in Claude Code; I signed the narration verdict on 4 Sep before au
   feature "at random" became "nearly arbitrarily"; a Lasso-vs-Ridge accuracy line
   was dropped for lack of a source.
 - **The handle was wrong.** Sanjana Rao's 7 Sep review found @NikBearBrown on this
-  video, L2 and Linear/Logistic. It was recompiled that day. [CHECK: confirm this feedback came from Sanjana Rao before keeping it.]
+  video, L2 and Linear/Logistic. It was recompiled that day.
 - **"Missing media throughout."** Her 8 Sep review rejected this video. B01–B07 in
   the submitted cut were pipeline placeholder slates. The Manim scenes were
   re-rendered from `scenes.py`, restored to their slots, the 1920×1080 master was
