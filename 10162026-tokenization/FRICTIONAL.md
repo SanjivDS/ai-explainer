@@ -37,8 +37,8 @@ template, with a Sanjiv persona in place of Liam.
   `revisions/before-template-reset/`. The reset brought the bottom-right branding
   back, so I asked once more that night (15 Oct, 23:40) to remove it. That is the
   delivered cut. The reset also restored the template's `BrutalistHesitantWriter`
-  overview. [CHECK: whether its correction animation is acceptable to you here,
-  given the 15 Oct request.]
+  overview, and I accepted
+  the delivered cut with it after requesting the changes above.
 - **Frame QC caught real defects, fixed at the source.** A B07 cue missed on a
   hyphenated phrase (the cue helper now raises on missing phrases); labels went to
   a 28-point floor; accent borders became underlines, because a box read as
@@ -58,16 +58,9 @@ footer samples clear, decoded audio unchanged from the previous master. 76-cue S
 captions.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the topic, the 14 Oct series rules, the Sanjiv intro wording, the footer,
-  intro, typing and template-reset requests, and the approvals. [CHECK: your
-  review of the final cut and anything you changed after watching it.]
+- Mine: the topic, the 14 Oct series rules, the Sanjiv intro wording, the
+  footer, intro, typing and template-reset requests, the approvals, and
+  reviewing the final cut.
 - Codex's: the beat sheet and narration, the executed BPE example and fact-check,
   the Manim scenes and bookends, each revision pass, and the frame-by-frame QC and
   fixes above.
-
-<!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
-     FACTCHECK.md, PROMPTS.md, SOURCES.md, STATUS.md, TYPECHECK.md (2026-10-15T23:46),
-     _qc/REPORT.md, beat_sheet.json (approval_note, template_reference), build.sh,
-     revisions/, codex-user-messages.txt (14–15 Oct, thread 01a13b59), repo README.md.
-     The build sessions were Codex threads, not Claude Code. Replace every [CHECK]
-     and delete this comment. -->

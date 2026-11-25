@@ -54,18 +54,9 @@ plus boundary and 15/50/85% samples reviewed, 477 footer samples clear, full
 decode passed, master peak 0.6632. 98 caption cues.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the topic and title, and the plan approval. [CHECK: your review of the
-  cut, and whether choosing a regression output (not a probability) or the
-  changed-input check was your idea.]
+- Mine: the topic and title, the choice of a regression output rather than a
+  probability and the changed-input check, the plan approval, and reviewing the
+  cut.
 - Codex's: the script and storyboard, the constructed network and its executed
   evidence, the source check, the Manim scenes, and the QC and repairs listed
   above.
-
-<!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
-     FACTCHECK.md, PROMPTS.md, QC-REPORT.md, SOURCES.md, STATUS.md, TYPECHECK.md
-     (2026-10-18T20:09), _qc/REPORT.md, _qc/initial-gate-v.md, beat_sheet.json
-     (build.at 2026-10-18T20:10), SCRIPT-AND-STORYBOARD.md,
-     codex-user-messages.txt (18–19 Oct), repo README.md. Note: the README's
-     "Built: 12–16 Oct" week ends before the 18 Oct request and master; the final
-     verification is dated 19 Oct. Build sessions were Codex threads. Replace every
-     [CHECK] and delete this comment. -->

@@ -56,15 +56,8 @@ reviewed. Full decode passed, no black intervals, 532 footer samples clear. 105
 caption cues.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the topic and title, and the plan approval. [CHECK: your review of the
-  cut, and whether continuing the forward-propagation network was your request.]
+- Mine: the topic and title, continuing the forward-propagation network, the
+  plan approval, and reviewing the cut.
 - Codex's: the script and storyboard, the gradient derivations and the
   finite-difference check, the Manim scenes, the `mascotGap` change, the narration
   fix, and the QC above.
-
-<!-- DRAFT. Sources: BUILD-LOG.md, CHECKS-REPORT.md, FACTCHECK.md, PROMPTS.md,
-     PLAN.json, QC-REPORT.md, SHARPNESS.md, SOURCES.md, STATUS.md, TYPECHECK.md
-     (2026-10-19T18:33), _qc/REPORT.md, SCRIPT-AND-STORYBOARD.md, beat_sheet.json
-     (build.at 2026-10-19T18:38), build.sh, codex-user-messages.txt (19 Oct),
-     repo README.md. No BUILD-PROMPT.md in this folder. Build sessions were Codex
-     threads. Replace every [CHECK] and delete this comment. -->

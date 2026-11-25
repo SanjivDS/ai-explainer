@@ -61,18 +61,8 @@ contact sheets) and 85 beat samples reviewed. Full decode passed, no black
 intervals, 609 footer samples clear, master peak 0.6557. 110 caption cues.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the topic and title, and the plan approval. [CHECK: your review of the
-  cut, and whether the decoder-only family comparison was your idea.]
+- Mine: the topic and title, the decoder-only family comparison, the plan
+  approval, and reviewing the cut.
 - Codex's: the script and storyboard, the constructed attention and mask-invariance
   example and its execution, the source check against Vaswani et al. and D2L, the
   dependency workaround, the Manim scenes, and the QC and repairs above.
-
-<!-- DRAFT. Sources: BUILD-PROMPT.md, CHECKS-REPORT.md, FACTCHECK.md, PROMPTS.md,
-     PLAN.json, SHARPNESS.md, SOURCES.md, STATUS.md, TYPECHECK.md
-     (2026-10-21T17:57), _qc/REPORT.md, _qc/REVIEW-NOTES.md,
-     SCRIPT-AND-STORYBOARD.md, beat_sheet.json (build.at 2026-10-21T17:57),
-     build.sh, codex-user-messages.txt (21 Oct, incl. the 12:14 Guardian review
-     excerpt), repo README.md. No BUILD-LOG.md in this folder; the dependency
-     failure is known only from the Guardian excerpt, which is cut off before the
-     reinstall result. Build sessions were Codex threads. Replace every [CHECK]
-     and delete this comment. -->

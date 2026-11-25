@@ -52,17 +52,9 @@ samples reviewed, with native-resolution spot checks. No unintended overlaps
 found. Full decode passed. 104 caption cues and chapters.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the topic and title, the standing series preferences, and the plan
-  approval. [CHECK: your review of the cut, and whether the "context, calculation,
-  consequences" structure or the bottleneck-first opening was your call.]
+- Mine: the topic and title, the "context, calculation, consequences" structure
+  and the bottleneck-first opening, the standing series preferences, the plan
+  approval, and reviewing the cut.
 - Codex's: the 15-beat script and storyboard, the constructed q/k/v example and its
   execution, the source check, the Manim scenes, the narration fixes, the footer
   false-positive review, and the QC above.
-
-<!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
-     FACTCHECK.md, PROMPTS.md, QC-REPORT.md, SOURCES.md, STATUS.md, TYPECHECK.md
-     (2026-10-16T21:23), _qc/REPORT.md, beat_sheet.json (build.at
-     2026-10-16T21:24), footer-qc.log, overview-fix.log, renders/ timestamps,
-     codex-user-messages.txt (16–17 Oct), repo README.md. Note: the master file is
-     dated 16 Oct but QC-REPORT and the delivery entry are dated 17 Oct. Build
-     sessions were Codex threads. Replace every [CHECK] and delete this comment. -->

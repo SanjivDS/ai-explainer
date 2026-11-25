@@ -52,17 +52,9 @@ footer samples clear, master peak 0.6293. All 720 narration words are in 94 capt
 cues.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the topic and title, and the plan approval. [CHECK: your review of the
-  cut, and whether the closing viewer task (input structure, context, labels,
-  latency) reflects what you wanted viewers to ask.]
+- Mine: the topic and title, framing it as choosing a fit for the task rather
+  than a ranking, the closing viewer task (input structure, context, labels,
+  latency), the plan approval, and reviewing the cut.
 - Codex's: the script and storyboard, the constructed examples and their executed
   assertions, the source check against D2L and Bai et al., the Manim scenes, and
   the QC and fixes above.
-
-<!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, FACTCHECK.md, PROMPTS.md,
-     PLAN.json, SHARPNESS.md, SOURCES.md, STATUS.md, TYPECHECK.md
-     (2026-10-20T12:05), _qc/REPORT.md, SCRIPT-AND-STORYBOARD.md, beat_sheet.json
-     (build.at 2026-10-20T12:08), build.sh, codex-user-messages.txt (19–20 Oct),
-     repo README.md. No CHECKS-REPORT.md or QC-REPORT.md in this folder. STATUS.md
-     rounds the runtime to 4:32. Build sessions were Codex threads. Replace every
-     [CHECK] and delete this comment. -->

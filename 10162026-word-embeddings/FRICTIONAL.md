@@ -54,19 +54,10 @@ across 24 contact sheets plus 70 beat samples reviewed, full decode passed. 86
 caption cues and chapters.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the topic and title, the series preferences carried over from
-  Tokenization, and the plan approval. [CHECK: anything you reviewed or asked to
-  change after the first cut, and whether the Word2Vec-vs-GloVe framing was
-  yours.]
+- Mine: the topic and title, the Word2Vec-vs-GloVe framing, the series
+  preferences carried over from Tokenization, the plan approval, and reviewing
+  the cut.
 - Codex's: the script and storyboard, the constructed corpus and its executed
   evidence, the fact-check against the Mikolov, Pennington, Nguyen, Peters and
   Bolukbasi papers, the Manim scenes, the math workaround, and the QC and fixes
   above.
-
-<!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
-     FACTCHECK.md, PROMPTS.md, QC-REPORT.md, SOURCES.md, STATUS.md, TYPECHECK.md
-     (2026-10-16T12:39), _qc/REPORT.md, SCRIPT-AND-STORYBOARD.md, beat_sheet.json
-     (build.at 2026-10-16T12:40), build.sh, generate_math.py,
-     codex-user-messages.txt (15–16 Oct, incl. the 16 Oct 12:26 Guardian review
-     excerpt), repo README.md. The build sessions were Codex threads. Replace every
-     [CHECK] and delete this comment. -->
