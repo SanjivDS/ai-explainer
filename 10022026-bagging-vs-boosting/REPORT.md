@@ -3,7 +3,6 @@
 **Week:** 28 Sep – 4 Oct
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
-- **Video:** not yet on YouTube
 - **Drive:** [11 Bagging vs Boosting](https://drive.google.com/file/d/1o1UzJG3bI9W0kGY2dShmkr5m3hsmNTAS/view) (uploaded 3 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How bagging averages independent randomised fits while boosting adds dependent c
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+Random forest is one kind of ensemble; this names the two families before XGBoost.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

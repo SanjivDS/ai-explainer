@@ -2,7 +2,6 @@
 
 ## 2026-09-04 — two L1 projects, placeholder slates in the submission, and an NBB mark
 
-- **Video:** not yet on YouTube
 - **Drive:** [04 L1 Regularization (Lasso)](https://drive.google.com/file/d/1zC_kkxJUv7AXVCOCVGzKKL6VLvD-8gjm/view) (uploaded 3 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

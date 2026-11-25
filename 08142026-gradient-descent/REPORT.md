@@ -3,7 +3,6 @@
 **Week:** 10–16 Aug
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
-- **Video:** not yet on YouTube
 - **Drive:** [01 Gradient Descent](https://drive.google.com/file/d/1jo-3nv1LZTZu02BW7VScrk4BU5uQyJfw/view) (uploaded 3 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How gradient descent walks downhill on a loss landscape: the gradient as the loc
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+Gradient descent is how almost every model in the series learns, so it had to come first.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

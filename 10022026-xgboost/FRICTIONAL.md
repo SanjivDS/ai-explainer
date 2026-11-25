@@ -2,7 +2,6 @@
 
 ## 2026-10-02 — 4K from the start, but under the wrong name
 
-- **Video:** not yet on YouTube
 - **Drive:** [12 XGBoost](https://drive.google.com/file/d/1UhfocwQahh-rv4pjjGX2geiqFicUd0oQ/view) (uploaded 4 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

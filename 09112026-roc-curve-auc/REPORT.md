@@ -3,7 +3,6 @@
 **Week:** 7–13 Sep
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
-- **Video:** not yet on YouTube
 - **Drive:** [06 ROC Curve and AUC score](https://drive.google.com/file/d/1cE8CXoM1571tTQPFkmWbB59qHPDf-yz3/view) (uploaded 3 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How the ROC curve maps the trade-off across every classification threshold, and 
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+With classifiers in place, the series needed a way to judge them across every threshold, not just one.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

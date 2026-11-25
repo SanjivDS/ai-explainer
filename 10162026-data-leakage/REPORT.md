@@ -3,7 +3,6 @@
 **Week:** 12–18 Oct
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
-- **Video:** not yet on YouTube
 - **Drive:** [20 Data Leakage](https://drive.google.com/file/d/1PCTPrwN19P6th_XSMKgxNwcklbTDwdXM/view) (uploaded 20 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How data leakage gives a model an unfair preview of the test set, and three ques
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+The last foundational video: the mistake that makes every earlier metric look better than it is.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

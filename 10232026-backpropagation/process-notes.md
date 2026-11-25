@@ -1,7 +1,7 @@
 # Process notes — Backpropagation - How Neural Networks Actually Learn
 
 **Google Drive:** [25 DL-2 Backpropagation](https://drive.google.com/file/d/1f_kycoVZQ6QvMcogdwsCwsxiOYfV-FSs/view) (uploaded 10 Nov)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 4:31.3
 **Built:** 19–25 Oct (master built 19 Oct)
 

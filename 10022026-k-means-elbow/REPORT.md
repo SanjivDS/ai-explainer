@@ -3,7 +3,6 @@
 **Week:** 28 Sep – 4 Oct
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
-- **Video:** not yet on YouTube
 - **Drive:** [15 K-means](https://drive.google.com/file/d/1BWyKhEJ6ffVvrmtkRAOiQy40ESrOBWa5/view) (uploaded 4 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How k-means groups points by alternating between assigning each point to its nea
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+The unsupervised companion to PCA: grouping data with no labels, and choosing how many groups.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

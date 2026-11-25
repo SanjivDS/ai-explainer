@@ -2,7 +2,6 @@
 
 ## 2026-08-24 — the second explainer, moved to Codex after the usage limit
 
-- **Video:** not yet on YouTube
 - **Drive:** [02 Bias Variance tradeoff](https://drive.google.com/file/d/1y1Nk4S24TQ_2nRiNhHrATZcOxkUHeyur/view) (uploaded 3 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

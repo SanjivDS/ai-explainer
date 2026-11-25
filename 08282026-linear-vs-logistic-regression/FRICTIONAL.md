@@ -2,7 +2,6 @@
 
 ## 2026-08-26 — built in Codex to match the first two
 
-- **Video:** not yet on YouTube
 - **Drive:** [03 Linear and Logistic regression](https://drive.google.com/file/d/1K_sJsQZUd6gjVJgL9WTlBuo06Ypa53eZ/view) (uploaded 4 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

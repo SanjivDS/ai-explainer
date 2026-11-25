@@ -1,7 +1,7 @@
 # Process notes — Bias vs. Variance, Oversimplified
 
 **Google Drive:** [02 Bias Variance tradeoff](https://drive.google.com/file/d/1y1Nk4S24TQ_2nRiNhHrATZcOxkUHeyur/view) (uploaded 3 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 2:56.6
 **Built:** 17–23 Aug (master built 24 Aug)
 

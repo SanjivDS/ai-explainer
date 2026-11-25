@@ -1,7 +1,7 @@
 # Process notes — CNN vs RNN vs LSTM - When and Why to Use Each
 
 **Google Drive:** [26 DL-3 CNN vs RNN vs LSTM](https://drive.google.com/file/d/1RxkUe1leAyT9_OjvVmeXjtJTeAIthLAo/view) (uploaded 12 Nov)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 4:31.8
 **Built:** 19–25 Oct (master built 20 Oct)
 

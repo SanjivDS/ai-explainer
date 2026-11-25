@@ -1,9 +1,9 @@
 # Sanjiv Choudhari — Humanitarians AI Fellow
 
-- **Role:** TODO
+- **Role:** Fellow — STEM explainer video producer
 - **Project:** AI+1 — STEM explainer video series (Humanitarians AI)
 - **Repository:** https://github.com/SanjivDS/ai-explainer
-- **Group / supervisor:** TODO
+- **Group / supervisor:** Humanitarians AI — AI+1 explainer series (reviews with Sanjana)
 - **Agreement period:** 7 Aug 2026 — 30 Nov 2026 (renewed after the August progress report)
 - **Videos:** [Drive review folder](https://drive.google.com/drive/folders/1baua7IlhIQ1cUQgkPel5fMejPyXGbG-S) · all masters 3840×2160
 
@@ -23,7 +23,7 @@ the date it was uploaded to the Drive review folder.
 
 ## Research question
 
-TODO
+Can an AI-assisted, audio-first pipeline produce accurate 4K STEM explainers at a steady weekly pace, and where does a person still have to step in to keep them correct and clear?
 
 ## Weekly timeline
 

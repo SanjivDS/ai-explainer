@@ -3,7 +3,6 @@
 **Week:** 14–20 Sep
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
-- **Video:** not yet on YouTube
 - **Drive:** [08 Classification metrics](https://drive.google.com/file/d/1Y-0sd9OI7SUd32rAUSPhtWtXfXqAmdKI/view) (uploaded 3 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ What accuracy, precision, recall and F1 each measure: accuracy counts all correc
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+Accuracy alone misleads, so precision, recall and F1 had to be explained before the harder evaluation videos.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

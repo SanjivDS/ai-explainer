@@ -3,7 +3,6 @@
 **Week:** 12–18 Oct
 **Type:** STEM / AI explainer — Deep Dive — NLP
 
-- **Video:** not yet on YouTube
 - **Drive:** [21 NLP-1 Tokenization](https://drive.google.com/file/d/18dn6Hh80p-udcuUEfW7L-cqLJs3FKgM4/view) (uploaded 26 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How a sentence becomes the numbers a language model receives, built up through a
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+Opens the NLP deep dive: before a model can read text, the text has to be split into tokens.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

@@ -3,7 +3,6 @@
 **Week:** 28 Sep – 4 Oct
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
-- **Video:** not yet on YouTube
 - **Drive:** [13 Feature Scaling](https://drive.google.com/file/d/1ULEnffn0oWHuYXTpswzNwxXW9NhhDNae/view) (uploaded 4 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How standardisation and min–max normalisation change units but not information
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+Distance- and gradient-based models depend on scale, and PCA and K-means come next.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

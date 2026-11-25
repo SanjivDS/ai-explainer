@@ -1,7 +1,7 @@
 # Process notes — Feature Scaling: Standardization vs Normalization, Oversimplified
 
 **Google Drive:** [13 Feature Scaling](https://drive.google.com/file/d/1ULEnffn0oWHuYXTpswzNwxXW9NhhDNae/view) (uploaded 4 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:41.8
 **Built:** 28 Sep – 4 Oct (master built 2 Oct)
 

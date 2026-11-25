@@ -2,7 +2,6 @@
 
 ## 2026-10-02 — five rounds on one loss-curve label
 
-- **Video:** not yet on YouTube
 - **Drive:** [11 Bagging vs Boosting](https://drive.google.com/file/d/1o1UzJG3bI9W0kGY2dShmkr5m3hsmNTAS/view) (uploaded 3 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

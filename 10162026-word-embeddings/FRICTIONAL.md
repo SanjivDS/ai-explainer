@@ -2,7 +2,6 @@
 
 ## 2026-10-16 — structured math without a math renderer in the venv
 
-- **Video:** not yet on YouTube
 - **Drive:** [22 NLP-2 WordEmbeddings](https://drive.google.com/file/d/1-1OwFdY2SjeuR-celejEz5cXTD9uOZHL/view) (uploaded 29 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

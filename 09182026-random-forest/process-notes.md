@@ -1,7 +1,7 @@
 # Process notes — Random Forest: Why Multiple Trees Beat One, Oversimplified
 
 **Google Drive:** [10 Random Forest](https://drive.google.com/file/d/1gLkiVEkccH0L2TDKMHB4-bQ9JYxOsz84/view) (uploaded 4 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:34.6
 **Built:** 14–20 Sep (master built 17 Sep)
 

@@ -3,7 +3,6 @@
 **Week:** 14–20 Sep
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
-- **Video:** not yet on YouTube
 - **Drive:** [09 Decision Tree](https://drive.google.com/file/d/1ObfLER35dWIxFoyfZmbZwT9woN8qdirV/view) (uploaded 3 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How a classification tree picks each split: it tests feature-threshold candidate
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+Trees are the base of the ensemble videos that follow, so the split rule came first.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

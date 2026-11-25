@@ -2,7 +2,6 @@
 
 ## 2026-10-12 — built, then rebuilt the same day after my layout feedback
 
-- **Video:** not yet on YouTube
 - **Drive:** [19 Class Imbalance](https://drive.google.com/file/d/1g1HXzkdhFJaQWYIdChWK52f3ai-48P9B/view) (uploaded 16 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

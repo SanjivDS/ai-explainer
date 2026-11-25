@@ -2,7 +2,6 @@
 
 ## 2026-09-18 — dotted guides that ran through the nodes
 
-- **Video:** not yet on YouTube
 - **Drive:** [09 Decision Tree](https://drive.google.com/file/d/1ObfLER35dWIxFoyfZmbZwT9woN8qdirV/view) (uploaded 3 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

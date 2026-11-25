@@ -2,7 +2,6 @@
 
 ## 2026-08-12 — the first explainer, built without LaTeX and corrected in the 4K pass
 
-- **Video:** not yet on YouTube
 - **Drive:** [01 Gradient Descent](https://drive.google.com/file/d/1jo-3nv1LZTZu02BW7VScrk4BU5uQyJfw/view) (uploaded 3 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

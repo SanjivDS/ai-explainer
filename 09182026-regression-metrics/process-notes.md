@@ -1,7 +1,7 @@
 # Process notes — Regression Metrics: MAE, MSE, RMSE, R², and MAPE, Oversimplified
 
 **Google Drive:** [07 Regression metrics](https://drive.google.com/file/d/101egQCDPU8kCuz3jkgSu-RqlZuBC40Hd/view) (uploaded 3 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:37.5
 **Built:** 14–20 Sep (master built 3 Oct)
 

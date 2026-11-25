@@ -3,7 +3,6 @@
 **Week:** 17–23 Aug
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
-- **Video:** not yet on YouTube
 - **Drive:** [02 Bias Variance tradeoff](https://drive.google.com/file/d/1y1Nk4S24TQ_2nRiNhHrATZcOxkUHeyur/view) (uploaded 3 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ Why a model trained on a small, noisy sample can fail in two ways, too rigid to 
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+After how models learn, the next question is why they fail; bias and variance name the two ways.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

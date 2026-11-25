@@ -2,7 +2,6 @@
 
 ## 2026-10-15 — the first Deep Dive video, and a round trip back to the older template
 
-- **Video:** not yet on YouTube
 - **Drive:** [21 NLP-1 Tokenization](https://drive.google.com/file/d/18dn6Hh80p-udcuUEfW7L-cqLJs3FKgM4/view) (uploaded 26 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

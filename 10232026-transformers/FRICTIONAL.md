@@ -2,7 +2,6 @@
 
 ## 2026-10-21 — the full architecture, a missing math module, and a rounding catch
 
-- **Video:** not yet on YouTube
 - **Drive:** [27 LLM-1 Transformers](https://drive.google.com/file/d/1gQySl8qB8U3hszwgTdC9jUZFXjiJ_ou2/view) (uploaded 20 Nov)
 - **Report:** [REPORT.md](REPORT.md)
 

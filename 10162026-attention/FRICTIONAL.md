@@ -2,7 +2,6 @@
 
 ## 2026-10-16 — exact attention arithmetic, and a footer check that cried wolf
 
-- **Video:** not yet on YouTube
 - **Drive:** [23 NLP-3 Attention](https://drive.google.com/file/d/1Bmz9_baTgAK8_1_6JqsUTcf3jhbN1xM0/view) (uploaded 3 Nov)
 - **Report:** [REPORT.md](REPORT.md)
 

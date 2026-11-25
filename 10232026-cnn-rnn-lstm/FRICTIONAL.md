@@ -2,7 +2,6 @@
 
 ## 2026-10-20 — a comparison that refuses to name a winner
 
-- **Video:** not yet on YouTube
 - **Drive:** [26 DL-3 CNN vs RNN vs LSTM](https://drive.google.com/file/d/1RxkUe1leAyT9_OjvVmeXjtJTeAIthLAo/view) (uploaded 12 Nov)
 - **Report:** [REPORT.md](REPORT.md)
 

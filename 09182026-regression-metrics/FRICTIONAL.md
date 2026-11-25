@@ -2,7 +2,6 @@
 
 ## 2026-10-03 — built at 1080p, first in line for the 4K re-render
 
-- **Video:** not yet on YouTube
 - **Drive:** [07 Regression metrics](https://drive.google.com/file/d/101egQCDPU8kCuz3jkgSu-RqlZuBC40Hd/view) (uploaded 3 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

@@ -3,7 +3,6 @@
 **Week:** 19–25 Oct
 **Type:** STEM / AI explainer — Deep Dive — Deep Learning
 
-- **Video:** not yet on YouTube
 - **Drive:** [26 DL-3 CNN vs RNN vs LSTM](https://drive.google.com/file/d/1RxkUe1leAyT9_OjvVmeXjtJTeAIthLAo/view) (uploaded 12 Nov)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How CNNs, RNNs and LSTMs handle local patterns, sequence order and memory, and h
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+With the training loop explained, this compares the main architectures and when each fits.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

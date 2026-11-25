@@ -2,7 +2,6 @@
 
 ## 2026-10-02 — 1080p first, then native 4K and an old handle
 
-- **Video:** not yet on YouTube
 - **Drive:** [13 Feature Scaling](https://drive.google.com/file/d/1ULEnffn0oWHuYXTpswzNwxXW9NhhDNae/view) (uploaded 4 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

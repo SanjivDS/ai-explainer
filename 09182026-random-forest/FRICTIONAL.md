@@ -2,7 +2,6 @@
 
 ## 2026-09-17 — six collisions, a late 4K pass, and an old handle
 
-- **Video:** not yet on YouTube
 - **Drive:** [10 Random Forest](https://drive.google.com/file/d/1gLkiVEkccH0L2TDKMHB4-bQ9JYxOsz84/view) (uploaded 4 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

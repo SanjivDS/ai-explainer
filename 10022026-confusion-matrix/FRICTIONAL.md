@@ -2,7 +2,6 @@
 
 ## 2026-10-04 — a short 4K explainer, built on the existing series template
 
-- **Video:** not yet on YouTube
 - **Drive:** [18 Confusion Matrix](https://drive.google.com/file/d/1O1R9GoWIcBpjxbi-4Tt_ECdLuVIzReTY/view) (uploaded 13 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

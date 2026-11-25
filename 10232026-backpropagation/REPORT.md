@@ -3,7 +3,6 @@
 **Week:** 19–25 Oct
 **Type:** STEM / AI explainer — Deep Dive — Deep Learning
 
-- **Video:** not yet on YouTube
 - **Drive:** [25 DL-2 Backpropagation](https://drive.google.com/file/d/1f_kycoVZQ6QvMcogdwsCwsxiOYfV-FSs/view) (uploaded 10 Nov)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How backpropagation uses the chain rule to turn a prediction's error into a grad
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+Follows forward propagation: how the network learns from its errors, linking back to gradient descent.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

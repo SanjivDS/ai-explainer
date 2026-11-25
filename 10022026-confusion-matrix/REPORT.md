@@ -3,7 +3,6 @@
 **Week:** 28 Sep – 4 Oct
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
-- **Video:** not yet on YouTube
 - **Drive:** [18 Confusion Matrix](https://drive.google.com/file/d/1O1R9GoWIcBpjxbi-4Tt_ECdLuVIzReTY/view) (uploaded 13 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How a confusion matrix replaces one score with four counts, so the two kinds of 
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+The table underneath precision, recall and ROC, shown directly so every rate can be read from it.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

@@ -2,7 +2,6 @@
 
 ## 2026-09-09 — built with the review feedback in hand, then three rounds at the type gate
 
-- **Video:** not yet on YouTube
 - **Drive:** [06 ROC Curve and AUC score](https://drive.google.com/file/d/1cE8CXoM1571tTQPFkmWbB59qHPDf-yz3/view) (uploaded 3 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

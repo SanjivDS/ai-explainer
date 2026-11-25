@@ -2,7 +2,6 @@
 
 ## 2026-10-19 — every gradient checked twice, and a mascot in the way of the handle
 
-- **Video:** not yet on YouTube
 - **Drive:** [25 DL-2 Backpropagation](https://drive.google.com/file/d/1f_kycoVZQ6QvMcogdwsCwsxiOYfV-FSs/view) (uploaded 10 Nov)
 - **Report:** [REPORT.md](REPORT.md)
 

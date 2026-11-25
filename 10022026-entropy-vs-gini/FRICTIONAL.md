@@ -2,7 +2,6 @@
 
 ## 2026-10-04 — structured equations, and a split where the two criteria disagree
 
-- **Video:** not yet on YouTube
 - **Drive:** [16 Entropy and Gini Impurity](https://drive.google.com/file/d/18uo3Szq3xQPllJUmH9YBMH78c7yEEE6X/view) (uploaded 11 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

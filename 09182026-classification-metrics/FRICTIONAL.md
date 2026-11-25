@@ -2,7 +2,6 @@
 
 ## 2026-09-17 — three metrics became four, then 1080p became 4K
 
-- **Video:** not yet on YouTube
 - **Drive:** [08 Classification metrics](https://drive.google.com/file/d/1Y-0sd9OI7SUd32rAUSPhtWtXfXqAmdKI/view) (uploaded 3 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

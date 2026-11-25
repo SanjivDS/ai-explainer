@@ -2,7 +2,6 @@
 
 ## 2026-10-12 — built on the revised Class Imbalance layout
 
-- **Video:** not yet on YouTube
 - **Drive:** [20 Data Leakage](https://drive.google.com/file/d/1PCTPrwN19P6th_XSMKgxNwcklbTDwdXM/view) (uploaded 20 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

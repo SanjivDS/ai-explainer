@@ -1,7 +1,7 @@
 # Process notes — K-Means Clustering + Elbow Method
 
 **Google Drive:** [15 K-means](https://drive.google.com/file/d/1BWyKhEJ6ffVvrmtkRAOiQy40ESrOBWa5/view) (uploaded 4 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:37.0
 **Built:** 28 Sep – 4 Oct (master built 4 Oct)
 

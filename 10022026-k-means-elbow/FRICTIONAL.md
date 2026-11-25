@@ -2,7 +2,6 @@
 
 ## 2026-10-04 — the first new topic built after the @sanjiv cleanup
 
-- **Video:** not yet on YouTube
 - **Drive:** [15 K-means](https://drive.google.com/file/d/1BWyKhEJ6ffVvrmtkRAOiQy40ESrOBWa5/view) (uploaded 4 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

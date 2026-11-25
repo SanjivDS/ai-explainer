@@ -3,7 +3,6 @@
 **Week:** 28 Sep – 4 Oct
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
-- **Video:** not yet on YouTube
 - **Drive:** [12 XGBoost](https://drive.google.com/file/d/1UhfocwQahh-rv4pjjGX2geiqFicUd0oQ/view) (uploaded 4 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How XGBoost improves predictions through controlled corrections: small trees lea
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+The boosting family's most-used model, following on from bagging vs boosting.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

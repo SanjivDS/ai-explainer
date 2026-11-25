@@ -3,7 +3,6 @@
 **Week:** 12–18 Oct
 **Type:** STEM / AI explainer — Deep Dive — NLP
 
-- **Video:** not yet on YouTube
 - **Drive:** [22 NLP-2 WordEmbeddings](https://drive.google.com/file/d/1-1OwFdY2SjeuR-celejEz5cXTD9uOZHL/view) (uploaded 29 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
@@ -16,9 +15,9 @@ How word embeddings turn patterns of word use into geometry, how Word2Vec and Gl
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+The next step after tokens: turning them into vectors that carry meaning.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).

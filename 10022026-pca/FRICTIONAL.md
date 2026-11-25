@@ -2,7 +2,6 @@
 
 ## 2026-10-02 — finished at 1080p the morning 4K became the rule
 
-- **Video:** not yet on YouTube
 - **Drive:** [14 Principal Component Analysis](https://drive.google.com/file/d/16tIVinbuyIlWZ_eBwJOxiCWnSBcP4Yp4/view) (uploaded 4 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

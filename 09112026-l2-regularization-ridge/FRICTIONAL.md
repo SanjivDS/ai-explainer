@@ -2,7 +2,6 @@
 
 ## 2026-09-07 — the handle and footer fixes from the first review
 
-- **Video:** not yet on YouTube
 - **Drive:** [05 L2 Regularization (Ridge)](https://drive.google.com/file/d/1unnRYOgMgLQZLoWg2eSKY3bMP52zreza/view) (uploaded 3 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 

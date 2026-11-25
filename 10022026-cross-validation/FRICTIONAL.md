@@ -2,7 +2,6 @@
 
 ## 2026-10-04 — computed folds, and a contrast pass across every native scene
 
-- **Video:** not yet on YouTube
 - **Drive:** [17 Cross Validation](https://drive.google.com/file/d/1syYUyYCA-J3N2VSU8LjKkBSBBm4Hu54M/view) (uploaded 11 Oct)
 - **Report:** [REPORT.md](REPORT.md)
 
