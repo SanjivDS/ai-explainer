@@ -15,16 +15,18 @@ for Sanjiv". It was built in Claude Code right after the toolkit setup on 10 Aug
 - I asked whether I could start without installing LaTeX/MacTeX and add it later
   only if it became necessary. The build went ahead without it: every Manim label
   is plain Pango `Text`.
-- [CHECK: what you expected going in, e.g. that the first video would finish in
-  one session, or that skipping LaTeX would not affect the visuals.]
+- I expected to study the concept and use the toolkit to produce a clear
+  explainer, then review the draft and request changes to the explanations and
+  visuals.
 
 **Where it resisted, and what I did next.**
 - **Text collided with the graph.** The first layout audit (12 Aug) logged 3
   errors, the labels "you are here", "low loss" and "you can't see the bottom"
   sitting on a curve, plus one label outside the safe area. I spotted the overlap
   on playback, asked whether missing LaTeX was the cause, and asked for every label
-  to be kept clear of the lines. [CHECK: whether that fix landed in August or only
-  in the September 4K pass; the August audit on disk still shows the 3 errors.]
+  to be kept clear of the lines. The
+  August audit on disk still shows the 3 errors; the label and margin corrections
+  that are documented came in the September 4K pass.
 - **I hit the Claude usage limit** on 14 Aug, right after asking for that fix
   ("when will it reset").
 - **The handle changed after review.** On 7 Sep, after Sanjana Rao's feedback on
@@ -53,8 +55,10 @@ Fact-check PASS on the corrected claims (Goodfellow et al., *Deep Learning* §4.
 and ch. 8). No SRT/VTT captions in `renders/`.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: [CHECK: the topic, catching the overlap on playback, the August narration
-  sign-off, approving the five corrections on 27 Sep, and your review of the cut.]
+- Mine: studying the concept, directing changes, approving the five narration
+  corrections before the 27 Sep export, and reviewing the video. [CHECK: confirm
+  the topic choice, the original August narration approval, and that you spotted
+  the overlap yourself.]
 - Claude Code's (Aug): the beat sheet and narration, the Manim scenes and the first
   build. Codex's (Sep–Oct): the 4K rebuild, the fact review and proposed
   corrections, the re-voicing, and the frame-QC and branding fixes above.

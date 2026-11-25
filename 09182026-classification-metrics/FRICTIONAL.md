@@ -35,8 +35,7 @@ recall. 10 beats: 6 Manim body beats and 4 Remotion bookends, with Kokoro
   version of Brutalist. All ten beats were rebuilt at native 3840×2160 that
   morning, and the 1080p file was kept as an archive. The same day I forked the
   upstream toolkit and moved the books into `brutalist.art-latest`. Later that
-  day Sanjana said again that the videos still weren't 4K. [CHECK: what her
-  screenshot showed and which file she was looking at.] The 24 Sep 4K audit
+  day Sanjana said again that the videos still weren't 4K. The 24 Sep 4K audit
   confirmed 3840×2160 streams with ffprobe, and noted this proves the encoded
   size, not how the video was rendered.
 - **The branding cleanup was blocked by the type gate (2–3 Oct).** The handle

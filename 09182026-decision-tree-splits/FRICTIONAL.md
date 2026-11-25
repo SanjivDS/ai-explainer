@@ -39,7 +39,7 @@ bookends.
   4K, all ten beats were rebuilt at native 3840×2160 that morning. QC covered 402
   frames at 2 fps across 17 contact sheets, and the 0:21/0:25 fix was checked
   again. Sanjana said again that afternoon that the videos still weren't 4K.
-  [CHECK: what that screenshot showed.] The 24 Sep audit confirmed the 3840×2160
+  The 24 Sep audit confirmed the 3840×2160
   stream with ffprobe.
 - **The branding cleanup was blocked by the type gate (2 Oct).** The final
   export failed GATE T twice (5 beats each time). A debug crop found one text

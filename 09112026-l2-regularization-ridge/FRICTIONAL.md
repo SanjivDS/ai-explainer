@@ -33,8 +33,7 @@ Remotion), built in Codex.
   standard formulation, and every path and curve is labelled schematic.
 - **Resolution.** The 24 Sep audit found the 7 Sep copies and the slate at
   1920×1080 (192.4 s). A 4K master (192.6 s) had been exported on 21 Sep, the same
-  day Sanjana told me the videos were still not in 4K. [CHECK: which file Sanjana
-  reviewed, if you know.]
+  day Sanjana told me the videos were still not in 4K.
 - **Production footers were still showing in some videos.** On 2 Oct I reported
   footer notes with beat-sheet info on the bottom left and asked for every video to
   be checked one by one. [CHECK: whether this one was among them.] The cleanup

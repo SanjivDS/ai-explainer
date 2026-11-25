@@ -19,8 +19,9 @@ Remotion). All curves are schematic; no numbers appear on screen.
   and the setup was ready, but the tokens had run out on this second video.
 - With Claude at its limit (18–23 Aug), I carried on in Codex and Cursor, and kept
   working with both through 30 Aug.
-- [CHECK: what you expected, e.g. that Codex could pick up the same toolkit and
-  match the first video's look.]
+- I expected to build on the first video's format while making the difference
+  between underfitting and overfitting easy to understand. I also needed to see
+  whether production could continue in Codex and Cursor after the Claude limit.
 
 **Where it resisted, and what I did next.**
 - **The work restarted from scratch in a new tool.** Sources were consulted on
@@ -50,8 +51,9 @@ Gate V 0 blocker / 0 major, layout audit clean. Branding check: 353 frames at 2 
 plus 30 beat samples, no old-name or production-footer matches.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: [CHECK: the topic and its place after gradient descent, moving the build
-  to Codex, the narration sign-off, and your review of the cut.]
+- Mine: studying the concept, moving the work to Codex and Cursor, reviewing the
+  drafts and requesting changes. [CHECK: confirm the topic choice and the narration
+  sign-off.]
 - Codex's: the beat sheet and narration, the sources (Stanford STATS 202,
   scikit-learn's underfitting/overfitting example, *The Elements of Statistical
   Learning*) and scope notes, the Manim scenes, the build, and the 7 Sep and 2 Oct

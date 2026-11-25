@@ -18,8 +18,8 @@ L2 reel. Built in Claude Code; I signed the narration verdict on 4 Sep before au
   one (`claude-liam-l1-regularization-lasso`) and a standalone
   `claude-liam-l1-regularization`. [CHECK: whether the second one was intended, and
   which one you submitted first.]
-- [CHECK: what you expected going in, e.g. that Claude Code would now finish a
-  video in one run.]
+- I expected to explain how L1 regularization shrinks coefficients and can remove
+  features, then refine the video after reviewing the draft.
 
 **Where it resisted, and what I did next.**
 - **"Can't hear narration."** I reported this on 4 Sep. The standalone copy's
