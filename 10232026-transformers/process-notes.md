@@ -1,9 +1,9 @@
 # Process notes — Transformers - Encoder, Decoder & Self-Attention
 
 **Google Drive:** [27 LLM-1 Transformers](https://drive.google.com/file/d/1gQySl8qB8U3hszwgTdC9jUZFXjiJ_ou2/view) (uploaded 20 Nov)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 5:09.9
-**Built:** 19–23 Oct (master built 21 Oct)
+**Built:** 19–25 Oct (master built 21 Oct)
 
 Build notes for `transformers`. Append-only going forward.
 

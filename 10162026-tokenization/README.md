@@ -1,7 +1,7 @@
 # 21 · Tokenization - How Machines Break Down Language
 
 - **Series:** Deep Dive — NLP
-- **Built:** 12–16 Oct (master built 15 Oct)
+- **Built:** 12–18 Oct (master built 15 Oct)
 - **Delivered:** [21 NLP-1 Tokenization](https://drive.google.com/file/d/18dn6Hh80p-udcuUEfW7L-cqLJs3FKgM4/view) (uploaded 26 Oct)
 - **Master:** 3840×2160, 24 fps · 3:07.6
 

@@ -1,9 +1,9 @@
 # Process notes — L2 Regularization, Oversimplified
 
 **Google Drive:** [05 L2 Regularization (Ridge)](https://drive.google.com/file/d/1unnRYOgMgLQZLoWg2eSKY3bMP52zreza/view) (uploaded 3 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:12.6
-**Built:** 7–11 Sep (master built 7 Sep)
+**Built:** 7–13 Sep (master built 7 Sep)
 
 Build notes for `claude-liam-l2-regularization-ridge`. Append-only going forward.
 

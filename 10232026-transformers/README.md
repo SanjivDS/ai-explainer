@@ -1,7 +1,7 @@
 # 27 · Transformers - Encoder, Decoder & Self-Attention
 
 - **Series:** Deep Dive — Transformers & LLMs
-- **Built:** 19–23 Oct (master built 21 Oct)
+- **Built:** 19–25 Oct (master built 21 Oct)
 - **Delivered:** [27 LLM-1 Transformers](https://drive.google.com/file/d/1gQySl8qB8U3hszwgTdC9jUZFXjiJ_ou2/view) (uploaded 20 Nov)
 - **Master:** 3840×2160, 24 fps · 5:09.9
 

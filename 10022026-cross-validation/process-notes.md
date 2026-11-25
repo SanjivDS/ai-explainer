@@ -1,9 +1,9 @@
 # Process notes — Cross-Validation — Why One Train/Test Split Isn't Enough
 
 **Google Drive:** [17 Cross Validation](https://drive.google.com/file/d/1syYUyYCA-J3N2VSU8LjKkBSBBm4Hu54M/view) (uploaded 11 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 4:05.8
-**Built:** 28 Sep – 2 Oct (master built 4 Oct)
+**Built:** 28 Sep – 4 Oct (master built 4 Oct)
 
 Build notes for `claude-liam-cross-validation`. Append-only going forward.
 

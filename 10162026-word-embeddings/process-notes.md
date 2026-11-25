@@ -1,9 +1,9 @@
 # Process notes — Word Embeddings - Word2Vec, GloVe & Semantic Similarity
 
 **Google Drive:** [22 NLP-2 WordEmbeddings](https://drive.google.com/file/d/1-1OwFdY2SjeuR-celejEz5cXTD9uOZHL/view) (uploaded 29 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:57.3
-**Built:** 12–16 Oct (master built 16 Oct)
+**Built:** 12–18 Oct (master built 16 Oct)
 
 Build notes for `word-embeddings`. Append-only going forward.
 

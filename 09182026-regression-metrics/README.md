@@ -1,7 +1,7 @@
 # 07 · Regression Metrics: MAE, MSE, RMSE, R², and MAPE, Oversimplified
 
 - **Series:** Foundational (Data Science)
-- **Built:** 14–18 Sep (master built 3 Oct)
+- **Built:** 14–20 Sep (master built 3 Oct)
 - **Delivered:** [07 Regression metrics](https://drive.google.com/file/d/101egQCDPU8kCuz3jkgSu-RqlZuBC40Hd/view) (uploaded 3 Oct)
 - **Master:** 3840×2160, 24 fps · 3:37.5
 

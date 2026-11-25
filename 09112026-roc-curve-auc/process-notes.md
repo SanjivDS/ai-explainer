@@ -1,9 +1,9 @@
 # Process notes — ROC Curve and AUC Score, Oversimplified
 
 **Google Drive:** [06 ROC Curve and AUC score](https://drive.google.com/file/d/1cE8CXoM1571tTQPFkmWbB59qHPDf-yz3/view) (uploaded 3 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:25.0
-**Built:** 7–11 Sep (master built 9 Sep)
+**Built:** 7–13 Sep (master built 9 Sep)
 
 Build notes for `claude-liam-roc-curve-auc-score`. Append-only going forward.
 

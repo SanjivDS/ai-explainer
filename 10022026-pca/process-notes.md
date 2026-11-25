@@ -1,9 +1,9 @@
 # Process notes — PCA — Dimensionality Reduction Explained Visually
 
 **Google Drive:** [14 Principal Component Analysis](https://drive.google.com/file/d/16tIVinbuyIlWZ_eBwJOxiCWnSBcP4Yp4/view) (uploaded 4 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 4:33.8
-**Built:** 28 Sep – 2 Oct (master built 2 Oct)
+**Built:** 28 Sep – 4 Oct (master built 2 Oct)
 
 Build notes for `claude-liam-pca`. Append-only going forward.
 

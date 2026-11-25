@@ -1,7 +1,7 @@
 # 22 · Word Embeddings - Word2Vec, GloVe & Semantic Similarity
 
 - **Series:** Deep Dive — NLP
-- **Built:** 12–16 Oct (master built 16 Oct)
+- **Built:** 12–18 Oct (master built 16 Oct)
 - **Delivered:** [22 NLP-2 WordEmbeddings](https://drive.google.com/file/d/1-1OwFdY2SjeuR-celejEz5cXTD9uOZHL/view) (uploaded 29 Oct)
 - **Master:** 3840×2160, 24 fps · 3:57.3
 

@@ -1,7 +1,7 @@
 # 01 · Gradient Descent, Oversimplified
 
 - **Series:** Foundational (Data Science)
-- **Built:** 10–14 Aug (master built 12 Aug)
+- **Built:** 10–16 Aug (master built 12 Aug)
 - **Delivered:** [01 Gradient Descent](https://drive.google.com/file/d/1jo-3nv1LZTZu02BW7VScrk4BU5uQyJfw/view) (uploaded 3 Oct)
 - **Master:** 3840×2160, 24 fps · 2:33.5
 

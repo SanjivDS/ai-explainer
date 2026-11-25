@@ -1,9 +1,9 @@
 # Process notes — Entropy vs Gini Impurity
 
 **Google Drive:** [16 Entropy and Gini Impurity](https://drive.google.com/file/d/18uo3Szq3xQPllJUmH9YBMH78c7yEEE6X/view) (uploaded 11 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:41.7
-**Built:** 28 Sep – 2 Oct (master built 4 Oct)
+**Built:** 28 Sep – 4 Oct (master built 4 Oct)
 
 Build notes for `claude-liam-entropy-vs-gini`. Append-only going forward.
 

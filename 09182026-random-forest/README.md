@@ -1,7 +1,7 @@
 # 10 · Random Forest: Why Multiple Trees Beat One, Oversimplified
 
 - **Series:** Foundational (Data Science)
-- **Built:** 14–18 Sep (master built 17 Sep)
+- **Built:** 14–20 Sep (master built 17 Sep)
 - **Delivered:** [10 Random Forest](https://drive.google.com/file/d/1gLkiVEkccH0L2TDKMHB4-bQ9JYxOsz84/view) (uploaded 4 Oct)
 - **Master:** 3840×2160, 24 fps · 3:34.6
 

@@ -1,9 +1,9 @@
 # Process notes — Tokenization - How Machines Break Down Language
 
 **Google Drive:** [21 NLP-1 Tokenization](https://drive.google.com/file/d/18dn6Hh80p-udcuUEfW7L-cqLJs3FKgM4/view) (uploaded 26 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:07.6
-**Built:** 12–16 Oct (master built 15 Oct)
+**Built:** 12–18 Oct (master built 15 Oct)
 
 Build notes for `tokenization`. Append-only going forward.
 

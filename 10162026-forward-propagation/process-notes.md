@@ -1,9 +1,9 @@
 # Process notes — Neural Networks - Forward Propagation Explained
 
 **Google Drive:** [24 DL-1 Forward Propagation](https://drive.google.com/file/d/1et1AAhBKixBxMH0R-7YwtEiE0oB_cShG/view) (uploaded 6 Nov)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 4:04.0
-**Built:** 12–16 Oct (master built 18 Oct)
+**Built:** 12–18 Oct (master built 18 Oct)
 
 Build notes for `forward-propagation`. Append-only going forward.
 

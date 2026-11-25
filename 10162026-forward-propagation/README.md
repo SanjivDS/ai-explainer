@@ -1,7 +1,7 @@
 # 24 · Neural Networks - Forward Propagation Explained
 
 - **Series:** Deep Dive — Deep Learning
-- **Built:** 12–16 Oct (master built 18 Oct)
+- **Built:** 12–18 Oct (master built 18 Oct)
 - **Delivered:** [24 DL-1 Forward Propagation](https://drive.google.com/file/d/1et1AAhBKixBxMH0R-7YwtEiE0oB_cShG/view) (uploaded 6 Nov)
 - **Master:** 3840×2160, 24 fps · 4:04.0
 

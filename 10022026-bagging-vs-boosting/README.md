@@ -1,7 +1,7 @@
 # 11 · Bagging vs Boosting, Oversimplified
 
 - **Series:** Foundational (Data Science)
-- **Built:** 28 Sep – 2 Oct (master built 2 Oct)
+- **Built:** 28 Sep – 4 Oct (master built 2 Oct)
 - **Delivered:** [11 Bagging vs Boosting](https://drive.google.com/file/d/1o1UzJG3bI9W0kGY2dShmkr5m3hsmNTAS/view) (uploaded 3 Oct)
 - **Master:** 3840×2160, 24 fps · 4:10.0
 

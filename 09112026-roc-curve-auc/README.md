@@ -1,7 +1,7 @@
 # 06 · ROC Curve and AUC Score, Oversimplified
 
 - **Series:** Foundational (Data Science)
-- **Built:** 7–11 Sep (master built 9 Sep)
+- **Built:** 7–13 Sep (master built 9 Sep)
 - **Delivered:** [06 ROC Curve and AUC score](https://drive.google.com/file/d/1cE8CXoM1571tTQPFkmWbB59qHPDf-yz3/view) (uploaded 3 Oct)
 - **Master:** 3840×2160, 24 fps · 3:25.0
 

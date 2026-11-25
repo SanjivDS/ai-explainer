@@ -1,9 +1,9 @@
 # Process notes — Accuracy vs Precision vs Recall vs F1 Score, Oversimplified
 
 **Google Drive:** [08 Classification metrics](https://drive.google.com/file/d/1Y-0sd9OI7SUd32rAUSPhtWtXfXqAmdKI/view) (uploaded 3 Oct)
-**Status:** delivered to Drive for review · not yet published to YouTube
+**Status:** delivered to Drive for review
 **Resolution:** 3840×2160, 24 fps · **Runtime:** 3:34.4
-**Built:** 14–18 Sep (master built 17 Sep)
+**Built:** 14–20 Sep (master built 17 Sep)
 
 Build notes for `claude-liam-precision-recall-f1`. Append-only going forward.
 

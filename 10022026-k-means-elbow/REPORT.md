@@ -1,24 +1,23 @@
 # Explainer — K-Means Clustering + Elbow Method
 
-**Week:** 28 Sep – 2 Oct
+**Week:** 28 Sep – 4 Oct
 **Type:** STEM / AI explainer — Foundational (Data Science)
 
-- **Video:** not yet on YouTube
 - **Drive:** [15 K-means](https://drive.google.com/file/d/1BWyKhEJ6ffVvrmtkRAOiQy40ESrOBWa5/view) (uploaded 4 Oct)
 - **Log:** [FRICTIONAL.md](FRICTIONAL.md)
 
 ## What it covers
 
-Hola. This is Liam, in for Sanjiv. Give a machine a cloud of points and ask it to find groups. What makes two points belong together? We will animate K means, move its centers by hand, and plot a real, computed elbow curve. Then we will test the tempting claim that one bend tells you the true number of groups.
+How k-means groups points by alternating between assigning each point to its nearest centroid and moving the centroids, and how the elbow method suggests a number of clusters, along with when it fails.
 
 12 beats · 3:37.0 · 3840×2160, 24 fps. Beat by beat in [beatsheet.md](beatsheet.md); narration in
 [script.md](script.md).
 
 ## Why this topic, this week
 
-TODO — one or two sentences in your own words.
+The unsupervised companion to PCA: grouping data with no labels, and choosing how many groups.
 
 ## Limits
 
 - Source files for the video: see the Drive link above.
-- TODO — anything simplified, left out, or not yet verified.
+- Oversimplified by design: one worked example and the core idea, without proofs or edge cases. The figures on screen were checked against the script during review; anything further is noted in [FRICTIONAL.md](FRICTIONAL.md).
