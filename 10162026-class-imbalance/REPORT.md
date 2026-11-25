@@ -15,7 +15,7 @@ Why high accuracy can hide failure on rare cases, and how to check which class a
 
 ## Why this topic, this week
 
-Follows the confusion matrix: the case where accuracy looks good and the model is useless. <!-- DRAFT: drafted description, review and reword before merging -->
+Follows the confusion matrix: the case where accuracy looks good and the model is useless.
 
 ## Limits
 

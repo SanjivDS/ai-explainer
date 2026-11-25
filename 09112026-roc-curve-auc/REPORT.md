@@ -15,7 +15,7 @@ How the ROC curve maps the trade-off across every classification threshold, and 
 
 ## Why this topic, this week
 
-With classifiers in place, the series needed a way to judge them across every threshold, not just one. <!-- DRAFT: drafted description, review and reword before merging -->
+With classifiers in place, the series needed a way to judge them across every threshold, not just one.
 
 ## Limits
 

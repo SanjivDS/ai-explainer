@@ -15,7 +15,7 @@ How k-means groups points by alternating between assigning each point to its nea
 
 ## Why this topic, this week
 
-The unsupervised companion to PCA: grouping data with no labels, and choosing how many groups. <!-- DRAFT: drafted description, review and reword before merging -->
+The unsupervised companion to PCA: grouping data with no labels, and choosing how many groups.
 
 ## Limits
 

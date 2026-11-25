@@ -15,7 +15,7 @@ How MAE, MSE, RMSE, R² and MAPE are different lenses on the same residuals, and
 
 ## Why this topic, this week
 
-The regression counterpart to ROC/AUC: how to score a model that predicts numbers. <!-- DRAFT: drafted description, review and reword before merging -->
+The regression counterpart to ROC/AUC: how to score a model that predicts numbers.
 
 ## Limits
 

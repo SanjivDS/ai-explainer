@@ -15,7 +15,7 @@ How gradient descent walks downhill on a loss landscape: the gradient as the loc
 
 ## Why this topic, this week
 
-Gradient descent is how almost every model in the series learns, so it had to come first. <!-- DRAFT: drafted description, review and reword before merging -->
+Gradient descent is how almost every model in the series learns, so it had to come first.
 
 ## Limits
 

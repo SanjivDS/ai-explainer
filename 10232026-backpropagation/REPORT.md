@@ -15,7 +15,7 @@ How backpropagation uses the chain rule to turn a prediction's error into a grad
 
 ## Why this topic, this week
 
-Follows forward propagation: how the network learns from its errors, linking back to gradient descent. <!-- DRAFT: drafted description, review and reword before merging -->
+Follows forward propagation: how the network learns from its errors, linking back to gradient descent.
 
 ## Limits
 

@@ -15,7 +15,7 @@ How a confusion matrix replaces one score with four counts, so the two kinds of 
 
 ## Why this topic, this week
 
-The table underneath precision, recall and ROC, shown directly so every rate can be read from it. <!-- DRAFT: drafted description, review and reword before merging -->
+The table underneath precision, recall and ROC, shown directly so every rate can be read from it.
 
 ## Limits
 

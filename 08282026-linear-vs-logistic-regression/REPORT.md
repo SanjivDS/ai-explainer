@@ -15,7 +15,7 @@ How linear and logistic regression share the same weighted score: linear regress
 
 ## Why this topic, this week
 
-The two baseline models every later video compares against, and the clearest picture of regression versus classification. <!-- DRAFT: drafted description, review and reword before merging -->
+The two baseline models every later video compares against, and the clearest picture of regression versus classification.
 
 ## Limits
 

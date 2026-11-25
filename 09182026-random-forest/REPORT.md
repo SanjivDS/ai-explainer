@@ -15,7 +15,7 @@ Why a random forest beats a single tree: averaging many trees whose errors are d
 
 ## Why this topic, this week
 
-The first ensemble: it follows directly from how a single tree splits and why one tree overfits. <!-- DRAFT: drafted description, review and reword before merging -->
+The first ensemble: it follows directly from how a single tree splits and why one tree overfits.
 
 ## Limits
 

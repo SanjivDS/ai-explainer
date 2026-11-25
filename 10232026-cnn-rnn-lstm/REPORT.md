@@ -15,7 +15,7 @@ How CNNs, RNNs and LSTMs handle local patterns, sequence order and memory, and h
 
 ## Why this topic, this week
 
-With the training loop explained, this compares the main architectures and when each fits. <!-- DRAFT: drafted description, review and reword before merging -->
+With the training loop explained, this compares the main architectures and when each fits.
 
 ## Limits
 

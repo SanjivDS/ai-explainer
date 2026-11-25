@@ -15,7 +15,7 @@ How a sentence becomes the numbers a language model receives, built up through a
 
 ## Why this topic, this week
 
-Opens the NLP deep dive: before a model can read text, the text has to be split into tokens. <!-- DRAFT: drafted description, review and reword before merging -->
+Opens the NLP deep dive: before a model can read text, the text has to be split into tokens.
 
 ## Limits
 

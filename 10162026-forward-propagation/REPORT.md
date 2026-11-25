@@ -15,7 +15,7 @@ How a neural network turns inputs into a prediction, following two numbers throu
 
 ## Why this topic, this week
 
-Opens the deep-learning part: how a neural network turns inputs into a prediction. <!-- DRAFT: drafted description, review and reword before merging -->
+Opens the deep-learning part: how a neural network turns inputs into a prediction.
 
 ## Limits
 

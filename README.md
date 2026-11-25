@@ -23,7 +23,7 @@ the date it was uploaded to the Drive review folder.
 
 ## Research question
 
-Can an AI-assisted, audio-first pipeline produce accurate 4K STEM explainers at a steady weekly pace, and where does a person still have to step in to keep them correct and clear? <!-- DRAFT: drafted description, review and reword before merging -->
+Can an AI-assisted, audio-first pipeline produce accurate 4K STEM explainers at a steady weekly pace, and where does a person still have to step in to keep them correct and clear?
 
 ## Weekly timeline
 

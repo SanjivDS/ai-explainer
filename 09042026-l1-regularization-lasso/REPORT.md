@@ -15,7 +15,7 @@ How the L1 (lasso) penalty on absolute weight size can push some weights exactly
 
 ## Why this topic, this week
 
-Bias–variance showed overfitting; L1 is the first tool for controlling it, and it also selects features. <!-- DRAFT: drafted description, review and reword before merging -->
+Bias–variance showed overfitting; L1 is the first tool for controlling it, and it also selects features.
 
 ## Limits
 

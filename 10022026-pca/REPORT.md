@@ -15,7 +15,7 @@ How PCA rotates centred data onto orthogonal directions ranked by variance, and 
 
 ## Why this topic, this week
 
-Builds on feature scaling and opens the unsupervised part of the series. <!-- DRAFT: drafted description, review and reword before merging -->
+Builds on feature scaling and opens the unsupervised part of the series.
 
 ## Limits
 

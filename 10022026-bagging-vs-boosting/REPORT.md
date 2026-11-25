@@ -15,7 +15,7 @@ How bagging averages independent randomised fits while boosting adds dependent c
 
 ## Why this topic, this week
 
-Random forest is one kind of ensemble; this names the two families before XGBoost. <!-- DRAFT: drafted description, review and reword before merging -->
+Random forest is one kind of ensemble; this names the two families before XGBoost.
 
 ## Limits
 

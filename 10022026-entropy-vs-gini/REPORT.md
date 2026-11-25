@@ -15,7 +15,7 @@ How a decision tree scores a candidate split with Gini impurity or entropy, usin
 
 ## Why this topic, this week
 
-Goes back to the decision-tree video to explain the two impurity measures behind each split. <!-- DRAFT: drafted description, review and reword before merging -->
+Goes back to the decision-tree video to explain the two impurity measures behind each split.
 
 ## Limits
 
