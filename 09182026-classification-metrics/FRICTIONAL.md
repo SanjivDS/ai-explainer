@@ -53,9 +53,7 @@ plus 30 beat samples, with no old-name or production-label OCR matches.
 - Mine: the topic, the decision to add accuracy, the footer-removal request,
   both narration approvals, and passing on Sanjana's 4K feedback. [CHECK: why
   this topic this week, and your own review of the cut.]
-- Claude's: [CHECK: the session records for this build and the 21 Sep 4K
-  rebuild are Codex threads, not Claude Code. Confirm which tool to credit.]
-  The beat sheet and narration, the fact-check against Google for Developers
+- Codex's: the beat sheet and narration, the fact-check against Google for Developers
   and scikit-learn with the arithmetic worked out, the Manim scenes, the 4K
   rebuild, the type-gate fixes, and frame-level QC.
 

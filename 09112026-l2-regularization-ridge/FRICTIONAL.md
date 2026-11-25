@@ -36,7 +36,8 @@ Remotion), built in Codex.
   day Sanjana told me the videos were still not in 4K.
 - **Production footers were still showing in some videos.** On 2 Oct I reported
   footer notes with beat-sheet info on the bottom left and asked for every video to
-  be checked one by one. [CHECK: whether this one was among them.] The cleanup
+  be checked one by one. The cleanup's baseline audit flagged no footer or
+  old-handle text in this video. The cleanup
   exported in final mode, with review labels off, which drops the beat, status and
   timecode overlays.
 - **The type gate blocked that export once** (two beats failed on 2 Oct); after
