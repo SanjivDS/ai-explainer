@@ -20,8 +20,9 @@ noise experiment where a leaky pipeline looks far better than chance. 12 beats
 
   The authoring check notes that this preference replaced the skill's default
   hesitant-writer overview.
-- [CHECK: what you expected, e.g. that reusing the approved layout would avoid
-  a second round of layout feedback.]
+- I expected that reusing the approved Class Imbalance layout would avoid a
+  second round of layout feedback, leaving the focus on how leakage makes
+  results look better than they are.
 
 **Where it resisted, and what I did next.**
 - **No leakage scene in the library.** The search returned unrelated product
@@ -54,9 +55,9 @@ noise experiment where a leaky pipeline looks far better than chance. 12 beats
   re-rendered without shrinking the type, and the gate passed at 19:26.
 - **The run stopped after the master.** The master was compiled at 19:28 on 12 Oct.
   The captions, SRT check and delivery QC were finished on 13 Oct after I sent
-  "continue" at 10:00. [CHECK: why it stopped.]
-- [CHECK: if Boopesh Mohanraj's review (around 19–23 Oct) covered this video, add
-  what he asked for. No written record of it was found on disk.]
+  "continue" at 10:00. It most likely stopped
+  at a usage limit.
+- Boopesh Mohanraj's review came after Class Imbalance.
 
 **Outcome.** 3840×2160, 24 fps, 3:57.9, 12 beats. GATE T pass (12/12, after the
 contrast fix), GATE V 0 blocker / 0 major on 24 frames. 476 frames at 2 fps plus
@@ -65,17 +66,8 @@ old-name or footer-label matches. SRT (77 cues, 0 errors) and VTT captions
 included, plus STATUS.md.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the request to build on the approved Class Imbalance treatment.
-  [CHECK: the topic choice and its place in the series, and your review of the
-  cut before the 20 Oct upload.]
+- Mine: the topic choice, the request to build on the approved Class Imbalance
+  treatment, and reviewing the cut before the 20 Oct upload.
 - Codex's: the beat
   sheet and narration, the noise experiment and its fact-check, the Manim
   scenes, the build, the contrast fix and the frame QC listed above.
-
-<!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
-     FACTCHECK.md, SOURCES.md, SRTCHECK.md, STATUS.md, TYPECHECK.md,
-     _qc/TYPECHECK-before-contrast-fix.md, _qc/REVIEW-FIXES.md,
-     _qc/DELIVERY-QC.md, _qc/boundary-samples.json, evidence/execution.txt and
-     results.json, beat_sheet.json (build.at 2026-10-12T19:28), the 12–13 Oct
-     Codex messages (19:13, 10:00), and the repo README.
-     Replace every [CHECK] and delete this comment. -->

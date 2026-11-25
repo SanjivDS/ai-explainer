@@ -16,8 +16,9 @@ Sanjiv", no production footers.
 **What I tried, and what I expected.**
 - I requested it at 19:04 on 4 Oct with just the title. Unlike K-means and
   Entropy, this build ran straight through: master at 19:23, QC finished 19:25.
-- [CHECK: what you expected, e.g. that a third same-day build would go faster,
-  or that the earlier contrast fixes would already be in the template.]
+- I expected a third build that day to go faster, so the focus could be on why a
+  single train/test split can give a score that depends heavily on the split,
+  and how k-fold validation evaluates performance across multiple splits.
 
 **Where it resisted, and what I did next.**
 - **No fold scene in the library.** The search returned unrelated split/testing
@@ -51,14 +52,8 @@ audited with zero old-name or footer-label matches. SRT (80 cues, 0 errors) and
 VTT captions included.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: [CHECK: the topic choice and its place in the series, the brief, and
-  your review of the cut before the 11 Oct upload.]
+- Mine: the topic choice, the brief, and reviewing the cut before the 11 Oct
+  upload.
 - Codex's: the beat
   sheet and narration, the computed regression experiment and its fact-check,
   the Manim scenes, the build, and the frame QC and fixes listed above.
-
-<!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
-     FACTCHECK.md, SOURCES.md, SRTCHECK.md, TYPECHECK.md, _qc/DELIVERY-QC.md,
-     _qc/REPORT.md, evidence/execution.txt, native-fix/time-fix/contrast-fix
-     logs, beat_sheet.json (build.at 2026-10-04T19:23), the 4 Oct Codex message
-     (19:04), and the repo README. Replace every [CHECK] and delete this comment. -->

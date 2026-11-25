@@ -15,8 +15,8 @@ production footers.
 **What I tried, and what I expected.**
 - I requested it at 13:20 on 4 Oct with just the title, relying on the notes
   already given in that session.
-- [CHECK: what you expected, e.g. that this would reuse the K-means setup
-  unchanged, or whether you knew going in that it needed real equations.]
+- I expected to reuse the K-means setup, and to show with real equations how the
+  two impurity measures score a split and why they often select similar splits.
 
 **Where it resisted, and what I did next.**
 - **No matching scene in the library.** The candidates were unrelated decision
@@ -46,8 +46,8 @@ production footers.
 
   B03, B04 and B08 were re-rendered, then B04 and B07 again for contrast.
 - **The run stopped after the master.** The master was compiled at 13:38, and the
-  captions and delivery QC were finished after I sent "continue" at 16:16.
-  [CHECK: why it stopped.]
+  captions and delivery QC were finished after I sent "continue" at 16:16. It most likely stopped
+  at a usage limit.
 
 **Outcome.** 3840×2160, 24 fps, 3:41.7, 12 beats. GATE T pass (12/12), GATE V 0
 blocker / 0 major on 24 frames, 443 frames at 2 fps plus 36 per-beat samples
@@ -55,15 +55,9 @@ audited with zero old-name or footer-label matches. Every equation was checked i
 its revealed state. SRT (80 cues, 0 errors) and VTT captions included.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: [CHECK: the topic choice and its place in the series, the brief, and your review of the cut before the 11 Oct upload.]
+- Mine: the topic choice, the brief, and reviewing the cut before the 11 Oct
+  upload.
 - Codex's: the beat
   sheet and narration, the computed node and split values with their fact-check,
   the constructed disagreement case, the MathText equations, the Manim scenes,
   the build, and the frame QC and fixes listed above.
-
-<!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
-     FACTCHECK.md, SOURCES.md, SRTCHECK.md, TYPECHECK.md, _qc/DELIVERY-QC.md,
-     _qc/REPORT.md, evidence/execution.txt, make_math.py, math-deps.log,
-     native-fix/contrast-fix logs, beat_sheet.json (build.at 2026-10-04T13:38),
-     the 4 Oct Codex messages (13:20, 16:16), the 12 Aug Claude Code message on
-     MacTeX, and the repo README. Replace every [CHECK] and delete this comment. -->

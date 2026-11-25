@@ -17,9 +17,9 @@ for both of those in September.
 - I asked for it on 4 Oct at 00:38 "remembering all the notes so far (4k,
   footer note removal, etc)". So 4K, @sanjiv, "Liam, in for Sanjiv" and no
   footer labels were part of the brief from the start, not fixes afterwards.
-- [CHECK: what you expected going in, e.g. that carrying the notes forward would
-  mean no branding fixes this time, or that the cleanup setup would carry over
-  to a new topic unchanged.]
+- I expected that carrying the earlier notes forward (4K, the handle, no
+  footers) would mean no branding fixes this time, so I could focus on how
+  K-means groups points and how the elbow method guides the choice of k.
 
 **Where it resisted, and what I did next.**
 - **No clustering scene existed.** The library search found nothing specific to
@@ -43,8 +43,8 @@ for both of those in September.
   B05 and B07 were re-rendered in the fix passes and B09 was rebuilt in Remotion.
 - **The run stopped after the master.** The master was compiled at 01:02. The
   captions, SRT check and delivery QC were only finished after I sent "continue"
-  at 10:19. [CHECK: why it stopped, e.g. usage limit, app closed, or you paused
-  it overnight.]
+  at 10:19. It most likely stopped
+  at a usage limit.
 - **The outro name could not be confirmed by ASR alone.** The opening transcribed
   as "Liam, in for Sanjiv", but the small ASR model garbled the closing name. The
   source narration and preserved audio were used to confirm it instead.
@@ -55,16 +55,8 @@ audited with zero old-name or footer-label matches. SRT (77 cues, 0 errors) and
 VTT captions included.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: the brief carrying the 4K, footer and branding notes forward.
-  [CHECK: the topic choice and its place in the series, and your review of the
-  cut before the 4 Oct Drive upload.]
+- Mine: the topic choice, the brief carrying the 4K, footer and branding notes
+  forward, and reviewing the cut before the 4 Oct Drive upload.
 - Codex's: the beat
   sheet and narration, the computed clustering examples and their fact-check,
   the Manim scenes, the build, and the frame QC and fixes listed above.
-
-<!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
-     FACTCHECK.md, SOURCES.md, SRTCHECK.md, TYPECHECK.md, _qc/DELIVERY-QC.md,
-     _qc/REPORT.md, evidence/execution.txt, elbow-fix/native-fix/verdict-fix
-     logs, beat_sheet.json (build.at 2026-10-04T01:02), the 4 Oct Codex messages
-     (00:38, 10:19), reports/branding-cleanup-2026-10-02, and the repo README.
-     Replace every [CHECK] and delete this comment. -->

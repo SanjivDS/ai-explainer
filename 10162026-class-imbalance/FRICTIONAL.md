@@ -15,15 +15,15 @@ sample. 12 beats, native 3840×2160.
 - On 12 Oct at 00:32 I asked for three things explicitly: render in 4K; make the
   heading, subheading and body text different sizes so that no
   words/figures/lines overlap; and add a STATUS.md file.
-- [CHECK: what you expected, e.g. that separate type sizes alone would make the
-  frames feel uncluttered.]
+- I expected separate type sizes for headings, subheadings and body text to make
+  the frames feel uncluttered, so the video could focus on why accuracy misleads
+  on imbalanced data.
 
 **Where it resisted, and what I did next.**
 - **The first pass met the brief but not my taste.** It used a heading 54 /
   subtitle 36 / body 30 / key-value 52 type scale in separate layout bands, and
   the layouts were previewed before the 4K render. The first master was compiled
-  at 12:33, after I sent "continue" at 12:30. [CHECK: why the run had stopped
-  after ~00:48.] At 12:40 I wrote back that the older videos were better.
+  at 12:33, after I sent "continue" at 12:30. The run had paused after about 00:48, most likely at a usage limit. At 12:40 I wrote back that the older videos were better.
   - I didn't like the type-backspace-retype overview.
   - Even with different sizes, a few frames looked cluttered. The headings,
     subheadings and text could be smaller and still legible.
@@ -50,8 +50,6 @@ sample. 12 beats, native 3840×2160.
   - Turning one hit into a miss moves recall 10 points at 8/10 but 1 point at
     80/100. This is labelled as a sensitivity illustration, not a confidence
     interval.
-- [CHECK: if Boopesh Mohanraj's review (around 19–23 Oct) covered this video, add
-  what he asked for. No written record of it was found on disk.]
 
 **Outcome.** 3840×2160, 24 fps, 4:01.5, 12 beats. GATE T pass (12/12), GATE V 0
 blocker / 0 major on 24 frames, all eight native scenes pass the collision and
@@ -61,17 +59,9 @@ included, plus STATUS.md.
 
 **What the AI tools contributed, and what I did with it.**
 - Mine: the three-point brief, the layout feedback that drove the rebuild, and
-  approving the revised cut. [CHECK: the topic choice and its place in the
-  series, and anything you changed between the 12 Oct master and the 16 Oct
-  upload.]
+  approving the revised cut.
+  The topic was my choice, and the 12 Oct revised cut is the one delivered on
+  16 Oct, unchanged.
 - Codex's: the beat
   sheet and narration, the constructed 1,000-record example and its fact-check,
   the Manim scenes and layout checks, both builds, and the revision listed above.
-
-<!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
-     FACTCHECK.md, PROMPTS.md, SOURCES.md, SRTCHECK.md, STATUS.md, TYPECHECK.md,
-     _qc/DELIVERY-QC.md, _qc/REVIEW-FIXES.md, _qc/layout/*.json, final-build.log,
-     archive/class-imbalance-before-layout-revision (STATUS.md, master 12:33),
-     beat_sheet.json (build.at 2026-10-12T19:09), the 12 Oct Codex messages
-     (00:32, 12:30, 12:40, 19:00, 19:13), and the repo README.
-     Replace every [CHECK] and delete this comment. -->

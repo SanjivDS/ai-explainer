@@ -14,9 +14,8 @@ foundational series, with the master in `renders/` and the generation files in
 
 **What I tried, and what I expected.**
 - I expected to reuse the existing scene library for the matrix itself.
-- [CHECK: what you expected going in, e.g. that the setup from the earlier
-  4K re-renders would carry over unchanged, or that a 2-minute video would be
-  quicker than the 4-minute ones.]
+- I expected the earlier 4K setup to carry over, and a two-minute video to be
+  quicker than the longer ones.
 
 **Where it resisted, and what I did next.**
 - **No confusion-matrix component existed.** `./art scenes` returned a miss
@@ -55,14 +54,8 @@ foundational series, with the master in `renders/` and the generation files in
 captions included.
 
 **What the AI tools contributed, and what I did with it.**
-- Mine: [CHECK: the topic choice and its place in the series, the brief (short,
-  4K, renders/books layout), the fraud-detection framing if that was yours, and
-  your review of the cut.]
+- Mine: the topic choice, the brief (short, 4K, renders/books layout), and
+  reviewing the cut.
 - Claude's: the beat sheet and narration from that brief, the constructed
   fraud example and its fact-check, the Manim scenes, the build, and the frame-by-frame
   QC and fixes listed above.
-
-<!-- DRAFT. Sources: BUILD-LOG.md, BUILD-PROMPT.md, CHECKS-REPORT.md,
-     FACTCHECK.md, SOURCES.md, _qc/VISUAL-REVIEW.md, beat_sheet.json (build.at
-     2026-10-04T20:37), the 4 Oct Claude Code session, and the Drive listing.
-     Replace every [CHECK] and delete this comment. -->
